@@ -1,0 +1,248 @@
+{
+  "id": "measurement",
+  "certainty": "established",
+  "certaintyNote": "Projective measurement per von Neumann (1932). QND vendor-behavior sentences are explicitly year-qualified (2024-2025) in text.",
+  "sourceRef": "M. Born, Zur Quantenmechanik der Stossvorgaenge, Z. Phys. 37, 863 (1926), doi:10.1007/BF01397477",
+  "category": "foundations",
+  "difficultyLevel": 1,
+  "prerequisites": ["qubit", "superposition"],
+  "translations": {
+    "en": {
+      "title": "Quantum Measurement",
+      "shortDefinition": "Quantum measurement is the process of extracting classical information from a quantum system, which irreversibly collapses the quantum state into one of the measurement basis states.",
+      "detailedExplanation": "In quantum mechanics, measurement is a fundamentally different process from classical observation. When a qubit in state |ψ⟩ = α|0⟩ + β|1⟩ is measured in the computational basis, it probabilistically collapses to |0⟩ with probability |α|² or to |1⟩ with probability |β|². This collapse is irreversible — the original superposition is destroyed and cannot be recovered. Measurement is described mathematically by projection operators, and the choice of measurement basis matters: measuring in different bases yields different probability distributions. This is formalized by the Born rule and generalized by POVMs (Positive Operator-Valued Measures) in more advanced treatments.",
+      "analogies": [
+        "Measurement is like asking a question that forces a commitment: before you ask someone 'yes or no?', they might be considering both options, but once they answer, their deliberation collapses into a single definite response.",
+        "Think of opening a box containing Schrödinger's cat — the act of looking (measuring) forces the system from an indefinite quantum state into a definite classical outcome."
+      ],
+      "commonMisconceptions": [
+        "Measurement does NOT simply reveal a pre-existing value — the outcome is created by the act of measurement itself, as shown by Bell's theorem.",
+        "Measurement is NOT the only way a quantum state can change — unitary evolution (quantum gates) continuously transforms quantum states without collapsing them.",
+        "Textbook measurement is non-destructive (the post-measurement state equals the measured outcome), but real hardware readout can be destructive — QND (Quantum Non-Demolition) readout is a specially engineered property, and many commercial machines in 2024–2025 did not guarantee it by default."
+      ],
+      "keyTakeaways": [
+        "Measurement irreversibly collapses a quantum superposition into a single definite classical state.",
+        "The probabilities of measurement outcomes are determined by the Born rule: P(i) = |⟨i|ψ⟩|².",
+        "The choice of measurement basis affects the outcomes — a state definite in one basis may be uncertain in another.",
+        "Mid-circuit measurement plus classical feedback turns measurement into a control-flow primitive (the real 'if'); active reset — measure, then flip back to |0⟩ if needed — is its simplest useful application."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "After measuring a qubit and obtaining the result |0⟩, what happens if you immediately measure the same qubit again in the same basis?",
+          "questionType": "multipleChoice",
+          "options": ["You get |0⟩ or |1⟩ with equal probability", "You always get |0⟩", "You always get |1⟩", "The qubit returns to its original superposition"],
+          "correctAnswerIndex": 1,
+          "explanation": "After measurement, the qubit is in state |0⟩. Measuring again in the same basis will deterministically yield |0⟩ since there is no superposition left.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ko": {
+      "title": "양자 측정",
+      "shortDefinition": "양자 측정은 양자 시스템에서 고전적 정보를 추출하는 과정으로, 양자 상태를 비가역적으로 측정 기저 상태 중 하나로 붕괴시킵니다.",
+      "detailedExplanation": "양자역학에서 측정은 고전적 관측과 근본적으로 다른 과정입니다. 상태 |ψ⟩ = α|0⟩ + β|1⟩에 있는 큐비트를 계산 기저로 측정하면, |α|²의 확률로 |0⟩으로 또는 |β|²의 확률로 |1⟩으로 확률적으로 붕괴합니다. 이 붕괴는 비가역적입니다 — 원래의 중첩은 파괴되어 복구할 수 없습니다. 측정은 수학적으로 사영 연산자로 기술되며, 측정 기저의 선택이 중요합니다: 서로 다른 기저에서의 측정은 서로 다른 확률 분포를 산출합니다. 이는 보른 규칙에 의해 공식화되며, 더 고급 처리에서는 POVM으로 일반화됩니다.",
+      "analogies": [
+        "측정은 결정을 강요하는 질문과 같습니다: '예 아니오?'를 묻기 전에 상대방은 두 선택지를 모두 고려하고 있을 수 있지만, 대답하면 숙고는 하나의 확정적 응답으로 붕괴됩니다.",
+        "슈뢰딩거의 고양이가 들어있는 상자를 여는 것을 생각해보세요 — 보는 행위(측정)가 시스템을 불확정한 양자 상태에서 확정적인 고전적 결과로 강제합니다."
+      ],
+      "commonMisconceptions": [
+        "측정은 기존에 존재하던 값을 단순히 드러내는 것이 아닙니다 — 벨의 정리가 보여주듯이, 결과는 측정 행위 자체에 의해 생성됩니다.",
+        "측정이 양자 상태가 변할 수 있는 유일한 방법은 아닙니다 — 유니터리 진화(양자 게이트)는 붕괴 없이 양자 상태를 지속적으로 변환합니다.",
+        "교과서의 측정은 비파괴적입니다(측정 후 상태 = 측정된 결과). 하지만 실제 하드웨어의 판독은 파괴적일 수 있습니다 — QND(양자 비파괴) 판독은 특별히 공학적으로 구현해야 하는 성질이며, 2024–2025년의 많은 상용 기계는 이를 기본으로 보장하지 않았습니다."
+      ],
+      "keyTakeaways": [
+        "측정은 양자 중첩을 비가역적으로 하나의 확정적 고전 상태로 붕괴시킵니다.",
+        "측정 결과의 확률은 보른 규칙에 의해 결정됩니다: P(i) = |⟨i|ψ⟩|².",
+        "측정 기저의 선택이 결과에 영향을 미칩니다 — 하나의 기저에서 확정적인 상태가 다른 기저에서는 불확정할 수 있습니다.",
+        "회로 중간 측정과 고전적 피드백을 결합하면 측정은 제어 흐름의 기본 요소(진짜 'if문')가 됩니다. 능동 리셋 — 측정한 뒤 필요하면 |0⟩으로 되돌리기 — 이 가장 간단하고 유용한 응용입니다."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "큐비트를 측정하여 |0⟩ 결과를 얻은 후, 같은 기저로 같은 큐비트를 즉시 다시 측정하면 어떻게 됩니까?",
+          "questionType": "multipleChoice",
+          "options": ["동일한 확률로 |0⟩ 또는 |1⟩을 얻는다", "항상 |0⟩을 얻는다", "항상 |1⟩을 얻는다", "큐비트가 원래 중첩으로 돌아간다"],
+          "correctAnswerIndex": 1,
+          "explanation": "측정 후 큐비트는 |0⟩ 상태에 있습니다. 같은 기저로 다시 측정하면 더 이상 중첩이 없으므로 결정론적으로 |0⟩을 산출합니다.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ja": {
+      "title": "量子測定",
+      "shortDefinition": "量子測定は量子システムから古典的情報を抽出するプロセスであり、量子状態を不可逆的に測定基底状態の一つに崩壊させます。",
+      "detailedExplanation": "量子力学において、測定は古典的な観測とは根本的に異なるプロセスです。状態|ψ⟩ = α|0⟩ + β|1⟩にある量子ビットを計算基底で測定すると、|α|²の確率で|0⟩に、または|β|²の確率で|1⟩に確率的に崩壊します。この崩壊は不可逆的であり、元の重ね合わせは破壊されて回復できません。測定は数学的に射影演算子で記述され、測定基底の選択が重要です：異なる基底での測定は異なる確率分布を与えます。これはボルンの規則によって形式化され、より高度な扱いではPOVMによって一般化されます。",
+      "analogies": [
+        "測定は決断を強いる質問のようなものです：「はい、いいえ？」と聞く前は両方の選択肢を検討しているかもしれませんが、答えると熟考は一つの確定的な回答に崩壊します。",
+        "シュレーディンガーの猫が入った箱を開けることを考えてください — 見る行為（測定）がシステムを不確定な量子状態から確定的な古典的結果に強制します。"
+      ],
+      "commonMisconceptions": [
+        "測定は既存の値を単に明らかにするのではありません — ベルの定理が示すように、結果は測定行為自体によって生み出されます。",
+        "測定は量子状態が変化する唯一の方法ではありません — ユニタリ発展（量子ゲート）は崩壊させることなく量子状態を連続的に変換します。",
+        "教科書の測定は非破壊的です（測定後の状態＝測定された結果）が、実際のハードウェアの読み出しは破壊的になり得ます — QND（量子非破壊）読み出しは特別に設計された性質であり、2024〜2025年の多くの商用マシンはこれをデフォルトでは保証していませんでした。"
+      ],
+      "keyTakeaways": [
+        "測定は量子重ね合わせを不可逆的に一つの確定的な古典状態に崩壊させます。",
+        "測定結果の確率はボルンの規則によって決定されます：P(i) = |⟨i|ψ⟩|²。",
+        "測定基底の選択が結果に影響します — ある基底で確定的な状態が別の基底では不確定な場合があります。",
+        "回路途中測定と古典フィードバックを組み合わせると、測定は制御フローの基本要素（本物の「if文」）になります。アクティブリセット — 測定して必要なら|0⟩へ反転して戻す — がその最も単純で有用な応用です。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "量子ビットを測定して|0⟩の結果を得た後、同じ基底で同じ量子ビットを直ちに再測定するとどうなりますか？",
+          "questionType": "multipleChoice",
+          "options": ["等しい確率で|0⟩または|1⟩を得る", "常に|0⟩を得る", "常に|1⟩を得る", "量子ビットは元の重ね合わせに戻る"],
+          "correctAnswerIndex": 1,
+          "explanation": "測定後、量子ビットは|0⟩の状態にあります。同じ基底で再度測定すると、重ね合わせがないため決定論的に|0⟩が得られます。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "zh-Hans": {
+      "title": "量子测量",
+      "shortDefinition": "量子测量是从量子系统中提取经典信息的过程，它不可逆地将量子态坍缩为测量基态之一。",
+      "detailedExplanation": "在量子力学中，测量与经典观测是根本不同的过程。当处于状态|ψ⟩ = α|0⟩ + β|1⟩的量子比特在计算基上被测量时，它以|α|²的概率坍缩到|0⟩，或以|β|²的概率坍缩到|1⟩。这种坍缩是不可逆的——原始叠加态被破坏且无法恢复。测量在数学上由投影算子描述，测量基的选择很重要：在不同基上测量会产生不同的概率分布。这由玻恩规则形式化，在更高级的处理中由POVM推广。",
+      "analogies": [
+        "测量就像一个迫使做出承诺的问题：在你问对方'是还是否？'之前，他们可能在考虑两个选项，但一旦回答，思考就坍缩为一个确定的回应。",
+        "想想打开装有薛定谔猫的盒子——看的行为（测量）迫使系统从不确定的量子态变为确定的经典结果。"
+      ],
+      "commonMisconceptions": [
+        "测量并不是简单地揭示预先存在的值——正如贝尔定理所示，结果是由测量行为本身创造的。",
+        "测量不是量子态改变的唯一方式——幺正演化（量子门）在不坍缩的情况下持续变换量子态。",
+        "教科书中的测量是非破坏性的（测量后的状态等于测得的结果），但真实硬件的读出可能是破坏性的——QND（量子非破坏）读出是一种需要专门工程实现的特性，2024–2025年的许多商用机器默认并不保证这一点。"
+      ],
+      "keyTakeaways": [
+        "测量不可逆地将量子叠加态坍缩为单一确定的经典态。",
+        "测量结果的概率由玻恩规则决定：P(i) = |⟨i|ψ⟩|²。",
+        "测量基的选择影响结果——在一个基上确定的态在另一个基上可能是不确定的。",
+        "电路中途测量加经典反馈把测量变成了控制流原语（真正的'if'）；主动复位——先测量，必要时翻转回|0⟩——是其最简单实用的应用。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "测量一个量子比特并获得结果|0⟩后，如果立即在同一基上再次测量同一量子比特，会发生什么？",
+          "questionType": "multipleChoice",
+          "options": ["以相等概率得到|0⟩或|1⟩", "总是得到|0⟩", "总是得到|1⟩", "量子比特回到原来的叠加态"],
+          "correctAnswerIndex": 1,
+          "explanation": "测量后，量子比特处于|0⟩状态。在同一基上再次测量将确定性地得到|0⟩，因为不再有叠加态。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "de": {
+      "title": "Quantenmessung",
+      "shortDefinition": "Quantenmessung ist der Prozess der Extraktion klassischer Information aus einem Quantensystem, der den Quantenzustand irreversibel in einen der Messbasis-Zustände kollabiert.",
+      "detailedExplanation": "In der Quantenmechanik ist die Messung ein grundlegend anderer Prozess als die klassische Beobachtung. Wenn ein Qubit im Zustand |ψ⟩ = α|0⟩ + β|1⟩ in der Rechenbasis gemessen wird, kollabiert es probabilistisch zu |0⟩ mit Wahrscheinlichkeit |α|² oder zu |1⟩ mit Wahrscheinlichkeit |β|². Dieser Kollaps ist irreversibel — die ursprüngliche Superposition wird zerstört und kann nicht wiederhergestellt werden. Die Messung wird mathematisch durch Projektionsoperatoren beschrieben, und die Wahl der Messbasis ist wichtig: Messungen in verschiedenen Basen ergeben unterschiedliche Wahrscheinlichkeitsverteilungen. Dies wird durch die Bornsche Regel formalisiert und in fortgeschrittenen Behandlungen durch POVMs verallgemeinert.",
+      "analogies": [
+        "Die Messung ist wie eine Frage, die eine Festlegung erzwingt: Bevor man jemanden fragt 'Ja oder Nein?', erwägt er vielleicht beide Optionen, aber sobald er antwortet, kollabiert seine Überlegung in eine einzige definitive Antwort.",
+        "Denken Sie daran, eine Schachtel mit Schrödingers Katze zu öffnen — der Akt des Schauens (Messens) zwingt das System von einem unbestimmten Quantenzustand in ein bestimmtes klassisches Ergebnis."
+      ],
+      "commonMisconceptions": [
+        "Die Messung enthüllt NICHT einfach einen bereits vorhandenen Wert — das Ergebnis wird durch den Akt der Messung selbst erzeugt, wie Bells Theorem zeigt.",
+        "Die Messung ist NICHT die einzige Möglichkeit, wie sich ein Quantenzustand ändern kann — unitäre Evolution (Quantengatter) transformiert Quantenzustände kontinuierlich ohne sie zu kollabieren.",
+        "Die Lehrbuch-Messung ist zerstörungsfrei (der Zustand nach der Messung entspricht dem gemessenen Ergebnis), aber das Auslesen auf echter Hardware kann destruktiv sein — QND-Auslesen (Quantum Non-Demolition) ist eine eigens konstruierte Eigenschaft, und viele kommerzielle Maschinen garantierten sie 2024–2025 nicht standardmäßig."
+      ],
+      "keyTakeaways": [
+        "Die Messung kollabiert eine Quantensuperposition irreversibel in einen einzigen bestimmten klassischen Zustand.",
+        "Die Wahrscheinlichkeiten der Messergebnisse werden durch die Bornsche Regel bestimmt: P(i) = |⟨i|ψ⟩|².",
+        "Die Wahl der Messbasis beeinflusst die Ergebnisse — ein in einer Basis bestimmter Zustand kann in einer anderen unbestimmt sein.",
+        "Messung mitten im Schaltkreis plus klassisches Feedback macht die Messung zu einem Kontrollfluss-Primitiv (das echte 'if'); Active Reset — messen und bei Bedarf zurück nach |0⟩ kippen — ist die einfachste nützliche Anwendung."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Nachdem ein Qubit gemessen wurde und das Ergebnis |0⟩ ergab, was passiert, wenn Sie dasselbe Qubit sofort erneut in derselben Basis messen?",
+          "questionType": "multipleChoice",
+          "options": ["Sie erhalten |0⟩ oder |1⟩ mit gleicher Wahrscheinlichkeit", "Sie erhalten immer |0⟩", "Sie erhalten immer |1⟩", "Das Qubit kehrt zu seiner ursprünglichen Superposition zurück"],
+          "correctAnswerIndex": 1,
+          "explanation": "Nach der Messung befindet sich das Qubit im Zustand |0⟩. Eine erneute Messung in derselben Basis ergibt deterministisch |0⟩, da keine Superposition mehr vorhanden ist.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "fr": {
+      "title": "Mesure quantique",
+      "shortDefinition": "La mesure quantique est le processus d'extraction d'information classique d'un système quantique, qui effondre irréversiblement l'état quantique en l'un des états de la base de mesure.",
+      "detailedExplanation": "En mécanique quantique, la mesure est un processus fondamentalement différent de l'observation classique. Lorsqu'un qubit dans l'état |ψ⟩ = α|0⟩ + β|1⟩ est mesuré dans la base computationnelle, il s'effondre de manière probabiliste en |0⟩ avec la probabilité |α|² ou en |1⟩ avec la probabilité |β|². Cet effondrement est irréversible — la superposition originale est détruite et ne peut être récupérée. La mesure est décrite mathématiquement par des opérateurs de projection, et le choix de la base de mesure importe : mesurer dans différentes bases donne différentes distributions de probabilité. Ceci est formalisé par la règle de Born et généralisé par les POVM dans les traitements plus avancés.",
+      "analogies": [
+        "La mesure est comme poser une question qui force un engagement : avant de demander à quelqu'un 'oui ou non ?', il pourrait considérer les deux options, mais une fois qu'il répond, sa délibération s'effondre en une seule réponse définitive.",
+        "Pensez à ouvrir une boîte contenant le chat de Schrödinger — l'acte de regarder (mesurer) force le système d'un état quantique indéfini à un résultat classique défini."
+      ],
+      "commonMisconceptions": [
+        "La mesure ne révèle PAS simplement une valeur préexistante — le résultat est créé par l'acte de mesure lui-même, comme le montre le théorème de Bell.",
+        "La mesure n'est PAS la seule façon dont un état quantique peut changer — l'évolution unitaire (portes quantiques) transforme continuellement les états quantiques sans les effondrer.",
+        "La mesure des manuels est non destructive (l'état après mesure égale le résultat mesuré), mais la lecture sur du matériel réel peut être destructive — la lecture QND (Quantum Non-Demolition) est une propriété spécialement conçue, et de nombreuses machines commerciales en 2024–2025 ne la garantissaient pas par défaut."
+      ],
+      "keyTakeaways": [
+        "La mesure effondre irréversiblement une superposition quantique en un seul état classique défini.",
+        "Les probabilités des résultats de mesure sont déterminées par la règle de Born : P(i) = |⟨i|ψ⟩|².",
+        "Le choix de la base de mesure affecte les résultats — un état défini dans une base peut être incertain dans une autre.",
+        "La mesure en cours de circuit plus la rétroaction classique transforme la mesure en primitive de flux de contrôle (le vrai « if ») ; le reset actif — mesurer, puis rebasculer vers |0⟩ si nécessaire — en est l'application utile la plus simple."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Après avoir mesuré un qubit et obtenu le résultat |0⟩, que se passe-t-il si vous mesurez immédiatement le même qubit dans la même base ?",
+          "questionType": "multipleChoice",
+          "options": ["Vous obtenez |0⟩ ou |1⟩ avec une probabilité égale", "Vous obtenez toujours |0⟩", "Vous obtenez toujours |1⟩", "Le qubit revient à sa superposition originale"],
+          "correctAnswerIndex": 1,
+          "explanation": "Après la mesure, le qubit est dans l'état |0⟩. Le mesurer à nouveau dans la même base donnera de manière déterministe |0⟩ puisqu'il n'y a plus de superposition.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "es": {
+      "title": "Medición cuántica",
+      "shortDefinition": "La medición cuántica es el proceso de extraer información clásica de un sistema cuántico, que colapsa irreversiblemente el estado cuántico en uno de los estados de la base de medición.",
+      "detailedExplanation": "En mecánica cuántica, la medición es un proceso fundamentalmente diferente de la observación clásica. Cuando un qubit en el estado |ψ⟩ = α|0⟩ + β|1⟩ se mide en la base computacional, colapsa probabilísticamente a |0⟩ con probabilidad |α|² o a |1⟩ con probabilidad |β|². Este colapso es irreversible — la superposición original se destruye y no puede recuperarse. La medición se describe matemáticamente mediante operadores de proyección, y la elección de la base de medición importa: medir en diferentes bases produce distribuciones de probabilidad diferentes. Esto se formaliza mediante la regla de Born y se generaliza mediante POVMs en tratamientos más avanzados.",
+      "analogies": [
+        "La medición es como hacer una pregunta que fuerza un compromiso: antes de preguntar a alguien '¿sí o no?', podría estar considerando ambas opciones, pero una vez que responde, su deliberación colapsa en una única respuesta definitiva.",
+        "Piensa en abrir una caja que contiene el gato de Schrödinger — el acto de mirar (medir) fuerza al sistema de un estado cuántico indefinido a un resultado clásico definido."
+      ],
+      "commonMisconceptions": [
+        "La medición NO simplemente revela un valor preexistente — el resultado es creado por el acto de medición en sí, como muestra el teorema de Bell.",
+        "La medición NO es la única forma en que un estado cuántico puede cambiar — la evolución unitaria (puertas cuánticas) transforma continuamente los estados cuánticos sin colapsarlos.",
+        "La medición de los libros de texto es no destructiva (el estado posterior a la medición es igual al resultado medido), pero la lectura en hardware real puede ser destructiva — la lectura QND (Quantum Non-Demolition) es una propiedad especialmente diseñada, y muchas máquinas comerciales en 2024–2025 no la garantizaban por defecto."
+      ],
+      "keyTakeaways": [
+        "La medición colapsa irreversiblemente una superposición cuántica en un único estado clásico definido.",
+        "Las probabilidades de los resultados de medición están determinadas por la regla de Born: P(i) = |⟨i|ψ⟩|².",
+        "La elección de la base de medición afecta los resultados — un estado definido en una base puede ser incierto en otra.",
+        "La medición a mitad de circuito más la retroalimentación clásica convierte la medición en una primitiva de flujo de control (el verdadero 'if'); el reinicio activo — medir y, si hace falta, voltear de vuelta a |0⟩ — es su aplicación útil más simple."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Después de medir un qubit y obtener el resultado |0⟩, ¿qué sucede si inmediatamente mides el mismo qubit de nuevo en la misma base?",
+          "questionType": "multipleChoice",
+          "options": ["Obtienes |0⟩ o |1⟩ con igual probabilidad", "Siempre obtienes |0⟩", "Siempre obtienes |1⟩", "El qubit vuelve a su superposición original"],
+          "correctAnswerIndex": 1,
+          "explanation": "Después de la medición, el qubit está en el estado |0⟩. Medirlo de nuevo en la misma base dará determinísticamente |0⟩ ya que no queda superposición.",
+          "difficultyLevel": 1
+        }
+      ]
+    }
+  },
+  "relatedFormulas": [
+    {
+      "latex": "P(i) = |\\langle i|\\psi\\rangle|^2",
+      "plainTextDescription": {
+        "en": "Born rule: probability of measuring outcome i",
+        "ko": "보른 규칙: 결과 i를 측정할 확률"
+      },
+      "variables": [
+        {"symbol": "P(i)", "meaning": {"en": "Probability of outcome i", "ko": "결과 i의 확률"}},
+        {"symbol": "⟨i|ψ⟩", "meaning": {"en": "Inner product of measurement basis state i with the quantum state", "ko": "측정 기저 상태 i와 양자 상태의 내적"}}
+      ]
+    }
+  ],
+  "visualizationType": "probabilityHistogram",
+  "verifiedBy": {
+    "verifierName": "Eunmin Park",
+    "verifierCredentials": "IEEE Member, Quantum Computing Educator",
+    "verificationDate": "2026-04-07",
+    "reviewedSources": ["Nielsen & Chuang (2010)", "IBM Qiskit Textbook"],
+    "confidenceLevel": "undisputed"
+  },
+  "lastReviewed": "2026-07-03",
+  "citationReferences": [
+    "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.",
+    "Born, M. (1926). Zur Quantenmechanik der Stoßvorgänge. Zeitschrift für Physik.",
+    "Rakhim Davletkaliyev, Quantum Computing for Software Engineers (Leanpub, 2025), Ch. 8."
+  ]
+}

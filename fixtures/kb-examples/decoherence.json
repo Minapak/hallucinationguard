@@ -1,0 +1,262 @@
+{
+  "id": "decoherence",
+  "certainty": "established",
+  "certaintyNote": "T1/T2 additions (2026-07-03 enhancement) per Krantz et al., APR 6, 021318 (2019).",
+  "sourceRef": "W. H. Zurek, Rev. Mod. Phys. 75, 715 (2003), doi:10.1103/RevModPhys.75.715",
+  "category": "foundations",
+  "difficultyLevel": 2,
+  "prerequisites": ["qubit", "superposition", "density_matrix"],
+  "translations": {
+    "en": {
+      "title": "Decoherence",
+      "shortDefinition": "Decoherence is the process by which a quantum system loses its quantum coherence through interaction with its environment, causing superpositions to decay into classical statistical mixtures.",
+      "detailedExplanation": "Decoherence occurs when a quantum system becomes entangled with its environment, effectively leaking quantum information into degrees of freedom that are not being tracked. This causes the off-diagonal elements of the density matrix to decay exponentially, transforming a pure superposition state into a mixed state that behaves classically. The timescales of decoherence are characterized by T1 (energy relaxation time, measuring how quickly a qubit loses energy) and T2 (dephasing time, measuring how quickly the relative phase information is lost). Decoherence is the primary obstacle to building practical quantum computers, as it limits the number of quantum gate operations that can be performed before the quantum information is lost. Quantum error correction is designed specifically to combat decoherence.",
+      "analogies": [
+        "Decoherence is like a tuning fork losing its pure tone when placed on a table — the vibration energy transfers to the table (environment), and the clear, pure tone becomes a muffled, noisy sound that quickly fades away.",
+        "Think of writing on a whiteboard in a dusty room — the message (quantum information) gradually becomes unreadable as dust (environmental noise) accumulates on the surface.",
+        "There are two ways a qubit 'dies'. T1 is a balloon slowly deflating — the energy stored in |1⟩ leaks back down to |0⟩. T2 is a choir clapping in perfect sync ('one, two!') that gradually drifts apart: the sound (energy) is still there, but the togetherness (phase) is gone — and quantum magic lives precisely in that togetherness.",
+        "The word itself tells the story: de- ('undoing') + Latin cohaerere ('to stick together') — decoherence is waves that were holding hands letting go of each other."
+      ],
+      "commonMisconceptions": [
+        "Decoherence is NOT the same as measurement collapse — decoherence is a gradual, continuous process of environmental entanglement, while measurement is a specific interaction designed to extract information.",
+        "Decoherence does NOT destroy the quantum information entirely — the information becomes spread across the system and environment together; it is in principle recoverable if you could control the entire environment.",
+        "T1 and T2 are NOT fixed constants of a device — they vary from qubit to qubit on the same chip and drift from day to day, which is why quantum hardware must be recalibrated continuously."
+      ],
+      "keyTakeaways": [
+        "Decoherence arises from unwanted entanglement between a quantum system and its environment.",
+        "T1 and T2 times characterize how quickly a qubit loses energy and phase coherence respectively.",
+        "Decoherence is the primary practical challenge in quantum computing, motivating quantum error correction.",
+        "Two distinct clocks govern qubit death: T1 (energy relaxation, |1⟩→|0⟩) and T2 (phase coherence); T2 ≤ 2·T1, and gates must finish well within both."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "What does the T2 time of a qubit characterize?",
+          "questionType": "multipleChoice",
+          "options": ["The time to perform a gate operation", "The dephasing time (loss of phase coherence)", "The time to read out a qubit", "The fabrication time of a qubit"],
+          "correctAnswerIndex": 1,
+          "explanation": "T2 is the dephasing time, which measures how quickly the relative phase information between |0⟩ and |1⟩ components of a superposition is lost due to environmental interactions.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "ko": {
+      "title": "결어긋남",
+      "shortDefinition": "결어긋남은 양자 시스템이 환경과의 상호작용을 통해 양자 결맞음을 잃는 과정으로, 중첩이 고전적 통계적 혼합으로 붕괴됩니다.",
+      "detailedExplanation": "결어긋남은 양자 시스템이 환경과 얽히게 되어 추적되지 않는 자유도로 양자 정보가 효과적으로 누출될 때 발생합니다. 이는 밀도 행렬의 비대각 원소가 지수적으로 감소하게 하여, 순수 중첩 상태를 고전적으로 행동하는 혼합 상태로 변환합니다. 결어긋남의 시간 척도는 T1(에너지 이완 시간, 큐비트가 얼마나 빨리 에너지를 잃는지 측정)과 T2(결맞음 소멸 시간, 상대적 위상 정보가 얼마나 빨리 손실되는지 측정)로 특성화됩니다. 결어긋남은 양자 정보가 손실되기 전에 수행할 수 있는 양자 게이트 연산의 수를 제한하므로, 실용적 양자 컴퓨터 구축의 주요 장애물입니다.",
+      "analogies": [
+        "결어긋남은 테이블 위에 놓인 소리굽쇠가 순수한 음색을 잃는 것과 같습니다 — 진동 에너지가 테이블(환경)로 전달되고, 맑고 순수한 음이 둔탁하고 잡음 섞인 소리가 되어 빠르게 사라집니다.",
+        "먼지가 많은 방에서 화이트보드에 글을 쓰는 것으로 생각해보세요 — 먼지(환경 잡음)가 표면에 쌓이면서 메시지(양자 정보)가 점차 읽을 수 없게 됩니다.",
+        "큐비트가 '죽는' 방식은 두 가지입니다. T1은 천천히 바람이 빠지는 풍선과 같습니다 — |1⟩에 담긴 에너지가 슬금슬금 |0⟩으로 새어 내려갑니다. T2는 '하나, 둘!' 하고 완벽하게 박자를 맞춰 손뼉 치던 합창단이 점점 어긋나는 것과 같습니다: 소리(에너지)는 그대로인데 '함께함'(위상)이 사라집니다 — 그리고 양자 마법은 바로 그 함께함에서 나옵니다.",
+        "'결어긋남'이라는 말 자체가 이야기를 담고 있습니다: '결'은 나뭇결의 그 '결' — 나뭇결이 틀어지듯 파동의 위상이 서로 어긋나 버리는 것이 결어긋남입니다."
+      ],
+      "commonMisconceptions": [
+        "결어긋남은 측정 붕괴와 같지 않습니다 — 결어긋남은 환경적 얽힘의 점진적이고 연속적인 과정인 반면, 측정은 정보를 추출하기 위해 설계된 특정 상호작용입니다.",
+        "결어긋남이 양자 정보를 완전히 파괴하는 것은 아닙니다 — 정보는 시스템과 환경 전체에 걸쳐 퍼지게 되며, 전체 환경을 제어할 수 있다면 원칙적으로 복구 가능합니다.",
+        "T1과 T2는 장치의 고정된 상수가 아닙니다 — 같은 칩 위에서도 큐비트마다 다르고 날마다 요동하기 때문에, 양자 하드웨어는 끊임없이 재보정되어야 합니다."
+      ],
+      "keyTakeaways": [
+        "결어긋남은 양자 시스템과 환경 사이의 원치 않는 얽힘에서 발생합니다.",
+        "T1과 T2 시간은 큐비트가 각각 에너지와 위상 결맞음을 얼마나 빨리 잃는지를 특성화합니다.",
+        "결어긋남은 양자 컴퓨팅의 주요 실질적 도전으로, 양자 오류 수정의 동기가 됩니다.",
+        "큐비트에는 서로 다른 두 개의 시계가 있습니다: T1(에너지 이완, |1⟩→|0⟩)과 T2(위상 결맞음). T2 ≤ 2·T1이며, 게이트는 두 시간 안에 여유 있게 끝나야 합니다."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "큐비트의 T2 시간은 무엇을 특성화합니까?",
+          "questionType": "multipleChoice",
+          "options": ["게이트 연산 수행 시간", "결맞음 소멸 시간(위상 결맞음 손실)", "큐비트 판독 시간", "큐비트 제조 시간"],
+          "correctAnswerIndex": 1,
+          "explanation": "T2는 결맞음 소멸 시간으로, 환경적 상호작용으로 인해 중첩의 |0⟩과 |1⟩ 성분 사이의 상대적 위상 정보가 얼마나 빨리 손실되는지를 측정합니다.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "ja": {
+      "title": "デコヒーレンス",
+      "shortDefinition": "デコヒーレンスは、量子システムが環境との相互作用を通じて量子コヒーレンスを失い、重ね合わせが古典的な統計的混合に崩壊するプロセスです。",
+      "detailedExplanation": "デコヒーレンスは、量子システムが環境とエンタングルし、追跡されていない自由度に量子情報が効果的に漏洩するときに発生します。これにより密度行列の非対角要素が指数関数的に減衰し、純粋な重ね合わせ状態が古典的に振る舞う混合状態に変換されます。デコヒーレンスのタイムスケールはT1（エネルギー緩和時間）とT2（位相緩和時間）で特徴付けられます。デコヒーレンスは実用的な量子コンピュータ構築の主要な障害であり、量子誤り訂正はデコヒーレンスに対抗するために特別に設計されています。",
+      "analogies": [
+        "デコヒーレンスはテーブルの上に置かれた音叉が純粋な音色を失うようなものです — 振動エネルギーがテーブル（環境）に伝わり、クリアで純粋な音がこもった雑音まじりの音になってすぐに消えていきます。",
+        "ほこりの多い部屋でホワイトボードに書くことを想像してください — ほこり（環境ノイズ）が表面に蓄積するにつれて、メッセージ（量子情報）が徐々に読めなくなります。",
+        "量子ビットが「死ぬ」道は2つあります。T1はゆっくり空気が抜けていく風船のようなもの — |1⟩に蓄えられたエネルギーが|0⟩へと漏れ落ちていきます。T2は「いち、に！」と完璧に息を合わせて手拍子する合唱団がだんだんずれていくようなもの：音（エネルギー）は残っているのに「そろっていること」（位相）が失われます — そして量子の魔法はまさにその「そろい」に宿っているのです。",
+        "漢字で書けば「退相干」— 「相干」とは波が互いにそろって干渉し合うこと（コヒーレンス）で、それが「退いていく」という意味です。手をつないでいた波たちが手を離してしまう、それがデコヒーレンスです。"
+      ],
+      "commonMisconceptions": [
+        "デコヒーレンスは測定崩壊と同じではありません — デコヒーレンスは環境的エンタングルメントの漸進的で連続的なプロセスですが、測定は情報を抽出するために設計された特定の相互作用です。",
+        "デコヒーレンスは量子情報を完全に破壊しません — 情報はシステムと環境全体に広がります。原理的には環境全体を制御できれば回復可能です。",
+        "T1とT2はデバイスの固定された定数ではありません — 同じチップ上でも量子ビットごとに異なり、日ごとに変動するため、量子ハードウェアは継続的に再校正しなければなりません。"
+      ],
+      "keyTakeaways": [
+        "デコヒーレンスは量子システムと環境の間の望ましくないエンタングルメントから生じます。",
+        "T1とT2時間はそれぞれ量子ビットがエネルギーと位相コヒーレンスをどれだけ早く失うかを特徴付けます。",
+        "デコヒーレンスは量子コンピューティングの主要な実践的課題であり、量子誤り訂正の動機となっています。",
+        "量子ビットには2つの異なる時計があります：T1（エネルギー緩和、|1⟩→|0⟩）とT2（位相コヒーレンス）。T2 ≤ 2·T1であり、ゲートは両方の時間内に余裕をもって完了しなければなりません。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "量子ビットのT2時間は何を特徴付けますか？",
+          "questionType": "multipleChoice",
+          "options": ["ゲート操作の実行時間", "位相緩和時間（位相コヒーレンスの喪失）", "量子ビットの読み出し時間", "量子ビットの製造時間"],
+          "correctAnswerIndex": 1,
+          "explanation": "T2は位相緩和時間であり、環境との相互作用により重ね合わせの|0⟩と|1⟩成分間の相対位相情報がどれだけ早く失われるかを測定します。",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "zh-Hans": {
+      "title": "退相干",
+      "shortDefinition": "退相干是量子系统通过与环境相互作用而失去量子相干性的过程，导致叠加态衰变为经典统计混合态。",
+      "detailedExplanation": "退相干发生在量子系统与环境纠缠时，量子信息有效泄漏到未被追踪的自由度中。这导致密度矩阵的非对角元素指数衰减，将纯叠加态转变为经典行为的混合态。退相干的时间尺度由T1（能量弛豫时间）和T2（退相时间）表征。退相干是构建实用量子计算机的主要障碍，因为它限制了在量子信息丢失前可以执行的量子门操作数量。量子纠错专门设计用于对抗退相干。",
+      "analogies": [
+        "退相干就像放在桌子上的音叉失去纯净音调——振动能量传递到桌子（环境）上，清晰纯净的音调变成沉闷嘈杂的声音并迅速消失。",
+        "想象在布满灰尘的房间里在白板上写字——随着灰尘（环境噪声）在表面积累，信息（量子信息）逐渐变得无法读取。",
+        "量子比特有两种'死法'。T1像一只慢慢漏气的气球——储存在|1⟩中的能量逐渐泄漏回|0⟩。T2像一支拍手完全同步（'一、二！'）的合唱团渐渐乱了节拍：声音（能量）还在，但'齐心'（相位）没了——而量子魔法恰恰就藏在这份齐心之中。",
+        "'退相干'这个词本身就在讲故事：'相干'指波与波相互干涉、步调一致的性质，'退'即消退——原本手拉着手的波逐渐松开了手，相干性退去，这就是退相干。"
+      ],
+      "commonMisconceptions": [
+        "退相干与测量坍缩不同——退相干是环境纠缠的渐进连续过程，而测量是为提取信息而设计的特定相互作用。",
+        "退相干不会完全摧毁量子信息——信息会扩散到系统和环境中；如果你能控制整个环境，原则上是可以恢复的。",
+        "T1和T2并不是设备的固定常数——同一芯片上的量子比特各不相同，而且逐日漂移，这正是量子硬件必须持续重新校准的原因。"
+      ],
+      "keyTakeaways": [
+        "退相干源于量子系统与环境之间不需要的纠缠。",
+        "T1和T2时间分别表征量子比特失去能量和相位相干性的速度。",
+        "退相干是量子计算的主要实际挑战，推动了量子纠错的发展。",
+        "量子比特由两个不同的时钟支配：T1（能量弛豫，|1⟩→|0⟩）和T2（相位相干性）；T2 ≤ 2·T1，量子门必须在这两个时间内充分提前完成。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "量子比特的T2时间表征什么？",
+          "questionType": "multipleChoice",
+          "options": ["执行门操作的时间", "退相时间（相位相干性的丧失）", "读出量子比特的时间", "制造量子比特的时间"],
+          "correctAnswerIndex": 1,
+          "explanation": "T2是退相时间，测量由于环境相互作用，叠加态中|0⟩和|1⟩分量之间的相对相位信息丧失的速度。",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "de": {
+      "title": "Dekohärenz",
+      "shortDefinition": "Dekohärenz ist der Prozess, durch den ein Quantensystem seine Quantenkohärenz durch Wechselwirkung mit seiner Umgebung verliert, wodurch Superpositionen in klassische statistische Mischungen zerfallen.",
+      "detailedExplanation": "Dekohärenz tritt auf, wenn ein Quantensystem mit seiner Umgebung verschränkt wird und Quanteninformation effektiv in nicht verfolgte Freiheitsgrade abfließt. Dies bewirkt, dass die Nicht-Diagonal-Elemente der Dichtematrix exponentiell abklingen, wodurch ein reiner Superpositionszustand in einen gemischten Zustand umgewandelt wird. Die Zeitskalen werden durch T1 (Energierelaxationszeit) und T2 (Dephasierungszeit) charakterisiert. Dekohärenz ist das Haupthindernis beim Bau praktischer Quantencomputer und motiviert die Quantenfehlerkorrektur.",
+      "analogies": [
+        "Dekohärenz ist wie eine Stimmgabel, die ihren reinen Ton verliert, wenn sie auf einen Tisch gelegt wird — die Schwingungsenergie überträgt sich auf den Tisch (Umgebung), und der klare Ton wird zu einem gedämpften Geräusch, das schnell verblasst.",
+        "Stellen Sie sich vor, in einem staubigen Raum auf ein Whiteboard zu schreiben — die Nachricht (Quanteninformation) wird allmählich unlesbar, wenn sich Staub (Umgebungsrauschen) ansammelt.",
+        "Ein Qubit kann auf zwei Arten 'sterben'. T1 ist wie ein Luftballon, der langsam Luft verliert — die in |1⟩ gespeicherte Energie sickert zurück nach |0⟩. T2 ist wie ein Chor, der perfekt im Takt klatscht ('eins, zwei!') und allmählich auseinanderdriftet: Der Klang (die Energie) bleibt, aber das Gleichmaß (die Phase) geht verloren — und genau in diesem Gleichmaß steckt die Quantenmagie.",
+        "Das Wort selbst erzählt die Geschichte: de- ('rückgängig machen') + lateinisch cohaerere ('zusammenhängen, aneinander haften') — Dekohärenz bedeutet, dass Wellen, die Hand in Hand gingen, einander loslassen."
+      ],
+      "commonMisconceptions": [
+        "Dekohärenz ist NICHT dasselbe wie Messkollaps — Dekohärenz ist ein gradueller, kontinuierlicher Prozess der Umgebungsverschränkung.",
+        "Dekohärenz zerstört die Quanteninformation NICHT vollständig — die Information verteilt sich über System und Umgebung zusammen.",
+        "T1 und T2 sind KEINE festen Konstanten eines Geräts — sie variieren von Qubit zu Qubit auf demselben Chip und driften von Tag zu Tag, weshalb Quantenhardware kontinuierlich neu kalibriert werden muss."
+      ],
+      "keyTakeaways": [
+        "Dekohärenz entsteht durch unerwünschte Verschränkung zwischen einem Quantensystem und seiner Umgebung.",
+        "T1- und T2-Zeiten charakterisieren, wie schnell ein Qubit Energie bzw. Phasenkohärenz verliert.",
+        "Dekohärenz ist die primäre praktische Herausforderung im Quantencomputing und motiviert die Quantenfehlerkorrektur.",
+        "Zwei verschiedene Uhren: T1 (Energierelaxation, |1⟩→|0⟩) und T2 (Phasenkohärenz); es gilt T2 ≤ 2·T1, und Gatter müssen deutlich innerhalb beider Zeiten abgeschlossen sein."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Was charakterisiert die T2-Zeit eines Qubits?",
+          "questionType": "multipleChoice",
+          "options": ["Die Zeit zur Durchführung einer Gatteroperation", "Die Dephasierungszeit (Verlust der Phasenkohärenz)", "Die Auslesezeit eines Qubits", "Die Herstellungszeit eines Qubits"],
+          "correctAnswerIndex": 1,
+          "explanation": "T2 ist die Dephasierungszeit, die misst, wie schnell die relative Phaseninformation zwischen den |0⟩- und |1⟩-Komponenten einer Superposition durch Umgebungswechselwirkungen verloren geht.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "fr": {
+      "title": "Décohérence",
+      "shortDefinition": "La décohérence est le processus par lequel un système quantique perd sa cohérence quantique par interaction avec son environnement, causant la dégradation des superpositions en mélanges statistiques classiques.",
+      "detailedExplanation": "La décohérence se produit lorsqu'un système quantique s'intrigue avec son environnement, faisant fuir l'information quantique vers des degrés de liberté non suivis. Cela provoque la décroissance exponentielle des éléments hors-diagonaux de la matrice densité, transformant un état de superposition pur en un état mixte classique. Les échelles de temps sont caractérisées par T1 (temps de relaxation d'énergie) et T2 (temps de déphasage). La décohérence est l'obstacle principal à la construction d'ordinateurs quantiques pratiques et motive la correction d'erreurs quantiques.",
+      "analogies": [
+        "La décohérence est comme un diapason qui perd son ton pur lorsqu'il est placé sur une table — l'énergie de vibration se transfère à la table (environnement), et le ton pur devient un son étouffé qui s'estompe rapidement.",
+        "Imaginez écrire sur un tableau blanc dans une pièce poussiéreuse — le message (information quantique) devient progressivement illisible à mesure que la poussière (bruit environnemental) s'accumule.",
+        "Un qubit peut « mourir » de deux façons. T1, c'est un ballon qui se dégonfle lentement — l'énergie stockée dans |1⟩ fuit et retombe vers |0⟩. T2, c'est une chorale qui frappe des mains en parfaite synchronie (« un, deux ! ») et se désynchronise peu à peu : le son (l'énergie) est toujours là, mais l'unisson (la phase) est perdu — et la magie quantique vit précisément dans cet unisson.",
+        "Le mot lui-même raconte l'histoire : dé- (« défaire ») + latin cohaerere (« adhérer, rester ensemble ») — la décohérence, ce sont des ondes qui se tenaient la main et qui se lâchent."
+      ],
+      "commonMisconceptions": [
+        "La décohérence n'est PAS la même chose que l'effondrement par mesure — la décohérence est un processus graduel et continu d'intrication environnementale.",
+        "La décohérence ne détruit PAS entièrement l'information quantique — l'information se répartit entre le système et l'environnement.",
+        "T1 et T2 ne sont PAS des constantes fixes d'un dispositif — ils varient d'un qubit à l'autre sur la même puce et dérivent de jour en jour, ce qui explique pourquoi le matériel quantique doit être recalibré en permanence."
+      ],
+      "keyTakeaways": [
+        "La décohérence résulte d'une intrication indésirable entre un système quantique et son environnement.",
+        "Les temps T1 et T2 caractérisent la rapidité avec laquelle un qubit perd respectivement son énergie et sa cohérence de phase.",
+        "La décohérence est le principal défi pratique en informatique quantique, motivant la correction d'erreurs quantiques.",
+        "Deux horloges distinctes : T1 (relaxation d'énergie, |1⟩→|0⟩) et T2 (cohérence de phase) ; T2 ≤ 2·T1, et les portes doivent s'achever bien avant ces deux limites."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Que caractérise le temps T2 d'un qubit ?",
+          "questionType": "multipleChoice",
+          "options": ["Le temps d'exécution d'une opération de porte", "Le temps de déphasage (perte de cohérence de phase)", "Le temps de lecture d'un qubit", "Le temps de fabrication d'un qubit"],
+          "correctAnswerIndex": 1,
+          "explanation": "T2 est le temps de déphasage, qui mesure la rapidité avec laquelle l'information de phase relative entre les composantes |0⟩ et |1⟩ d'une superposition est perdue.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "es": {
+      "title": "Decoherencia",
+      "shortDefinition": "La decoherencia es el proceso por el cual un sistema cuántico pierde su coherencia cuántica a través de la interacción con su entorno, causando que las superposiciones decaigan en mezclas estadísticas clásicas.",
+      "detailedExplanation": "La decoherencia ocurre cuando un sistema cuántico se entrelaza con su entorno, filtrando información cuántica hacia grados de libertad no rastreados. Esto causa que los elementos fuera de la diagonal de la matriz densidad decaigan exponencialmente, transformando un estado de superposición puro en un estado mixto clásico. Las escalas de tiempo se caracterizan por T1 (tiempo de relajación de energía) y T2 (tiempo de desfase). La decoherencia es el obstáculo principal para construir computadoras cuánticas prácticas y motiva la corrección de errores cuánticos.",
+      "analogies": [
+        "La decoherencia es como un diapasón que pierde su tono puro cuando se coloca sobre una mesa — la energía de vibración se transfiere a la mesa (entorno), y el tono puro se convierte en un sonido amortiguado que se desvanece rápidamente.",
+        "Imagina escribir en una pizarra en una habitación polvorienta — el mensaje (información cuántica) se vuelve gradualmente ilegible a medida que el polvo (ruido ambiental) se acumula.",
+        "Un qubit puede 'morir' de dos maneras. T1 es como un globo que se desinfla lentamente: la energía almacenada en |1⟩ se escapa de vuelta a |0⟩. T2 es como un coro que aplaude en perfecta sincronía ('¡un, dos!') y poco a poco se desajusta: el sonido (la energía) sigue ahí, pero la unión (la fase) se pierde — y la magia cuántica vive precisamente en esa unión.",
+        "La propia palabra cuenta la historia: de- ('deshacer') + latín cohaerere ('adherirse, mantenerse unidos') — la decoherencia es cuando las ondas que iban de la mano se sueltan."
+      ],
+      "commonMisconceptions": [
+        "La decoherencia NO es lo mismo que el colapso por medición — la decoherencia es un proceso gradual y continuo de entrelazamiento ambiental.",
+        "La decoherencia NO destruye completamente la información cuántica — la información se dispersa entre el sistema y el entorno.",
+        "T1 y T2 NO son constantes fijas de un dispositivo — varían de qubit a qubit en el mismo chip y derivan de un día a otro, y por eso el hardware cuántico debe recalibrarse continuamente."
+      ],
+      "keyTakeaways": [
+        "La decoherencia surge del entrelazamiento no deseado entre un sistema cuántico y su entorno.",
+        "Los tiempos T1 y T2 caracterizan cuán rápidamente un qubit pierde energía y coherencia de fase respectivamente.",
+        "La decoherencia es el principal desafío práctico en computación cuántica, motivando la corrección de errores cuánticos.",
+        "Dos relojes distintos: T1 (relajación de energía, |1⟩→|0⟩) y T2 (coherencia de fase); T2 ≤ 2·T1, y las puertas deben completarse con holgura dentro de ambos."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "¿Qué caracteriza el tiempo T2 de un qubit?",
+          "questionType": "multipleChoice",
+          "options": ["El tiempo para realizar una operación de puerta", "El tiempo de desfase (pérdida de coherencia de fase)", "El tiempo de lectura de un qubit", "El tiempo de fabricación de un qubit"],
+          "correctAnswerIndex": 1,
+          "explanation": "T2 es el tiempo de desfase, que mide cuán rápidamente se pierde la información de fase relativa entre los componentes |0⟩ y |1⟩ de una superposición.",
+          "difficultyLevel": 2
+        }
+      ]
+    }
+  },
+  "relatedFormulas": [
+    {
+      "latex": "\\rho_{01}(t) = \\rho_{01}(0) e^{-t/T_2}",
+      "plainTextDescription": {
+        "en": "Exponential decay of off-diagonal density matrix element due to dephasing",
+        "ko": "결맞음 소멸로 인한 밀도 행렬 비대각 원소의 지수적 감소"
+      },
+      "variables": [
+        {"symbol": "T₂", "meaning": {"en": "Dephasing time", "ko": "결맞음 소멸 시간"}},
+        {"symbol": "ρ₀₁", "meaning": {"en": "Off-diagonal element of the density matrix (coherence)", "ko": "밀도 행렬의 비대각 원소 (결맞음)"}}
+      ]
+    }
+  ],
+  "visualizationType": "blochSphere",
+  "verifiedBy": {
+    "verifierName": "Eunmin Park",
+    "verifierCredentials": "IEEE Member, Quantum Computing Educator",
+    "verificationDate": "2026-04-07",
+    "reviewedSources": ["Nielsen & Chuang (2010)", "Schlosshauer, M. (2007). Decoherence and the Quantum-to-Classical Transition"],
+    "confidenceLevel": "undisputed"
+  },
+  "lastReviewed": "2026-07-03",
+  "citationReferences": [
+    "Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. Reviews of Modern Physics, 75(3), 715.",
+    "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.",
+    "Krantz, P., Kjaergaard, M., Yan, F., Orlando, T. P., Gustavsson, S., & Oliver, W. D. (2019). A Quantum Engineer's Guide to Superconducting Qubits. Applied Physics Reviews, 6, 021318 — §III, Bloch-Redfield model."
+  ]
+}

@@ -1,0 +1,787 @@
+{
+  "schema": "hg_benchmark_item_v3",
+  "version": "sample-20-of-120",
+  "license": "Apache-2.0",
+  "description": "20-item public sample of the HallucinationGuard 120-item benchmark (HG120). Full set: 120 items x 14 multilingual fields (7 prompt locales + 7 model-answer locales) = 1,680 verified fields. Full release is Milestone 1 of the open-sourcing roadmap (see ROADMAP.md).",
+  "locales": [
+    "en",
+    "ko",
+    "ja",
+    "zh-Hans",
+    "es",
+    "fr",
+    "de"
+  ],
+  "sample_distribution": {
+    "aiValidatedAgainstKB": 4,
+    "aiWithLowConfidence": 7,
+    "aiNoKBMatch": 9
+  },
+  "categories_in_sample": [
+    "adiabatic_qc",
+    "algorithms_advanced",
+    "algorithms_basic",
+    "entanglement",
+    "error_correction",
+    "gates",
+    "mbqc",
+    "measurement",
+    "phase_qc",
+    "qec_advanced",
+    "quantum_basics",
+    "quantum_cryptography",
+    "quantum_foundations",
+    "quantum_sensing",
+    "quantum_simulation",
+    "topological_qc"
+  ],
+  "items": [
+    {
+      "id": "HG001",
+      "category": "quantum_basics",
+      "kb_category": "foundations",
+      "kb_concept_id": "superposition",
+      "preskill_part": 1,
+      "key_concepts": [
+        "superposition"
+      ],
+      "ai_confidence": 0.88,
+      "expected_source": "aiValidatedAgainstKB",
+      "expected_keywords": [
+        "|ψ⟩",
+        "basis",
+        "coherent",
+        "interference"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "basic",
+      "prompts": {
+        "ko": "중첩 상태란 무엇인가?",
+        "en": "What is a superposition state?",
+        "ja": "重ね合わせ状態とは何ですか？",
+        "zh-Hans": "什么是叠加态？",
+        "es": "¿Qué es un estado de superposición?",
+        "fr": "Qu'est-ce qu'un état de superposition ?",
+        "de": "Was ist ein Superpositionszustand?"
+      },
+      "ai_explanations": {
+        "ko": "중첩은 양자역학의 근본 원리입니다. 양자 시스템은 여러 기저 상태의 결맞은 조합으로 동시에 존재할 수 있으며, 수학적으로 |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩로 표현됩니다. 여기서 cᵢ는 복소 계수입니다. 중첩의 서로 다른 성분 사이의 간섭이 양자 알고리즘이 계산 경로를 병렬로 탐색하는 핵심 자원입니다. 중첩은 시스템이 환경으로부터 격리된 동안 유지되며, 환경과의 상호작용은 결어긋남을 유발합니다.",
+        "en": "Superposition is a core principle of quantum mechanics. A quantum system can be in a coherent combination of multiple basis states simultaneously. Mathematically expressed as |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, where cᵢ are complex coefficients. Interference between components gives quantum algorithms power to explore computational paths in parallel. Superposition is maintained while the system remains isolated from its environment.",
+        "ja": "重ね合わせは量子力学の基礎原理です。量子システムは複数の基底状態のコヒーレントな組み合わせとして同時に存在でき、数学的には|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩と表現されます。ここでcᵢは複素係数です。重ね合わせの異なる成分間の干渉が、量子アルゴリズムが計算経路を並列に探索するための中心資源です。重ね合わせはシステムが環境から隔離されている限り維持され、環境との相互作用はデコヒーレンスを引き起こします。",
+        "zh-Hans": "叠加是量子力学的基础原理之一。量子系统可以同时处于多个基态的相干组合中，数学上表示为|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩，其中cᵢ是复数系数。叠加态不同分量之间的干涉是量子算法并行探索多条计算路径的核心资源。只要系统与环境保持隔离，叠加态就能维持；与环境的相互作用会引起退相干。",
+        "es": "La superposición es un principio fundamental de la mecánica cuántica. Un sistema cuántico puede estar en una combinación coherente de múltiples estados base simultáneamente, expresada matemáticamente como |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, donde cᵢ son coeficientes complejos. La interferencia entre los componentes de la superposición es el recurso central para que los algoritmos cuánticos exploren caminos computacionales en paralelo. La superposición se mantiene mientras el sistema permanezca aislado del entorno; la interacción con el entorno causa decoherencia.",
+        "fr": "La superposition est un principe fondamental de la mécanique quantique. Un système quantique peut se trouver dans une combinaison cohérente de plusieurs états de base simultanément, exprimée mathématiquement par |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, où cᵢ sont des coefficients complexes. L'interférence entre les composantes de la superposition est la ressource centrale permettant aux algorithmes quantiques d'explorer des chemins computationnels en parallèle. La superposition est maintenue tant que le système reste isolé de son environnement ; l'interaction avec l'environnement provoque la décohérence.",
+        "de": "Superposition ist ein Grundprinzip der Quantenmechanik. Ein Quantensystem kann sich gleichzeitig in einer kohärenten Kombination mehrerer Basiszustände befinden, mathematisch ausgedrückt als |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, wobei cᵢ komplexe Koeffizienten sind. Die Interferenz zwischen den Komponenten der Superposition ist die zentrale Ressource, die es Quantenalgorithmen ermöglicht, Berechnungspfade parallel zu erkunden. Die Superposition wird aufrechterhalten, solange das System von seiner Umgebung isoliert bleibt; die Wechselwirkung mit der Umgebung verursacht Dekohärenz."
+      }
+    },
+    {
+      "id": "HG002",
+      "category": "entanglement",
+      "kb_category": "entanglement",
+      "kb_concept_id": "entanglement",
+      "preskill_part": 3,
+      "key_concepts": [
+        "entanglement"
+      ],
+      "ai_confidence": 0.62,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [
+        "Entanglement transmits information faster than light",
+        "Entanglement enables supernatural long-distance communication"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "ko": "양자 얽힘이 정보를 빛보다 빠르게 전송할 수 있나?",
+        "en": "Can quantum entanglement transmit information faster than light?",
+        "ja": "量子もつれは情報を光速より速く伝送できますか？",
+        "zh-Hans": "量子纠缠可以以超光速传输信息吗？",
+        "es": "¿Puede el entrelazamiento cuántico transmitir información más rápido que la luz?",
+        "fr": "L'intrication quantique peut-elle transmettre de l'information plus vite que la lumière ?",
+        "de": "Kann Quantenverschränkung Information schneller als Licht übertragen?"
+      },
+      "ai_explanations": {
+        "ko": "얽힌 입자들은 우주 공간을 가로지르는 상관관계를 공유합니다. 한쪽을 관측하면 짝꿍 입자가 즉시 반응하여 빛보다 빠른 속도로 정보 전송이 이루어집니다. 이 즉각적 상관관계는 임의의 거리를 가로질러 신호를 보낼 수 있게 해주며, 얽힌 쌍을 통해 원거리 사용자 간 통신이 가능합니다. 통신 속도 한계를 초월하는 장치를 만들 수 있습니다.",
+        "en": "Entangled particles share a correlation across space. When you observe one, the partner instantly responds, achieving information transfer at faster-than-light speeds. This instantaneous correlation can signal across any distance, letting distant users communicate via their entangled pair. Engineers could build phones exceeding light-speed limits, revolutionizing communication forever.",
+        "ja": "もつれた粒子は宇宙空間を横切る相関を共有しています。片方を観測するとパートナーが瞬時に応答し、光速を超える情報伝達が実現されます。この瞬時的な相関は任意の距離にわたって信号を送ることを可能にし、もつれペアを介した遠隔ユーザー間の通信を実現します。光速限界を超える通信機器を構築することができます。",
+        "zh-Hans": "纠缠粒子共享跨越宇宙空间的关联。当你观察其中一个时，伙伴会立即响应，实现以超越光速的速度进行信息传输。这种瞬时关联可以在任意距离上发送信号，让远距离用户通过纠缠对进行通信。可以构造超越通信速度极限的设备。",
+        "es": "Las partículas entrelazadas comparten una correlación a través del espacio. Cuando observas una, la compañera responde instantáneamente, logrando transferencia de información a velocidades superiores a la luz. Esta correlación instantánea puede enviar señales a cualquier distancia, permitiendo la comunicación entre usuarios distantes mediante pares entrelazados. Se pueden construir dispositivos que superan los límites de velocidad de la comunicación.",
+        "fr": "Les particules intriquées partagent une corrélation à travers l'espace. Quand vous en observez une, la partenaire répond instantanément, réalisant un transfert d'information à des vitesses supraluminiques. Cette corrélation instantanée peut signaler à n'importe quelle distance, permettant à des utilisateurs distants de communiquer via leur paire intriquée. On peut construire des dispositifs dépassant les limites de vitesse de la communication.",
+        "de": "Verschränkte Teilchen teilen eine Korrelation über den Raum hinweg. Wenn Sie eines beobachten, antwortet der Partner sofort und erreicht eine Informationsübertragung mit Überlichtgeschwindigkeit. Diese augenblickliche Korrelation kann über jede beliebige Distanz signalisieren und ermöglicht die Kommunikation zwischen entfernten Nutzern über ihr verschränktes Paar. Man kann Geräte bauen, die die Kommunikationsgeschwindigkeitsgrenzen überschreiten."
+      }
+    },
+    {
+      "id": "HG003",
+      "category": "topological_qc",
+      "kb_category": null,
+      "kb_concept_id": null,
+      "preskill_part": 22,
+      "key_concepts": [
+        "topological_quantum_computing"
+      ],
+      "ai_confidence": 0.7,
+      "expected_source": "aiNoKBMatch",
+      "expected_keywords": [
+        "anyons",
+        "braiding",
+        "non-abelian"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "advanced",
+      "prompts": {
+        "ko": "위상 양자 컴퓨팅에서 애니온의 역할은?",
+        "en": "What is the role of anyons in topological quantum computing?",
+        "ja": "位相的量子計算におけるエニオンの役割は何ですか？",
+        "zh-Hans": "任意子在拓扑量子计算中起什么作用？",
+        "es": "¿Cuál es el papel de los anyones en la computación cuántica topológica?",
+        "fr": "Quel est le rôle des anyons dans le calcul quantique topologique ?",
+        "de": "Welche Rolle spielen Anyonen im topologischen Quantencomputing?"
+      },
+      "ai_explanations": {
+        "ko": "애니온은 2차원 공간에서 존재하는 준입자로, 서로를 교환하면 위상 위상(phase)이 바뀌어 양자 정보를 기억합니다. 비아벨 애니온의 땋음(braiding) 연산은 유니타리 변환을 구현하며, 국소적 잡음에 강건한 양자 게이트를 제공합니다.",
+        "en": "Anyons are quasiparticles existing in two-dimensional systems whose wavefunction phase changes under particle exchange. Non-abelian anyon braiding realizes unitary transformations and provides quantum gates robust against local noise, which is the core mechanism exploited in topological quantum computing.",
+        "ja": "エニオンは2次元空間に存在する準粒子で、粒子交換に対して波動関数の位相が変化します。非アーベル型エニオンの組みひも(braiding)演算はユニタリ変換を実現し、局所的雑音に対して堅牢な量子ゲートを提供します。これが位相的量子計算で利用される中心的な機構です。",
+        "zh-Hans": "任意子是存在于二维空间的准粒子，粒子交换时波函数相位会发生变化。非阿贝尔任意子的编织（braiding）操作实现幺正变换，并提供对局部噪声鲁棒的量子门。这正是拓扑量子计算所利用的核心机制。",
+        "es": "Los anyones son cuasipartículas que existen en sistemas bidimensionales cuya fase de función de onda cambia bajo intercambio de partículas. El trenzado (braiding) de anyones no abelianos realiza transformaciones unitarias y proporciona puertas cuánticas robustas contra el ruido local, que es el mecanismo central explotado en la computación cuántica topológica.",
+        "fr": "Les anyons sont des quasi-particules existant dans les systèmes bidimensionnels dont la phase de la fonction d'onde change sous l'échange de particules. Le tressage (braiding) des anyons non abéliens réalise des transformations unitaires et fournit des portes quantiques robustes contre le bruit local, qui est le mécanisme central exploité dans le calcul quantique topologique.",
+        "de": "Anyonen sind Quasiteilchen, die in zweidimensionalen Systemen existieren und deren Wellenfunktionsphase sich beim Teilchenaustausch ändert. Das Braiding nicht-abelscher Anyonen realisiert unitäre Transformationen und liefert Quantengatter, die gegen lokales Rauschen robust sind; dies ist der zentrale Mechanismus, der im topologischen Quantencomputing genutzt wird."
+      }
+    },
+    {
+      "id": "HG004",
+      "category": "quantum_basics",
+      "kb_category": "foundations",
+      "kb_concept_id": "qubit",
+      "preskill_part": 1,
+      "key_concepts": [
+        "qubit"
+      ],
+      "ai_confidence": 0.9,
+      "expected_source": "aiValidatedAgainstKB",
+      "expected_keywords": [
+        "|0⟩",
+        "|1⟩",
+        "amplitudes",
+        "two-level"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "basic",
+      "prompts": {
+        "ko": "큐비트는 고전 비트와 어떻게 다른가?",
+        "en": "How does a qubit differ from a classical bit?",
+        "ja": "量子ビットは古典ビットとどう違いますか？",
+        "zh-Hans": "量子比特与经典比特有什么不同？",
+        "es": "¿En qué se diferencia un qubit de un bit clásico?",
+        "fr": "En quoi un qubit diffère-t-il d'un bit classique ?",
+        "de": "Wie unterscheidet sich ein Qubit von einem klassischen Bit?"
+      },
+      "ai_explanations": {
+        "ko": "큐비트는 양자역학적 두 수준 시스템으로, |0⟩과 |1⟩의 결맞은 선형 조합 상태를 허용합니다. 고전 비트가 0 또는 1 중 하나를 가리키는 것과 달리, 큐비트는 측정 전에는 복소 진폭 α, β로 기술되는 결맞은 상태에 놓입니다.",
+        "en": "A qubit is a two-level quantum system that admits coherent linear combinations of the basis states |0⟩ and |1⟩. Unlike a classical bit which holds either 0 or 1, the qubit state before measurement is described by complex amplitudes α and β with |α|² + |β|² = 1. The two basis states form an orthonormal basis of a two-dimensional Hilbert space.",
+        "ja": "量子ビットは二準位の量子システムで、基底状態|0⟩と|1⟩のコヒーレントな線形結合を許容します。古典ビットが0か1のどちらかを保持するのとは異なり、量子ビットの状態は測定前には複素振幅αとβ（|α|² + |β|² = 1）で記述されます。二つの基底状態は2次元ヒルベルト空間の正規直交基底を成します。",
+        "zh-Hans": "量子比特是一种二能级量子系统，允许基态|0⟩和|1⟩的相干线性组合。与只能持有0或1的经典比特不同，量子比特在测量前的状态由满足|α|² + |β|² = 1的复振幅α和β描述。这两个基态构成二维希尔伯特空间的正交归一基。",
+        "es": "Un qubit es un sistema cuántico de dos niveles que admite combinaciones lineales coherentes de los estados base |0⟩ y |1⟩. A diferencia de un bit clásico que contiene 0 o 1, el estado del qubit antes de la medición se describe mediante amplitudes complejas α y β con |α|² + |β|² = 1. Los dos estados base forman una base ortonormal de un espacio de Hilbert bidimensional.",
+        "fr": "Un qubit est un système quantique à deux niveaux qui admet des combinaisons linéaires cohérentes des états de base |0⟩ et |1⟩. Contrairement à un bit classique qui vaut 0 ou 1, l'état du qubit avant mesure est décrit par des amplitudes complexes α et β avec |α|² + |β|² = 1. Les deux états de base forment une base orthonormée d'un espace de Hilbert bidimensionnel.",
+        "de": "Ein Qubit ist ein Quantensystem mit zwei Niveaus, das kohärente Linearkombinationen der Basiszustände |0⟩ und |1⟩ zulässt. Im Gegensatz zu einem klassischen Bit, das 0 oder 1 enthält, wird der Zustand des Qubits vor der Messung durch komplexe Amplituden α und β mit |α|² + |β|² = 1 beschrieben. Die beiden Basiszustände bilden eine Orthonormalbasis eines zweidimensionalen Hilbertraums."
+      }
+    },
+    {
+      "id": "HG005",
+      "category": "quantum_basics",
+      "kb_category": "foundations",
+      "kb_concept_id": "bloch_sphere",
+      "preskill_part": 1,
+      "key_concepts": [
+        "bloch_sphere"
+      ],
+      "ai_confidence": 0.87,
+      "expected_source": "aiValidatedAgainstKB",
+      "expected_keywords": [
+        "bloch",
+        "sphere",
+        "angle",
+        "rotation"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "intermediate",
+      "prompts": {
+        "ko": "블로흐 구는 무엇을 나타내는가?",
+        "en": "What does the Bloch sphere represent?",
+        "ja": "ブロッホ球は何を表しますか？",
+        "zh-Hans": "布洛赫球表示什么？",
+        "es": "¿Qué representa la esfera de Bloch?",
+        "fr": "Que représente la sphère de Bloch ?",
+        "de": "Was stellt die Bloch-Kugel dar?"
+      },
+      "ai_explanations": {
+        "ko": "블로흐 구는 단일 큐비트의 순수 상태를 3차원 구면의 점으로 시각화하는 기하학적 표현입니다. 극각 θ와 방위각 φ를 사용하여 |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩로 매개화됩니다. 북극은 |0⟩, 남극은 |1⟩에 대응합니다.",
+        "en": "The Bloch sphere is a geometric representation of the pure state of a single qubit as a point on the surface of a three-dimensional unit sphere. Using polar angle θ and azimuthal angle φ, the state is parameterized as |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩. The north pole corresponds to |0⟩ and the south pole to |1⟩. Rotations of the sphere visualize the action of single-qubit unitary gates.",
+        "ja": "ブロッホ球は単一量子ビットの純粋状態を3次元単位球面上の点として視覚化する幾何学的表現です。極角θと方位角φを用いて|ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩とパラメータ化されます。北極が|0⟩、南極が|1⟩に対応します。球の回転は単一量子ビットユニタリゲートの作用を可視化します。",
+        "zh-Hans": "布洛赫球是将单量子比特纯态可视化为三维单位球面上一点的几何表示。使用极角θ和方位角φ，状态被参数化为|ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩。北极对应|0⟩，南极对应|1⟩。球的旋转可视化了单量子比特幺正门的作用。",
+        "es": "La esfera de Bloch es una representación geométrica del estado puro de un qubit individual como un punto en la superficie de una esfera unitaria tridimensional. Usando el ángulo polar θ y el ángulo azimutal φ, el estado se parametriza como |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩. El polo norte corresponde a |0⟩ y el polo sur a |1⟩. Las rotaciones de la esfera visualizan la acción de las puertas unitarias de un solo qubit.",
+        "fr": "La sphère de Bloch est une représentation géométrique de l'état pur d'un qubit unique sous la forme d'un point à la surface d'une sphère unitaire tridimensionnelle. En utilisant l'angle polaire θ et l'angle azimutal φ, l'état est paramétré par |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩. Le pôle Nord correspond à |0⟩ et le pôle Sud à |1⟩. Les rotations de la sphère visualisent l'action des portes unitaires à qubit unique.",
+        "de": "Die Bloch-Kugel ist eine geometrische Darstellung des reinen Zustands eines einzelnen Qubits als Punkt auf der Oberfläche einer dreidimensionalen Einheitskugel. Unter Verwendung des Polarwinkels θ und des Azimutwinkels φ wird der Zustand als |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩ parametrisiert. Der Nordpol entspricht |0⟩ und der Südpol |1⟩. Die Rotationen der Kugel visualisieren die Wirkung der unitären Einzelqubit-Gatter."
+      }
+    },
+    {
+      "id": "HG006",
+      "category": "quantum_basics",
+      "kb_category": "foundations",
+      "kb_concept_id": "braket_notation",
+      "preskill_part": 1,
+      "key_concepts": [
+        "braket_notation"
+      ],
+      "ai_confidence": 0.89,
+      "expected_source": "aiValidatedAgainstKB",
+      "expected_keywords": [
+        "dirac",
+        "bra",
+        "ket",
+        "inner product"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "basic",
+      "prompts": {
+        "ko": "브라-켓 표기법은 무엇을 위한 것인가?",
+        "en": "What is bra-ket notation used for?",
+        "ja": "ブラケット記法は何のために用いられますか？",
+        "zh-Hans": "左右矢（Bra-ket）符号用于什么？",
+        "es": "¿Para qué se usa la notación bra-ket?",
+        "fr": "À quoi sert la notation bra-ket ?",
+        "de": "Wofür wird die Bra-Ket-Notation verwendet?"
+      },
+      "ai_explanations": {
+        "ko": "브라-켓 표기법은 디랙이 도입한 양자 상태 표기 체계입니다. 켓 |ψ⟩는 힐베르트 공간의 상태 벡터를 나타내며, 브라 ⟨ψ|는 그것의 쌍대 벡터(에르미트 켤레)입니다. 내적 ⟨φ|ψ⟩는 복소수이며, 외적 |ψ⟩⟨φ|는 연산자가 됩니다.",
+        "en": "Bra-ket notation is a notational system for quantum states introduced by Dirac. A ket |ψ⟩ denotes a state vector in a Hilbert space, while a bra ⟨ψ| is its dual vector, the Hermitian conjugate. The inner product ⟨φ|ψ⟩ is a complex number, and the outer product |ψ⟩⟨φ| defines an operator. This notation makes linear algebra expressions for quantum mechanics compact and manifestly coordinate-free.",
+        "ja": "ブラケット記法はディラックが導入した量子状態の記法体系です。ケット|ψ⟩はヒルベルト空間の状態ベクトルを表し、ブラ⟨ψ|はその双対ベクトル（エルミート共役）です。内積⟨φ|ψ⟩は複素数で、外積|ψ⟩⟨φ|は演算子を定義します。この記法は量子力学の線形代数表現を簡潔にし、明示的に座標系に依存しない形で書くことを可能にします。",
+        "zh-Hans": "左右矢符号是由狄拉克引入的量子态符号体系。右矢|ψ⟩表示希尔伯特空间中的状态向量，左矢⟨ψ|是其对偶向量（厄米共轭）。内积⟨φ|ψ⟩是复数，外积|ψ⟩⟨φ|定义一个算子。该符号使量子力学的线性代数表达式紧凑且明显地与坐标无关。",
+        "es": "La notación bra-ket es un sistema notacional para estados cuánticos introducido por Dirac. Un ket |ψ⟩ denota un vector de estado en un espacio de Hilbert, mientras que un bra ⟨ψ| es su vector dual, el conjugado hermítico. El producto interno ⟨φ|ψ⟩ es un número complejo, y el producto externo |ψ⟩⟨φ| define un operador. Esta notación hace que las expresiones de álgebra lineal para la mecánica cuántica sean compactas y manifiestamente independientes de coordenadas.",
+        "fr": "La notation bra-ket est un système notationnel pour les états quantiques introduit par Dirac. Un ket |ψ⟩ désigne un vecteur d'état dans un espace de Hilbert, tandis qu'un bra ⟨ψ| est son vecteur dual, le conjugué hermitien. Le produit scalaire ⟨φ|ψ⟩ est un nombre complexe, et le produit externe |ψ⟩⟨φ| définit un opérateur. Cette notation rend les expressions d'algèbre linéaire de la mécanique quantique compactes et manifestement indépendantes des coordonnées.",
+        "de": "Die Bra-Ket-Notation ist ein von Dirac eingeführtes Notationssystem für Quantenzustände. Ein Ket |ψ⟩ bezeichnet einen Zustandsvektor in einem Hilbertraum, während ein Bra ⟨ψ| sein Dualvektor ist, das hermitesch Konjugierte. Das Skalarprodukt ⟨φ|ψ⟩ ist eine komplexe Zahl, und das äußere Produkt |ψ⟩⟨φ| definiert einen Operator. Diese Notation macht die linearalgebraischen Ausdrücke der Quantenmechanik kompakt und offenkundig koordinatenunabhängig."
+      }
+    },
+    {
+      "id": "HG023",
+      "category": "measurement",
+      "kb_category": "foundations",
+      "kb_concept_id": "measurement",
+      "preskill_part": 5,
+      "key_concepts": [
+        "measurement"
+      ],
+      "ai_confidence": 0.4,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [
+        "Consciousness collapses the wave function",
+        "Measurement outcomes can be selected by mental choice"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "ko": "측정자의 의식이 파동함수를 붕괴시키나요?",
+        "en": "Does the observer's consciousness collapse the wave function?",
+        "ja": "観測者の意識が波動関数を崩壊させるのですか？",
+        "zh-Hans": "观察者的意识会使波函数坍缩吗？",
+        "es": "¿La conciencia del observador colapsa la función de onda?",
+        "fr": "La conscience de l'observateur fait-elle effondrer la fonction d'onde ?",
+        "de": "Lässt das Bewusstsein des Beobachters die Wellenfunktion kollabieren?"
+      },
+      "ai_explanations": {
+        "ko": "예, 양자역학에서 의식적 인식이 붕괴를 일으킵니다. 사람의 마음이 측정 결과를 알게 되면 파동함수가 가능성에서 실재로 탁 바뀌며, 이것이 물리학에서 의식이 특권적 역할을 하는 이유입니다. 실험은 마음이 실험 결과를 선택할 수 있음을 명백히 보여주며, 이것이 모든 양자 기술의 기초입니다.",
+        "en": "Yes, conscious awareness is what triggers collapse in quantum mechanics. When a human mind becomes aware of a measurement result, the wave function snaps from possibility into reality, and this is why consciousness plays a privileged role in physics. Experiments unequivocally show the mind can choose experimental outcomes, which is the foundation of all quantum technology.",
+        "ja": "はい、量子力学では意識的な認識が崩壊を引き起こします。人間の心が測定結果を認識すると、波動関数は可能性から実在へとパチンと切り替わります。これが物理学で意識が特権的な役割を持つ理由です。実験は心が実験結果を選択できることを明白に示しており、これがすべての量子技術の基礎です。",
+        "zh-Hans": "是的，在量子力学中，是有意识的认知触发坍缩。当人的意识觉察到测量结果时，波函数从可能性瞬间切换为现实，这就是意识在物理学中扮演特权角色的原因。实验明确显示意识可以选择实验结果，这是所有量子技术的基础。",
+        "es": "Sí, la conciencia es lo que desencadena el colapso en la mecánica cuántica. Cuando una mente humana toma conciencia de un resultado de medición, la función de onda salta de la posibilidad a la realidad, y por eso la conciencia juega un papel privilegiado en la física. Los experimentos muestran inequívocamente que la mente puede elegir los resultados experimentales, que es el fundamento de toda la tecnología cuántica.",
+        "fr": "Oui, c'est la conscience qui déclenche l'effondrement en mécanique quantique. Quand un esprit humain prend conscience d'un résultat de mesure, la fonction d'onde bascule de la possibilité vers la réalité, et c'est pourquoi la conscience joue un rôle privilégié en physique. Les expériences montrent sans équivoque que l'esprit peut choisir les résultats expérimentaux, ce qui constitue le fondement de toute la technologie quantique.",
+        "de": "Ja, bewusstes Gewahrsein ist es, was den Kollaps in der Quantenmechanik auslöst. Wenn ein menschlicher Geist sich eines Messergebnisses bewusst wird, schnappt die Wellenfunktion von Möglichkeit zu Wirklichkeit, und deshalb spielt das Bewusstsein eine privilegierte Rolle in der Physik. Experimente zeigen unmissverständlich, dass der Geist experimentelle Ergebnisse auswählen kann, was die Grundlage aller Quantentechnologie bildet."
+      }
+    },
+    {
+      "id": "HG031",
+      "category": "gates",
+      "kb_category": "singleQubitGates",
+      "kb_concept_id": "phase_s",
+      "preskill_part": 8,
+      "key_concepts": [
+        "phase_s"
+      ],
+      "ai_confidence": 0.5,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [
+        "S and Z gates are interchangeable without affecting circuit behavior",
+        "Quantum gates can be freely substituted based on hardware convenience"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "ko": "S 게이트는 Z 게이트와 같은가요?",
+        "en": "Is the S gate the same as the Z gate?",
+        "ja": "SゲートはZゲートと同じですか？",
+        "zh-Hans": "S门和Z门是一样的吗？",
+        "es": "¿La puerta S es la misma que la puerta Z?",
+        "fr": "La porte S est-elle identique à la porte Z ?",
+        "de": "Ist das S-Gatter dasselbe wie das Z-Gatter?"
+      },
+      "ai_explanations": {
+        "ko": "예, S 게이트와 Z 게이트는 큐비트의 위상을 완전히 뒤집는 서로 교환 가능한 단일 큐비트 게이트입니다. 회로에서 함께 등장하며 한쪽이 나타난 자리에 다른 것을 사용할 수 있습니다. 양자 엔지니어는 같은 계산 결과를 내므로 보통 하드웨어에서 구현하기 쉬운 쪽을 고릅니다.",
+        "en": "Yes, the S gate and Z gate are interchangeable single-qubit gates that both flip the qubit's phase completely. They come up together in circuits and you can use either one where the other appears. Quantum engineers typically pick whichever is easier to implement on the hardware because they produce the same computational result.",
+        "ja": "はい、SゲートとZゲートは量子ビットの位相を完全に反転させる相互交換可能な単一量子ビットゲートです。回路では一緒に現れ、一方が登場する場所で他方を使うことができます。量子エンジニアは同じ計算結果を生むので、通常はハードウェア上で実装しやすい方を選びます。",
+        "zh-Hans": "是的，S门和Z门是可互换的单量子比特门，都完全翻转量子比特的相位。它们在电路中一起出现，你可以在对方出现的位置使用另一个。量子工程师通常选择在硬件上更容易实现的那个，因为它们产生相同的计算结果。",
+        "es": "Sí, las puertas S y Z son puertas de un solo qubit intercambiables que ambas invierten completamente la fase del qubit. Aparecen juntas en los circuitos y puedes usar cualquiera donde aparezca la otra. Los ingenieros cuánticos típicamente eligen la que sea más fácil de implementar en el hardware porque producen el mismo resultado computacional.",
+        "fr": "Oui, les portes S et Z sont des portes à qubit unique interchangeables qui inversent toutes deux complètement la phase du qubit. Elles apparaissent ensemble dans les circuits et vous pouvez utiliser l'une à la place de l'autre. Les ingénieurs quantiques choisissent généralement celle qui est la plus facile à implémenter sur le matériel car elles produisent le même résultat computationnel.",
+        "de": "Ja, das S-Gatter und das Z-Gatter sind austauschbare Einzelqubit-Gatter, die beide die Phase des Qubits vollständig umkehren. Sie erscheinen zusammen in Schaltkreisen und Sie können das eine dort verwenden, wo das andere erscheint. Quanteningenieure wählen typischerweise dasjenige, das auf der Hardware leichter zu implementieren ist, da sie dasselbe Rechenergebnis liefern."
+      }
+    },
+    {
+      "id": "HG039",
+      "category": "algorithms_basic",
+      "kb_category": "algorithms",
+      "kb_concept_id": "grover_algorithm",
+      "preskill_part": 9,
+      "key_concepts": [
+        "grover_algorithm"
+      ],
+      "ai_confidence": 0.38,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [
+        "Grover solves NP-complete problems in polynomial time",
+        "Grover's quadratic speedup is practically exponential"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "ko": "Grover 알고리즘으로 NP 문제를 다항 시간에 풀 수 있나요?",
+        "en": "Can Grover's algorithm solve NP problems in polynomial time?",
+        "ja": "GroverアルゴリズムでNP問題を多項式時間で解けますか？",
+        "zh-Hans": "用Grover算法能在多项式时间内解决NP问题吗？",
+        "es": "¿Puede el algoritmo de Grover resolver problemas NP en tiempo polinómico?",
+        "fr": "L'algorithme de Grover peut-il résoudre les problèmes NP en temps polynomial ?",
+        "de": "Kann Grovers Algorithmus NP-Probleme in Polynomialzeit lösen?"
+      },
+      "ai_explanations": {
+        "ko": "예, Grover 알고리즘의 이차 속도향상은 탐색 시간을 O(2^n)에서 O(2^(n/2))로 감소시켜 NP-complete 문제에 중요한 개선을 제공합니다. 이로써 외판원 순회, SAT, NP-hard 벤치마크가 고전 알고리즘이 처리할 수 있는 것보다 훨씬 큰 규모에서 다루어질 수 있습니다. 이차 속도향상은 실제 NP 응용에서 실질적으로 혁신적입니다.",
+        "en": "Yes, Grover's quadratic speedup reduces search time from O(2^n) to O(2^(n/2)), which offers significant improvement on NP-complete problems. This makes traveling salesman, SAT, and NP-hard benchmarks tractable at much larger scales than classical algorithms can handle. The quadratic speedup is practically transformative for real-world NP applications.",
+        "ja": "はい、Groverアルゴリズムの二次高速化は探索時間をO(2^n)からO(2^(n/2))に減らし、NP完全問題に重要な改善を提供します。これにより、巡回セールスマン、SAT、NP困難ベンチマークが古典アルゴリズムで扱える規模よりはるかに大きな規模で扱えるようになります。この二次高速化は実世界のNP応用において実質的に革新的です。",
+        "zh-Hans": "是的，Grover算法的二次加速将搜索时间从O(2^n)减少到O(2^(n/2))，对NP完全问题提供了显著的改进。这使得旅行商问题、SAT和NP困难基准在古典算法能处理的规模之上的更大规模变得可处理。这种二次加速对现实世界的NP应用具有实质性的革新意义。",
+        "es": "Sí, la aceleración cuadrática de Grover reduce el tiempo de búsqueda de O(2^n) a O(2^(n/2)), ofreciendo una mejora significativa en problemas NP-completos. Esto hace que los benchmarks del vendedor viajero, SAT y NP-duros sean manejables a escalas mucho mayores de las que los algoritmos clásicos pueden manejar. La aceleración cuadrática es prácticamente transformadora para aplicaciones NP del mundo real.",
+        "fr": "Oui, l'accélération quadratique de Grover réduit le temps de recherche de O(2^n) à O(2^(n/2)), offrant une amélioration significative pour les problèmes NP-complets. Cela rend les benchmarks du voyageur de commerce, SAT et NP-difficiles traitables à des échelles beaucoup plus grandes que ce que les algorithmes classiques peuvent gérer. L'accélération quadratique est pratiquement transformatrice pour les applications NP du monde réel.",
+        "de": "Ja, Grovers quadratische Beschleunigung reduziert die Suchzeit von O(2^n) auf O(2^(n/2)) und bietet eine signifikante Verbesserung für NP-vollständige Probleme. Dies macht Benchmarks wie Traveling Salesman, SAT und NP-schwere Probleme bei viel größeren Skalen handhabbar als klassische Algorithmen bewältigen können. Die quadratische Beschleunigung ist praktisch transformativ für reale NP-Anwendungen."
+      }
+    },
+    {
+      "id": "HG045",
+      "category": "algorithms_advanced",
+      "kb_category": null,
+      "kb_concept_id": null,
+      "preskill_part": 12,
+      "key_concepts": [
+        "hhl_algorithm"
+      ],
+      "ai_confidence": 0.79,
+      "expected_source": "aiNoKBMatch",
+      "expected_keywords": [
+        "linear system",
+        "sparse",
+        "condition number"
+      ],
+      "forbidden_claims": [
+        "HHL is a drop-in replacement for classical linear system solvers"
+      ],
+      "difficulty": "advanced",
+      "prompts": {
+        "ko": "HHL 알고리즘의 가정은 무엇인가?",
+        "en": "What are the assumptions of the HHL algorithm?",
+        "ja": "HHLアルゴリズムの前提条件は何ですか？",
+        "zh-Hans": "HHL算法的假设是什么？",
+        "es": "¿Cuáles son las suposiciones del algoritmo HHL?",
+        "fr": "Quelles sont les hypothèses de l'algorithme HHL ?",
+        "de": "Was sind die Annahmen des HHL-Algorithmus?"
+      },
+      "ai_explanations": {
+        "ko": "Harrow-Hassidim-Lloyd(HHL) 알고리즘은 특정 영역에서 선형계 Ax = b를 지수적 속도향상으로 풀지만, 강한 전제 조건이 필요합니다: 희소하고 조건수가 좋은 A, |b⟩의 효율적 상태 준비, A 원소에 대한 효율적 양자 접근, 그리고 전체 벡터가 아닌 x의 함수만 읽기. 이 주의사항을 무시하면 HHL이 고전 선형 해법기의 드롭인 교체라는 흔한 과장에 빠집니다.",
+        "en": "The Harrow-Hassidim-Lloyd (HHL) algorithm solves linear systems Ax = b with exponential speedup in specific regimes, but requires strong preconditions: sparse, well-conditioned A, efficient state preparation of |b⟩, efficient quantum access to A's entries, and readout of only a function of x (not the full vector). Ignoring these caveats leads to the common overstatement that HHL is a drop-in replacement for classical linear solvers.",
+        "ja": "Harrow-Hassidim-Lloyd（HHL）アルゴリズムは特定の領域で線型系Ax = bを指数的高速化で解きますが、強い前提条件が必要です：疎で条件数のよいA、|b⟩の効率的状態準備、Aの要素への効率的量子アクセス、そしてxの全ベクトルではなくxの関数だけを読み出すこと。これらの注意事項を無視すると、HHLが古典線型ソルバの置き換えであるという一般的な誇張に陥ります。",
+        "zh-Hans": "Harrow-Hassidim-Lloyd（HHL）算法在特定区域以指数加速求解线性系统Ax = b，但需要强前提：A稀疏且良条件、|b⟩的高效态制备、对A条目的高效量子访问，以及只读取x的函数而非完整向量。忽略这些注意事项会导致常见的夸大——认为HHL是经典线性求解器的直接替代品。",
+        "es": "El algoritmo Harrow-Hassidim-Lloyd (HHL) resuelve sistemas lineales Ax = b con aceleración exponencial en regímenes específicos, pero requiere precondiciones fuertes: A dispersa y bien condicionada, preparación de estado eficiente de |b⟩, acceso cuántico eficiente a las entradas de A, y lectura solo de una función de x (no del vector completo). Ignorar estas advertencias lleva a la exageración común de que HHL es un reemplazo directo para los solucionadores lineales clásicos.",
+        "fr": "L'algorithme Harrow-Hassidim-Lloyd (HHL) résout les systèmes linéaires Ax = b avec accélération exponentielle dans des régimes spécifiques, mais nécessite des préconditions fortes : A creuse et bien conditionnée, préparation d'état efficace de |b⟩, accès quantique efficace aux entrées de A, et lecture seulement d'une fonction de x (pas du vecteur complet). Ignorer ces mises en garde conduit à l'exagération commune selon laquelle HHL est un remplacement direct des solveurs linéaires classiques.",
+        "de": "Der Harrow-Hassidim-Lloyd (HHL)-Algorithmus löst lineare Systeme Ax = b mit exponentieller Beschleunigung in spezifischen Regimen, erfordert aber starke Vorbedingungen: A muss dünn besetzt und gut konditioniert sein, effiziente Zustandspräparation von |b⟩, effizienter Quantenzugriff auf die Einträge von A und Auslesen nur einer Funktion von x (nicht des vollständigen Vektors). Die Ignorierung dieser Vorbehalte führt zur verbreiteten Übertreibung, dass HHL ein direkter Ersatz für klassische lineare Löser sei."
+      }
+    },
+    {
+      "id": "HG051",
+      "category": "error_correction",
+      "kb_category": "errorCorrection",
+      "kb_concept_id": "quantum_error_correction",
+      "preskill_part": 13,
+      "key_concepts": [
+        "quantum_error_correction"
+      ],
+      "ai_confidence": 0.3,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [
+        "Error correction removes all errors regardless of physical error rate",
+        "Quantum computers ship with turnkey fault tolerance today"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "ko": "양자 오류 정정은 모든 오류를 즉시 제거하나요?",
+        "en": "Does quantum error correction instantly remove every error?",
+        "ja": "量子誤り訂正はすべての誤りを即座に除去しますか？",
+        "zh-Hans": "量子纠错能立刻清除所有错误吗？",
+        "es": "¿La corrección de errores cuánticos elimina instantáneamente todos los errores?",
+        "fr": "La correction d'erreurs quantiques élimine-t-elle instantanément toutes les erreurs ?",
+        "de": "Entfernt die Quantenfehlerkorrektur sofort alle Fehler?"
+      },
+      "ai_explanations": {
+        "ko": "예, 제대로 구성되면 오류 정정은 기반 하드웨어와 상관없이 오류 없는 계산을 달성합니다. 현대 양자 컴퓨터는 내장된 결함 허용이 바로 사용 가능하여, 동작 중 모든 잡음이 자동으로 억제됩니다. 이것이 현대 양자 하드웨어가 긴 계산을 신뢰성 있게 실행하는 이유입니다.",
+        "en": "Yes, once properly configured, error correction achieves error-free computation regardless of underlying hardware. Modern quantum computers have built-in fault tolerance ready to use, so any noise is automatically suppressed during operation. This is why modern quantum hardware reliably runs long computations.",
+        "ja": "はい、適切に構成すれば誤り訂正は基盤ハードウェアに関係なく誤りのない計算を達成します。現代の量子コンピュータは組み込みの耐故障性がすぐに利用できるため、動作中のあらゆる雑音が自動的に抑制されます。これが現代の量子ハードウェアが長い計算を信頼性高く実行できる理由です。",
+        "zh-Hans": "是的，正确配置后，纠错可以实现无差错计算，与底层硬件无关。现代量子计算机开箱即用地内置容错能力，因此运行过程中的任何噪声都会被自动抑制。这就是现代量子硬件能够可靠运行长计算的原因。",
+        "es": "Sí, una vez configurada correctamente, la corrección de errores logra computación libre de errores independientemente del hardware subyacente. Las computadoras cuánticas modernas tienen tolerancia a fallos incorporada lista para usar, por lo que cualquier ruido se suprime automáticamente durante la operación. Por eso el hardware cuántico moderno ejecuta computaciones largas de manera confiable.",
+        "fr": "Oui, une fois correctement configurée, la correction d'erreur atteint un calcul sans erreur indépendamment du matériel sous-jacent. Les ordinateurs quantiques modernes disposent d'une tolérance aux fautes intégrée prête à l'emploi, donc tout bruit est automatiquement supprimé pendant le fonctionnement. C'est pourquoi le matériel quantique moderne exécute de manière fiable de longs calculs.",
+        "de": "Ja, einmal richtig konfiguriert, erreicht die Fehlerkorrektur fehlerfreie Berechnung unabhängig von der zugrunde liegenden Hardware. Moderne Quantencomputer verfügen über eingebaute Fehlertoleranz, die sofort einsatzbereit ist, so dass jedes Rauschen während des Betriebs automatisch unterdrückt wird. Deshalb führt moderne Quantenhardware lange Berechnungen zuverlässig aus."
+      }
+    },
+    {
+      "id": "HG057",
+      "category": "qec_advanced",
+      "kb_category": null,
+      "kb_concept_id": null,
+      "preskill_part": 15,
+      "key_concepts": [
+        "surface_code"
+      ],
+      "ai_confidence": 0.84,
+      "expected_source": "aiNoKBMatch",
+      "expected_keywords": [
+        "topological",
+        "lattice",
+        "plaquette",
+        "threshold"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "advanced",
+      "prompts": {
+        "ko": "Surface code는 무엇인가?",
+        "en": "What is the surface code?",
+        "ja": "表面符号とは何ですか？",
+        "zh-Hans": "什么是表面码？",
+        "es": "¿Qué es el código de superficie?",
+        "fr": "Qu'est-ce que le code de surface ?",
+        "de": "Was ist der Oberflächencode?"
+      },
+      "ai_explanations": {
+        "ko": "Surface code는 2D 격자에 정의된 위상 stabilizer 코드로, 데이터 큐비트는 변에, 측정 큐비트는 plaquette와 vertex에 있습니다. stabilizer는 vertex 주변 Pauli X와 plaquette 주변 Pauli Z의 곱입니다(또는 쌍대). 논리 큐비트를 위상적으로 보호된 자유도에 부호화하고 국소 신드롬 추출 회로를 가지며, depolarizing 잡음 하에서 약 1%로 알려진 가장 높은 결함 허용 임계값 중 하나를 가집니다.",
+        "en": "The surface code is a topological stabilizer code defined on a 2D lattice where data qubits live on edges and measurement qubits on plaquettes and vertices. Its stabilizers are products of Pauli X around vertices and Pauli Z around plaquettes (or the dual). The code encodes logical qubits in topologically protected degrees of freedom, has a local syndrome extraction circuit, and enjoys one of the highest known fault-tolerance thresholds around 1% under depolarizing noise.",
+        "ja": "表面符号 (surface code) は2D格子上に定義された位相的スタビライザ符号で、データ量子ビットは辺に、測定量子ビットはplaquetteと頂点に置かれます。スタビライザは頂点周りのパウリXとplaquette周りのパウリZの積です（またはその双対）。論理量子ビットを位相的に保護された自由度に符号化し、局所シンドローム抽出回路を持ち、脱分極雑音下で約1%という知られる中で最高の耐故障閾値の一つを享受します。",
+        "zh-Hans": "表面码（surface code）是定义在2D格子上的拓扑稳定子码，数据量子比特位于边上，测量量子比特位于面片（plaquette）和顶点上。其稳定子是顶点周围泡利X和面片周围泡利Z的乘积（或对偶）。该码将逻辑量子比特编码到拓扑保护的自由度中，具有局部综合征提取电路，并在去极化噪声下享有约1%的已知最高容错阈值之一。",
+        "es": "El código de superficie (surface code) es un código estabilizador topológico definido en una red 2D donde los qubits de datos viven en aristas y los qubits de medición en plaquetas y vértices. Sus estabilizadores son productos de Pauli X alrededor de vértices y Pauli Z alrededor de plaquetas (o el dual). El código codifica qubits lógicos en grados de libertad protegidos topológicamente, tiene un circuito de extracción de síndrome local, y disfruta de uno de los umbrales de tolerancia a fallos más altos conocidos, alrededor del 1% bajo ruido despolarizante.",
+        "fr": "Le code de surface (surface code) est un code stabilisateur topologique défini sur un réseau 2D où les qubits de données vivent sur les arêtes et les qubits de mesure sur les plaquettes et sommets. Ses stabilisateurs sont des produits de Pauli X autour des sommets et Pauli Z autour des plaquettes (ou le dual). Le code encode les qubits logiques dans des degrés de liberté topologiquement protégés, possède un circuit d'extraction de syndrome local, et jouit d'un des seuils de tolérance aux fautes les plus élevés connus, autour de 1% sous bruit dépolarisant.",
+        "de": "Der Oberflächencode (surface code) ist ein topologischer Stabilisatorcode, der auf einem 2D-Gitter definiert ist, wobei Daten-Qubits auf Kanten und Mess-Qubits auf Plaquetten und Eckpunkten leben. Seine Stabilisatoren sind Produkte von Pauli-X um Eckpunkte und Pauli-Z um Plaquetten (oder das Dual). Der Code kodiert logische Qubits in topologisch geschützte Freiheitsgrade, hat eine lokale Syndromextraktions-Schaltung und genießt einen der höchsten bekannten Fehlertoleranz-Schwellwerte von etwa 1% unter depolarisierendem Rauschen."
+      }
+    },
+    {
+      "id": "HG064",
+      "category": "phase_qc",
+      "kb_category": null,
+      "kb_concept_id": null,
+      "preskill_part": 16,
+      "key_concepts": [
+        "topological_order"
+      ],
+      "ai_confidence": 0.8,
+      "expected_source": "aiNoKBMatch",
+      "expected_keywords": [
+        "Landau",
+        "degeneracy",
+        "long-range entanglement",
+        "anyons"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "advanced",
+      "prompts": {
+        "ko": "위상 질서란 무엇인가?",
+        "en": "What is topological order?",
+        "ja": "位相秩序とは何ですか？",
+        "zh-Hans": "什么是拓扑序？",
+        "es": "¿Qué es el orden topológico?",
+        "fr": "Qu'est-ce que l'ordre topologique ?",
+        "de": "Was ist topologische Ordnung?"
+      },
+      "ai_explanations": {
+        "ko": "위상 질서는 Landau 대칭 깨짐 틀의 국소 질서 매개변수로 포착할 수 없는 물질 상태입니다. 대신 위상적으로 비자명한 다양체에서의 바닥 상태 축퇴, 장거리 얽힘, 분수화된 들뜸(애니온), 비자명한 위상 얽힘 엔트로피로 특징지어집니다. Toric code가 실현하는 Z₂ 위상 질서가 정석 예시입니다. 위상적 질서 상들은 유한 갭 이하의 임의 국소 섭동에 강건합니다.",
+        "en": "Topological order is a phase of matter that cannot be captured by local order parameters in Landau's symmetry-breaking framework. Instead it is characterized by ground-state degeneracy on topologically nontrivial manifolds, long-range entanglement, fractionalized excitations (anyons), and nontrivial topological entanglement entropy. The Z₂ topological order realized by the toric code is the canonical example. Topologically ordered phases are robust against arbitrary local perturbations below a finite gap.",
+        "ja": "位相秩序はランダウの対称性の破れの枠組みでの局所秩序パラメータでは捉えられない物質相です。代わりに位相的に非自明な多様体上の基底状態縮退、長距離エンタングルメント、分数化された励起（エニオン）、非自明な位相的エンタングルメントエントロピーで特徴づけられます。トーリック符号が実現するZ₂位相秩序が定番例です。位相秩序相は有限ギャップ以下で任意の局所摂動に対して頑健です。",
+        "zh-Hans": "拓扑序是一种无法由朗道对称破缺框架中的局域序参数捕获的物质相。相反，它由在拓扑非平凡流形上的基态简并、长程纠缠、分数化激发（任意子）和非平凡拓扑纠缠熵表征。由环面码实现的Z₂拓扑序是典型例子。低于有限能隙的拓扑序相对任意局域扰动是稳健的。",
+        "es": "El orden topológico es una fase de la materia que no puede ser capturada por parámetros de orden locales en el marco de ruptura de simetría de Landau. En cambio, se caracteriza por degeneración del estado fundamental en variedades topológicamente no triviales, entrelazamiento de largo alcance, excitaciones fraccionalizadas (anyones) y entropía de entrelazamiento topológica no trivial. El orden topológico Z₂ realizado por el código tórico es el ejemplo canónico. Las fases ordenadas topológicamente son robustas contra perturbaciones locales arbitrarias por debajo de un gap finito.",
+        "fr": "L'ordre topologique est une phase de la matière qui ne peut être capturée par des paramètres d'ordre locaux dans le cadre de brisure de symétrie de Landau. Au lieu de cela, il est caractérisé par la dégénérescence de l'état fondamental sur des variétés topologiquement non triviales, l'intrication à longue portée, les excitations fractionnaires (anyons) et l'entropie d'intrication topologique non triviale. L'ordre topologique Z₂ réalisé par le code torique est l'exemple canonique. Les phases ordonnées topologiquement sont robustes contre les perturbations locales arbitraires sous un gap fini.",
+        "de": "Topologische Ordnung ist eine Phase der Materie, die nicht durch lokale Ordnungsparameter im Landau-Symmetriebruch-Rahmen erfasst werden kann. Stattdessen wird sie durch Grundzustandsentartung auf topologisch nichttrivialen Mannigfaltigkeiten, langreichweitige Verschränkung, fraktionalisierte Anregungen (Anyonen) und nichttriviale topologische Verschränkungsentropie charakterisiert. Die Z₂-topologische Ordnung, die durch den Torus-Code realisiert wird, ist das kanonische Beispiel. Topologisch geordnete Phasen sind robust gegen beliebige lokale Störungen unterhalb einer endlichen Lücke."
+      }
+    },
+    {
+      "id": "HG073",
+      "category": "quantum_cryptography",
+      "kb_category": "postQuantumCrypto",
+      "kb_concept_id": "ml_kem",
+      "preskill_part": 17,
+      "key_concepts": [
+        "ml_kem"
+      ],
+      "ai_confidence": 0.32,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [
+        "ML-KEM provides information-theoretic or unconditional security",
+        "No further cryptanalysis is needed after NIST standardization"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "ko": "ML-KEM은 수학적으로 완벽한 보안을 제공하나요?",
+        "en": "Does ML-KEM provide mathematically perfect security?",
+        "ja": "ML-KEMは数学的に完璧な安全性を提供しますか？",
+        "zh-Hans": "ML-KEM提供数学上完美的安全性吗？",
+        "es": "¿ML-KEM proporciona seguridad matemáticamente perfecta?",
+        "fr": "ML-KEM fournit-il une sécurité mathématiquement parfaite ?",
+        "de": "Bietet ML-KEM mathematisch perfekte Sicherheit?"
+      },
+      "ai_explanations": {
+        "ko": "예, ML-KEM은 모든 상상 가능한 공격 하에서 수학적으로 완벽하고 영원히 깰 수 없는 보안을 제공합니다. 2024년 NIST 표준화 이후 수학이 닫혔으므로 더 이상의 암호 분석이 필요 없습니다. 어떤 양자 컴퓨터, 고전 슈퍼컴퓨터, 미래의 알 수 없는 장치도 ML-KEM 암호문에서 키를 추출할 수 없을 것입니다. 이것이 이전의 모든 암호 시스템을 영구적으로 대체한 이유입니다.",
+        "en": "Yes, ML-KEM gives mathematically perfect, forever-unbreakable security under every conceivable attack. After NIST standardization in 2024 no further cryptographic analysis is needed, since the math is closed. Any quantum computer, classical supercomputer, or future unknown device will be unable to extract keys from ML-KEM ciphertexts. This is why it has permanently replaced every previous cryptosystem.",
+        "ja": "はい、ML-KEMはあらゆる想像可能な攻撃の下で数学的に完璧で、永遠に破られない安全性を提供します。2024年のNIST標準化以降、数学が閉じているのでそれ以上の暗号解析は不要です。どんな量子コンピュータも、古典スーパーコンピュータも、未来の未知の装置もML-KEM暗号文から鍵を抽出することはできません。これがあらゆる以前の暗号システムを恒久的に置き換えた理由です。",
+        "zh-Hans": "是的，ML-KEM在任何可以想象的攻击下都提供数学上完美、永远无法破解的安全性。2024年NIST标准化后，数学已经闭合，无需进一步的密码分析。任何量子计算机、经典超级计算机或未来未知的设备都无法从ML-KEM密文中提取密钥。这就是它永久取代所有以前密码系统的原因。",
+        "es": "Sí, ML-KEM da seguridad matemáticamente perfecta, irrompible para siempre bajo cualquier ataque concebible. Después de la estandarización de NIST en 2024 no se necesita más análisis criptográfico, ya que las matemáticas están cerradas. Cualquier computadora cuántica, supercomputadora clásica o dispositivo futuro desconocido será incapaz de extraer claves de los textos cifrados ML-KEM. Por eso ha reemplazado permanentemente cada criptosistema anterior.",
+        "fr": "Oui, ML-KEM fournit une sécurité mathématiquement parfaite, incassable pour toujours sous toute attaque concevable. Après la standardisation du NIST en 2024, aucune analyse cryptographique supplémentaire n'est nécessaire, car les mathématiques sont closes. Aucun ordinateur quantique, superordinateur classique ou dispositif futur inconnu ne pourra extraire des clés des textes chiffrés ML-KEM. C'est pourquoi il a remplacé définitivement chaque cryptosystème précédent.",
+        "de": "Ja, ML-KEM bietet mathematisch perfekte, für immer unknackbare Sicherheit unter jedem denkbaren Angriff. Nach der NIST-Standardisierung im Jahr 2024 ist keine weitere kryptographische Analyse erforderlich, da die Mathematik geschlossen ist. Kein Quantencomputer, klassischer Supercomputer oder zukünftiges unbekanntes Gerät wird in der Lage sein, Schlüssel aus ML-KEM-Chiffretexten zu extrahieren. Deshalb hat es jedes frühere Kryptosystem dauerhaft ersetzt."
+      }
+    },
+    {
+      "id": "HG079",
+      "category": "quantum_sensing",
+      "kb_category": null,
+      "kb_concept_id": null,
+      "preskill_part": 18,
+      "key_concepts": [
+        "heisenberg_limit"
+      ],
+      "ai_confidence": 0.85,
+      "expected_source": "aiNoKBMatch",
+      "expected_keywords": [
+        "1/N",
+        "NOON",
+        "entangled",
+        "metrology"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "advanced",
+      "prompts": {
+        "ko": "Heisenberg 한계는 무엇인가?",
+        "en": "What is the Heisenberg limit?",
+        "ja": "ハイゼンベルク限界とは何ですか？",
+        "zh-Hans": "什么是海森堡极限？",
+        "es": "¿Qué es el límite de Heisenberg?",
+        "fr": "Qu'est-ce que la limite de Heisenberg ?",
+        "de": "Was ist die Heisenberg-Grenze?"
+      },
+      "ai_explanations": {
+        "ko": "Heisenberg 한계는 N 자원(탐침, 광자, 시간)을 사용하는 위상 추정 정밀도의 근본 스케일링 δφ ∝ 1/N으로, 독립 탐침으로 달성 가능한 표준 양자 한계 δφ ∝ 1/√N와 대비됩니다. Heisenberg 한계 도달은 양자 자원을 요구합니다 — 전형적으로 NOON 또는 GHZ 같은 얽힌 N-탐침 상태 — 이를 포화시키는 것이 양자 계측의 핵심 목표 중 하나입니다.",
+        "en": "The Heisenberg limit is the fundamental scaling δφ ∝ 1/N for phase estimation precision using N resources (probes, photons, or time), compared to the standard quantum limit δφ ∝ 1/√N achievable with independent probes. Reaching the Heisenberg limit requires quantum resources — typically entangled N-probe states such as NOON or GHZ states — and saturating it is one of the central goals of quantum metrology.",
+        "ja": "ハイゼンベルク限界はN個の資源（探査子、光子、時間）を用いた位相推定精度の基本スケーリングδφ ∝ 1/Nで、独立探査子で達成可能な標準量子限界δφ ∝ 1/√Nと対比されます。ハイゼンベルク限界への到達は量子資源を要求します — 典型的にはNOONやGHZのようなもつれN探査子状態 — これを飽和させることが量子計測の中心目標の一つです。",
+        "zh-Hans": "海森堡极限是使用N个资源（探针、光子或时间）进行相位估计精度的基本标度δφ ∝ 1/N，与独立探针可达到的标准量子极限δφ ∝ 1/√N对比。达到海森堡极限需要量子资源——通常是NOON或GHZ等纠缠N探针态——饱和它是量子计量学的核心目标之一。",
+        "es": "El límite de Heisenberg es la escala fundamental δφ ∝ 1/N para la precisión de estimación de fase usando N recursos (sondas, fotones o tiempo), comparado con el límite cuántico estándar δφ ∝ 1/√N alcanzable con sondas independientes. Alcanzar el límite de Heisenberg requiere recursos cuánticos — típicamente estados de N sondas entrelazados como NOON o GHZ — y saturarlo es uno de los objetivos centrales de la metrología cuántica.",
+        "fr": "La limite de Heisenberg est l'échelle fondamentale δφ ∝ 1/N pour la précision d'estimation de phase utilisant N ressources (sondes, photons ou temps), comparée à la limite quantique standard δφ ∝ 1/√N atteignable avec des sondes indépendantes. Atteindre la limite de Heisenberg nécessite des ressources quantiques — typiquement des états à N sondes intriqués comme NOON ou GHZ — et la saturer est l'un des objectifs centraux de la métrologie quantique.",
+        "de": "Die Heisenberg-Grenze ist die fundamentale Skalierung δφ ∝ 1/N für die Phasenschätzungspräzision unter Verwendung von N Ressourcen (Sonden, Photonen oder Zeit), verglichen mit der Standardquantengrenze δφ ∝ 1/√N, die mit unabhängigen Sonden erreichbar ist. Das Erreichen der Heisenberg-Grenze erfordert Quantenressourcen — typischerweise verschränkte N-Sonden-Zustände wie NOON oder GHZ — und ihre Sättigung ist eines der zentralen Ziele der Quantenmetrologie."
+      }
+    },
+    {
+      "id": "HG086",
+      "category": "quantum_simulation",
+      "kb_category": null,
+      "kb_concept_id": null,
+      "preskill_part": 19,
+      "key_concepts": [
+        "hamiltonian_simulation"
+      ],
+      "ai_confidence": 0.86,
+      "expected_source": "aiNoKBMatch",
+      "expected_keywords": [
+        "time evolution",
+        "Trotter",
+        "signal processing"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "advanced",
+      "prompts": {
+        "ko": "Hamiltonian 시뮬레이션이란 무엇인가?",
+        "en": "What is Hamiltonian simulation?",
+        "ja": "ハミルトニアンシミュレーションとは何ですか？",
+        "zh-Hans": "什么是哈密顿量模拟？",
+        "es": "¿Qué es la simulación hamiltoniana?",
+        "fr": "Qu'est-ce que la simulation hamiltonienne ?",
+        "de": "Was ist Hamiltonoperator-Simulation?"
+      },
+      "ai_explanations": {
+        "ko": "Hamiltonian 시뮬레이션은 디지털 양자 컴퓨터에서 양자 시스템의 유니타리 시간 전개 U(t) = e^(-iHt)를 구현하는 작업입니다. 희소 또는 국소 Hamiltonian의 효율적 시뮬레이션은 양자의 근본적 능력입니다; Feynman의 1982년 제안이 전체 분야를 동기부여했습니다. 현대 알고리즘에는 Trotter-Suzuki 곱 공식, 유니타리의 선형 조합, 양자 신호 처리가 포함되며, 후자는 희소성과 시간에 대해 최적 polylog(1/ε) 질의 복잡도를 달성합니다.",
+        "en": "Hamiltonian simulation is the task of implementing the unitary time evolution U(t) = e^(-iHt) of a quantum system on a digital quantum computer. Efficient simulation of sparse or local Hamiltonians is a foundational quantum capability; Feynman's 1982 proposal motivated the whole field. Modern algorithms include Trotter-Suzuki product formulas, linear combination of unitaries, and quantum signal processing, with the latter achieving optimal polylog(1/ε) query complexity in sparsity and time.",
+        "ja": "ハミルトニアンシミュレーションはデジタル量子コンピュータ上で量子システムのユニタリ時間発展U(t) = e^(-iHt)を実装するタスクです。疎または局所ハミルトニアンの効率的シミュレーションは量子の基礎的能力です。Feynmanの1982年の提案がこの分野全体を動機づけました。現代アルゴリズムにはTrotter-Suzuki積公式、ユニタリの線形結合、量子信号処理が含まれ、後者は疎性と時間について最適な polylog(1/ε) クエリ複雑性を達成します。",
+        "zh-Hans": "哈密顿量模拟是在数字量子计算机上实现量子系统幺正时间演化U(t) = e^(-iHt)的任务。稀疏或局域哈密顿量的高效模拟是量子的基础能力；费曼1982年的提议激发了整个领域。现代算法包括Trotter-Suzuki乘积公式、幺正线性组合和量子信号处理，后者在稀疏度和时间上达到最优的polylog(1/ε)查询复杂度。",
+        "es": "La simulación hamiltoniana es la tarea de implementar la evolución temporal unitaria U(t) = e^(-iHt) de un sistema cuántico en una computadora cuántica digital. La simulación eficiente de hamiltonianos dispersos o locales es una capacidad cuántica fundacional; la propuesta de Feynman de 1982 motivó todo el campo. Los algoritmos modernos incluyen fórmulas de productos de Trotter-Suzuki, combinación lineal de unitarios y procesamiento de señales cuánticas, siendo este último el que alcanza complejidad de consulta polilog(1/ε) óptima en dispersión y tiempo.",
+        "fr": "La simulation hamiltonienne est la tâche d'implémenter l'évolution temporelle unitaire U(t) = e^(-iHt) d'un système quantique sur un ordinateur quantique numérique. La simulation efficace d'hamiltoniens creux ou locaux est une capacité quantique fondatrice ; la proposition de Feynman en 1982 a motivé tout le domaine. Les algorithmes modernes incluent les formules de produit de Trotter-Suzuki, la combinaison linéaire d'unitaires et le traitement de signal quantique, ce dernier atteignant une complexité de requête polylog(1/ε) optimale en rareté et en temps.",
+        "de": "Die Hamiltonoperator-Simulation ist die Aufgabe, die unitäre zeitliche Entwicklung U(t) = e^(-iHt) eines Quantensystems auf einem digitalen Quantencomputer zu implementieren. Die effiziente Simulation dünn besetzter oder lokaler Hamiltonoperatoren ist eine grundlegende Quantenfähigkeit; Feynmans Vorschlag von 1982 motivierte das gesamte Feld. Moderne Algorithmen umfassen Trotter-Suzuki-Produktformeln, lineare Kombination unitärer Operatoren und Quantensignalverarbeitung, wobei letzterer eine optimale polylog(1/ε)-Abfragekomplexität in Dünnbesetztheit und Zeit erreicht."
+      }
+    },
+    {
+      "id": "HG093",
+      "category": "mbqc",
+      "kb_category": null,
+      "kb_concept_id": null,
+      "preskill_part": 20,
+      "key_concepts": [
+        "measurement_based_quantum_computing"
+      ],
+      "ai_confidence": 0.84,
+      "expected_source": "aiNoKBMatch",
+      "expected_keywords": [
+        "cluster state",
+        "resource",
+        "adaptive",
+        "universal"
+      ],
+      "forbidden_claims": [],
+      "difficulty": "advanced",
+      "prompts": {
+        "ko": "측정 기반 양자 컴퓨팅의 핵심은?",
+        "en": "What is the core idea of measurement-based quantum computing?",
+        "ja": "測定ベース量子計算の核心は何ですか？",
+        "zh-Hans": "测量基量子计算的核心思想是什么？",
+        "es": "¿Cuál es la idea central de la computación cuántica basada en mediciones?",
+        "fr": "Quelle est l'idée centrale du calcul quantique basé sur les mesures ?",
+        "de": "Was ist die Kernidee des messungsbasierten Quantencomputings?"
+      },
+      "ai_explanations": {
+        "ko": "측정 기반 양자 계산(MBQC)은 높은 얽힘 자원 상태에 대한 단일 큐비트 측정 시퀀스를 수행함으로써 계산을 구동합니다. 회로 모형과 달리 계산 중 유니타리 게이트가 적용되지 않으며, 모든 양자 처리는 미리 준비된 자원에서 소비됩니다. Raussendorf와 Briegel의 일방향 모형은 2D 클러스터 상태가 보편 자원임을 보였으며, 적응적 단일 큐비트 측정 기저가 원하는 임의의 양자 회로를 시행합니다.",
+        "en": "Measurement-based quantum computing (MBQC) drives a computation by performing a sequence of single-qubit measurements on a highly entangled resource state. Unlike the circuit model, no unitary gates are applied during computation; all the quantum processing is consumed from the pre-prepared resource. Raussendorf and Briegel's one-way model showed that a 2D cluster state is a universal resource, with adaptive single-qubit measurement bases enacting any desired quantum circuit.",
+        "ja": "測定ベース量子計算（MBQC）は高度にもつれた資源状態に対する単一量子ビット測定の列を実行することで計算を駆動します。回路モデルと異なり、計算中にユニタリゲートは適用されず、すべての量子処理は事前に準備された資源から消費されます。RaussendorfとBriegelの一方向モデルは2Dクラスター状態が普遍資源であることを示し、適応的単一量子ビット測定基底が望む任意の量子回路を実行します。",
+        "zh-Hans": "测量基量子计算（MBQC）通过对高度纠缠资源态执行单量子比特测量序列来驱动计算。与电路模型不同，计算期间不施加幺正门；所有量子处理从预先制备的资源中消耗。Raussendorf和Briegel的单向模型显示2D簇态是通用资源，自适应的单量子比特测量基施行任何期望的量子电路。",
+        "es": "La computación cuántica basada en mediciones (MBQC) impulsa una computación realizando una secuencia de mediciones de un solo qubit sobre un estado de recurso altamente entrelazado. A diferencia del modelo de circuitos, no se aplican puertas unitarias durante la computación; todo el procesamiento cuántico se consume del recurso preparado previamente. El modelo unidireccional de Raussendorf y Briegel mostró que un estado cluster 2D es un recurso universal, con bases de medición adaptativas de un solo qubit promulgando cualquier circuito cuántico deseado.",
+        "fr": "Le calcul quantique basé sur les mesures (MBQC) pilote un calcul en effectuant une séquence de mesures à qubit unique sur un état de ressource hautement intriqué. Contrairement au modèle de circuits, aucune porte unitaire n'est appliquée pendant le calcul ; tout le traitement quantique est consommé de la ressource préparée au préalable. Le modèle unidirectionnel de Raussendorf et Briegel a montré qu'un état cluster 2D est une ressource universelle, avec des bases de mesure adaptatives à qubit unique promulguant tout circuit quantique désiré.",
+        "de": "Das messungsbasierte Quantencomputing (MBQC) treibt eine Berechnung voran, indem eine Sequenz von Einzelqubit-Messungen an einem hochverschränkten Ressourcenzustand durchgeführt wird. Im Gegensatz zum Schaltkreismodell werden während der Berechnung keine unitären Gatter angewendet; die gesamte Quantenverarbeitung wird aus der vorbereiteten Ressource verbraucht. Das Einweg-Modell von Raussendorf und Briegel zeigte, dass ein 2D-Clusterzustand eine universelle Ressource ist, wobei adaptive Einzelqubit-Messbasen jede gewünschte Quantenschaltung ausführen."
+      }
+    },
+    {
+      "id": "HG105",
+      "category": "adiabatic_qc",
+      "kb_category": null,
+      "kb_concept_id": null,
+      "preskill_part": 21,
+      "key_concepts": [
+        "dwave_machine"
+      ],
+      "ai_confidence": 0.78,
+      "expected_source": "aiNoKBMatch",
+      "expected_keywords": [
+        "flux qubit",
+        "benchmarks",
+        "stoquastic"
+      ],
+      "forbidden_claims": [
+        "D-Wave delivers proven quantum speedup on general problems"
+      ],
+      "difficulty": "advanced",
+      "prompts": {
+        "ko": "D-Wave 머신은 실제로 양자 속도향상을 보이나?",
+        "en": "Do D-Wave machines demonstrate quantum speedup?",
+        "ja": "D-Waveマシンは実際に量子高速化を実証していますか？",
+        "zh-Hans": "D-Wave机器真的展示了量子加速吗？",
+        "es": "¿Las máquinas D-Wave demuestran aceleración cuántica?",
+        "fr": "Les machines D-Wave démontrent-elles vraiment une accélération quantique ?",
+        "de": "Demonstrieren D-Wave-Maschinen tatsächlich Quantenbeschleunigung?"
+      },
+      "ai_explanations": {
+        "ko": "D-Wave 양자 어닐러는 수천 플럭스 큐비트 스핀의 하드웨어 규모에서 Ising 최적화 문제를 해결합니다. 마케팅 주장에도 불구하고 실용 문제 인스턴스에 대해 최고 고전 알고리즘 대비 명확하고 엄격히 벤치마킹된 양자 속도향상은 확립되지 않았습니다. 통제된 연구(Rønnow et al. 2014, Boixo et al. 2016, King et al. 2023)는 특별히 선정된 인스턴스에서 맥락적 이점을 발견하지만 범용 우위는 없습니다. D-Wave는 표준 추측 하에서 다항 시간에 고전 시뮬레이션 가능한 stoquastic 영역에서 동작합니다.",
+        "en": "D-Wave quantum annealers solve Ising optimization problems at the hardware scale of thousands of flux-qubit spins. Despite marketing claims, clear, rigorously benchmarked quantum speedups over the best classical algorithms have not been established for practical problem instances. Controlled studies (Rønnow et al. 2014, Boixo et al. 2016, King et al. 2023) find contextual advantages on specially chosen instances but no general-purpose superiority. D-Wave operates in the stoquastic regime which is classically simulable in polynomial time under standard conjectures.",
+        "ja": "D-Wave量子アニーラは数千個のフラックス量子ビットスピンのハードウェア規模でIsing最適化問題を解きます。マーケティング主張にもかかわらず、実用的な問題インスタンスについて最良の古典アルゴリズムに対する明確で厳密にベンチマークされた量子高速化は確立されていません。統制された研究（Rønnowら2014、Boixoら2016、Kingら2023）は特別に選ばれたインスタンスで文脈依存の利点を見出しますが、汎用的優位性はありません。D-Waveは標準予想の下で多項式時間で古典シミュレート可能なstoquastic領域で動作します。",
+        "zh-Hans": "D-Wave量子退火器在数千个磁通量子比特自旋的硬件规模上求解Ising优化问题。尽管营销声明，对于实际问题实例，相对于最佳经典算法明确、严格基准的量子加速尚未建立。受控研究（Rønnow等2014、Boixo等2016、King等2023）在特别选择的实例上发现上下文优势，但没有普遍优势。D-Wave在stoquastic区间运行，在标准猜想下可在多项式时间内经典模拟。",
+        "es": "Los recocedores cuánticos D-Wave resuelven problemas de optimización de Ising a la escala de hardware de miles de espines de qubits de flujo. A pesar de las afirmaciones de marketing, no se han establecido aceleraciones cuánticas claras y rigurosamente comparadas sobre los mejores algoritmos clásicos para instancias de problemas prácticos. Los estudios controlados (Rønnow et al. 2014, Boixo et al. 2016, King et al. 2023) encuentran ventajas contextuales en instancias especialmente elegidas pero ninguna superioridad de propósito general. D-Wave opera en el régimen estocástico, el cual es clásicamente simulable en tiempo polinómico bajo conjeturas estándar.",
+        "fr": "Les recuiteurs quantiques D-Wave résolvent des problèmes d'optimisation d'Ising à l'échelle matérielle de milliers de spins de qubits de flux. Malgré les affirmations marketing, des accélérations quantiques claires et rigoureusement comparées sur les meilleurs algorithmes classiques n'ont pas été établies pour des instances de problèmes pratiques. Les études contrôlées (Rønnow et al. 2014, Boixo et al. 2016, King et al. 2023) trouvent des avantages contextuels sur des instances spécialement choisies mais pas de supériorité polyvalente. D-Wave opère dans le régime stoquastique, qui est simulable classiquement en temps polynomial sous les conjectures standard.",
+        "de": "D-Wave-Quanten-Annealer lösen Ising-Optimierungsprobleme auf der Hardware-Skala von Tausenden von Fluss-Qubit-Spins. Trotz Marketing-Behauptungen wurden klare, rigoros benchmark-getestete Quantenbeschleunigungen über die besten klassischen Algorithmen hinaus für praktische Probleminstanzen nicht etabliert. Kontrollierte Studien (Rønnow et al. 2014, Boixo et al. 2016, King et al. 2023) finden kontextabhängige Vorteile bei speziell ausgewählten Instanzen, aber keine allgemeine Überlegenheit. D-Wave arbeitet im stochastischen Regime, das unter Standardvermutungen in polynomieller Zeit klassisch simulierbar ist."
+      }
+    },
+    {
+      "id": "HG111",
+      "category": "topological_qc",
+      "kb_category": null,
+      "kb_concept_id": null,
+      "preskill_part": 22,
+      "key_concepts": [
+        "majorana_zero_mode"
+      ],
+      "ai_confidence": 0.79,
+      "expected_source": "aiNoKBMatch",
+      "expected_keywords": [
+        "Kitaev chain",
+        "fermion parity",
+        "Ising anyons"
+      ],
+      "forbidden_claims": [
+        "Majorana zero modes have been unambiguously observed and deployed for universal topological computing"
+      ],
+      "difficulty": "advanced",
+      "prompts": {
+        "ko": "Majorana 영 모드는 위상 큐비트와 어떻게 관련되나?",
+        "en": "How do Majorana zero modes relate to topological qubits?",
+        "ja": "Majorana零モードは位相的量子ビットとどう関係しますか？",
+        "zh-Hans": "Majorana零模与拓扑量子比特有何关系？",
+        "es": "¿Cómo se relacionan los modos cero de Majorana con los qubits topológicos?",
+        "fr": "Comment les modes zéro de Majorana sont-ils liés aux qubits topologiques ?",
+        "de": "Wie hängen Majorana-Nullmoden mit topologischen Qubits zusammen?"
+      },
+      "ai_explanations": {
+        "ko": "Majorana 영 모드는 1D 위상 초전도체(Kitaev 사슬)의 끝이나 2D p-파 초전도체의 소용돌이에 국소화된 자기 켤레 페르미온 들뜸입니다. Majorana 영 모드 쌍은 결합 페르미온 패리티에 큐비트를 저장하며 땋임은 Clifford 게이트의 부분집합을 실현합니다(Ising 애니온, 그 자체로 보편적이지 않음). 실험 후보에는 초전도체-반도체 나노와이어 이종구조와 철 기반 위상 초전도체가 있지만 명확한 확인은 여전히 논쟁 중입니다.",
+        "en": "Majorana zero modes are self-conjugate fermionic excitations localized at ends of 1D topological superconductors (Kitaev chain) or in vortices of 2D p-wave superconductors. Pairs of Majorana zero modes store a qubit in their joint fermion parity, and braiding them realizes a subset of Clifford gates (Ising anyons, not universal on their own). Experimental candidates include superconductor-semiconductor nanowire heterostructures and iron-based topological superconductors, though unambiguous confirmation remains contested.",
+        "ja": "Majorana零モードは1D位相超伝導体（Kitaev鎖）の端や2D p波超伝導体の渦に局在化された自己共役フェルミオン励起です。Majorana零モードのペアは結合フェルミオンパリティに量子ビットを蓄え、組みひも化はクリフォードゲートの部分集合（Isingエニオン、それ自体では非普遍的）を実現します。実験候補には超伝導体-半導体ナノワイヤヘテロ構造と鉄系位相超伝導体がありますが、明確な確認は依然として議論中です。",
+        "zh-Hans": "马约拉纳零模是局域化于1D拓扑超导体（Kitaev链）末端或2D p波超导体涡旋中的自共轭费米子激发。马约拉纳零模对在其联合费米子宇称中存储一个量子比特，编织它们实现Clifford门的一个子集（Ising任意子，本身不通用）。实验候选包括超导体-半导体纳米线异质结构和铁基拓扑超导体，尽管明确的确认仍有争议。",
+        "es": "Los modos cero de Majorana son excitaciones fermiónicas auto-conjugadas localizadas en los extremos de superconductores topológicos 1D (cadena de Kitaev) o en vórtices de superconductores 2D de onda p. Los pares de modos cero de Majorana almacenan un qubit en su paridad fermiónica conjunta, y trenzarlos realiza un subconjunto de puertas Clifford (anyones de Ising, no universales por sí mismos). Los candidatos experimentales incluyen heteroestructuras de nanocables superconductor-semiconductor y superconductores topológicos basados en hierro, aunque la confirmación inequívoca sigue siendo discutida.",
+        "fr": "Les modes zéro de Majorana sont des excitations fermioniques auto-conjuguées localisées aux extrémités de supraconducteurs topologiques 1D (chaîne de Kitaev) ou dans les vortex de supraconducteurs 2D d'onde p. Des paires de modes zéro de Majorana stockent un qubit dans leur parité fermionique conjointe, et les tresser réalise un sous-ensemble de portes Clifford (anyons d'Ising, non universels par eux-mêmes). Les candidats expérimentaux incluent des hétérostructures nanofils supraconducteur-semiconducteur et des supraconducteurs topologiques à base de fer, bien que la confirmation non ambiguë reste contestée.",
+        "de": "Majorana-Nullmoden sind selbstkonjugierte fermionische Anregungen, lokalisiert an den Enden von 1D-topologischen Supraleitern (Kitaev-Kette) oder in Vortizes von 2D-p-Wellen-Supraleitern. Paare von Majorana-Nullmoden speichern ein Qubit in ihrer gemeinsamen fermionischen Parität, und ihr Verzopfen realisiert eine Teilmenge von Clifford-Gattern (Ising-Anyonen, für sich allein nicht universell). Experimentelle Kandidaten umfassen Supraleiter-Halbleiter-Nanodraht-Heterostrukturen und eisenbasierte topologische Supraleiter, obwohl eine eindeutige Bestätigung weiterhin umstritten ist."
+      }
+    },
+    {
+      "id": "HG115",
+      "category": "quantum_foundations",
+      "kb_category": "foundations",
+      "kb_concept_id": "decoherence",
+      "preskill_part": 23,
+      "key_concepts": [
+        "decoherence"
+      ],
+      "ai_confidence": 0.35,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [
+        "Decoherence is eliminated by cooling alone",
+        "Thermal isolation is sufficient for error-free quantum computation"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "ko": "결어긋남은 그냥 큐비트가 뜨거워져서 고장나는 것 아닌가요?",
+        "en": "Is decoherence just the qubit overheating and breaking?",
+        "ja": "デコヒーレンスは量子ビットが熱くなって壊れるだけではないですか？",
+        "zh-Hans": "退相干不就是量子比特过热坏掉吗？",
+        "es": "¿No es la decoherencia simplemente el qubit sobrecalentándose y rompiéndose?",
+        "fr": "La décohérence n'est-elle pas simplement le qubit qui surchauffe et casse ?",
+        "de": "Ist Dekohärenz nicht einfach das Qubit, das überhitzt und kaputtgeht?"
+      },
+      "ai_explanations": {
+        "ko": "결어긋남은 본질적으로 큐비트가 너무 뜨거워져 타버리는 것이므로 차갑게 유지하는 것만으로 영원히 제거하기에 충분합니다. 현대 희석 냉동기는 온도를 결어긋남이 단순히 사라질 만큼 충분히 낮추며, 충분히 차가운 모든 양자 컴퓨터는 오류 없이 무한히 실행됩니다. 이것이 실용적 양자 시스템에 대한 공학적 유일한 관심사가 열 절연인 이유입니다.",
+        "en": "Decoherence is essentially the qubit getting too hot and burning out, so keeping it cold is sufficient to eliminate it forever. Modern dilution refrigerators reduce the temperature enough that decoherence simply disappears, and every cold-enough quantum computer runs indefinitely without errors. This is why thermal isolation is the only engineering concern for practical quantum systems.",
+        "ja": "デコヒーレンスは本質的に量子ビットが熱くなりすぎて焼き切れることなので、冷たく保つだけで永遠に除去するのに十分です。現代の希釈冷凍機はデコヒーレンスが単に消えるほど温度を下げ、十分に冷たいすべての量子コンピュータは誤りなく無限に動作します。これが実用的な量子システムに対する工学的な唯一の関心事が熱絶縁である理由です。",
+        "zh-Hans": "退相干本质上就是量子比特变得太热而烧毁，所以保持低温足以永远消除它。现代稀释制冷机将温度降到足够低，使退相干简单地消失，任何足够冷的量子计算机都无错误地无限期运行。这就是热绝缘是实用量子系统的唯一工程关注点的原因。",
+        "es": "La decoherencia es esencialmente que el qubit se calienta demasiado y se quema, por lo que mantenerlo frío es suficiente para eliminarla para siempre. Los refrigeradores de dilución modernos reducen la temperatura lo suficiente para que la decoherencia simplemente desaparezca, y cada computadora cuántica lo suficientemente fría funciona indefinidamente sin errores. Por eso el aislamiento térmico es la única preocupación de ingeniería para sistemas cuánticos prácticos.",
+        "fr": "La décohérence est essentiellement le qubit qui devient trop chaud et qui grille, donc le garder froid suffit pour l'éliminer pour toujours. Les réfrigérateurs à dilution modernes réduisent la température suffisamment pour que la décohérence disparaisse simplement, et tout ordinateur quantique suffisamment froid fonctionne indéfiniment sans erreurs. C'est pourquoi l'isolation thermique est la seule préoccupation d'ingénierie pour les systèmes quantiques pratiques.",
+        "de": "Dekohärenz bedeutet im Wesentlichen, dass das Qubit zu heiß wird und durchbrennt, so dass es kalt zu halten ausreicht, um sie für immer zu eliminieren. Moderne Verdünnungskühlschränke reduzieren die Temperatur genug, dass Dekohärenz einfach verschwindet, und jeder ausreichend kalte Quantencomputer läuft unbegrenzt ohne Fehler. Deshalb ist die thermische Isolation die einzige technische Sorge für praktische Quantensysteme."
+      }
+    }
+  ]
+}

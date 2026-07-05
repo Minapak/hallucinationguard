@@ -1,0 +1,254 @@
+{
+  "id": "bloch_sphere",
+  "certainty": "established",
+  "certaintyNote": "Bloch-sphere representation standard per N&C (2010).",
+  "sourceRef": "F. Bloch, Nuclear Induction, Phys. Rev. 70, 460 (1946), doi:10.1103/PhysRev.70.460",
+  "category": "foundations",
+  "difficultyLevel": 1,
+  "prerequisites": ["qubit", "braket_notation"],
+  "translations": {
+    "en": {
+      "title": "Bloch Sphere",
+      "shortDefinition": "The Bloch sphere is a geometrical representation of the pure state space of a single qubit, mapping every possible qubit state to a point on the surface of a unit sphere.",
+      "detailedExplanation": "Any pure single-qubit state can be written as |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩, where θ (polar angle) and φ (azimuthal angle) define a point on the Bloch sphere. The north pole corresponds to |0⟩, the south pole to |1⟩, and the equator contains equal superpositions with various relative phases. Single-qubit gates correspond to rotations of this sphere. The Bloch sphere provides crucial geometric intuition: the X, Y, Z Pauli gates are 180-degree rotations around the x, y, z axes respectively, and the Hadamard gate maps between the z and x axes. Mixed states (from decoherence) map to points inside the sphere, not on its surface.",
+      "analogies": [
+        "The Bloch sphere is like a globe where the north pole is |0⟩ and the south pole is |1⟩ — every quantum state has its own 'latitude and longitude' on this globe, and quantum gates are like rotating the globe.",
+        "Think of it as a compass for quantum states — just as a compass needle can point in any direction on a sphere, a qubit's state can correspond to any point on the Bloch sphere.",
+        "Where does the name come from? Not from any property of the sphere — it honors the Swiss-American physicist Felix Bloch (Nobel Prize 1952, nuclear magnetic resonance). A person's name simply became the term."
+      ],
+      "commonMisconceptions": [
+        "The Bloch sphere only works for SINGLE qubits — there is no simple geometric representation for multi-qubit states, which live in exponentially larger Hilbert spaces.",
+        "Points INSIDE the Bloch sphere are not invalid — they represent mixed states (statistical mixtures), while points on the surface represent pure states.",
+        "The Bloch sphere is NOT a literal shape — a qubit is not a ball and has no spatial direction; the sphere is only a visualization of two complex amplitudes. Treating it as physical geometry is a common source of confusion."
+      ],
+      "keyTakeaways": [
+        "Every pure single-qubit state maps to a unique point on the surface of the Bloch sphere, parameterized by angles θ and φ.",
+        "Quantum gates on a single qubit correspond to rotations of the Bloch sphere.",
+        "The Bloch sphere provides geometric intuition for understanding single-qubit operations and states.",
+        "The Hadamard gate is a 90° rotation about the Y axis followed by a 180° rotation about the X axis — that second rotation is what makes H self-inverse (H·H = I) for every initial state."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "On the Bloch sphere, which state is located at the north pole?",
+          "questionType": "multipleChoice",
+          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "correctAnswerIndex": 2,
+          "explanation": "The north pole of the Bloch sphere corresponds to the state |0⟩ (θ=0), while the south pole corresponds to |1⟩ (θ=π).",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ko": {
+      "title": "블로흐 구",
+      "shortDefinition": "블로흐 구는 단일 큐비트의 순수 상태 공간에 대한 기하학적 표현으로, 모든 가능한 큐비트 상태를 단위 구의 표면 위 한 점에 매핑합니다.",
+      "detailedExplanation": "모든 순수 단일 큐비트 상태는 |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩으로 쓸 수 있으며, 여기서 θ(극각)와 φ(방위각)은 블로흐 구 위의 한 점을 정의합니다. 북극은 |0⟩에, 남극은 |1⟩에 대응하며, 적도에는 다양한 상대적 위상을 가진 동등한 중첩 상태가 있습니다. 단일 큐비트 게이트는 이 구의 회전에 대응합니다. 블로흐 구는 중요한 기하학적 직관을 제공합니다: X, Y, Z 파울리 게이트는 각각 x, y, z 축에 대한 180도 회전이고, 아다마르 게이트는 z축과 x축 사이를 매핑합니다. 결어긋남에 의한 혼합 상태는 구의 표면이 아닌 내부 점에 매핑됩니다.",
+      "analogies": [
+        "블로흐 구는 북극이 |0⟩이고 남극이 |1⟩인 지구본과 같습니다 — 모든 양자 상태는 이 지구본 위에 고유한 '위도와 경도'를 가지며, 양자 게이트는 지구본을 회전하는 것과 같습니다.",
+        "양자 상태를 위한 나침반이라고 생각하세요 — 나침반 바늘이 구 위의 어느 방향이든 가리킬 수 있듯이, 큐비트의 상태는 블로흐 구 위의 어느 점이든 대응할 수 있습니다.",
+        "'블로흐'는 무슨 뜻일까요? 사실 사람 이름입니다 — 스위스 출신 미국 물리학자 펠릭스 블로흐(1952년 노벨 물리학상, 핵자기공명)를 기린 것으로, 사람 이름이 그대로 용어가 된 경우입니다."
+      ],
+      "commonMisconceptions": [
+        "블로흐 구는 단일 큐비트에만 작동합니다 — 다중 큐비트 상태에 대한 간단한 기하학적 표현은 없으며, 이들은 기하급수적으로 큰 힐베르트 공간에 존재합니다.",
+        "블로흐 구 내부의 점은 유효하지 않은 것이 아닙니다 — 혼합 상태(통계적 혼합)를 나타내며, 표면의 점은 순수 상태를 나타냅니다.",
+        "블로흐 구는 실제 모양이 아닙니다 — 큐비트는 공이 아니며 공간적 방향을 갖지 않습니다. 구는 두 복소 진폭을 그림으로 보여주는 시각화일 뿐이며, 이를 물리적 기하로 받아들이는 것이 흔한 혼란의 원인입니다."
+      ],
+      "keyTakeaways": [
+        "모든 순수 단일 큐비트 상태는 각도 θ와 φ로 매개변수화된 블로흐 구 표면의 고유한 점에 매핑됩니다.",
+        "단일 큐비트에 대한 양자 게이트는 블로흐 구의 회전에 대응합니다.",
+        "블로흐 구는 단일 큐비트 연산과 상태를 이해하기 위한 기하학적 직관을 제공합니다.",
+        "아다마르 게이트는 Y축 90° 회전 뒤 X축 180° 회전입니다 — 이 두 번째 회전 덕분에 H는 모든 초기 상태에 대해 자기 역원(H·H = I)이 됩니다."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "블로흐 구에서 북극에 위치한 상태는 무엇입니까?",
+          "questionType": "multipleChoice",
+          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "correctAnswerIndex": 2,
+          "explanation": "블로흐 구의 북극은 상태 |0⟩(θ=0)에 대응하고, 남극은 |1⟩(θ=π)에 대응합니다.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ja": {
+      "title": "ブロッホ球",
+      "shortDefinition": "ブロッホ球は、単一量子ビットの純粋状態空間の幾何学的表現であり、すべての可能な量子ビット状態を単位球の表面上の点にマッピングします。",
+      "detailedExplanation": "任意の純粋な単一量子ビット状態は|ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩と書くことができ、ここでθ（極角）とφ（方位角）がブロッホ球上の点を定義します。北極は|0⟩に、南極は|1⟩に対応し、赤道には様々な相対位相を持つ等しい重ね合わせが含まれます。単一量子ビットゲートはこの球の回転に対応します。ブロッホ球は重要な幾何学的直感を提供します：X、Y、Zパウリゲートはそれぞれx、y、z軸周りの180度回転であり、アダマールゲートはz軸とx軸の間をマッピングします。デコヒーレンスによる混合状態は球の表面ではなく内部の点にマッピングされます。",
+      "analogies": [
+        "ブロッホ球は北極が|0⟩で南極が|1⟩の地球儀のようなものです — すべての量子状態はこの地球儀上に独自の「緯度と経度」を持ち、量子ゲートは地球儀を回転させるようなものです。",
+        "量子状態のためのコンパスと考えてください — コンパスの針が球上のどの方向にも向けるように、量子ビットの状態はブロッホ球上のどの点にも対応できます。",
+        "「ブロッホ」とはどういう意味でしょう？実は人名です — スイス生まれのアメリカの物理学者フェリックス・ブロッホ（1952年ノーベル物理学賞、核磁気共鳴）にちなんだもので、人の名前がそのまま用語になった例です。"
+      ],
+      "commonMisconceptions": [
+        "ブロッホ球は単一量子ビットにのみ機能します — 多量子ビット状態に対する単純な幾何学的表現はなく、それらは指数関数的に大きなヒルベルト空間に存在します。",
+        "ブロッホ球の内部の点は無効ではありません — 混合状態（統計的混合）を表し、表面の点は純粋状態を表します。",
+        "ブロッホ球は文字通りの形ではありません — 量子ビットは球体ではなく空間的な方向も持ちません。球はあくまで2つの複素振幅を可視化したものにすぎず、これを物理的な幾何学として捉えることがよくある混乱の元です。"
+      ],
+      "keyTakeaways": [
+        "すべての純粋な単一量子ビット状態は、角度θとφでパラメータ化されたブロッホ球表面の一意の点にマッピングされます。",
+        "単一量子ビットに対する量子ゲートはブロッホ球の回転に対応します。",
+        "ブロッホ球は単一量子ビットの操作と状態を理解するための幾何学的直感を提供します。",
+        "アダマールゲートはY軸まわりの90°回転に続くX軸まわりの180°回転です — この2つ目の回転こそが、あらゆる初期状態に対してHを自己逆元（H·H = I）にしています。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "ブロッホ球で北極に位置する状態はどれですか？",
+          "questionType": "multipleChoice",
+          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "correctAnswerIndex": 2,
+          "explanation": "ブロッホ球の北極は状態|0⟩（θ=0）に対応し、南極は|1⟩（θ=π）に対応します。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "zh-Hans": {
+      "title": "布洛赫球",
+      "shortDefinition": "布洛赫球是单量子比特纯态空间的几何表示，将每个可能的量子比特态映射到单位球面上的一个点。",
+      "detailedExplanation": "任何纯单量子比特态都可以写为|ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩，其中θ（极角）和φ（方位角）定义了布洛赫球上的一个点。北极对应|0⟩，南极对应|1⟩，赤道包含具有各种相对相位的等量叠加。单量子比特门对应于这个球的旋转。布洛赫球提供了关键的几何直觉：X、Y、Z泡利门分别是绕x、y、z轴的180度旋转，阿达马门在z轴和x轴之间映射。退相干导致的混合态映射到球内部而非表面的点。",
+      "analogies": [
+        "布洛赫球就像一个北极为|0⟩、南极为|1⟩的地球仪——每个量子态在这个地球仪上都有自己的'经纬度'，量子门就像旋转地球仪。",
+        "把它想象为量子态的指南针——正如指南针的指针可以指向球面上的任何方向，量子比特的状态可以对应布洛赫球上的任何点。",
+        "'布洛赫'是什么意思？其实是人名——纪念瑞士裔美国物理学家费利克斯·布洛赫（1952年诺贝尔物理学奖，核磁共振），一个人的名字就这样变成了术语。"
+      ],
+      "commonMisconceptions": [
+        "布洛赫球仅适用于单量子比特——多量子比特态没有简单的几何表示，它们存在于指数级大的希尔伯特空间中。",
+        "布洛赫球内部的点不是无效的——它们代表混合态（统计混合），而表面上的点代表纯态。",
+        "布洛赫球并不是一个真实的形状——量子比特不是球，也没有空间方向；这个球面只是对两个复振幅的可视化。把它当作物理几何来理解是常见的困惑来源。"
+      ],
+      "keyTakeaways": [
+        "每个纯单量子比特态映射到布洛赫球面上由角度θ和φ参数化的唯一点。",
+        "单量子比特上的量子门对应于布洛赫球的旋转。",
+        "布洛赫球为理解单量子比特操作和状态提供了几何直觉。",
+        "阿达马门是先绕Y轴旋转90°，再绕X轴旋转180°——正是第二个旋转使H对任何初始态都是自逆的（H·H = I）。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "在布洛赫球上，哪个状态位于北极？",
+          "questionType": "multipleChoice",
+          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "correctAnswerIndex": 2,
+          "explanation": "布洛赫球的北极对应状态|0⟩（θ=0），南极对应|1⟩（θ=π）。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "de": {
+      "title": "Bloch-Kugel",
+      "shortDefinition": "Die Bloch-Kugel ist eine geometrische Darstellung des reinen Zustandsraums eines einzelnen Qubits, die jeden möglichen Qubitzustand auf einen Punkt auf der Oberfläche einer Einheitskugel abbildet.",
+      "detailedExplanation": "Jeder reine Einzelqubit-Zustand kann als |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩ geschrieben werden, wobei θ (Polarwinkel) und φ (Azimutwinkel) einen Punkt auf der Bloch-Kugel definieren. Der Nordpol entspricht |0⟩, der Südpol |1⟩, und der Äquator enthält gleiche Superpositionen mit verschiedenen relativen Phasen. Einzelqubit-Gatter entsprechen Rotationen dieser Kugel. Die Bloch-Kugel liefert wichtige geometrische Intuition: Die X-, Y-, Z-Pauli-Gatter sind 180-Grad-Rotationen um die x-, y-, z-Achsen, und das Hadamard-Gatter bildet zwischen der z- und x-Achse ab. Gemischte Zustände (durch Dekohärenz) werden auf Punkte im Inneren der Kugel abgebildet.",
+      "analogies": [
+        "Die Bloch-Kugel ist wie ein Globus, bei dem der Nordpol |0⟩ und der Südpol |1⟩ ist — jeder Quantenzustand hat seinen eigenen 'Breiten- und Längengrad' auf diesem Globus, und Quantengatter entsprechen der Rotation des Globus.",
+        "Denken Sie an einen Kompass für Quantenzustände — so wie eine Kompassnadel in jede Richtung auf einer Kugel zeigen kann, kann der Zustand eines Qubits jedem Punkt auf der Bloch-Kugel entsprechen.",
+        "Woher kommt der Name? Von keiner Eigenschaft der Kugel — er ehrt den schweizerisch-amerikanischen Physiker Felix Bloch (Nobelpreis 1952, Kernspinresonanz). Der Name einer Person wurde einfach zum Fachbegriff."
+      ],
+      "commonMisconceptions": [
+        "Die Bloch-Kugel funktioniert nur für EINZELNE Qubits — es gibt keine einfache geometrische Darstellung für Multi-Qubit-Zustände, die in exponentiell größeren Hilberträumen leben.",
+        "Punkte INNERHALB der Bloch-Kugel sind nicht ungültig — sie repräsentieren gemischte Zustände (statistische Mischungen), während Punkte auf der Oberfläche reine Zustände repräsentieren.",
+        "Die Bloch-Kugel ist KEINE buchstäbliche Form — ein Qubit ist keine Kugel und hat keine räumliche Richtung; die Kugel ist nur eine Visualisierung zweier komplexer Amplituden. Sie als physische Geometrie zu behandeln, ist eine häufige Quelle der Verwirrung."
+      ],
+      "keyTakeaways": [
+        "Jeder reine Einzelqubit-Zustand wird auf einen einzigartigen Punkt auf der Oberfläche der Bloch-Kugel abgebildet, parametrisiert durch die Winkel θ und φ.",
+        "Quantengatter auf einem einzelnen Qubit entsprechen Rotationen der Bloch-Kugel.",
+        "Die Bloch-Kugel liefert geometrische Intuition zum Verständnis von Einzelqubit-Operationen und -Zuständen.",
+        "Das Hadamard-Gatter ist eine 90°-Rotation um die Y-Achse gefolgt von einer 180°-Rotation um die X-Achse — diese zweite Rotation macht H für jeden Anfangszustand selbstinvers (H·H = I)."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Welcher Zustand befindet sich auf der Bloch-Kugel am Nordpol?",
+          "questionType": "multipleChoice",
+          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "correctAnswerIndex": 2,
+          "explanation": "Der Nordpol der Bloch-Kugel entspricht dem Zustand |0⟩ (θ=0), während der Südpol |1⟩ (θ=π) entspricht.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "fr": {
+      "title": "Sphère de Bloch",
+      "shortDefinition": "La sphère de Bloch est une représentation géométrique de l'espace des états purs d'un qubit unique, mappant chaque état possible du qubit à un point sur la surface d'une sphère unité.",
+      "detailedExplanation": "Tout état pur d'un qubit unique peut être écrit comme |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩, où θ (angle polaire) et φ (angle azimutal) définissent un point sur la sphère de Bloch. Le pôle Nord correspond à |0⟩, le pôle Sud à |1⟩, et l'équateur contient des superpositions égales avec diverses phases relatives. Les portes à qubit unique correspondent à des rotations de cette sphère. La sphère de Bloch fournit une intuition géométrique cruciale : les portes de Pauli X, Y, Z sont des rotations de 180 degrés autour des axes x, y, z respectivement, et la porte de Hadamard mappe entre les axes z et x. Les états mixtes (de la décohérence) sont mappés à des points à l'intérieur de la sphère.",
+      "analogies": [
+        "La sphère de Bloch est comme un globe où le pôle Nord est |0⟩ et le pôle Sud est |1⟩ — chaque état quantique a sa propre 'latitude et longitude' sur ce globe, et les portes quantiques sont comme la rotation du globe.",
+        "Pensez-y comme une boussole pour les états quantiques — tout comme l'aiguille d'une boussole peut pointer dans n'importe quelle direction sur une sphère, l'état d'un qubit peut correspondre à n'importe quel point sur la sphère de Bloch.",
+        "D'où vient le nom ? D'aucune propriété de la sphère — il honore le physicien helvético-américain Felix Bloch (prix Nobel 1952, résonance magnétique nucléaire). Le nom d'une personne est simplement devenu le terme."
+      ],
+      "commonMisconceptions": [
+        "La sphère de Bloch ne fonctionne que pour les qubits UNIQUES — il n'existe pas de représentation géométrique simple pour les états multi-qubits, qui vivent dans des espaces de Hilbert exponentiellement plus grands.",
+        "Les points À L'INTÉRIEUR de la sphère de Bloch ne sont pas invalides — ils représentent des états mixtes (mélanges statistiques), tandis que les points sur la surface représentent des états purs.",
+        "La sphère de Bloch n'est PAS une forme littérale — un qubit n'est pas une boule et n'a pas de direction spatiale ; la sphère n'est qu'une visualisation de deux amplitudes complexes. La traiter comme une géométrie physique est une source fréquente de confusion."
+      ],
+      "keyTakeaways": [
+        "Chaque état pur d'un qubit unique correspond à un point unique sur la surface de la sphère de Bloch, paramétré par les angles θ et φ.",
+        "Les portes quantiques sur un qubit unique correspondent à des rotations de la sphère de Bloch.",
+        "La sphère de Bloch fournit une intuition géométrique pour comprendre les opérations et états d'un qubit unique.",
+        "La porte de Hadamard est une rotation de 90° autour de l'axe Y suivie d'une rotation de 180° autour de l'axe X — c'est cette seconde rotation qui rend H auto-inverse (H·H = I) pour tout état initial."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Sur la sphère de Bloch, quel état se trouve au pôle Nord ?",
+          "questionType": "multipleChoice",
+          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "correctAnswerIndex": 2,
+          "explanation": "Le pôle Nord de la sphère de Bloch correspond à l'état |0⟩ (θ=0), tandis que le pôle Sud correspond à |1⟩ (θ=π).",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "es": {
+      "title": "Esfera de Bloch",
+      "shortDefinition": "La esfera de Bloch es una representación geométrica del espacio de estados puros de un qubit individual, mapeando cada estado posible del qubit a un punto en la superficie de una esfera unitaria.",
+      "detailedExplanation": "Cualquier estado puro de un qubit individual puede escribirse como |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩, donde θ (ángulo polar) y φ (ángulo azimutal) definen un punto en la esfera de Bloch. El polo norte corresponde a |0⟩, el polo sur a |1⟩, y el ecuador contiene superposiciones iguales con varias fases relativas. Las puertas de un solo qubit corresponden a rotaciones de esta esfera. La esfera de Bloch proporciona intuición geométrica crucial: las puertas de Pauli X, Y, Z son rotaciones de 180 grados alrededor de los ejes x, y, z respectivamente, y la puerta de Hadamard mapea entre los ejes z y x. Los estados mixtos (por decoherencia) se mapean a puntos dentro de la esfera.",
+      "analogies": [
+        "La esfera de Bloch es como un globo terráqueo donde el polo norte es |0⟩ y el polo sur es |1⟩ — cada estado cuántico tiene su propia 'latitud y longitud' en este globo, y las puertas cuánticas son como rotar el globo.",
+        "Piénsalo como una brújula para estados cuánticos — así como la aguja de una brújula puede apuntar en cualquier dirección en una esfera, el estado de un qubit puede corresponder a cualquier punto en la esfera de Bloch.",
+        "¿De dónde viene el nombre? De ninguna propiedad de la esfera — honra al físico suizo-estadounidense Felix Bloch (Premio Nobel 1952, resonancia magnética nuclear). El nombre de una persona se convirtió simplemente en el término."
+      ],
+      "commonMisconceptions": [
+        "La esfera de Bloch solo funciona para qubits INDIVIDUALES — no existe una representación geométrica simple para estados multi-qubit, que viven en espacios de Hilbert exponencialmente más grandes.",
+        "Los puntos DENTRO de la esfera de Bloch no son inválidos — representan estados mixtos (mezclas estadísticas), mientras que los puntos en la superficie representan estados puros.",
+        "La esfera de Bloch NO es una forma literal — un qubit no es una bola ni tiene dirección espacial; la esfera es solo una visualización de dos amplitudes complejas. Tratarla como geometría física es una fuente común de confusión."
+      ],
+      "keyTakeaways": [
+        "Cada estado puro de un qubit individual se mapea a un punto único en la superficie de la esfera de Bloch, parametrizado por los ángulos θ y φ.",
+        "Las puertas cuánticas en un qubit individual corresponden a rotaciones de la esfera de Bloch.",
+        "La esfera de Bloch proporciona intuición geométrica para entender las operaciones y estados de un qubit individual.",
+        "La puerta de Hadamard es una rotación de 90° sobre el eje Y seguida de una rotación de 180° sobre el eje X — esa segunda rotación es lo que hace que H sea su propia inversa (H·H = I) para cualquier estado inicial."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "En la esfera de Bloch, ¿qué estado se encuentra en el polo norte?",
+          "questionType": "multipleChoice",
+          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "correctAnswerIndex": 2,
+          "explanation": "El polo norte de la esfera de Bloch corresponde al estado |0⟩ (θ=0), mientras que el polo sur corresponde a |1⟩ (θ=π).",
+          "difficultyLevel": 1
+        }
+      ]
+    }
+  },
+  "relatedFormulas": [
+    {
+      "latex": "|\\psi\\rangle = \\cos\\frac{\\theta}{2}|0\\rangle + e^{i\\phi}\\sin\\frac{\\theta}{2}|1\\rangle",
+      "plainTextDescription": {
+        "en": "Bloch sphere parameterization of a single-qubit state",
+        "ko": "단일 큐비트 상태의 블로흐 구 매개변수화"
+      },
+      "variables": [
+        {"symbol": "θ", "meaning": {"en": "Polar angle (0 to π)", "ko": "극각 (0에서 π)"}},
+        {"symbol": "φ", "meaning": {"en": "Azimuthal angle (0 to 2π)", "ko": "방위각 (0에서 2π)"}}
+      ]
+    }
+  ],
+  "visualizationType": "blochSphere",
+  "verifiedBy": {
+    "verifierName": "Eunmin Park",
+    "verifierCredentials": "IEEE Member, Quantum Computing Educator",
+    "verificationDate": "2026-04-07",
+    "reviewedSources": ["Nielsen & Chuang (2010)", "IBM Qiskit Textbook"],
+    "confidenceLevel": "undisputed"
+  },
+  "lastReviewed": "2026-07-03",
+  "citationReferences": [
+    "Bloch, F. (1946). Nuclear Induction. Physical Review.",
+    "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press."
+  ]
+}

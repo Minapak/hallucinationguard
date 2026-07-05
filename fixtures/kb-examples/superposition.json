@@ -1,0 +1,233 @@
+{
+  "id": "superposition",
+  "certainty": "established",
+  "certaintyNote": "Superposition principle per Dirac, The Principles of Quantum Mechanics (1930); textbook formalization N&C.",
+  "sourceRef": "Nielsen & Chuang, Quantum Computation and Quantum Information (2010), doi:10.1017/CBO9780511976667",
+  "category": "foundations",
+  "difficultyLevel": 1,
+  "prerequisites": ["qubit"],
+  "translations": {
+    "en": {
+      "title": "Superposition",
+      "shortDefinition": "Superposition is the quantum mechanical principle that allows a quantum system to exist in multiple states simultaneously until measured.",
+      "detailedExplanation": "Superposition is one of the cornerstone principles of quantum mechanics. A quantum system can be in a coherent combination of multiple basis states at once, mathematically expressed as |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, where cᵢ are complex coefficients. This is not merely a statement of ignorance about the system's state — it is a fundamental feature of nature. The interference between different components of a superposition is what gives quantum computing its power, enabling quantum algorithms to explore multiple computational paths in parallel. Superposition is maintained as long as the system remains isolated from its environment; interaction with the environment causes decoherence, which destroys the superposition.",
+      "analogies": [
+        "Superposition is like a musical chord: just as a chord is a combination of multiple notes played simultaneously (not a random note), a quantum state in superposition is a definite combination of basis states, not a random one.",
+        "Imagine a ball rolling through a maze that can take all paths simultaneously — upon reaching the exit (measurement), it commits to a single path, but along the way it explored every route at once."
+      ],
+      "commonMisconceptions": [
+        "Superposition does NOT mean the system is in one state and we just don't know which — it is genuinely in a combination of states, as demonstrated by interference experiments.",
+        "Superposition is NOT randomness — the complex amplitudes precisely determine the probability of each outcome and allow for constructive and destructive interference."
+      ],
+      "keyTakeaways": [
+        "Superposition allows a quantum state to be a linear combination of multiple basis states simultaneously.",
+        "Interference between superposed states is the key resource that quantum algorithms exploit.",
+        "Superposition is fragile and collapses upon measurement or interaction with the environment (decoherence)."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Which phenomenon demonstrates that quantum superposition is a real physical property and not just classical ignorance?",
+          "questionType": "multipleChoice",
+          "options": ["Gravity", "Quantum interference", "Thermal noise", "Electric resistance"],
+          "correctAnswerIndex": 1,
+          "explanation": "Quantum interference (e.g., in the double-slit experiment) shows that superposition is a genuine physical property, since the interference pattern cannot be explained by classical probability alone.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ko": {
+      "title": "중첩",
+      "shortDefinition": "중첩은 양자 시스템이 측정되기 전까지 동시에 여러 상태에 존재할 수 있게 하는 양자역학의 원리입니다.",
+      "detailedExplanation": "중첩은 양자역학의 핵심 원리 중 하나입니다. 양자 시스템은 여러 기저 상태의 결맞은 조합으로 동시에 존재할 수 있으며, 수학적으로 |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩로 표현됩니다. 여기서 cᵢ는 복소 계수입니다. 이것은 시스템의 상태에 대한 무지의 표현이 아니라 자연의 근본적인 특성입니다. 중첩의 서로 다른 성분 사이의 간섭이 양자 컴퓨팅에 힘을 주어, 양자 알고리즘이 여러 계산 경로를 병렬로 탐색할 수 있게 합니다. 중첩은 시스템이 환경으로부터 격리된 상태를 유지하는 한 유지되며, 환경과의 상호작용은 중첩을 파괴하는 결어긋남을 유발합니다.",
+      "analogies": [
+        "중첩은 음악의 화음과 같습니다: 화음이 동시에 연주되는 여러 음의 조합인 것처럼(무작위 음이 아님), 중첩 상태의 양자 상태는 기저 상태의 확정적 조합이지 무작위가 아닙니다.",
+        "미로를 통과하는 공이 모든 경로를 동시에 지나가는 것을 상상해보세요 — 출구(측정)에 도달하면 하나의 경로에 정착하지만, 그 과정에서 모든 경로를 동시에 탐색했습니다."
+      ],
+      "commonMisconceptions": [
+        "중첩은 시스템이 하나의 상태에 있지만 우리가 어떤 상태인지 모른다는 것을 의미하지 않습니다 — 간섭 실험이 증명하듯이 실제로 상태의 조합에 있습니다.",
+        "중첩은 무작위가 아닙니다 — 복소 진폭이 각 결과의 확률을 정확히 결정하고 보강 및 상쇄 간섭을 가능하게 합니다."
+      ],
+      "keyTakeaways": [
+        "중첩은 양자 상태가 여러 기저 상태의 선형 조합으로 동시에 존재할 수 있게 합니다.",
+        "중첩된 상태 사이의 간섭은 양자 알고리즘이 활용하는 핵심 자원입니다.",
+        "중첩은 취약하며 측정이나 환경과의 상호작용(결어긋남) 시 붕괴됩니다."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "양자 중첩이 고전적 무지가 아닌 실제 물리적 특성임을 보여주는 현상은 무엇입니까?",
+          "questionType": "multipleChoice",
+          "options": ["중력", "양자 간섭", "열 잡음", "전기 저항"],
+          "correctAnswerIndex": 1,
+          "explanation": "양자 간섭(예: 이중 슬릿 실험)은 간섭 패턴이 고전적 확률만으로는 설명될 수 없으므로 중첩이 진정한 물리적 특성임을 보여줍니다.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ja": {
+      "title": "重ね合わせ",
+      "shortDefinition": "重ね合わせとは、量子システムが測定されるまで複数の状態に同時に存在することを可能にする量子力学の原理です。",
+      "detailedExplanation": "重ね合わせは量子力学の基礎原理の一つです。量子システムは複数の基底状態のコヒーレントな組み合わせとして同時に存在でき、数学的には|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩と表現されます。ここでcᵢは複素係数です。これはシステムの状態に関する無知の表明ではなく、自然の根本的な特性です。重ね合わせの異なる成分間の干渉が量子コンピューティングに力を与え、量子アルゴリズムが複数の計算経路を並列に探索することを可能にします。重ね合わせはシステムが環境から隔離されている限り維持され、環境との相互作用はデコヒーレンスを引き起こし、重ね合わせを破壊します。",
+      "analogies": [
+        "重ね合わせは音楽の和音のようなものです：和音が同時に演奏される複数の音の組み合わせであるように（ランダムな音ではなく）、重ね合わせ状態の量子状態は基底状態の確定的な組み合わせであり、ランダムではありません。",
+        "迷路を通り抜けるボールがすべての経路を同時に通ることを想像してください — 出口（測定）に到達すると一つの経路に確定しますが、途中ですべてのルートを同時に探索していました。"
+      ],
+      "commonMisconceptions": [
+        "重ね合わせはシステムがある状態にあるが私たちがどの状態か知らないということを意味しません — 干渉実験が示すように、本当に状態の組み合わせにあります。",
+        "重ね合わせはランダム性ではありません — 複素振幅が各結果の確率を正確に決定し、建設的・破壊的干渉を可能にします。"
+      ],
+      "keyTakeaways": [
+        "重ね合わせは量子状態が複数の基底状態の線形結合として同時に存在することを可能にします。",
+        "重ね合わされた状態間の干渉は量子アルゴリズムが活用する主要なリソースです。",
+        "重ね合わせは脆弱であり、測定や環境との相互作用（デコヒーレンス）によって崩壊します。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "量子重ね合わせが古典的な無知ではなく実際の物理的性質であることを示す現象はどれですか？",
+          "questionType": "multipleChoice",
+          "options": ["重力", "量子干渉", "熱雑音", "電気抵抗"],
+          "correctAnswerIndex": 1,
+          "explanation": "量子干渉（例：二重スリット実験）は、干渉パターンが古典的な確率だけでは説明できないため、重ね合わせが本物の物理的性質であることを示しています。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "zh-Hans": {
+      "title": "叠加态",
+      "shortDefinition": "叠加是量子力学原理，允许量子系统在被测量之前同时存在于多个状态中。",
+      "detailedExplanation": "叠加是量子力学的基石原理之一。量子系统可以同时处于多个基态的相干组合中，数学表达为|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩，其中cᵢ是复数系数。这不仅仅是对系统状态的无知——而是自然的根本特征。叠加态不同分量之间的干涉赋予了量子计算其力量，使量子算法能够并行探索多条计算路径。只要系统与环境保持隔离，叠加态就能维持；与环境的相互作用会导致退相干，从而破坏叠加态。",
+      "analogies": [
+        "叠加就像音乐和弦：正如和弦是同时演奏的多个音符的组合（而非随机音符），处于叠加态的量子状态是基态的确定组合，而非随机状态。",
+        "想象一个球在迷宫中同时走过所有路径——到达出口（测量）时，它选定一条路径，但在此过程中它同时探索了每条路线。"
+      ],
+      "commonMisconceptions": [
+        "叠加并不意味着系统处于某个状态而我们只是不知道是哪个——正如干涉实验所证明的，它确实处于状态的组合中。",
+        "叠加不是随机性——复数振幅精确地决定了每个结果的概率，并允许相长干涉和相消干涉。"
+      ],
+      "keyTakeaways": [
+        "叠加允许量子态同时作为多个基态的线性组合存在。",
+        "叠加态之间的干涉是量子算法利用的关键资源。",
+        "叠加态是脆弱的，在测量或与环境相互作用（退相干）时会坍缩。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "哪种现象证明量子叠加是真实的物理特性，而不仅仅是经典的无知？",
+          "questionType": "multipleChoice",
+          "options": ["引力", "量子干涉", "热噪声", "电阻"],
+          "correctAnswerIndex": 1,
+          "explanation": "量子干涉（如双缝实验）表明叠加是真正的物理特性，因为干涉图样无法仅用经典概率解释。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "de": {
+      "title": "Superposition",
+      "shortDefinition": "Superposition ist das quantenmechanische Prinzip, das es einem Quantensystem ermöglicht, gleichzeitig in mehreren Zuständen zu existieren, bis es gemessen wird.",
+      "detailedExplanation": "Superposition ist eines der Grundprinzipien der Quantenmechanik. Ein Quantensystem kann sich gleichzeitig in einer kohärenten Kombination mehrerer Basiszustände befinden, mathematisch ausgedrückt als |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, wobei cᵢ komplexe Koeffizienten sind. Dies ist nicht bloß eine Aussage über Unwissenheit des Systemzustands — es ist eine fundamentale Eigenschaft der Natur. Die Interferenz zwischen verschiedenen Komponenten einer Superposition verleiht dem Quantencomputing seine Stärke und ermöglicht es Quantenalgorithmen, mehrere Berechnungspfade parallel zu erkunden. Superposition wird aufrechterhalten, solange das System von seiner Umgebung isoliert bleibt; die Wechselwirkung mit der Umgebung verursacht Dekohärenz, die die Superposition zerstört.",
+      "analogies": [
+        "Superposition ist wie ein Musikakkord: So wie ein Akkord eine Kombination mehrerer gleichzeitig gespielter Töne ist (kein zufälliger Ton), ist ein Quantenzustand in Superposition eine bestimmte Kombination von Basiszuständen, keine zufällige.",
+        "Stellen Sie sich einen Ball vor, der durch ein Labyrinth rollt und dabei alle Pfade gleichzeitig nehmen kann — am Ausgang (Messung) legt er sich auf einen einzelnen Pfad fest, aber unterwegs hat er jeden Weg gleichzeitig erkundet."
+      ],
+      "commonMisconceptions": [
+        "Superposition bedeutet NICHT, dass sich das System in einem Zustand befindet und wir nur nicht wissen, in welchem — es befindet sich tatsächlich in einer Kombination von Zuständen, wie Interferenzexperimente zeigen.",
+        "Superposition ist KEINE Zufälligkeit — die komplexen Amplituden bestimmen präzise die Wahrscheinlichkeit jedes Ergebnisses und ermöglichen konstruktive und destruktive Interferenz."
+      ],
+      "keyTakeaways": [
+        "Superposition ermöglicht es einem Quantenzustand, gleichzeitig als Linearkombination mehrerer Basiszustände zu existieren.",
+        "Interferenz zwischen superponierten Zuständen ist die Schlüsselressource, die Quantenalgorithmen nutzen.",
+        "Superposition ist fragil und kollabiert bei Messung oder Wechselwirkung mit der Umgebung (Dekohärenz)."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Welches Phänomen zeigt, dass Quantensuperposition eine reale physikalische Eigenschaft und nicht nur klassische Unwissenheit ist?",
+          "questionType": "multipleChoice",
+          "options": ["Gravitation", "Quanteninterferenz", "Thermisches Rauschen", "Elektrischer Widerstand"],
+          "correctAnswerIndex": 1,
+          "explanation": "Quanteninterferenz (z.B. im Doppelspaltexperiment) zeigt, dass Superposition eine echte physikalische Eigenschaft ist, da das Interferenzmuster nicht allein durch klassische Wahrscheinlichkeit erklärt werden kann.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "fr": {
+      "title": "Superposition",
+      "shortDefinition": "La superposition est le principe de mécanique quantique qui permet à un système quantique d'exister simultanément dans plusieurs états jusqu'à ce qu'il soit mesuré.",
+      "detailedExplanation": "La superposition est l'un des principes fondamentaux de la mécanique quantique. Un système quantique peut se trouver dans une combinaison cohérente de plusieurs états de base à la fois, exprimée mathématiquement par |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, où cᵢ sont des coefficients complexes. Ce n'est pas simplement une déclaration d'ignorance sur l'état du système — c'est une caractéristique fondamentale de la nature. L'interférence entre les différentes composantes d'une superposition est ce qui donne au calcul quantique sa puissance, permettant aux algorithmes quantiques d'explorer plusieurs chemins de calcul en parallèle. La superposition est maintenue tant que le système reste isolé de son environnement ; l'interaction avec l'environnement provoque la décohérence, qui détruit la superposition.",
+      "analogies": [
+        "La superposition est comme un accord musical : tout comme un accord est une combinaison de plusieurs notes jouées simultanément (pas une note aléatoire), un état quantique en superposition est une combinaison définie d'états de base, pas une combinaison aléatoire.",
+        "Imaginez une balle roulant dans un labyrinthe qui peut emprunter tous les chemins simultanément — en atteignant la sortie (mesure), elle s'engage sur un seul chemin, mais en cours de route elle a exploré toutes les voies à la fois."
+      ],
+      "commonMisconceptions": [
+        "La superposition ne signifie PAS que le système est dans un état et que nous ne savons simplement pas lequel — il est véritablement dans une combinaison d'états, comme le démontrent les expériences d'interférence.",
+        "La superposition n'est PAS du hasard — les amplitudes complexes déterminent précisément la probabilité de chaque résultat et permettent l'interférence constructive et destructive."
+      ],
+      "keyTakeaways": [
+        "La superposition permet à un état quantique d'être une combinaison linéaire de plusieurs états de base simultanément.",
+        "L'interférence entre les états superposés est la ressource clé exploitée par les algorithmes quantiques.",
+        "La superposition est fragile et s'effondre lors de la mesure ou de l'interaction avec l'environnement (décohérence)."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Quel phénomène démontre que la superposition quantique est une propriété physique réelle et pas simplement une ignorance classique ?",
+          "questionType": "multipleChoice",
+          "options": ["La gravité", "L'interférence quantique", "Le bruit thermique", "La résistance électrique"],
+          "correctAnswerIndex": 1,
+          "explanation": "L'interférence quantique (par exemple, dans l'expérience de la double fente) montre que la superposition est une véritable propriété physique, car le motif d'interférence ne peut pas être expliqué uniquement par la probabilité classique.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "es": {
+      "title": "Superposición",
+      "shortDefinition": "La superposición es el principio de mecánica cuántica que permite a un sistema cuántico existir simultáneamente en múltiples estados hasta que es medido.",
+      "detailedExplanation": "La superposición es uno de los principios fundamentales de la mecánica cuántica. Un sistema cuántico puede estar en una combinación coherente de múltiples estados base a la vez, expresada matemáticamente como |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, donde cᵢ son coeficientes complejos. Esto no es simplemente una declaración de ignorancia sobre el estado del sistema — es una característica fundamental de la naturaleza. La interferencia entre diferentes componentes de una superposición es lo que da al cómputo cuántico su poder, permitiendo a los algoritmos cuánticos explorar múltiples caminos computacionales en paralelo. La superposición se mantiene mientras el sistema permanezca aislado de su entorno; la interacción con el entorno causa decoherencia, que destruye la superposición.",
+      "analogies": [
+        "La superposición es como un acorde musical: así como un acorde es una combinación de múltiples notas tocadas simultáneamente (no una nota aleatoria), un estado cuántico en superposición es una combinación definida de estados base, no aleatoria.",
+        "Imagina una pelota rodando por un laberinto que puede tomar todos los caminos simultáneamente — al llegar a la salida (medición), se compromete con un solo camino, pero en el trayecto exploró cada ruta a la vez."
+      ],
+      "commonMisconceptions": [
+        "La superposición NO significa que el sistema está en un estado y simplemente no sabemos cuál — está genuinamente en una combinación de estados, como demuestran los experimentos de interferencia.",
+        "La superposición NO es aleatoriedad — las amplitudes complejas determinan precisamente la probabilidad de cada resultado y permiten la interferencia constructiva y destructiva."
+      ],
+      "keyTakeaways": [
+        "La superposición permite a un estado cuántico ser una combinación lineal de múltiples estados base simultáneamente.",
+        "La interferencia entre estados superpuestos es el recurso clave que explotan los algoritmos cuánticos.",
+        "La superposición es frágil y colapsa al medir o al interactuar con el entorno (decoherencia)."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "¿Qué fenómeno demuestra que la superposición cuántica es una propiedad física real y no simplemente ignorancia clásica?",
+          "questionType": "multipleChoice",
+          "options": ["Gravedad", "Interferencia cuántica", "Ruido térmico", "Resistencia eléctrica"],
+          "correctAnswerIndex": 1,
+          "explanation": "La interferencia cuántica (por ejemplo, en el experimento de la doble rendija) muestra que la superposición es una propiedad física genuina, ya que el patrón de interferencia no puede explicarse solo con probabilidad clásica.",
+          "difficultyLevel": 1
+        }
+      ]
+    }
+  },
+  "relatedFormulas": [
+    {
+      "latex": "|\\psi\\rangle = \\sum_i c_i |\\psi_i\\rangle",
+      "plainTextDescription": {
+        "en": "General superposition of quantum states",
+        "ko": "양자 상태의 일반적 중첩"
+      },
+      "variables": [
+        {"symbol": "cᵢ", "meaning": {"en": "Complex amplitude for the i-th basis state", "ko": "i번째 기저 상태에 대한 복소 진폭"}},
+        {"symbol": "|ψᵢ⟩", "meaning": {"en": "The i-th basis state", "ko": "i번째 기저 상태"}}
+      ]
+    }
+  ],
+  "visualizationType": "blochSphere",
+  "verifiedBy": {
+    "verifierName": "Eunmin Park",
+    "verifierCredentials": "IEEE Member, Quantum Computing Educator",
+    "verificationDate": "2026-04-07",
+    "reviewedSources": ["Nielsen & Chuang (2010)", "IBM Qiskit Textbook"],
+    "confidenceLevel": "undisputed"
+  },
+  "lastReviewed": "2026-04-07",
+  "citationReferences": [
+    "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.",
+    "Feynman, R. P. (1965). The Feynman Lectures on Physics, Volume III."
+  ]
+}

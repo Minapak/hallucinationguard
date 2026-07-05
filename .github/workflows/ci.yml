@@ -1,0 +1,23 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fixture schema + certainty gates
+        run: python3 tests/test_fixtures.py
+      - name: Reference scorer runs end-to-end (all 7 locales)
+        run: |
+          for loc in en ko ja zh-Hans es fr de; do
+            python3 reference/score_v0.py fixtures/samples/hg120_sample_20.json --locale "$loc" > /dev/null
+          done
+      - name: Demo script runs
+        run: python3 demo/metric_blindness_demo.py > /dev/null

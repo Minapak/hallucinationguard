@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it as below."
+title: "HallucinationGuard: an open benchmark for measuring what LLMs get wrong about quantum computing"
+authors:
+  - family-names: Park
+    given-names: Eunmin
+repository-code: "https://github.com/Minapak/hallucinationguard"
+license: Apache-2.0
+keywords:
+  - quantum computing
+  - hallucination
+  - benchmark
+  - LLM evaluation
+  - multilingual
+preferred-citation:
+  type: conference-paper
+  title: "Paper #305, IEEE International Conference on Quantum Computing and Engineering (QCE26), QSEEC track — submitted"
+  authors:
+    - family-names: Park
+      given-names: Eunmin
+  year: 2026

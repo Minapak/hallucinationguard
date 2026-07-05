@@ -1,0 +1,232 @@
+{
+  "id": "braket_notation",
+  "certainty": "established",
+  "sourceRef": "P. A. M. Dirac, A new notation for quantum mechanics, Math. Proc. Camb. Phil. Soc. 35, 416 (1939), doi:10.1017/S0305004100021162",
+  "category": "foundations",
+  "difficultyLevel": 1,
+  "prerequisites": ["qubit"],
+  "translations": {
+    "en": {
+      "title": "Dirac (Bra-Ket) Notation",
+      "shortDefinition": "Bra-ket notation is the standard mathematical notation for quantum states, where |ψ⟩ (ket) represents a column vector and ⟨ψ| (bra) represents its conjugate transpose row vector.",
+      "detailedExplanation": "Introduced by Paul Dirac, bra-ket notation provides a concise and powerful way to express quantum states and operations. A ket |ψ⟩ represents a state vector in Hilbert space (a column vector), while a bra ⟨ψ| is its dual (conjugate transpose, a row vector). The inner product ⟨φ|ψ⟩ gives the overlap between two states (a complex number), and the outer product |ψ⟩⟨φ| gives an operator (a matrix). This notation elegantly encodes both the algebraic and geometric structure of quantum mechanics, making it easy to express measurements, state evolution, and entanglement.",
+      "analogies": [
+        "Bra-ket notation is like a specialized shorthand for quantum mechanics — just as musicians use staff notation instead of writing out 'play the note A at 440 Hz for 0.5 seconds,' physicists use |ψ⟩ instead of writing out full column vectors.",
+        "Think of a ket |ψ⟩ as a labeled container that holds the quantum state, and a bra ⟨φ| as a measuring template — when you combine them ⟨φ|ψ⟩, you get the overlap score between the two states."
+      ],
+      "commonMisconceptions": [
+        "The symbols | and ⟩ are NOT just decoration — |ψ⟩ specifically denotes a column vector in Hilbert space, and ⟨ψ| is its conjugate transpose, not the same object.",
+        "Bra-ket notation is NOT limited to qubits — it applies to any quantum system, including continuous-variable systems and infinite-dimensional Hilbert spaces."
+      ],
+      "keyTakeaways": [
+        "|ψ⟩ (ket) is a column vector representing a quantum state; ⟨ψ| (bra) is its conjugate transpose.",
+        "The inner product ⟨φ|ψ⟩ gives the probability amplitude for transitioning from state |ψ⟩ to state |φ⟩.",
+        "Bra-ket notation is the universal language of quantum mechanics and quantum computing."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "What does the inner product ⟨0|1⟩ equal for the computational basis states?",
+          "questionType": "multipleChoice",
+          "options": ["0", "1", "1/2", "i"],
+          "correctAnswerIndex": 0,
+          "explanation": "The computational basis states |0⟩ and |1⟩ are orthonormal, so their inner product ⟨0|1⟩ = 0.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ko": {
+      "title": "디랙 (브라-켓) 표기법",
+      "shortDefinition": "브라-켓 표기법은 양자 상태를 위한 표준 수학적 표기법으로, |ψ⟩(켓)는 열 벡터를, ⟨ψ|(브라)는 그 켤레 전치 행 벡터를 나타냅니다.",
+      "detailedExplanation": "폴 디랙이 도입한 브라-켓 표기법은 양자 상태와 연산을 간결하고 강력하게 표현하는 방법을 제공합니다. 켓 |ψ⟩는 힐베르트 공간의 상태 벡터(열 벡터)를, 브라 ⟨ψ|는 그 쌍대(켤레 전치, 행 벡터)를 나타냅니다. 내적 ⟨φ|ψ⟩는 두 상태 사이의 겹침(복소수)을 주고, 외적 |ψ⟩⟨φ|는 연산자(행렬)를 줍니다. 이 표기법은 양자역학의 대수적, 기하학적 구조를 우아하게 인코딩하여 측정, 상태 진화, 얽힘을 쉽게 표현할 수 있게 합니다.",
+      "analogies": [
+        "브라-켓 표기법은 양자역학을 위한 전문적인 약어 같습니다 — 음악가가 '440Hz의 A 음을 0.5초간 연주하라'고 쓰는 대신 악보 표기법을 사용하듯, 물리학자는 전체 열 벡터를 쓰는 대신 |ψ⟩를 사용합니다.",
+        "켓 |ψ⟩를 양자 상태를 담는 레이블이 붙은 그릇으로, 브라 ⟨φ|를 측정 템플릿으로 생각하세요 — 이들을 결합하면 ⟨φ|ψ⟩, 두 상태 사이의 겹침 점수를 얻습니다."
+      ],
+      "commonMisconceptions": [
+        "기호 |와 ⟩는 단순한 장식이 아닙니다 — |ψ⟩는 힐베르트 공간의 열 벡터를 구체적으로 나타내고, ⟨ψ|는 그 켤레 전치로 같은 객체가 아닙니다.",
+        "브라-켓 표기법은 큐비트에만 제한되지 않습니다 — 연속 변수 시스템과 무한 차원 힐베르트 공간을 포함한 모든 양자 시스템에 적용됩니다."
+      ],
+      "keyTakeaways": [
+        "|ψ⟩(켓)는 양자 상태를 나타내는 열 벡터이며, ⟨ψ|(브라)는 그 켤레 전치입니다.",
+        "내적 ⟨φ|ψ⟩는 상태 |ψ⟩에서 상태 |φ⟩로 전이하기 위한 확률 진폭을 줍니다.",
+        "브라-켓 표기법은 양자역학과 양자 컴퓨팅의 보편적 언어입니다."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "계산 기저 상태에 대해 내적 ⟨0|1⟩의 값은 무엇입니까?",
+          "questionType": "multipleChoice",
+          "options": ["0", "1", "1/2", "i"],
+          "correctAnswerIndex": 0,
+          "explanation": "계산 기저 상태 |0⟩과 |1⟩은 정규직교이므로 내적 ⟨0|1⟩ = 0입니다.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ja": {
+      "title": "ディラック（ブラケット）記法",
+      "shortDefinition": "ブラケット記法は量子状態のための標準的な数学的記法で、|ψ⟩（ケット）は列ベクトルを、⟨ψ|（ブラ）はその共役転置行ベクトルを表します。",
+      "detailedExplanation": "ポール・ディラックが導入したブラケット記法は、量子状態と演算を簡潔かつ強力に表現する方法を提供します。ケット|ψ⟩はヒルベルト空間の状態ベクトル（列ベクトル）を、ブラ⟨ψ|はその双対（共役転置、行ベクトル）を表します。内積⟨φ|ψ⟩は2つの状態間の重なり（複素数）を与え、外積|ψ⟩⟨φ|は演算子（行列）を与えます。この記法は量子力学の代数的・幾何学的構造を優雅にエンコードし、測定、状態発展、エンタングルメントを容易に表現できます。",
+      "analogies": [
+        "ブラケット記法は量子力学のための専門的な速記法のようなものです — 音楽家が「440Hzのラ音を0.5秒間演奏せよ」と書く代わりに楽譜記法を使うように、物理学者は完全な列ベクトルを書く代わりに|ψ⟩を使います。",
+        "ケット|ψ⟩を量子状態を保持するラベル付きの容器、ブラ⟨φ|を測定テンプレートと考えてください — これらを組み合わせると⟨φ|ψ⟩、2つの状態間の重なりスコアが得られます。"
+      ],
+      "commonMisconceptions": [
+        "記号|と⟩は単なる装飾ではありません — |ψ⟩はヒルベルト空間の列ベクトルを明確に示し、⟨ψ|はその共役転置であり、同じオブジェクトではありません。",
+        "ブラケット記法は量子ビットに限定されません — 連続変数システムや無限次元ヒルベルト空間を含むあらゆる量子システムに適用されます。"
+      ],
+      "keyTakeaways": [
+        "|ψ⟩（ケット）は量子状態を表す列ベクトル、⟨ψ|（ブラ）はその共役転置です。",
+        "内積⟨φ|ψ⟩は状態|ψ⟩から状態|φ⟩への遷移の確率振幅を与えます。",
+        "ブラケット記法は量子力学と量子コンピューティングの普遍的な言語です。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "計算基底状態に対して、内積⟨0|1⟩はいくつですか？",
+          "questionType": "multipleChoice",
+          "options": ["0", "1", "1/2", "i"],
+          "correctAnswerIndex": 0,
+          "explanation": "計算基底状態|0⟩と|1⟩は正規直交であるため、内積⟨0|1⟩ = 0です。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "zh-Hans": {
+      "title": "狄拉克（左右矢）符号",
+      "shortDefinition": "左右矢符号是量子态的标准数学符号，其中|ψ⟩（右矢）表示列向量，⟨ψ|（左矢）表示其共轭转置行向量。",
+      "detailedExplanation": "由保罗·狄拉克引入的左右矢符号提供了一种简洁而强大的方式来表达量子态和运算。右矢|ψ⟩表示希尔伯特空间中的状态向量（列向量），左矢⟨ψ|是其对偶（共轭转置，行向量）。内积⟨φ|ψ⟩给出两个状态之间的重叠（复数），外积|ψ⟩⟨φ|给出一个算子（矩阵）。这种符号优雅地编码了量子力学的代数和几何结构，使得测量、状态演化和纠缠易于表达。",
+      "analogies": [
+        "左右矢符号就像量子力学的专业速记——正如音乐家使用五线谱而不是写出'以440Hz演奏A音0.5秒'，物理学家使用|ψ⟩而不是写出完整的列向量。",
+        "把右矢|ψ⟩想象为一个标记了量子态的容器，左矢⟨φ|是测量模板——当你组合它们⟨φ|ψ⟩时，你得到两个状态之间的重叠分数。"
+      ],
+      "commonMisconceptions": [
+        "符号|和⟩不仅仅是装饰——|ψ⟩明确表示希尔伯特空间中的列向量，⟨ψ|是其共轭转置，不是同一个对象。",
+        "左右矢符号不限于量子比特——它适用于任何量子系统，包括连续变量系统和无限维希尔伯特空间。"
+      ],
+      "keyTakeaways": [
+        "|ψ⟩（右矢）是表示量子态的列向量；⟨ψ|（左矢）是其共轭转置。",
+        "内积⟨φ|ψ⟩给出从状态|ψ⟩到状态|φ⟩转换的概率幅。",
+        "左右矢符号是量子力学和量子计算的通用语言。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "对于计算基态，内积⟨0|1⟩等于多少？",
+          "questionType": "multipleChoice",
+          "options": ["0", "1", "1/2", "i"],
+          "correctAnswerIndex": 0,
+          "explanation": "计算基态|0⟩和|1⟩是正交归一的，因此内积⟨0|1⟩ = 0。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "de": {
+      "title": "Dirac (Bra-Ket) Notation",
+      "shortDefinition": "Die Bra-Ket-Notation ist die mathematische Standardnotation für Quantenzustände, wobei |ψ⟩ (Ket) einen Spaltenvektor und ⟨ψ| (Bra) seinen konjugiert transponierten Zeilenvektor darstellt.",
+      "detailedExplanation": "Die von Paul Dirac eingeführte Bra-Ket-Notation bietet eine prägnante und leistungsfähige Möglichkeit, Quantenzustände und Operationen auszudrücken. Ein Ket |ψ⟩ stellt einen Zustandsvektor im Hilbertraum dar (einen Spaltenvektor), während ein Bra ⟨ψ| sein Dual ist (konjugierte Transponierte, ein Zeilenvektor). Das Skalarprodukt ⟨φ|ψ⟩ gibt die Überlappung zwischen zwei Zuständen (eine komplexe Zahl), und das äußere Produkt |ψ⟩⟨φ| gibt einen Operator (eine Matrix). Diese Notation kodiert elegant die algebraische und geometrische Struktur der Quantenmechanik und erleichtert die Darstellung von Messungen, Zustandsentwicklung und Verschränkung.",
+      "analogies": [
+        "Die Bra-Ket-Notation ist wie eine spezialisierte Kurzschrift für die Quantenmechanik — so wie Musiker Notenschrift verwenden, anstatt 'spiele den Ton A bei 440 Hz für 0,5 Sekunden' zu schreiben, verwenden Physiker |ψ⟩ anstatt vollständige Spaltenvektoren aufzuschreiben.",
+        "Stellen Sie sich ein Ket |ψ⟩ als einen beschrifteten Behälter vor, der den Quantenzustand enthält, und ein Bra ⟨φ| als Messvorlage — wenn Sie sie kombinieren ⟨φ|ψ⟩, erhalten Sie den Überlappungswert zwischen den beiden Zuständen."
+      ],
+      "commonMisconceptions": [
+        "Die Symbole | und ⟩ sind KEINE bloße Dekoration — |ψ⟩ bezeichnet spezifisch einen Spaltenvektor im Hilbertraum, und ⟨ψ| ist seine konjugierte Transponierte, nicht dasselbe Objekt.",
+        "Die Bra-Ket-Notation ist NICHT auf Qubits beschränkt — sie gilt für jedes Quantensystem, einschließlich kontinuierlicher Variablensysteme und unendlich-dimensionaler Hilberträume."
+      ],
+      "keyTakeaways": [
+        "|ψ⟩ (Ket) ist ein Spaltenvektor, der einen Quantenzustand darstellt; ⟨ψ| (Bra) ist seine konjugierte Transponierte.",
+        "Das Skalarprodukt ⟨φ|ψ⟩ gibt die Wahrscheinlichkeitsamplitude für den Übergang vom Zustand |ψ⟩ zum Zustand |φ⟩.",
+        "Die Bra-Ket-Notation ist die universelle Sprache der Quantenmechanik und des Quantencomputings."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Was ergibt das Skalarprodukt ⟨0|1⟩ für die Rechenbasis-Zustände?",
+          "questionType": "multipleChoice",
+          "options": ["0", "1", "1/2", "i"],
+          "correctAnswerIndex": 0,
+          "explanation": "Die Rechenbasis-Zustände |0⟩ und |1⟩ sind orthonormal, daher ist ihr Skalarprodukt ⟨0|1⟩ = 0.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "fr": {
+      "title": "Notation de Dirac (Bra-Ket)",
+      "shortDefinition": "La notation bra-ket est la notation mathématique standard pour les états quantiques, où |ψ⟩ (ket) représente un vecteur colonne et ⟨ψ| (bra) représente son transposé conjugué (vecteur ligne).",
+      "detailedExplanation": "Introduite par Paul Dirac, la notation bra-ket fournit un moyen concis et puissant d'exprimer les états quantiques et les opérations. Un ket |ψ⟩ représente un vecteur d'état dans l'espace de Hilbert (un vecteur colonne), tandis qu'un bra ⟨ψ| est son dual (transposé conjugué, un vecteur ligne). Le produit scalaire ⟨φ|ψ⟩ donne le recouvrement entre deux états (un nombre complexe), et le produit externe |ψ⟩⟨φ| donne un opérateur (une matrice). Cette notation encode élégamment la structure algébrique et géométrique de la mécanique quantique, facilitant l'expression des mesures, de l'évolution des états et de l'intrication.",
+      "analogies": [
+        "La notation bra-ket est comme un raccourci spécialisé pour la mécanique quantique — tout comme les musiciens utilisent la notation sur portée au lieu d'écrire 'jouez la note La à 440 Hz pendant 0,5 seconde', les physiciens utilisent |ψ⟩ au lieu d'écrire des vecteurs colonnes complets.",
+        "Pensez à un ket |ψ⟩ comme un conteneur étiqueté contenant l'état quantique, et à un bra ⟨φ| comme un modèle de mesure — quand vous les combinez ⟨φ|ψ⟩, vous obtenez le score de recouvrement entre les deux états."
+      ],
+      "commonMisconceptions": [
+        "Les symboles | et ⟩ ne sont PAS de simples décorations — |ψ⟩ désigne spécifiquement un vecteur colonne dans l'espace de Hilbert, et ⟨ψ| est son transposé conjugué, pas le même objet.",
+        "La notation bra-ket n'est PAS limitée aux qubits — elle s'applique à tout système quantique, y compris les systèmes à variables continues et les espaces de Hilbert de dimension infinie."
+      ],
+      "keyTakeaways": [
+        "|ψ⟩ (ket) est un vecteur colonne représentant un état quantique ; ⟨ψ| (bra) est son transposé conjugué.",
+        "Le produit scalaire ⟨φ|ψ⟩ donne l'amplitude de probabilité pour la transition de l'état |ψ⟩ à l'état |φ⟩.",
+        "La notation bra-ket est le langage universel de la mécanique quantique et de l'informatique quantique."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Que vaut le produit scalaire ⟨0|1⟩ pour les états de la base computationnelle ?",
+          "questionType": "multipleChoice",
+          "options": ["0", "1", "1/2", "i"],
+          "correctAnswerIndex": 0,
+          "explanation": "Les états de la base computationnelle |0⟩ et |1⟩ sont orthonormaux, donc leur produit scalaire ⟨0|1⟩ = 0.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "es": {
+      "title": "Notación de Dirac (Bra-Ket)",
+      "shortDefinition": "La notación bra-ket es la notación matemática estándar para estados cuánticos, donde |ψ⟩ (ket) representa un vector columna y ⟨ψ| (bra) representa su transpuesta conjugada (vector fila).",
+      "detailedExplanation": "Introducida por Paul Dirac, la notación bra-ket proporciona una forma concisa y poderosa de expresar estados cuánticos y operaciones. Un ket |ψ⟩ representa un vector de estado en el espacio de Hilbert (un vector columna), mientras que un bra ⟨ψ| es su dual (transpuesta conjugada, un vector fila). El producto interno ⟨φ|ψ⟩ da el solapamiento entre dos estados (un número complejo), y el producto externo |ψ⟩⟨φ| da un operador (una matriz). Esta notación codifica elegantemente la estructura algebraica y geométrica de la mecánica cuántica, facilitando la expresión de mediciones, evolución de estados y entrelazamiento.",
+      "analogies": [
+        "La notación bra-ket es como una taquigrafía especializada para la mecánica cuántica — así como los músicos usan notación de pentagrama en lugar de escribir 'toca la nota La a 440 Hz durante 0,5 segundos', los físicos usan |ψ⟩ en lugar de escribir vectores columna completos.",
+        "Piensa en un ket |ψ⟩ como un contenedor etiquetado que contiene el estado cuántico, y un bra ⟨φ| como una plantilla de medición — cuando los combinas ⟨φ|ψ⟩, obtienes la puntuación de solapamiento entre los dos estados."
+      ],
+      "commonMisconceptions": [
+        "Los símbolos | y ⟩ NO son mera decoración — |ψ⟩ denota específicamente un vector columna en el espacio de Hilbert, y ⟨ψ| es su transpuesta conjugada, no el mismo objeto.",
+        "La notación bra-ket NO se limita a los qubits — se aplica a cualquier sistema cuántico, incluyendo sistemas de variables continuas y espacios de Hilbert de dimensión infinita."
+      ],
+      "keyTakeaways": [
+        "|ψ⟩ (ket) es un vector columna que representa un estado cuántico; ⟨ψ| (bra) es su transpuesta conjugada.",
+        "El producto interno ⟨φ|ψ⟩ da la amplitud de probabilidad para la transición del estado |ψ⟩ al estado |φ⟩.",
+        "La notación bra-ket es el lenguaje universal de la mecánica cuántica y la computación cuántica."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "¿Cuánto vale el producto interno ⟨0|1⟩ para los estados de la base computacional?",
+          "questionType": "multipleChoice",
+          "options": ["0", "1", "1/2", "i"],
+          "correctAnswerIndex": 0,
+          "explanation": "Los estados de la base computacional |0⟩ y |1⟩ son ortonormales, por lo que su producto interno ⟨0|1⟩ = 0.",
+          "difficultyLevel": 1
+        }
+      ]
+    }
+  },
+  "relatedFormulas": [
+    {
+      "latex": "\\langle\\phi|\\psi\\rangle = \\sum_i \\phi_i^* \\psi_i",
+      "plainTextDescription": {
+        "en": "Inner product of two quantum states",
+        "ko": "두 양자 상태의 내적"
+      },
+      "variables": [
+        {"symbol": "⟨φ|", "meaning": {"en": "Bra vector (conjugate transpose of |φ⟩)", "ko": "브라 벡터 (|φ⟩의 켤레 전치)"}},
+        {"symbol": "|ψ⟩", "meaning": {"en": "Ket vector (state vector)", "ko": "켓 벡터 (상태 벡터)"}}
+      ]
+    }
+  ],
+  "visualizationType": "stateVector",
+  "verifiedBy": {
+    "verifierName": "Eunmin Park",
+    "verifierCredentials": "IEEE Member, Quantum Computing Educator",
+    "verificationDate": "2026-04-07",
+    "reviewedSources": ["Nielsen & Chuang (2010)", "Sakurai, J. J. (2017). Modern Quantum Mechanics"],
+    "confidenceLevel": "undisputed"
+  },
+  "lastReviewed": "2026-04-07",
+  "citationReferences": [
+    "Dirac, P. A. M. (1939). A New Notation for Quantum Mechanics. Mathematical Proceedings of the Cambridge Philosophical Society.",
+    "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press."
+  ]
+}
