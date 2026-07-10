@@ -1,23 +1,294 @@
 {
   "id": "ml_kem",
   "certainty": "established",
-  "certaintyNote": "Standardization fact is dated in text (2024); the standard document is fixed.",
+  "certaintyNote": "Standardization fact is dated in text (2024); the standard document is fixed. Ecosystem-status sentences (HQC, FIPS 206, EO 14412) are explicitly date-qualified as of 2026-07-10.",
   "sourceRef": "NIST FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard (2024), doi:10.6028/NIST.FIPS.203",
   "category": "postQuantumCrypto",
   "difficultyLevel": 3,
-  "prerequisites": ["qubit", "shor_algorithm"],
+  "prerequisites": [
+    "qubit",
+    "shor_algorithm"
+  ],
   "translations": {
-    "en": {"title": "ML-KEM (Module-Lattice Key Encapsulation)", "shortDefinition": "ML-KEM (formerly CRYSTALS-Kyber) is a NIST-standardized post-quantum key encapsulation mechanism based on the Module Learning With Errors (MLWE) problem, designed to resist both classical and quantum attacks.", "detailedExplanation": "ML-KEM is the first post-quantum key encapsulation mechanism standardized by NIST (FIPS 203, 2024). It replaces RSA and elliptic curve key exchange protocols that are vulnerable to Shor's algorithm. ML-KEM's security is based on the hardness of the Module Learning With Errors (MLWE) problem over polynomial lattices. It offers three security levels: ML-KEM-512 (equivalent to AES-128), ML-KEM-768 (AES-192), and ML-KEM-1024 (AES-256). The algorithm is efficient, with small key sizes and fast computation compared to other post-quantum candidates. ML-KEM uses the NTT (Number Theoretic Transform) for efficient polynomial multiplication and includes an implicit rejection mechanism for CCA security.", "analogies": ["ML-KEM is like building a lock from a mathematical maze (lattice) that is easy to navigate with the key but exponentially hard to solve for anyone who doesn't have it, even with a quantum computer.", "Think of it as upgrading from a lock that quantum lockpicks can crack (RSA) to a new quantum-resistant lock design based on a completely different mathematical structure."], "commonMisconceptions": ["ML-KEM does NOT use quantum computing -- it is a CLASSICAL algorithm designed to resist attacks from quantum computers.", "ML-KEM does NOT encrypt data directly -- it is a key encapsulation mechanism that establishes shared secret keys, which are then used with symmetric encryption."], "keyTakeaways": ["NIST-standardized (FIPS 203) post-quantum key encapsulation mechanism.", "Based on the Module Learning With Errors (MLWE) lattice problem.", "Replaces RSA/ECDH key exchange to protect against Shor's algorithm."], "practiceQuestions": [{"questionText": "What mathematical problem is ML-KEM's security based on?", "questionType": "multipleChoice", "options": ["Integer factoring", "Discrete logarithm", "Module Learning With Errors (MLWE)", "Hash collision"], "correctAnswerIndex": 2, "explanation": "ML-KEM's security relies on the hardness of the Module Learning With Errors problem over polynomial lattices, which is believed to be hard for both classical and quantum computers.", "difficultyLevel": 3}]},
-    "ko": {"title": "ML-KEM (모듈 격자 키 캡슐화)", "shortDefinition": "ML-KEM(이전 CRYSTALS-Kyber)은 모듈 오류 학습(MLWE) 문제에 기반한 NIST 표준 후양자 키 캡슐화 메커니즘으로, 고전적 및 양자 공격 모두에 저항하도록 설계되었습니다.", "detailedExplanation": "ML-KEM은 NIST가 표준화한 최초의 후양자 키 캡슐화 메커니즘입니다(FIPS 203, 2024). 쇼어 알고리즘에 취약한 RSA와 타원 곡선 키 교환 프로토콜을 대체합니다. 보안은 다항식 격자 위의 MLWE 문제의 어려움에 기반합니다. 세 가지 보안 수준: ML-KEM-512, ML-KEM-768, ML-KEM-1024를 제공합니다.", "analogies": ["ML-KEM은 열쇠가 있으면 쉽게 탐색할 수 있지만 양자 컴퓨터도 풀기 어려운 수학적 미로(격자)로 자물쇠를 만드는 것과 같습니다.", "양자 열쇠따개가 열 수 있는 자물쇠(RSA)에서 완전히 다른 수학 구조에 기반한 양자 저항 자물쇠로 업그레이드하는 것으로 생각하세요."], "commonMisconceptions": ["ML-KEM은 양자 컴퓨팅을 사용하지 않습니다 -- 양자 컴퓨터 공격에 저항하도록 설계된 고전적 알고리즘입니다.", "ML-KEM은 데이터를 직접 암호화하지 않습니다 -- 공유 비밀 키를 수립하는 키 캡슐화 메커니즘입니다."], "keyTakeaways": ["NIST 표준(FIPS 203) 후양자 키 캡슐화 메커니즘.", "모듈 오류 학습(MLWE) 격자 문제 기반.", "쇼어 알고리즘으로부터 보호하기 위해 RSA/ECDH 키 교환 대체."], "practiceQuestions": [{"questionText": "ML-KEM의 보안은 어떤 수학적 문제에 기반합니까?", "questionType": "multipleChoice", "options": ["정수 인수분해", "이산 로그", "모듈 오류 학습(MLWE)", "해시 충돌"], "correctAnswerIndex": 2, "explanation": "ML-KEM의 보안은 다항식 격자 위의 MLWE 문제의 어려움에 기반합니다.", "difficultyLevel": 3}]},
-    "ja": {"title": "ML-KEM（モジュール格子鍵カプセル化）", "shortDefinition": "ML-KEM（旧CRYSTALS-Kyber）はMLWE問題に基づくNIST標準ポスト量子鍵カプセル化メカニズムです。", "detailedExplanation": "NIST初の標準化ポスト量子KEM（FIPS 203, 2024）。RSAとECDHに代わり、ショアのアルゴリズムへの耐性を提供。多項式格子上のMLWE問題の困難さに基づきます。", "analogies": ["量子コンピュータでも解けない数学的迷路。", "RSAから量子耐性設計へのアップグレード。"], "commonMisconceptions": ["ML-KEMは量子コンピューティングを使いません。", "ML-KEMは直接暗号化しません。"], "keyTakeaways": ["NIST標準（FIPS 203）ポスト量子KEM。", "MLWE格子問題ベース。", "RSA/ECDHを置換。"], "practiceQuestions": [{"questionText": "ML-KEMのセキュリティの基盤は？", "questionType": "multipleChoice", "options": ["整数因数分解", "離散対数", "MLWE", "ハッシュ衝突"], "correctAnswerIndex": 2, "explanation": "MLWE問題に基づきます。", "difficultyLevel": 3}]},
-    "zh-Hans": {"title": "ML-KEM（模块格密钥封装）", "shortDefinition": "ML-KEM（原CRYSTALS-Kyber）是基于MLWE问题的NIST标准后量子密钥封装机制。", "detailedExplanation": "NIST首个标准化后量子KEM（FIPS 203, 2024）。替代RSA和ECDH，抵抗Shor算法。基于多项式格上MLWE问题的困难性。", "analogies": ["像用量子计算机也解不开的数学迷宫制锁。", "从RSA升级到量子抗性设计。"], "commonMisconceptions": ["ML-KEM不使用量子计算。", "ML-KEM不直接加密数据。"], "keyTakeaways": ["NIST标准（FIPS 203）后量子KEM。", "基于MLWE格问题。", "替代RSA/ECDH。"], "practiceQuestions": [{"questionText": "ML-KEM安全性基于什么问题？", "questionType": "multipleChoice", "options": ["整数分解", "离散对数", "MLWE", "哈希碰撞"], "correctAnswerIndex": 2, "explanation": "基于MLWE问题。", "difficultyLevel": 3}]},
-    "de": {"title": "ML-KEM (Modul-Gitter-Schlüsselkapselung)", "shortDefinition": "ML-KEM ist ein NIST-standardisierter Post-Quanten-Schlüsselkapselungsmechanismus basierend auf dem MLWE-Problem.", "detailedExplanation": "Erstes von NIST standardisiertes Post-Quanten-KEM (FIPS 203, 2024). Ersetzt RSA/ECDH. Basiert auf der Härte des MLWE-Problems.", "analogies": ["Wie ein mathematisches Labyrinth das auch Quantencomputer nicht lösen können.", "Upgrade von RSA zu quantenresistentem Design."], "commonMisconceptions": ["ML-KEM verwendet KEIN Quantencomputing.", "ML-KEM verschlüsselt nicht direkt."], "keyTakeaways": ["NIST-Standard (FIPS 203) Post-Quanten-KEM.", "Basiert auf MLWE.", "Ersetzt RSA/ECDH."], "practiceQuestions": [{"questionText": "Worauf basiert die Sicherheit von ML-KEM?", "questionType": "multipleChoice", "options": ["Faktorisierung", "Diskreter Logarithmus", "MLWE", "Hash-Kollision"], "correctAnswerIndex": 2, "explanation": "Basiert auf MLWE.", "difficultyLevel": 3}]},
-    "fr": {"title": "ML-KEM (Encapsulation de clé par réseau modulaire)", "shortDefinition": "ML-KEM est un mécanisme d'encapsulation de clé post-quantique standardisé par le NIST basé sur le problème MLWE.", "detailedExplanation": "Premier KEM post-quantique standardisé par le NIST (FIPS 203, 2024). Remplace RSA/ECDH. Basé sur la difficulté du problème MLWE.", "analogies": ["Comme un labyrinthe mathématique insoluble même par ordinateur quantique.", "Mise à niveau de RSA vers un design résistant au quantique."], "commonMisconceptions": ["ML-KEM n'utilise PAS le calcul quantique.", "ML-KEM ne chiffre pas directement."], "keyTakeaways": ["Standard NIST (FIPS 203) KEM post-quantique.", "Basé sur MLWE.", "Remplace RSA/ECDH."], "practiceQuestions": [{"questionText": "Sur quel problème repose la sécurité de ML-KEM?", "questionType": "multipleChoice", "options": ["Factorisation", "Logarithme discret", "MLWE", "Collision de hachage"], "correctAnswerIndex": 2, "explanation": "Basé sur MLWE.", "difficultyLevel": 3}]},
-    "es": {"title": "ML-KEM (Encapsulación de clave por retículo modular)", "shortDefinition": "ML-KEM es un mecanismo de encapsulación de clave post-cuántico estandarizado por NIST basado en el problema MLWE.", "detailedExplanation": "Primer KEM post-cuántico estandarizado por NIST (FIPS 203, 2024). Reemplaza RSA/ECDH. Basado en la dificultad del problema MLWE.", "analogies": ["Como un laberinto matemático irresoluble incluso por computadora cuántica.", "Actualización de RSA a diseño resistente al cuántico."], "commonMisconceptions": ["ML-KEM NO usa computación cuántica.", "ML-KEM no cifra directamente."], "keyTakeaways": ["Estándar NIST (FIPS 203) KEM post-cuántico.", "Basado en MLWE.", "Reemplaza RSA/ECDH."], "practiceQuestions": [{"questionText": "¿En qué problema se basa la seguridad de ML-KEM?", "questionType": "multipleChoice", "options": ["Factorización", "Logaritmo discreto", "MLWE", "Colisión de hash"], "correctAnswerIndex": 2, "explanation": "Basado en MLWE.", "difficultyLevel": 3}]}
+    "en": {
+      "title": "ML-KEM (Module-Lattice Key Encapsulation)",
+      "shortDefinition": "ML-KEM (formerly CRYSTALS-Kyber) is a NIST-standardized post-quantum key encapsulation mechanism based on the Module Learning With Errors (MLWE) problem, designed to resist both classical and quantum attacks.",
+      "detailedExplanation": "ML-KEM is the first post-quantum key encapsulation mechanism standardized by NIST (FIPS 203, 2024). It replaces RSA and elliptic curve key exchange protocols that are vulnerable to Shor's algorithm. ML-KEM's security is based on the hardness of the Module Learning With Errors (MLWE) problem over polynomial lattices. It offers three security levels: ML-KEM-512 (equivalent to AES-128), ML-KEM-768 (AES-192), and ML-KEM-1024 (AES-256). The algorithm is efficient, with small key sizes and fast computation compared to other post-quantum candidates. ML-KEM uses the NTT (Number Theoretic Transform) for efficient polynomial multiplication and includes an implicit rejection mechanism for CCA security. Standardization status, explicitly date-qualified (as of 2026-07-10): NIST selected HQC as a fifth, non-lattice backup algorithm in March 2025; FIPS 206 (FN-DSA, based on Falcon) has not yet been finalized; and U.S. Executive Order 14412 (June 2026) set federal PQC migration deadlines of 2030/2031. None of this changes FIPS 203 itself.",
+      "analogies": [
+        "ML-KEM is like building a lock from a mathematical maze (lattice) that is easy to navigate with the key but exponentially hard to solve for anyone who doesn't have it, even with a quantum computer.",
+        "Think of it as upgrading from a lock that quantum lockpicks can crack (RSA) to a new quantum-resistant lock design based on a completely different mathematical structure."
+      ],
+      "commonMisconceptions": [
+        "ML-KEM does NOT use quantum computing -- it is a CLASSICAL algorithm designed to resist attacks from quantum computers.",
+        "ML-KEM does NOT encrypt data directly -- it is a key encapsulation mechanism that establishes shared secret keys, which are then used with symmetric encryption."
+      ],
+      "keyTakeaways": [
+        "NIST-standardized (FIPS 203) post-quantum key encapsulation mechanism.",
+        "Based on the Module Learning With Errors (MLWE) lattice problem.",
+        "Replaces RSA/ECDH key exchange to protect against Shor's algorithm."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "What mathematical problem is ML-KEM's security based on?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Integer factoring",
+            "Discrete logarithm",
+            "Module Learning With Errors (MLWE)",
+            "Hash collision"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "ML-KEM's security relies on the hardness of the Module Learning With Errors problem over polynomial lattices, which is believed to be hard for both classical and quantum computers.",
+          "difficultyLevel": 3
+        }
+      ]
+    },
+    "ko": {
+      "title": "ML-KEM (모듈 격자 키 캡슐화)",
+      "shortDefinition": "ML-KEM(이전 CRYSTALS-Kyber)은 모듈 오류 학습(MLWE) 문제에 기반한 NIST 표준 후양자 키 캡슐화 메커니즘으로, 고전적 및 양자 공격 모두에 저항하도록 설계되었습니다.",
+      "detailedExplanation": "ML-KEM은 NIST가 표준화한 최초의 후양자 키 캡슐화 메커니즘입니다(FIPS 203, 2024). 쇼어 알고리즘에 취약한 RSA와 타원 곡선 키 교환 프로토콜을 대체합니다. 보안은 다항식 격자 위의 MLWE 문제의 어려움에 기반합니다. 세 가지 보안 수준: ML-KEM-512, ML-KEM-768, ML-KEM-1024를 제공합니다. 표준화 현황(명시적 날짜 표기, 2026-07-10 기준): NIST는 2025년 3월 비격자 백업 알고리즘으로 HQC를 다섯 번째 표준으로 선정했고, FIPS 206(FN-DSA, Falcon 기반)은 아직 확정되지 않았으며, 미국 행정명령 14412(2026년 6월)는 연방 PQC 전환 기한을 2030/2031년으로 확정했습니다. 이 중 어느 것도 FIPS 203 자체를 바꾸지 않습니다.",
+      "analogies": [
+        "ML-KEM은 열쇠가 있으면 쉽게 탐색할 수 있지만 양자 컴퓨터도 풀기 어려운 수학적 미로(격자)로 자물쇠를 만드는 것과 같습니다.",
+        "양자 열쇠따개가 열 수 있는 자물쇠(RSA)에서 완전히 다른 수학 구조에 기반한 양자 저항 자물쇠로 업그레이드하는 것으로 생각하세요."
+      ],
+      "commonMisconceptions": [
+        "ML-KEM은 양자 컴퓨팅을 사용하지 않습니다 -- 양자 컴퓨터 공격에 저항하도록 설계된 고전적 알고리즘입니다.",
+        "ML-KEM은 데이터를 직접 암호화하지 않습니다 -- 공유 비밀 키를 수립하는 키 캡슐화 메커니즘입니다."
+      ],
+      "keyTakeaways": [
+        "NIST 표준(FIPS 203) 후양자 키 캡슐화 메커니즘.",
+        "모듈 오류 학습(MLWE) 격자 문제 기반.",
+        "쇼어 알고리즘으로부터 보호하기 위해 RSA/ECDH 키 교환 대체."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "ML-KEM의 보안은 어떤 수학적 문제에 기반합니까?",
+          "questionType": "multipleChoice",
+          "options": [
+            "정수 인수분해",
+            "이산 로그",
+            "모듈 오류 학습(MLWE)",
+            "해시 충돌"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "ML-KEM의 보안은 다항식 격자 위의 MLWE 문제의 어려움에 기반합니다.",
+          "difficultyLevel": 3
+        }
+      ]
+    },
+    "ja": {
+      "title": "ML-KEM（モジュール格子鍵カプセル化）",
+      "shortDefinition": "ML-KEM（旧CRYSTALS-Kyber）はMLWE問題に基づくNIST標準ポスト量子鍵カプセル化メカニズムです。",
+      "detailedExplanation": "NIST初の標準化ポスト量子KEM（FIPS 203, 2024）。RSAとECDHに代わり、ショアのアルゴリズムへの耐性を提供。多項式格子上のMLWE問題の困難さに基づきます。 標準化の現状（日付明記、2026-07-10時点）：NISTは2025年3月、非格子系のバックアップとしてHQCを5番目の標準アルゴリズムに選定しました。FIPS 206（FN-DSA、Falconベース）は未確定です。米大統領令14412（2026年6月）は連邦PQC移行期限を2030/2031年と定めました。いずれもFIPS 203自体を変えるものではありません。",
+      "analogies": [
+        "量子コンピュータでも解けない数学的迷路。",
+        "RSAから量子耐性設計へのアップグレード。"
+      ],
+      "commonMisconceptions": [
+        "ML-KEMは量子コンピューティングを使いません。",
+        "ML-KEMは直接暗号化しません。"
+      ],
+      "keyTakeaways": [
+        "NIST標準（FIPS 203）ポスト量子KEM。",
+        "MLWE格子問題ベース。",
+        "RSA/ECDHを置換。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "ML-KEMのセキュリティの基盤は？",
+          "questionType": "multipleChoice",
+          "options": [
+            "整数因数分解",
+            "離散対数",
+            "MLWE",
+            "ハッシュ衝突"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "MLWE問題に基づきます。",
+          "difficultyLevel": 3
+        }
+      ]
+    },
+    "zh-Hans": {
+      "title": "ML-KEM（模块格密钥封装）",
+      "shortDefinition": "ML-KEM（原CRYSTALS-Kyber）是基于MLWE问题的NIST标准后量子密钥封装机制。",
+      "detailedExplanation": "NIST首个标准化后量子KEM（FIPS 203, 2024）。替代RSA和ECDH，抵抗Shor算法。基于多项式格上MLWE问题的困难性。 标准化现状（明确标注日期，截至2026-07-10）：NIST于2025年3月选定HQC作为第五个（非格基备份）标准算法；FIPS 206（FN-DSA，基于Falcon）尚未定稿；美国第14412号行政命令（2026年6月）将联邦PQC迁移期限定为2030/2031年。这些都不改变FIPS 203本身。",
+      "analogies": [
+        "像用量子计算机也解不开的数学迷宫制锁。",
+        "从RSA升级到量子抗性设计。"
+      ],
+      "commonMisconceptions": [
+        "ML-KEM不使用量子计算。",
+        "ML-KEM不直接加密数据。"
+      ],
+      "keyTakeaways": [
+        "NIST标准（FIPS 203）后量子KEM。",
+        "基于MLWE格问题。",
+        "替代RSA/ECDH。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "ML-KEM安全性基于什么问题？",
+          "questionType": "multipleChoice",
+          "options": [
+            "整数分解",
+            "离散对数",
+            "MLWE",
+            "哈希碰撞"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "基于MLWE问题。",
+          "difficultyLevel": 3
+        }
+      ]
+    },
+    "de": {
+      "title": "ML-KEM (Modul-Gitter-Schlüsselkapselung)",
+      "shortDefinition": "ML-KEM ist ein NIST-standardisierter Post-Quanten-Schlüsselkapselungsmechanismus basierend auf dem MLWE-Problem.",
+      "detailedExplanation": "Erstes von NIST standardisiertes Post-Quanten-KEM (FIPS 203, 2024). Ersetzt RSA/ECDH. Basiert auf der Härte des MLWE-Problems. Stand der Standardisierung (ausdrücklich datiert, Stand 2026-07-10): NIST wählte im März 2025 HQC als fünften, nicht-gitterbasierten Backup-Algorithmus; FIPS 206 (FN-DSA, auf Falcon basierend) ist noch nicht finalisiert; die US-Executive Order 14412 (Juni 2026) legte Fristen für die föderale PQC-Migration auf 2030/2031 fest. Nichts davon ändert FIPS 203 selbst.",
+      "analogies": [
+        "Wie ein mathematisches Labyrinth das auch Quantencomputer nicht lösen können.",
+        "Upgrade von RSA zu quantenresistentem Design."
+      ],
+      "commonMisconceptions": [
+        "ML-KEM verwendet KEIN Quantencomputing.",
+        "ML-KEM verschlüsselt nicht direkt."
+      ],
+      "keyTakeaways": [
+        "NIST-Standard (FIPS 203) Post-Quanten-KEM.",
+        "Basiert auf MLWE.",
+        "Ersetzt RSA/ECDH."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Worauf basiert die Sicherheit von ML-KEM?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Faktorisierung",
+            "Diskreter Logarithmus",
+            "MLWE",
+            "Hash-Kollision"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "Basiert auf MLWE.",
+          "difficultyLevel": 3
+        }
+      ]
+    },
+    "fr": {
+      "title": "ML-KEM (Encapsulation de clé par réseau modulaire)",
+      "shortDefinition": "ML-KEM est un mécanisme d'encapsulation de clé post-quantique standardisé par le NIST basé sur le problème MLWE.",
+      "detailedExplanation": "Premier KEM post-quantique standardisé par le NIST (FIPS 203, 2024). Remplace RSA/ECDH. Basé sur la difficulté du problème MLWE. État de la normalisation (explicitement daté, au 2026-07-10) : le NIST a sélectionné HQC comme cinquième algorithme (sauvegarde non fondée sur les réseaux) en mars 2025 ; FIPS 206 (FN-DSA, fondé sur Falcon) n'est pas encore finalisé ; et l'Executive Order 14412 (juin 2026) fixe les échéances de migration PQC fédérale à 2030/2031. Rien de tout cela ne change FIPS 203 lui-même.",
+      "analogies": [
+        "Comme un labyrinthe mathématique insoluble même par ordinateur quantique.",
+        "Mise à niveau de RSA vers un design résistant au quantique."
+      ],
+      "commonMisconceptions": [
+        "ML-KEM n'utilise PAS le calcul quantique.",
+        "ML-KEM ne chiffre pas directement."
+      ],
+      "keyTakeaways": [
+        "Standard NIST (FIPS 203) KEM post-quantique.",
+        "Basé sur MLWE.",
+        "Remplace RSA/ECDH."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Sur quel problème repose la sécurité de ML-KEM?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Factorisation",
+            "Logarithme discret",
+            "MLWE",
+            "Collision de hachage"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "Basé sur MLWE.",
+          "difficultyLevel": 3
+        }
+      ]
+    },
+    "es": {
+      "title": "ML-KEM (Encapsulación de clave por retículo modular)",
+      "shortDefinition": "ML-KEM es un mecanismo de encapsulación de clave post-cuántico estandarizado por NIST basado en el problema MLWE.",
+      "detailedExplanation": "Primer KEM post-cuántico estandarizado por NIST (FIPS 203, 2024). Reemplaza RSA/ECDH. Basado en la dificultad del problema MLWE. Estado de la estandarización (explícitamente fechado, a 2026-07-10): el NIST seleccionó HQC como quinto algoritmo (respaldo no basado en retículos) en marzo de 2025; FIPS 206 (FN-DSA, basado en Falcon) aún no se ha finalizado; y la Orden Ejecutiva 14412 de EE. UU. (junio de 2026) fijó los plazos federales de migración PQC en 2030/2031. Nada de esto cambia el propio FIPS 203.",
+      "analogies": [
+        "Como un laberinto matemático irresoluble incluso por computadora cuántica.",
+        "Actualización de RSA a diseño resistente al cuántico."
+      ],
+      "commonMisconceptions": [
+        "ML-KEM NO usa computación cuántica.",
+        "ML-KEM no cifra directamente."
+      ],
+      "keyTakeaways": [
+        "Estándar NIST (FIPS 203) KEM post-cuántico.",
+        "Basado en MLWE.",
+        "Reemplaza RSA/ECDH."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "¿En qué problema se basa la seguridad de ML-KEM?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Factorización",
+            "Logaritmo discreto",
+            "MLWE",
+            "Colisión de hash"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "Basado en MLWE.",
+          "difficultyLevel": 3
+        }
+      ]
+    }
   },
-  "relatedFormulas": [{"latex": "\\mathbf{b} = \\mathbf{A}\\mathbf{s} + \\mathbf{e} \\pmod{q}", "plainTextDescription": {"en": "LWE problem: find secret s given public matrix A, noisy product b, and modulus q", "ko": "LWE 문제: 공개 행렬 A, 잡음이 있는 곱 b, 모듈러스 q가 주어졌을 때 비밀 s 찾기"}, "variables": [{"symbol": "A", "meaning": {"en": "Public random matrix", "ko": "공개 랜덤 행렬"}}, {"symbol": "s", "meaning": {"en": "Secret key vector", "ko": "비밀 키 벡터"}}, {"symbol": "e", "meaning": {"en": "Small error vector", "ko": "작은 오류 벡터"}}]}],
+  "relatedFormulas": [
+    {
+      "latex": "\\mathbf{b} = \\mathbf{A}\\mathbf{s} + \\mathbf{e} \\pmod{q}",
+      "plainTextDescription": {
+        "en": "LWE problem: find secret s given public matrix A, noisy product b, and modulus q",
+        "ko": "LWE 문제: 공개 행렬 A, 잡음이 있는 곱 b, 모듈러스 q가 주어졌을 때 비밀 s 찾기"
+      },
+      "variables": [
+        {
+          "symbol": "A",
+          "meaning": {
+            "en": "Public random matrix",
+            "ko": "공개 랜덤 행렬"
+          }
+        },
+        {
+          "symbol": "s",
+          "meaning": {
+            "en": "Secret key vector",
+            "ko": "비밀 키 벡터"
+          }
+        },
+        {
+          "symbol": "e",
+          "meaning": {
+            "en": "Small error vector",
+            "ko": "작은 오류 벡터"
+          }
+        }
+      ]
+    }
+  ],
   "visualizationType": null,
-  "verifiedBy": {"verifierName": "Eunmin Park", "verifierCredentials": "IEEE Member, Quantum Computing Educator", "verificationDate": "2026-04-07", "reviewedSources": ["NIST FIPS 203 (2024)", "Avanzi et al. CRYSTALS-Kyber specification"], "confidenceLevel": "standard"},
-  "lastReviewed": "2026-04-07",
-  "citationReferences": ["NIST. (2024). FIPS 203: Module-Lattice-Based Key-Encapsulation Mechanism Standard.", "Avanzi, R., et al. (2024). CRYSTALS-Kyber: Algorithm Specification and Supporting Documentation."]
+  "verifiedBy": {
+    "verifierName": "Eunmin Park",
+    "verifierCredentials": "IEEE Member, Quantum Computing Educator",
+    "verificationDate": "2026-04-07",
+    "reviewedSources": [
+      "NIST FIPS 203 (2024)",
+      "Avanzi et al. CRYSTALS-Kyber specification"
+    ],
+    "confidenceLevel": "standard"
+  },
+  "lastReviewed": "2026-07-10",
+  "citationReferences": [
+    "NIST. (2024). FIPS 203: Module-Lattice-Based Key-Encapsulation Mechanism Standard.",
+    "Avanzi, R., et al. (2024). CRYSTALS-Kyber: Algorithm Specification and Supporting Documentation.",
+    "NIST, HQC announced as the fifth algorithm selected for post-quantum standardization (2025-03-11)"
+  ]
 }

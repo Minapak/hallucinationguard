@@ -5,7 +5,10 @@
   "sourceRef": "F. Bloch, Nuclear Induction, Phys. Rev. 70, 460 (1946), doi:10.1103/PhysRev.70.460",
   "category": "foundations",
   "difficultyLevel": 1,
-  "prerequisites": ["qubit", "braket_notation"],
+  "prerequisites": [
+    "qubit",
+    "braket_notation"
+  ],
   "translations": {
     "en": {
       "title": "Bloch Sphere",
@@ -31,7 +34,12 @@
         {
           "questionText": "On the Bloch sphere, which state is located at the north pole?",
           "questionType": "multipleChoice",
-          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "options": [
+            "|1⟩",
+            "|+⟩",
+            "|0⟩",
+            "|−⟩"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "The north pole of the Bloch sphere corresponds to the state |0⟩ (θ=0), while the south pole corresponds to |1⟩ (θ=π).",
           "difficultyLevel": 1
@@ -41,7 +49,7 @@
     "ko": {
       "title": "블로흐 구",
       "shortDefinition": "블로흐 구는 단일 큐비트의 순수 상태 공간에 대한 기하학적 표현으로, 모든 가능한 큐비트 상태를 단위 구의 표면 위 한 점에 매핑합니다.",
-      "detailedExplanation": "모든 순수 단일 큐비트 상태는 |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩으로 쓸 수 있으며, 여기서 θ(극각)와 φ(방위각)은 블로흐 구 위의 한 점을 정의합니다. 북극은 |0⟩에, 남극은 |1⟩에 대응하며, 적도에는 다양한 상대적 위상을 가진 동등한 중첩 상태가 있습니다. 단일 큐비트 게이트는 이 구의 회전에 대응합니다. 블로흐 구는 중요한 기하학적 직관을 제공합니다: X, Y, Z 파울리 게이트는 각각 x, y, z 축에 대한 180도 회전이고, 아다마르 게이트는 z축과 x축 사이를 매핑합니다. 결어긋남에 의한 혼합 상태는 구의 표면이 아닌 내부 점에 매핑됩니다.",
+      "detailedExplanation": "모든 순수 단일 큐비트 상태는 |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩으로 쓸 수 있으며, 여기서 θ(극각)와 φ(방위각)은 블로흐 구 위의 한 점을 정의합니다. 북극은 |0⟩에, 남극은 |1⟩에 대응하며, 적도에는 다양한 상대적 위상을 가진 동등한 중첩 상태가 있습니다. 단일 큐비트 게이트는 이 구의 회전에 대응합니다. 블로흐 구는 중요한 기하학적 직관을 제공합니다: X, Y, Z 파울리 게이트는 각각 x, y, z 축에 대한 180도 회전이고, 아다마르 게이트는 z축과 x축 사이를 매핑합니다. 결깨짐(결어긋남)에 의한 혼합 상태는 구의 표면이 아닌 내부 점에 매핑됩니다.",
       "analogies": [
         "블로흐 구는 북극이 |0⟩이고 남극이 |1⟩인 지구본과 같습니다 — 모든 양자 상태는 이 지구본 위에 고유한 '위도와 경도'를 가지며, 양자 게이트는 지구본을 회전하는 것과 같습니다.",
         "양자 상태를 위한 나침반이라고 생각하세요 — 나침반 바늘이 구 위의 어느 방향이든 가리킬 수 있듯이, 큐비트의 상태는 블로흐 구 위의 어느 점이든 대응할 수 있습니다.",
@@ -62,7 +70,12 @@
         {
           "questionText": "블로흐 구에서 북극에 위치한 상태는 무엇입니까?",
           "questionType": "multipleChoice",
-          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "options": [
+            "|1⟩",
+            "|+⟩",
+            "|0⟩",
+            "|−⟩"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "블로흐 구의 북극은 상태 |0⟩(θ=0)에 대응하고, 남극은 |1⟩(θ=π)에 대응합니다.",
           "difficultyLevel": 1
@@ -93,7 +106,12 @@
         {
           "questionText": "ブロッホ球で北極に位置する状態はどれですか？",
           "questionType": "multipleChoice",
-          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "options": [
+            "|1⟩",
+            "|+⟩",
+            "|0⟩",
+            "|−⟩"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "ブロッホ球の北極は状態|0⟩（θ=0）に対応し、南極は|1⟩（θ=π）に対応します。",
           "difficultyLevel": 1
@@ -124,7 +142,12 @@
         {
           "questionText": "在布洛赫球上，哪个状态位于北极？",
           "questionType": "multipleChoice",
-          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "options": [
+            "|1⟩",
+            "|+⟩",
+            "|0⟩",
+            "|−⟩"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "布洛赫球的北极对应状态|0⟩（θ=0），南极对应|1⟩（θ=π）。",
           "difficultyLevel": 1
@@ -155,7 +178,12 @@
         {
           "questionText": "Welcher Zustand befindet sich auf der Bloch-Kugel am Nordpol?",
           "questionType": "multipleChoice",
-          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "options": [
+            "|1⟩",
+            "|+⟩",
+            "|0⟩",
+            "|−⟩"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "Der Nordpol der Bloch-Kugel entspricht dem Zustand |0⟩ (θ=0), während der Südpol |1⟩ (θ=π) entspricht.",
           "difficultyLevel": 1
@@ -186,7 +214,12 @@
         {
           "questionText": "Sur la sphère de Bloch, quel état se trouve au pôle Nord ?",
           "questionType": "multipleChoice",
-          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "options": [
+            "|1⟩",
+            "|+⟩",
+            "|0⟩",
+            "|−⟩"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "Le pôle Nord de la sphère de Bloch correspond à l'état |0⟩ (θ=0), tandis que le pôle Sud correspond à |1⟩ (θ=π).",
           "difficultyLevel": 1
@@ -217,7 +250,12 @@
         {
           "questionText": "En la esfera de Bloch, ¿qué estado se encuentra en el polo norte?",
           "questionType": "multipleChoice",
-          "options": ["|1⟩", "|+⟩", "|0⟩", "|−⟩"],
+          "options": [
+            "|1⟩",
+            "|+⟩",
+            "|0⟩",
+            "|−⟩"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "El polo norte de la esfera de Bloch corresponde al estado |0⟩ (θ=0), mientras que el polo sur corresponde a |1⟩ (θ=π).",
           "difficultyLevel": 1
@@ -233,8 +271,20 @@
         "ko": "단일 큐비트 상태의 블로흐 구 매개변수화"
       },
       "variables": [
-        {"symbol": "θ", "meaning": {"en": "Polar angle (0 to π)", "ko": "극각 (0에서 π)"}},
-        {"symbol": "φ", "meaning": {"en": "Azimuthal angle (0 to 2π)", "ko": "방위각 (0에서 2π)"}}
+        {
+          "symbol": "θ",
+          "meaning": {
+            "en": "Polar angle (0 to π)",
+            "ko": "극각 (0에서 π)"
+          }
+        },
+        {
+          "symbol": "φ",
+          "meaning": {
+            "en": "Azimuthal angle (0 to 2π)",
+            "ko": "방위각 (0에서 2π)"
+          }
+        }
       ]
     }
   ],
@@ -243,10 +293,13 @@
     "verifierName": "Eunmin Park",
     "verifierCredentials": "IEEE Member, Quantum Computing Educator",
     "verificationDate": "2026-04-07",
-    "reviewedSources": ["Nielsen & Chuang (2010)", "IBM Qiskit Textbook"],
+    "reviewedSources": [
+      "Nielsen & Chuang (2010)",
+      "IBM Qiskit Textbook"
+    ],
     "confidenceLevel": "undisputed"
   },
-  "lastReviewed": "2026-07-03",
+  "lastReviewed": "2026-07-10",
   "citationReferences": [
     "Bloch, F. (1946). Nuclear Induction. Physical Review.",
     "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press."

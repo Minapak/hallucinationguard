@@ -69,3 +69,8 @@ Each item in `fixtures/samples/hg120_sample_20.json → items[]`:
   ```
 
 - `verify`, `open`, `null` → no mandatory metadata; `null` renders as *needs-review*, never hidden.
+
+### Locale terminology & dated-sentence policy
+
+- **KO terms follow the Korean Physical Society (KPS) 2020 glossary.** Where common usage differs from the official term, the official term comes first with the common variant in parentheses at first mention per entry — e.g. decoherence = 결깨짐(결어긋남); KPS maps 결어긋남 to *incoherence*. Official-term confirmations are recorded in `certaintyNote`.
+- **An `established` entry may contain experiment- or ecosystem-status sentences only if they are explicitly year- or date-qualified in the text** (the pattern used by `measurement`, `quantum_error_correction`, `ml_kem`). Undated time-sensitive claims must instead be graded `timebound` with `asOfDate` — mixing undated status claims into an `established` entry is a gate violation.

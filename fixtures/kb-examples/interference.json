@@ -1,0 +1,295 @@
+{
+  "id": "interference",
+  "certainty": "established",
+  "certaintyNote": "Wave interference demonstrated by Young (1801 double-slit experiment); the term 'interference' coined by Young in 1802 — the experiment and the coinage are one year apart and are kept distinct in text. Amplitude-interference framing per Nielsen & Chuang (2010); 'engine of quantum computing' framing per IBM. Added 2026-07-10 to close the highest-priority definition gap identified in the 2026-07-10 content audit (a concept the curriculum teaches but the KB did not define).",
+  "sourceRef": "T. Young, The Bakerian Lecture: On the theory of light and colours, Phil. Trans. R. Soc. 92, 12 (1802), doi:10.1098/rstl.1802.0004",
+  "category": "foundations",
+  "difficultyLevel": 1,
+  "prerequisites": [
+    "qubit",
+    "superposition"
+  ],
+  "translations": {
+    "en": {
+      "title": "Quantum Interference",
+      "shortDefinition": "Interference is the wave-like addition of probability amplitudes: amplitudes in phase reinforce (constructive interference) and amplitudes out of phase cancel (destructive interference). Quantum algorithms compute by choreographing interference so that wrong answers cancel and correct answers are amplified.",
+      "detailedExplanation": "Each component of a quantum superposition carries a complex amplitude, and the amplitudes of indistinguishable paths to the same outcome add before probabilities are taken (Born rule: probability = |sum of amplitudes|²). Where amplitudes align in phase they reinforce; where they are out of phase they cancel. This is interference, first demonstrated for light in Young's double-slit experiment (1801) — Young coined the term 'interference' a year later, in 1802. IBM describes interference as the engine of quantum computing: an algorithm prepares a superposition, then applies gates that steer the relative phases so that amplitude drains away from wrong answers (destructive interference) and accumulates on correct answers (constructive interference) before measurement. Without interference, a superposition would be no more useful than a classical probability distribution. Decoherence destroys the phase relationships that interference depends on — which is why isolation and error correction matter.",
+      "analogies": [
+        "When two water waves meet, the water rises higher where crest meets crest and goes calm where crest meets trough. A quantum computer plays this wave game on purpose — arranging for the 'waves' of wrong answers to cancel each other and the waves of the right answer to build up.",
+        "Noise-cancelling headphones generate a wave exactly out of phase with the ambient noise so the two cancel — destructive interference, harnessed deliberately. Quantum algorithms do the same to the amplitudes of wrong answers."
+      ],
+      "commonMisconceptions": [
+        "A quantum computer does NOT 'try every answer at once' — a misconception IBM explicitly corrects. The actual mechanism is interference of amplitudes: wrong answers are cancelled, correct answers amplified.",
+        "Interference does NOT require two particles — the amplitudes of a single particle along different paths interfere with each other, as the double-slit experiment shows even when photons are sent one at a time."
+      ],
+      "keyTakeaways": [
+        "Amplitudes add first, then probabilities: P = |Σ amplitudes|² (Born rule).",
+        "Constructive interference amplifies desired outcomes; destructive interference cancels undesired ones.",
+        "Interference — not 'trying all answers at once' — is the mechanism quantum algorithms exploit; IBM calls it the engine of quantum computing.",
+        "Decoherence destroys the phase relations that interference depends on."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Why does a quantum algorithm apply gates before measuring, instead of measuring the superposition right away?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Measuring early would give the right answer, just more slowly",
+            "The gates steer amplitudes so wrong answers cancel and the right answer is amplified before measurement",
+            "The gates increase the number of qubits available",
+            "Measurement only works after at least one gate has been applied"
+          ],
+          "correctAnswerIndex": 1,
+          "explanation": "Measuring a freshly prepared uniform superposition returns a random outcome. The algorithm's gates choreograph interference — draining amplitude from wrong answers and concentrating it on correct ones — so that the final measurement yields the right answer with high probability.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ko": {
+      "title": "양자 간섭",
+      "shortDefinition": "간섭은 확률 진폭이 파동처럼 더해지는 현상입니다: 위상이 맞는 진폭은 서로 보강되고(보강 간섭), 위상이 어긋난 진폭은 상쇄됩니다(상쇄 간섭). 양자 알고리즘은 오답의 진폭은 지워지고 정답의 진폭은 증폭되도록 간섭을 조율하여 계산합니다.",
+      "detailedExplanation": "중첩의 각 성분은 복소 진폭을 지니며, 같은 결과로 이어지는 구별 불가능한 경로들의 진폭은 확률을 취하기 전에 먼저 더해집니다(보른 규칙: 확률 = |진폭 합|²). 위상이 맞으면 보강되고 어긋나면 상쇄됩니다. 이것이 간섭이며, 영(Thomas Young)의 이중슬릿 실험(1801)에서 빛에 대해 처음 시연되었고, 'interference'라는 용어는 그 이듬해인 1802년에 영이 만들었습니다. IBM은 간섭을 '양자 컴퓨팅의 엔진'이라 부릅니다: 알고리즘은 중첩을 준비한 뒤 게이트로 상대 위상을 조율해, 측정 전에 진폭이 오답에서는 빠져나가고(상쇄 간섭) 정답에는 쌓이게(보강 간섭) 만듭니다. 간섭이 없다면 중첩은 고전적 확률 분포보다 나을 것이 없습니다. 결깨짐(결어긋남)은 간섭이 의존하는 위상 관계를 파괴하므로, 격리와 오류 수정이 중요해집니다. (용어 참고: 한국물리학회 2020 물리학용어집은 interference를 '간섭, 방해'로 등재합니다. 한자 干涉은 방패 간(범하다) + 건널 섭(관여하다) — 파동들이 서로의 영역에 끼어든다는 그림이 어원에 이미 담겨 있습니다.)",
+      "analogies": [
+        "두 물결이 만나면, 마루끼리 겹친 곳은 더 높아지고 마루와 골이 만난 곳은 잔잔해집니다. 양자컴퓨터는 이 파도 놀이를 일부러 합니다 — 틀린 답의 파도는 서로 지워지게, 맞는 답의 파도는 커지게.",
+        "노이즈 캔슬링 헤드폰은 소음과 정확히 반대 위상의 파동을 만들어 소음을 지웁니다 — 상쇄 간섭을 의도적으로 활용하는 일상의 예입니다. 양자 알고리즘은 오답의 진폭에 똑같은 일을 합니다."
+      ],
+      "commonMisconceptions": [
+        "양자컴퓨터가 '모든 답을 동시에 시도'하는 것이 아닙니다 — IBM이 명시적으로 교정하는 오해입니다. 실제 메커니즘은 진폭의 간섭입니다: 오답은 상쇄되고 정답은 증폭됩니다.",
+        "간섭에 두 개의 입자가 필요한 것이 아닙니다 — 한 입자의 서로 다른 경로 진폭들끼리 간섭하며, 이중슬릿 실험은 광자를 한 번에 하나씩 보내도 간섭무늬가 생김을 보여줍니다."
+      ],
+      "keyTakeaways": [
+        "진폭이 먼저 더해지고, 그다음 확률이 됩니다: P = |Σ 진폭|² (보른 규칙).",
+        "보강 간섭은 원하는 결과를 증폭하고, 상쇄 간섭은 원치 않는 결과를 지웁니다.",
+        "양자 알고리즘이 이용하는 메커니즘은 '모든 답 동시 시도'가 아니라 간섭입니다 — IBM은 간섭을 양자 컴퓨팅의 엔진이라 부릅니다.",
+        "결깨짐은 간섭이 의존하는 위상 관계를 파괴합니다."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "양자 알고리즘이 중첩을 곧바로 측정하지 않고 먼저 게이트를 적용하는 이유는 무엇인가요?",
+          "questionType": "multipleChoice",
+          "options": [
+            "일찍 측정해도 정답이 나오지만 더 느리기 때문에",
+            "게이트가 진폭을 조율해 오답은 상쇄되고 정답이 증폭된 뒤에 측정하기 위해",
+            "게이트가 사용 가능한 큐비트 수를 늘리기 때문에",
+            "게이트를 최소 한 번 적용해야 측정이 작동하기 때문에"
+          ],
+          "correctAnswerIndex": 1,
+          "explanation": "막 준비된 균등 중첩을 측정하면 무작위 결과가 나옵니다. 알고리즘의 게이트들은 간섭을 조율해 — 오답의 진폭은 빼내고 정답에 집중시켜 — 최종 측정이 높은 확률로 정답을 내도록 만듭니다.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "ja": {
+      "title": "量子干渉",
+      "shortDefinition": "干渉とは、確率振幅が波のように足し合わされる現象です：位相の揃った振幅は強め合い（相長的干渉）、位相のずれた振幅は打ち消し合います（相殺的干渉）。量子アルゴリズムは、誤答が打ち消され正答が増幅されるように干渉を設計して計算します。",
+      "detailedExplanation": "重ね合わせの各成分は複素振幅を持ち、同じ結果に至る区別不可能な経路の振幅は、確率を取る前にまず加算されます（ボルンの規則：確率 = |振幅の和|²）。位相が揃えば強め合い、ずれれば打ち消し合います。これが干渉であり、ヤングの二重スリット実験（1801年）で光について初めて実証され、「interference」という用語はその翌年の1802年にヤングが作りました。IBMは干渉を「量子コンピューティングのエンジン」と呼びます：アルゴリズムは重ね合わせを準備し、ゲートで相対位相を調整して、測定前に振幅が誤答から流れ出し（相殺的干渉）、正答に蓄積される（相長的干渉）ようにします。干渉がなければ、重ね合わせは古典的な確率分布と変わりません。デコヒーレンスは干渉が依存する位相関係を破壊するため、隔離と誤り訂正が重要になります。",
+      "analogies": [
+        "二つの水の波が出会うと、山と山が重なる場所は高くなり、山と谷が出会う場所は静かになります。量子コンピュータはこの波の遊びを意図的に行います — 誤答の波は互いに打ち消し合い、正答の波は大きくなるように。",
+        "ノイズキャンセリングヘッドホンは、騒音とちょうど逆位相の波を作って騒音を消します — 相殺的干渉の意図的な活用です。量子アルゴリズムは誤答の振幅に同じことをします。"
+      ],
+      "commonMisconceptions": [
+        "量子コンピュータは「すべての答えを同時に試す」わけではありません — IBMが明示的に訂正している誤解です。実際のメカニズムは振幅の干渉です：誤答は打ち消され、正答は増幅されます。",
+        "干渉に二つの粒子は必要ありません — 一つの粒子の異なる経路の振幅同士が干渉します。二重スリット実験は光子を一つずつ送っても干渉縞が現れることを示しています。"
+      ],
+      "keyTakeaways": [
+        "振幅が先に加算され、その後に確率になります：P = |Σ 振幅|²（ボルンの規則）。",
+        "相長的干渉は望む結果を増幅し、相殺的干渉は望まない結果を消します。",
+        "量子アルゴリズムが利用するのは「全答同時試行」ではなく干渉です — IBMは干渉を量子コンピューティングのエンジンと呼びます。",
+        "デコヒーレンスは干渉が依存する位相関係を破壊します。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "量子アルゴリズムが重ね合わせをすぐ測定せず、先にゲートを適用するのはなぜですか？",
+          "questionType": "multipleChoice",
+          "options": [
+            "早く測定しても正答は出るが、遅くなるから",
+            "ゲートが振幅を調整し、誤答が打ち消され正答が増幅されてから測定するため",
+            "ゲートが使える量子ビット数を増やすから",
+            "ゲートを最低一回適用しないと測定が機能しないから"
+          ],
+          "correctAnswerIndex": 1,
+          "explanation": "準備直後の一様な重ね合わせを測定すると無作為な結果が出ます。アルゴリズムのゲートは干渉を設計し、誤答の振幅を減らして正答に集中させ、最終測定が高確率で正答を返すようにします。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "zh-Hans": {
+      "title": "量子干涉",
+      "shortDefinition": "干涉是概率幅像波一样相加的现象：同相的概率幅相互加强（相长干涉），反相的概率幅相互抵消（相消干涉）。量子算法通过设计干涉来计算——让错误答案相消、正确答案被放大。",
+      "detailedExplanation": "叠加态的每个分量都携带一个复数概率幅，通向同一结果的不可区分路径的概率幅在取概率之前先行相加（玻恩规则：概率 = |概率幅之和|²）。相位一致则相长，相位相反则相消。这就是干涉，最早由杨（Thomas Young）的双缝实验（1801年）对光进行了演示——“interference”一词则是杨在次年（1802年）创造的。IBM把干涉称为“量子计算的引擎”：算法先制备叠加态，再通过量子门调控相对相位，使概率幅在测量之前从错误答案流失（相消干涉）、在正确答案上积累（相长干涉）。没有干涉，叠加态并不比经典概率分布更有用。退相干会破坏干涉所依赖的相位关系——这正是隔离与纠错重要的原因。",
+      "analogies": [
+        "两列水波相遇时，波峰遇波峰处水面更高，波峰遇波谷处归于平静。量子计算机有意地玩这个波的游戏——让错误答案的'波'相互抵消，让正确答案的波不断增强。",
+        "降噪耳机产生与噪音恰好反相的波，使二者相消——这是对相消干涉的有意利用。量子算法对错误答案的概率幅做同样的事。"
+      ],
+      "commonMisconceptions": [
+        "量子计算机并非“同时尝试所有答案”——这是IBM明确纠正的误解。真正的机制是概率幅的干涉：错误答案相消，正确答案被放大。",
+        "干涉并不需要两个粒子——单个粒子沿不同路径的概率幅彼此干涉；双缝实验表明即使一次只发送一个光子也会出现干涉条纹。"
+      ],
+      "keyTakeaways": [
+        "概率幅先相加，然后才是概率：P = |Σ 概率幅|²（玻恩规则）。",
+        "相长干涉放大想要的结果；相消干涉抵消不想要的结果。",
+        "量子算法利用的机制是干涉而非'同时尝试所有答案'——IBM称干涉为量子计算的引擎。",
+        "退相干会破坏干涉所依赖的相位关系。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "量子算法为什么先施加量子门而不是立即测量叠加态？",
+          "questionType": "multipleChoice",
+          "options": [
+            "提前测量也能得到正确答案，只是更慢",
+            "量子门调控概率幅，使错误答案相消、正确答案被放大后再测量",
+            "量子门会增加可用的量子比特数量",
+            "至少施加一个量子门后测量才能工作"
+          ],
+          "correctAnswerIndex": 1,
+          "explanation": "对刚制备的均匀叠加态直接测量会得到随机结果。算法的量子门设计干涉——抽走错误答案的概率幅并将其集中到正确答案上——使最终测量以高概率给出正确答案。",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "de": {
+      "title": "Quanteninterferenz",
+      "shortDefinition": "Interferenz ist die wellenartige Addition von Wahrscheinlichkeitsamplituden: Amplituden in Phase verstärken sich (konstruktive Interferenz), Amplituden in Gegenphase löschen sich aus (destruktive Interferenz). Quantenalgorithmen rechnen, indem sie Interferenz so choreographieren, dass falsche Antworten sich auslöschen und richtige verstärkt werden.",
+      "detailedExplanation": "Jede Komponente einer Quantensuperposition trägt eine komplexe Amplitude, und die Amplituden ununterscheidbarer Pfade zum selben Ergebnis addieren sich, bevor Wahrscheinlichkeiten gebildet werden (Bornsche Regel: Wahrscheinlichkeit = |Summe der Amplituden|²). Gleichphasige Amplituden verstärken sich; gegenphasige löschen sich aus. Das ist Interferenz, erstmals für Licht in Youngs Doppelspaltexperiment (1801) demonstriert — den Begriff 'interference' prägte Young ein Jahr später, 1802. IBM beschreibt Interferenz als den Motor des Quantencomputings: Ein Algorithmus präpariert eine Superposition und wendet dann Gatter an, die die relativen Phasen so steuern, dass Amplitude vor der Messung von falschen Antworten abfließt (destruktiv) und sich auf richtigen Antworten sammelt (konstruktiv). Ohne Interferenz wäre eine Superposition nicht nützlicher als eine klassische Wahrscheinlichkeitsverteilung. Dekohärenz zerstört die Phasenbeziehungen, auf denen Interferenz beruht — deshalb sind Isolation und Fehlerkorrektur so wichtig.",
+      "analogies": [
+        "Wenn zwei Wasserwellen aufeinandertreffen, steigt das Wasser höher, wo Berg auf Berg trifft, und wird ruhig, wo Berg auf Tal trifft. Ein Quantencomputer spielt dieses Wellenspiel absichtlich — so arrangiert, dass sich die 'Wellen' falscher Antworten gegenseitig auslöschen und die der richtigen Antwort aufbauen.",
+        "Noise-Cancelling-Kopfhörer erzeugen eine Welle exakt in Gegenphase zum Umgebungslärm, sodass sich beide auslöschen — bewusst genutzte destruktive Interferenz. Quantenalgorithmen tun dasselbe mit den Amplituden falscher Antworten."
+      ],
+      "commonMisconceptions": [
+        "Ein Quantencomputer 'probiert NICHT alle Antworten gleichzeitig aus' — ein Missverständnis, das IBM ausdrücklich korrigiert. Der tatsächliche Mechanismus ist Interferenz der Amplituden: Falsche Antworten löschen sich aus, richtige werden verstärkt.",
+        "Interferenz erfordert KEINE zwei Teilchen — die Amplituden eines einzelnen Teilchens entlang verschiedener Pfade interferieren miteinander, wie das Doppelspaltexperiment selbst bei einzeln gesendeten Photonen zeigt."
+      ],
+      "keyTakeaways": [
+        "Erst addieren sich Amplituden, dann entstehen Wahrscheinlichkeiten: P = |Σ Amplituden|² (Bornsche Regel).",
+        "Konstruktive Interferenz verstärkt erwünschte Ergebnisse; destruktive löscht unerwünschte aus.",
+        "Interferenz — nicht 'alle Antworten gleichzeitig probieren' — ist der Mechanismus, den Quantenalgorithmen nutzen; IBM nennt sie den Motor des Quantencomputings.",
+        "Dekohärenz zerstört die Phasenbeziehungen, auf denen Interferenz beruht."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Warum wendet ein Quantenalgorithmus erst Gatter an, statt die Superposition sofort zu messen?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Frühes Messen ergäbe die richtige Antwort, nur langsamer",
+            "Die Gatter steuern die Amplituden, sodass falsche Antworten sich auslöschen und die richtige vor der Messung verstärkt wird",
+            "Die Gatter erhöhen die Zahl der verfügbaren Qubits",
+            "Messung funktioniert erst nach mindestens einem Gatter"
+          ],
+          "correctAnswerIndex": 1,
+          "explanation": "Die Messung einer frisch präparierten gleichmäßigen Superposition liefert ein zufälliges Ergebnis. Die Gatter des Algorithmus choreographieren Interferenz — sie entziehen falschen Antworten Amplitude und konzentrieren sie auf richtige —, sodass die finale Messung mit hoher Wahrscheinlichkeit die richtige Antwort liefert.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "fr": {
+      "title": "Interférence quantique",
+      "shortDefinition": "L'interférence est l'addition ondulatoire des amplitudes de probabilité : les amplitudes en phase se renforcent (interférence constructive) et les amplitudes en opposition de phase s'annulent (interférence destructive). Les algorithmes quantiques calculent en chorégraphiant l'interférence pour que les mauvaises réponses s'annulent et que les bonnes soient amplifiées.",
+      "detailedExplanation": "Chaque composante d'une superposition quantique porte une amplitude complexe, et les amplitudes des chemins indiscernables menant au même résultat s'additionnent avant le calcul des probabilités (règle de Born : probabilité = |somme des amplitudes|²). En phase, elles se renforcent ; en opposition de phase, elles s'annulent. C'est l'interférence, démontrée pour la lumière par l'expérience des fentes de Young (1801) — Young a forgé le terme « interference » l'année suivante, en 1802. IBM décrit l'interférence comme le moteur du calcul quantique : un algorithme prépare une superposition, puis applique des portes qui pilotent les phases relatives afin que l'amplitude s'écoule hors des mauvaises réponses (interférence destructive) et s'accumule sur les bonnes (interférence constructive) avant la mesure. Sans interférence, une superposition ne serait pas plus utile qu'une distribution de probabilité classique. La décohérence détruit les relations de phase dont dépend l'interférence — d'où l'importance de l'isolation et de la correction d'erreurs.",
+      "analogies": [
+        "Quand deux vagues se rencontrent, l'eau monte plus haut là où crête rencontre crête, et devient calme là où crête rencontre creux. Un ordinateur quantique joue à ce jeu de vagues à dessein — en faisant s'annuler les « vagues » des mauvaises réponses et grandir celles de la bonne réponse.",
+        "Un casque à réduction de bruit génère une onde exactement en opposition de phase avec le bruit ambiant pour l'annuler — de l'interférence destructive exploitée délibérément. Les algorithmes quantiques font de même avec les amplitudes des mauvaises réponses."
+      ],
+      "commonMisconceptions": [
+        "Un ordinateur quantique n'« essaie PAS toutes les réponses à la fois » — une idée fausse qu'IBM corrige explicitement. Le mécanisme réel est l'interférence des amplitudes : les mauvaises réponses s'annulent, les bonnes sont amplifiées.",
+        "L'interférence ne nécessite PAS deux particules — les amplitudes d'une même particule le long de chemins différents interfèrent entre elles, comme le montre l'expérience des fentes de Young même avec des photons envoyés un par un."
+      ],
+      "keyTakeaways": [
+        "Les amplitudes s'additionnent d'abord, puis viennent les probabilités : P = |Σ amplitudes|² (règle de Born).",
+        "L'interférence constructive amplifie les résultats souhaités ; la destructive annule les indésirables.",
+        "L'interférence — et non « essayer toutes les réponses à la fois » — est le mécanisme qu'exploitent les algorithmes quantiques ; IBM l'appelle le moteur du calcul quantique.",
+        "La décohérence détruit les relations de phase dont dépend l'interférence."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Pourquoi un algorithme quantique applique-t-il des portes avant de mesurer, au lieu de mesurer la superposition immédiatement ?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Mesurer tôt donnerait la bonne réponse, mais plus lentement",
+            "Les portes pilotent les amplitudes pour que les mauvaises réponses s'annulent et que la bonne soit amplifiée avant la mesure",
+            "Les portes augmentent le nombre de qubits disponibles",
+            "La mesure ne fonctionne qu'après au moins une porte"
+          ],
+          "correctAnswerIndex": 1,
+          "explanation": "Mesurer une superposition uniforme fraîchement préparée donne un résultat aléatoire. Les portes de l'algorithme chorégraphient l'interférence — drainant l'amplitude des mauvaises réponses pour la concentrer sur la bonne — afin que la mesure finale donne la bonne réponse avec une probabilité élevée.",
+          "difficultyLevel": 1
+        }
+      ]
+    },
+    "es": {
+      "title": "Interferencia cuántica",
+      "shortDefinition": "La interferencia es la suma ondulatoria de las amplitudes de probabilidad: las amplitudes en fase se refuerzan (interferencia constructiva) y las amplitudes en oposición de fase se cancelan (interferencia destructiva). Los algoritmos cuánticos calculan coreografiando la interferencia para que las respuestas incorrectas se cancelen y las correctas se amplifiquen.",
+      "detailedExplanation": "Cada componente de una superposición cuántica lleva una amplitud compleja, y las amplitudes de caminos indistinguibles hacia el mismo resultado se suman antes de tomar probabilidades (regla de Born: probabilidad = |suma de amplitudes|²). En fase se refuerzan; en oposición de fase se cancelan. Esto es la interferencia, demostrada por primera vez para la luz en el experimento de la doble rendija de Young (1801) — Young acuñó el término «interference» un año después, en 1802. IBM describe la interferencia como el motor de la computación cuántica: un algoritmo prepara una superposición y luego aplica puertas que dirigen las fases relativas para que la amplitud se drene de las respuestas incorrectas (interferencia destructiva) y se acumule en las correctas (interferencia constructiva) antes de la medición. Sin interferencia, una superposición no sería más útil que una distribución de probabilidad clásica. La decoherencia destruye las relaciones de fase de las que depende la interferencia — por eso importan el aislamiento y la corrección de errores.",
+      "analogies": [
+        "Cuando dos olas se encuentran, el agua sube más donde cresta encuentra cresta y se calma donde cresta encuentra valle. Una computadora cuántica juega a este juego de olas a propósito — haciendo que las 'olas' de las respuestas incorrectas se cancelen entre sí y las de la respuesta correcta crezcan.",
+        "Los auriculares con cancelación de ruido generan una onda exactamente en oposición de fase con el ruido ambiente para cancelarlo — interferencia destructiva aprovechada deliberadamente. Los algoritmos cuánticos hacen lo mismo con las amplitudes de las respuestas incorrectas."
+      ],
+      "commonMisconceptions": [
+        "Una computadora cuántica NO 'prueba todas las respuestas a la vez' — un error que IBM corrige explícitamente. El mecanismo real es la interferencia de amplitudes: las respuestas incorrectas se cancelan y las correctas se amplifican.",
+        "La interferencia NO requiere dos partículas — las amplitudes de una sola partícula a lo largo de caminos distintos interfieren entre sí, como muestra el experimento de la doble rendija incluso enviando fotones de uno en uno."
+      ],
+      "keyTakeaways": [
+        "Primero se suman las amplitudes y luego vienen las probabilidades: P = |Σ amplitudes|² (regla de Born).",
+        "La interferencia constructiva amplifica los resultados deseados; la destructiva cancela los no deseados.",
+        "La interferencia — no 'probar todas las respuestas a la vez' — es el mecanismo que explotan los algoritmos cuánticos; IBM la llama el motor de la computación cuántica.",
+        "La decoherencia destruye las relaciones de fase de las que depende la interferencia."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "¿Por qué un algoritmo cuántico aplica puertas antes de medir, en lugar de medir la superposición de inmediato?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Medir antes daría la respuesta correcta, solo que más lentamente",
+            "Las puertas dirigen las amplitudes para que las respuestas incorrectas se cancelen y la correcta se amplifique antes de la medición",
+            "Las puertas aumentan el número de qubits disponibles",
+            "La medición solo funciona después de al menos una puerta"
+          ],
+          "correctAnswerIndex": 1,
+          "explanation": "Medir una superposición uniforme recién preparada devuelve un resultado aleatorio. Las puertas del algoritmo coreografían la interferencia — drenando amplitud de las respuestas incorrectas y concentrándola en la correcta — para que la medición final dé la respuesta correcta con alta probabilidad.",
+          "difficultyLevel": 1
+        }
+      ]
+    }
+  },
+  "relatedFormulas": [
+    {
+      "latex": "P(x) = \\left| \\sum_{i} c_i(x) \\right|^2",
+      "plainTextDescription": {
+        "en": "Born rule with interference: amplitudes for indistinguishable paths to outcome x add before squaring",
+        "ko": "간섭이 포함된 보른 규칙: 결과 x로 가는 구별 불가능한 경로들의 진폭이 제곱 전에 먼저 더해짐"
+      },
+      "variables": [
+        {
+          "symbol": "cᵢ(x)",
+          "meaning": {
+            "en": "Complex amplitude of the i-th path leading to outcome x",
+            "ko": "결과 x로 이어지는 i번째 경로의 복소 진폭"
+          }
+        },
+        {
+          "symbol": "P(x)",
+          "meaning": {
+            "en": "Probability of measuring outcome x",
+            "ko": "결과 x가 측정될 확률"
+          }
+        }
+      ]
+    }
+  ],
+  "visualizationType": "waveInterference",
+  "verifiedBy": {
+    "verifierName": "Eunmin Park",
+    "verifierCredentials": "IEEE Member, Quantum Computing Educator",
+    "verificationDate": "2026-07-10",
+    "reviewedSources": [
+      "Young, T. (1802). Phil. Trans. R. Soc. 92",
+      "Nielsen & Chuang (2010)",
+      "IBM, What is quantum computing? (think/topics)"
+    ],
+    "confidenceLevel": "undisputed"
+  },
+  "lastReviewed": "2026-07-10",
+  "citationReferences": [
+    "T. Young, The Bakerian Lecture: On the theory of light and colours, Phil. Trans. R. Soc. 92, 12 (1802), doi:10.1098/rstl.1802.0004",
+    "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press, doi:10.1017/CBO9780511976667",
+    "IBM, What is quantum computing? — interference described as the engine of quantum computation (ibm.com/think/topics/quantum-computing)"
+  ]
+}

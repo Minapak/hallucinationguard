@@ -1,11 +1,15 @@
 {
   "id": "decoherence",
   "certainty": "established",
-  "certaintyNote": "T1/T2 additions (2026-07-03 enhancement) per Krantz et al., APR 6, 021318 (2019).",
+  "certaintyNote": "T1/T2 additions (2026-07-03 enhancement) per Krantz et al., APR 6, 021318 (2019). KO terminology per the KPS 2020 glossary: decoherence = 결깨짐 (official); 결어긋남 (common usage; KPS maps it to 'incoherence') — verified against the glossary source file 2026-07-10.",
   "sourceRef": "W. H. Zurek, Rev. Mod. Phys. 75, 715 (2003), doi:10.1103/RevModPhys.75.715",
   "category": "foundations",
   "difficultyLevel": 2,
-  "prerequisites": ["qubit", "superposition", "density_matrix"],
+  "prerequisites": [
+    "qubit",
+    "superposition",
+    "density_matrix"
+  ],
   "translations": {
     "en": {
       "title": "Decoherence",
@@ -32,7 +36,12 @@
         {
           "questionText": "What does the T2 time of a qubit characterize?",
           "questionType": "multipleChoice",
-          "options": ["The time to perform a gate operation", "The dephasing time (loss of phase coherence)", "The time to read out a qubit", "The fabrication time of a qubit"],
+          "options": [
+            "The time to perform a gate operation",
+            "The dephasing time (loss of phase coherence)",
+            "The time to read out a qubit",
+            "The fabrication time of a qubit"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "T2 is the dephasing time, which measures how quickly the relative phase information between |0⟩ and |1⟩ components of a superposition is lost due to environmental interactions.",
           "difficultyLevel": 2
@@ -40,31 +49,36 @@
       ]
     },
     "ko": {
-      "title": "결어긋남",
-      "shortDefinition": "결어긋남은 양자 시스템이 환경과의 상호작용을 통해 양자 결맞음을 잃는 과정으로, 중첩이 고전적 통계적 혼합으로 붕괴됩니다.",
-      "detailedExplanation": "결어긋남은 양자 시스템이 환경과 얽히게 되어 추적되지 않는 자유도로 양자 정보가 효과적으로 누출될 때 발생합니다. 이는 밀도 행렬의 비대각 원소가 지수적으로 감소하게 하여, 순수 중첩 상태를 고전적으로 행동하는 혼합 상태로 변환합니다. 결어긋남의 시간 척도는 T1(에너지 이완 시간, 큐비트가 얼마나 빨리 에너지를 잃는지 측정)과 T2(결맞음 소멸 시간, 상대적 위상 정보가 얼마나 빨리 손실되는지 측정)로 특성화됩니다. 결어긋남은 양자 정보가 손실되기 전에 수행할 수 있는 양자 게이트 연산의 수를 제한하므로, 실용적 양자 컴퓨터 구축의 주요 장애물입니다.",
+      "title": "결깨짐 (통용: 결어긋남)",
+      "shortDefinition": "결깨짐(통용: 결어긋남)은 양자 시스템이 환경과의 상호작용을 통해 양자 결맞음을 잃는 과정으로, 중첩이 고전적 통계적 혼합으로 붕괴됩니다.",
+      "detailedExplanation": "결깨짐은 양자 시스템이 환경과 얽히게 되어 추적되지 않는 자유도로 양자 정보가 효과적으로 누출될 때 발생합니다. 이는 밀도 행렬의 비대각 원소가 지수적으로 감소하게 하여, 순수 중첩 상태를 고전적으로 행동하는 혼합 상태로 변환합니다. 결깨짐의 시간 척도는 T1(에너지 이완 시간, 큐비트가 얼마나 빨리 에너지를 잃는지 측정)과 T2(결맞음 소멸 시간, 상대적 위상 정보가 얼마나 빨리 손실되는지 측정)로 특성화됩니다. 결깨짐은 양자 정보가 손실되기 전에 수행할 수 있는 양자 게이트 연산의 수를 제한하므로, 실용적 양자 컴퓨터 구축의 주요 장애물입니다. 용어 참고: 한국물리학회 2020 물리학용어집의 공식 용어는 '결깨짐'(coherence는 '결맞음')이며, 위키백과 등에서 널리 쓰이는 '결어긋남'은 KPS 기준으로는 incoherence에 해당합니다. 이 항목은 공식 용어를 우선하고 통용 표기를 병기합니다.",
       "analogies": [
-        "결어긋남은 테이블 위에 놓인 소리굽쇠가 순수한 음색을 잃는 것과 같습니다 — 진동 에너지가 테이블(환경)로 전달되고, 맑고 순수한 음이 둔탁하고 잡음 섞인 소리가 되어 빠르게 사라집니다.",
+        "결깨짐은 테이블 위에 놓인 소리굽쇠가 순수한 음색을 잃는 것과 같습니다 — 진동 에너지가 테이블(환경)로 전달되고, 맑고 순수한 음이 둔탁하고 잡음 섞인 소리가 되어 빠르게 사라집니다.",
         "먼지가 많은 방에서 화이트보드에 글을 쓰는 것으로 생각해보세요 — 먼지(환경 잡음)가 표면에 쌓이면서 메시지(양자 정보)가 점차 읽을 수 없게 됩니다.",
         "큐비트가 '죽는' 방식은 두 가지입니다. T1은 천천히 바람이 빠지는 풍선과 같습니다 — |1⟩에 담긴 에너지가 슬금슬금 |0⟩으로 새어 내려갑니다. T2는 '하나, 둘!' 하고 완벽하게 박자를 맞춰 손뼉 치던 합창단이 점점 어긋나는 것과 같습니다: 소리(에너지)는 그대로인데 '함께함'(위상)이 사라집니다 — 그리고 양자 마법은 바로 그 함께함에서 나옵니다.",
-        "'결어긋남'이라는 말 자체가 이야기를 담고 있습니다: '결'은 나뭇결의 그 '결' — 나뭇결이 틀어지듯 파동의 위상이 서로 어긋나 버리는 것이 결어긋남입니다."
+        "'결맞음'과 '결깨짐'이라는 우리말 자체가 이야기를 담고 있습니다: '결'은 나뭇결·물결의 그 '결' — 파동의 무늬가 맞아 있던(결맞음) 것이 깨지는(결깨짐) 현상입니다."
       ],
       "commonMisconceptions": [
-        "결어긋남은 측정 붕괴와 같지 않습니다 — 결어긋남은 환경적 얽힘의 점진적이고 연속적인 과정인 반면, 측정은 정보를 추출하기 위해 설계된 특정 상호작용입니다.",
-        "결어긋남이 양자 정보를 완전히 파괴하는 것은 아닙니다 — 정보는 시스템과 환경 전체에 걸쳐 퍼지게 되며, 전체 환경을 제어할 수 있다면 원칙적으로 복구 가능합니다.",
+        "결깨짐은 측정 붕괴와 같지 않습니다 — 결깨짐은 환경적 얽힘의 점진적이고 연속적인 과정인 반면, 측정은 정보를 추출하기 위해 설계된 특정 상호작용입니다.",
+        "결깨짐이 양자 정보를 완전히 파괴하는 것은 아닙니다 — 정보는 시스템과 환경 전체에 걸쳐 퍼지게 되며, 전체 환경을 제어할 수 있다면 원칙적으로 복구 가능합니다.",
         "T1과 T2는 장치의 고정된 상수가 아닙니다 — 같은 칩 위에서도 큐비트마다 다르고 날마다 요동하기 때문에, 양자 하드웨어는 끊임없이 재보정되어야 합니다."
       ],
       "keyTakeaways": [
-        "결어긋남은 양자 시스템과 환경 사이의 원치 않는 얽힘에서 발생합니다.",
+        "결깨짐은 양자 시스템과 환경 사이의 원치 않는 얽힘에서 발생합니다.",
         "T1과 T2 시간은 큐비트가 각각 에너지와 위상 결맞음을 얼마나 빨리 잃는지를 특성화합니다.",
-        "결어긋남은 양자 컴퓨팅의 주요 실질적 도전으로, 양자 오류 수정의 동기가 됩니다.",
+        "결깨짐은 양자 컴퓨팅의 주요 실질적 도전으로, 양자 오류 수정의 동기가 됩니다.",
         "큐비트에는 서로 다른 두 개의 시계가 있습니다: T1(에너지 이완, |1⟩→|0⟩)과 T2(위상 결맞음). T2 ≤ 2·T1이며, 게이트는 두 시간 안에 여유 있게 끝나야 합니다."
       ],
       "practiceQuestions": [
         {
           "questionText": "큐비트의 T2 시간은 무엇을 특성화합니까?",
           "questionType": "multipleChoice",
-          "options": ["게이트 연산 수행 시간", "결맞음 소멸 시간(위상 결맞음 손실)", "큐비트 판독 시간", "큐비트 제조 시간"],
+          "options": [
+            "게이트 연산 수행 시간",
+            "결맞음 소멸 시간(위상 결맞음 손실)",
+            "큐비트 판독 시간",
+            "큐비트 제조 시간"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "T2는 결맞음 소멸 시간으로, 환경적 상호작용으로 인해 중첩의 |0⟩과 |1⟩ 성분 사이의 상대적 위상 정보가 얼마나 빨리 손실되는지를 측정합니다.",
           "difficultyLevel": 2
@@ -96,7 +110,12 @@
         {
           "questionText": "量子ビットのT2時間は何を特徴付けますか？",
           "questionType": "multipleChoice",
-          "options": ["ゲート操作の実行時間", "位相緩和時間（位相コヒーレンスの喪失）", "量子ビットの読み出し時間", "量子ビットの製造時間"],
+          "options": [
+            "ゲート操作の実行時間",
+            "位相緩和時間（位相コヒーレンスの喪失）",
+            "量子ビットの読み出し時間",
+            "量子ビットの製造時間"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "T2は位相緩和時間であり、環境との相互作用により重ね合わせの|0⟩と|1⟩成分間の相対位相情報がどれだけ早く失われるかを測定します。",
           "difficultyLevel": 2
@@ -128,7 +147,12 @@
         {
           "questionText": "量子比特的T2时间表征什么？",
           "questionType": "multipleChoice",
-          "options": ["执行门操作的时间", "退相时间（相位相干性的丧失）", "读出量子比特的时间", "制造量子比特的时间"],
+          "options": [
+            "执行门操作的时间",
+            "退相时间（相位相干性的丧失）",
+            "读出量子比特的时间",
+            "制造量子比特的时间"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "T2是退相时间，测量由于环境相互作用，叠加态中|0⟩和|1⟩分量之间的相对相位信息丧失的速度。",
           "difficultyLevel": 2
@@ -160,7 +184,12 @@
         {
           "questionText": "Was charakterisiert die T2-Zeit eines Qubits?",
           "questionType": "multipleChoice",
-          "options": ["Die Zeit zur Durchführung einer Gatteroperation", "Die Dephasierungszeit (Verlust der Phasenkohärenz)", "Die Auslesezeit eines Qubits", "Die Herstellungszeit eines Qubits"],
+          "options": [
+            "Die Zeit zur Durchführung einer Gatteroperation",
+            "Die Dephasierungszeit (Verlust der Phasenkohärenz)",
+            "Die Auslesezeit eines Qubits",
+            "Die Herstellungszeit eines Qubits"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "T2 ist die Dephasierungszeit, die misst, wie schnell die relative Phaseninformation zwischen den |0⟩- und |1⟩-Komponenten einer Superposition durch Umgebungswechselwirkungen verloren geht.",
           "difficultyLevel": 2
@@ -192,7 +221,12 @@
         {
           "questionText": "Que caractérise le temps T2 d'un qubit ?",
           "questionType": "multipleChoice",
-          "options": ["Le temps d'exécution d'une opération de porte", "Le temps de déphasage (perte de cohérence de phase)", "Le temps de lecture d'un qubit", "Le temps de fabrication d'un qubit"],
+          "options": [
+            "Le temps d'exécution d'une opération de porte",
+            "Le temps de déphasage (perte de cohérence de phase)",
+            "Le temps de lecture d'un qubit",
+            "Le temps de fabrication d'un qubit"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "T2 est le temps de déphasage, qui mesure la rapidité avec laquelle l'information de phase relative entre les composantes |0⟩ et |1⟩ d'une superposition est perdue.",
           "difficultyLevel": 2
@@ -224,7 +258,12 @@
         {
           "questionText": "¿Qué caracteriza el tiempo T2 de un qubit?",
           "questionType": "multipleChoice",
-          "options": ["El tiempo para realizar una operación de puerta", "El tiempo de desfase (pérdida de coherencia de fase)", "El tiempo de lectura de un qubit", "El tiempo de fabricación de un qubit"],
+          "options": [
+            "El tiempo para realizar una operación de puerta",
+            "El tiempo de desfase (pérdida de coherencia de fase)",
+            "El tiempo de lectura de un qubit",
+            "El tiempo de fabricación de un qubit"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "T2 es el tiempo de desfase, que mide cuán rápidamente se pierde la información de fase relativa entre los componentes |0⟩ y |1⟩ de una superposición.",
           "difficultyLevel": 2
@@ -240,8 +279,20 @@
         "ko": "결맞음 소멸로 인한 밀도 행렬 비대각 원소의 지수적 감소"
       },
       "variables": [
-        {"symbol": "T₂", "meaning": {"en": "Dephasing time", "ko": "결맞음 소멸 시간"}},
-        {"symbol": "ρ₀₁", "meaning": {"en": "Off-diagonal element of the density matrix (coherence)", "ko": "밀도 행렬의 비대각 원소 (결맞음)"}}
+        {
+          "symbol": "T₂",
+          "meaning": {
+            "en": "Dephasing time",
+            "ko": "결맞음 소멸 시간"
+          }
+        },
+        {
+          "symbol": "ρ₀₁",
+          "meaning": {
+            "en": "Off-diagonal element of the density matrix (coherence)",
+            "ko": "밀도 행렬의 비대각 원소 (결맞음)"
+          }
+        }
       ]
     }
   ],
@@ -250,13 +301,17 @@
     "verifierName": "Eunmin Park",
     "verifierCredentials": "IEEE Member, Quantum Computing Educator",
     "verificationDate": "2026-04-07",
-    "reviewedSources": ["Nielsen & Chuang (2010)", "Schlosshauer, M. (2007). Decoherence and the Quantum-to-Classical Transition"],
+    "reviewedSources": [
+      "Nielsen & Chuang (2010)",
+      "Schlosshauer, M. (2007). Decoherence and the Quantum-to-Classical Transition"
+    ],
     "confidenceLevel": "undisputed"
   },
-  "lastReviewed": "2026-07-03",
+  "lastReviewed": "2026-07-10",
   "citationReferences": [
     "Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. Reviews of Modern Physics, 75(3), 715.",
     "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.",
-    "Krantz, P., Kjaergaard, M., Yan, F., Orlando, T. P., Gustavsson, S., & Oliver, W. D. (2019). A Quantum Engineer's Guide to Superconducting Qubits. Applied Physics Reviews, 6, 021318 — §III, Bloch-Redfield model."
+    "Krantz, P., Kjaergaard, M., Yan, F., Orlando, T. P., Gustavsson, S., & Oliver, W. D. (2019). A Quantum Engineer's Guide to Superconducting Qubits. Applied Physics Reviews, 6, 021318 — §III, Bloch-Redfield model.",
+    "한국물리학회, 물리학용어집 2020 수정판 — coherence = 결맞음, decoherence = 결깨짐, incoherence = 결어긋남/엇결성"
   ]
 }

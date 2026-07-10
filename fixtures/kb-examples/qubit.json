@@ -1,7 +1,7 @@
 {
   "id": "qubit",
   "certainty": "established",
-  "certaintyNote": "Term and formalism per Schumacher 1995; state-vector treatment per Nielsen & Chuang (2010), doi:10.1017/CBO9780511976667.",
+  "certaintyNote": "Term and formalism per Schumacher 1995; state-vector treatment per Nielsen & Chuang (2010), doi:10.1017/CBO9780511976667. 'Quantum parallelism' phrasing qualified per IBM's misconception correction (2026-07-10).",
   "sourceRef": "Schumacher, Quantum coding, Phys. Rev. A 51, 2738 (1995), doi:10.1103/PhysRevA.51.2738",
   "category": "foundations",
   "difficultyLevel": 1,
@@ -10,7 +10,7 @@
     "en": {
       "title": "Qubit",
       "shortDefinition": "A qubit (quantum bit) is the fundamental unit of quantum information, capable of existing in a superposition of the classical states 0 and 1.",
-      "detailedExplanation": "Unlike a classical bit that must be either 0 or 1, a qubit can exist in a linear combination of both states simultaneously, described by the state vector |ψ⟩ = α|0⟩ + β|1⟩, where α and β are complex probability amplitudes satisfying |α|² + |β|² = 1. This property enables quantum parallelism, where a single qubit can encode information about both 0 and 1 at the same time. Physical implementations include superconducting circuits, trapped ions, photon polarization, and electron spin. Upon measurement, the qubit collapses to either |0⟩ or |1⟩ with probabilities |α|² and |β|² respectively.",
+      "detailedExplanation": "Unlike a classical bit that must be either 0 or 1, a qubit can exist in a linear combination of both states simultaneously, described by the state vector |ψ⟩ = α|0⟩ + β|1⟩, where α and β are complex probability amplitudes satisfying |α|² + |β|² = 1. This is often loosely called 'quantum parallelism', but the computational power comes from interference between the amplitudes — not from the qubit being 0 and 1 'at the same time' in any classical sense. Physical implementations include superconducting circuits, trapped ions, photon polarization, and electron spin. Upon measurement, the qubit collapses to either |0⟩ or |1⟩ with probabilities |α|² and |β|² respectively.",
       "analogies": [
         "A coin spinning in the air is like a qubit in superposition — it is neither heads nor tails until it lands (measurement), at which point it becomes definitively one or the other.",
         "Think of a qubit as a point on a globe: the north pole is |0⟩, the south pole is |1⟩, and every other point on the surface represents a superposition of the two — far richer than the simple heads-or-tails of a classical bit."
@@ -28,7 +28,12 @@
         {
           "questionText": "A qubit is in the state |ψ⟩ = (1/√2)|0⟩ + (1/√2)|1⟩. What is the probability of measuring |0⟩?",
           "questionType": "multipleChoice",
-          "options": ["0", "1/4", "1/2", "1"],
+          "options": [
+            "0",
+            "1/4",
+            "1/2",
+            "1"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "The probability of measuring |0⟩ is |α|² = |1/√2|² = 1/2 = 50%.",
           "difficultyLevel": 1
@@ -38,7 +43,7 @@
     "ko": {
       "title": "큐비트",
       "shortDefinition": "큐비트(양자 비트)는 고전적 상태 0과 1의 중첩 상태에 존재할 수 있는 양자 정보의 기본 단위입니다.",
-      "detailedExplanation": "고전적 비트가 반드시 0 또는 1이어야 하는 것과 달리, 큐비트는 두 상태의 선형 결합으로 동시에 존재할 수 있으며, 상태 벡터 |ψ⟩ = α|0⟩ + β|1⟩으로 기술됩니다. 여기서 α와 β는 |α|² + |β|² = 1을 만족하는 복소 확률 진폭입니다. 이 속성은 단일 큐비트가 0과 1에 대한 정보를 동시에 인코딩할 수 있는 양자 병렬성을 가능하게 합니다. 물리적 구현에는 초전도 회로, 포획된 이온, 광자 편광, 전자 스핀 등이 있습니다. 측정 시 큐비트는 각각 |α|²와 |β|²의 확률로 |0⟩ 또는 |1⟩으로 붕괴합니다.",
+      "detailedExplanation": "고전적 비트가 반드시 0 또는 1이어야 하는 것과 달리, 큐비트는 두 상태의 선형 결합으로 동시에 존재할 수 있으며, 상태 벡터 |ψ⟩ = α|0⟩ + β|1⟩으로 기술됩니다. 여기서 α와 β는 |α|² + |β|² = 1을 만족하는 복소 확률 진폭입니다. 이를 흔히 '양자 병렬성'이라 부르지만, 계산의 힘은 진폭들 사이의 간섭에서 나옵니다 — 고전적 의미로 큐비트가 0이면서 '동시에' 1인 것이 아닙니다. 물리적 구현에는 초전도 회로, 포획된 이온, 광자 편광, 전자 스핀 등이 있습니다. 측정 시 큐비트는 각각 |α|²와 |β|²의 확률로 |0⟩ 또는 |1⟩으로 붕괴합니다.",
       "analogies": [
         "공중에서 회전하는 동전은 중첩 상태의 큐비트와 같습니다 — 동전이 착지(측정)할 때까지 앞면도 뒷면도 아니며, 착지 순간 확정적으로 하나가 됩니다.",
         "큐비트를 지구본 위의 한 점으로 생각해보세요: 북극은 |0⟩, 남극은 |1⟩이며, 표면의 다른 모든 점은 두 상태의 중첩을 나타냅니다 — 고전적 비트의 단순한 앞면/뒷면보다 훨씬 풍부합니다."
@@ -56,7 +61,12 @@
         {
           "questionText": "큐비트가 |ψ⟩ = (1/√2)|0⟩ + (1/√2)|1⟩ 상태에 있습니다. |0⟩을 측정할 확률은 얼마입니까?",
           "questionType": "multipleChoice",
-          "options": ["0", "1/4", "1/2", "1"],
+          "options": [
+            "0",
+            "1/4",
+            "1/2",
+            "1"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "|0⟩을 측정할 확률은 |α|² = |1/√2|² = 1/2 = 50%입니다.",
           "difficultyLevel": 1
@@ -66,7 +76,7 @@
     "ja": {
       "title": "量子ビット",
       "shortDefinition": "量子ビット（キュービット）は、古典的な状態0と1の重ね合わせ状態に存在できる量子情報の基本単位です。",
-      "detailedExplanation": "古典ビットが必ず0か1のどちらかでなければならないのとは異なり、量子ビットは両方の状態の線形結合として同時に存在でき、状態ベクトル|ψ⟩ = α|0⟩ + β|1⟩で記述されます。ここでαとβは|α|² + |β|² = 1を満たす複素確率振幅です。この性質により、単一の量子ビットが0と1の両方に関する情報を同時にエンコードできる量子並列性が可能になります。物理的な実装には、超伝導回路、トラップイオン、光子の偏光、電子スピンなどがあります。測定時に量子ビットはそれぞれ|α|²と|β|²の確率で|0⟩または|1⟩に崩壊します。",
+      "detailedExplanation": "古典ビットが必ず0か1のどちらかでなければならないのとは異なり、量子ビットは両方の状態の線形結合として同時に存在でき、状態ベクトル|ψ⟩ = α|0⟩ + β|1⟩で記述されます。ここでαとβは|α|² + |β|² = 1を満たす複素確率振幅です。これはしばしば「量子並列性」と呼ばれますが、計算の力は振幅間の干渉から生まれます — 古典的な意味で量子ビットが0と1に「同時に」あるわけではありません。物理的な実装には、超伝導回路、トラップイオン、光子の偏光、電子スピンなどがあります。測定時に量子ビットはそれぞれ|α|²と|β|²の確率で|0⟩または|1⟩に崩壊します。",
       "analogies": [
         "空中で回転しているコインは重ね合わせ状態の量子ビットのようなものです — 着地（測定）するまで表でも裏でもなく、着地した瞬間に確定的にどちらかになります。",
         "量子ビットを地球儀上の点として考えてみてください：北極は|0⟩、南極は|1⟩であり、表面上の他のすべての点は2つの状態の重ね合わせを表します — 古典ビットの単純な表裏よりはるかに豊かです。"
@@ -84,7 +94,12 @@
         {
           "questionText": "量子ビットが|ψ⟩ = (1/√2)|0⟩ + (1/√2)|1⟩の状態にあります。|0⟩を測定する確率はいくらですか？",
           "questionType": "multipleChoice",
-          "options": ["0", "1/4", "1/2", "1"],
+          "options": [
+            "0",
+            "1/4",
+            "1/2",
+            "1"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "|0⟩を測定する確率は|α|² = |1/√2|² = 1/2 = 50%です。",
           "difficultyLevel": 1
@@ -94,7 +109,7 @@
     "zh-Hans": {
       "title": "量子比特",
       "shortDefinition": "量子比特（qubit）是量子信息的基本单位，能够同时存在于经典状态0和1的叠加态中。",
-      "detailedExplanation": "与必须为0或1的经典比特不同，量子比特可以同时存在于两种状态的线性组合中，用状态向量|ψ⟩ = α|0⟩ + β|1⟩描述，其中α和β是满足|α|² + |β|² = 1的复概率幅。这一特性使得量子并行成为可能，单个量子比特可以同时编码关于0和1的信息。物理实现包括超导电路、囚禁离子、光子偏振和电子自旋。测量时，量子比特分别以|α|²和|β|²的概率坍缩到|0⟩或|1⟩。",
+      "detailedExplanation": "与必须为0或1的经典比特不同，量子比特可以同时存在于两种状态的线性组合中，用状态向量|ψ⟩ = α|0⟩ + β|1⟩描述，其中α和β是满足|α|² + |β|² = 1的复概率幅。这常被不严格地称为“量子并行”，但计算能力来自概率幅之间的干涉——并不是量子比特在经典意义上“同时”既是0又是1。物理实现包括超导电路、囚禁离子、光子偏振和电子自旋。测量时，量子比特分别以|α|²和|β|²的概率坍缩到|0⟩或|1⟩。",
       "analogies": [
         "在空中旋转的硬币就像处于叠加态的量子比特——在落地（测量）之前既不是正面也不是反面，落地时才确定为其中之一。",
         "可以把量子比特想象为地球仪上的一个点：北极是|0⟩，南极是|1⟩，表面上的每一个其他点都代表两种状态的叠加——比经典比特的简单正反面丰富得多。"
@@ -112,7 +127,12 @@
         {
           "questionText": "一个量子比特处于|ψ⟩ = (1/√2)|0⟩ + (1/√2)|1⟩状态。测量到|0⟩的概率是多少？",
           "questionType": "multipleChoice",
-          "options": ["0", "1/4", "1/2", "1"],
+          "options": [
+            "0",
+            "1/4",
+            "1/2",
+            "1"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "测量到|0⟩的概率为|α|² = |1/√2|² = 1/2 = 50%。",
           "difficultyLevel": 1
@@ -122,7 +142,7 @@
     "de": {
       "title": "Qubit",
       "shortDefinition": "Ein Qubit (Quantenbit) ist die grundlegende Einheit der Quanteninformation, die in einer Superposition der klassischen Zustände 0 und 1 existieren kann.",
-      "detailedExplanation": "Im Gegensatz zu einem klassischen Bit, das entweder 0 oder 1 sein muss, kann ein Qubit in einer Linearkombination beider Zustände gleichzeitig existieren, beschrieben durch den Zustandsvektor |ψ⟩ = α|0⟩ + β|1⟩, wobei α und β komplexe Wahrscheinlichkeitsamplituden sind, die |α|² + |β|² = 1 erfüllen. Diese Eigenschaft ermöglicht Quantenparallelismus, bei dem ein einzelnes Qubit gleichzeitig Informationen über 0 und 1 kodieren kann. Physikalische Implementierungen umfassen supraleitende Schaltkreise, gefangene Ionen, Photonenpolarisation und Elektronenspin. Bei der Messung kollabiert das Qubit mit den Wahrscheinlichkeiten |α|² bzw. |β|² zu |0⟩ oder |1⟩.",
+      "detailedExplanation": "Im Gegensatz zu einem klassischen Bit, das entweder 0 oder 1 sein muss, kann ein Qubit in einer Linearkombination beider Zustände gleichzeitig existieren, beschrieben durch den Zustandsvektor |ψ⟩ = α|0⟩ + β|1⟩, wobei α und β komplexe Wahrscheinlichkeitsamplituden sind, die |α|² + |β|² = 1 erfüllen. Dies wird oft locker 'Quantenparallelität' genannt, doch die Rechenkraft entsteht durch Interferenz zwischen den Amplituden — nicht dadurch, dass ein Qubit im klassischen Sinne 'gleichzeitig' 0 und 1 wäre. Physikalische Implementierungen umfassen supraleitende Schaltkreise, gefangene Ionen, Photonenpolarisation und Elektronenspin. Bei der Messung kollabiert das Qubit mit den Wahrscheinlichkeiten |α|² bzw. |β|² zu |0⟩ oder |1⟩.",
       "analogies": [
         "Eine in der Luft drehende Münze ist wie ein Qubit in Superposition — sie ist weder Kopf noch Zahl, bis sie landet (Messung), woraufhin sie definitiv eines von beiden wird.",
         "Stellen Sie sich ein Qubit als einen Punkt auf einem Globus vor: Der Nordpol ist |0⟩, der Südpol ist |1⟩, und jeder andere Punkt auf der Oberfläche repräsentiert eine Superposition der beiden — viel reichhaltiger als das einfache Kopf-oder-Zahl eines klassischen Bits."
@@ -140,7 +160,12 @@
         {
           "questionText": "Ein Qubit befindet sich im Zustand |ψ⟩ = (1/√2)|0⟩ + (1/√2)|1⟩. Wie groß ist die Wahrscheinlichkeit, |0⟩ zu messen?",
           "questionType": "multipleChoice",
-          "options": ["0", "1/4", "1/2", "1"],
+          "options": [
+            "0",
+            "1/4",
+            "1/2",
+            "1"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "Die Wahrscheinlichkeit, |0⟩ zu messen, beträgt |α|² = |1/√2|² = 1/2 = 50%.",
           "difficultyLevel": 1
@@ -150,7 +175,7 @@
     "fr": {
       "title": "Qubit",
       "shortDefinition": "Un qubit (bit quantique) est l'unité fondamentale de l'information quantique, capable d'exister dans une superposition des états classiques 0 et 1.",
-      "detailedExplanation": "Contrairement à un bit classique qui doit être soit 0 soit 1, un qubit peut exister dans une combinaison linéaire des deux états simultanément, décrit par le vecteur d'état |ψ⟩ = α|0⟩ + β|1⟩, où α et β sont des amplitudes de probabilité complexes satisfaisant |α|² + |β|² = 1. Cette propriété permet le parallélisme quantique, où un seul qubit peut encoder des informations sur 0 et 1 en même temps. Les implémentations physiques comprennent les circuits supraconducteurs, les ions piégés, la polarisation des photons et le spin de l'électron. Lors de la mesure, le qubit s'effondre en |0⟩ ou |1⟩ avec des probabilités |α|² et |β|² respectivement.",
+      "detailedExplanation": "Contrairement à un bit classique qui doit être soit 0 soit 1, un qubit peut exister dans une combinaison linéaire des deux états simultanément, décrit par le vecteur d'état |ψ⟩ = α|0⟩ + β|1⟩, où α et β sont des amplitudes de probabilité complexes satisfaisant |α|² + |β|² = 1. On appelle souvent cela, de façon approximative, le « parallélisme quantique », mais la puissance de calcul vient de l'interférence entre les amplitudes — et non du fait qu'un qubit serait 0 et 1 « en même temps » au sens classique. Les implémentations physiques comprennent les circuits supraconducteurs, les ions piégés, la polarisation des photons et le spin de l'électron. Lors de la mesure, le qubit s'effondre en |0⟩ ou |1⟩ avec des probabilités |α|² et |β|² respectivement.",
       "analogies": [
         "Une pièce de monnaie tournant en l'air est comme un qubit en superposition — elle n'est ni pile ni face jusqu'à ce qu'elle atterrisse (mesure), moment où elle devient définitivement l'un ou l'autre.",
         "Imaginez un qubit comme un point sur un globe : le pôle Nord est |0⟩, le pôle Sud est |1⟩, et chaque autre point de la surface représente une superposition des deux — bien plus riche que le simple pile ou face d'un bit classique."
@@ -168,7 +193,12 @@
         {
           "questionText": "Un qubit est dans l'état |ψ⟩ = (1/√2)|0⟩ + (1/√2)|1⟩. Quelle est la probabilité de mesurer |0⟩ ?",
           "questionType": "multipleChoice",
-          "options": ["0", "1/4", "1/2", "1"],
+          "options": [
+            "0",
+            "1/4",
+            "1/2",
+            "1"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "La probabilité de mesurer |0⟩ est |α|² = |1/√2|² = 1/2 = 50%.",
           "difficultyLevel": 1
@@ -178,7 +208,7 @@
     "es": {
       "title": "Qubit",
       "shortDefinition": "Un qubit (bit cuántico) es la unidad fundamental de información cuántica, capaz de existir en una superposición de los estados clásicos 0 y 1.",
-      "detailedExplanation": "A diferencia de un bit clásico que debe ser 0 o 1, un qubit puede existir en una combinación lineal de ambos estados simultáneamente, descrito por el vector de estado |ψ⟩ = α|0⟩ + β|1⟩, donde α y β son amplitudes de probabilidad complejas que satisfacen |α|² + |β|² = 1. Esta propiedad permite el paralelismo cuántico, donde un solo qubit puede codificar información sobre 0 y 1 al mismo tiempo. Las implementaciones físicas incluyen circuitos superconductores, iones atrapados, polarización de fotones y espín del electrón. Al medir, el qubit colapsa a |0⟩ o |1⟩ con probabilidades |α|² y |β|² respectivamente.",
+      "detailedExplanation": "A diferencia de un bit clásico que debe ser 0 o 1, un qubit puede existir en una combinación lineal de ambos estados simultáneamente, descrito por el vector de estado |ψ⟩ = α|0⟩ + β|1⟩, donde α y β son amplitudes de probabilidad complejas que satisfacen |α|² + |β|² = 1. A esto se le llama a menudo, de forma imprecisa, 'paralelismo cuántico', pero el poder de cálculo proviene de la interferencia entre las amplitudes — no de que un qubit sea 0 y 1 'al mismo tiempo' en sentido clásico. Las implementaciones físicas incluyen circuitos superconductores, iones atrapados, polarización de fotones y espín del electrón. Al medir, el qubit colapsa a |0⟩ o |1⟩ con probabilidades |α|² y |β|² respectivamente.",
       "analogies": [
         "Una moneda girando en el aire es como un qubit en superposición — no es cara ni cruz hasta que aterriza (medición), momento en el que se convierte definitivamente en una u otra.",
         "Piensa en un qubit como un punto en un globo terráqueo: el polo norte es |0⟩, el polo sur es |1⟩, y cada otro punto en la superficie representa una superposición de los dos — mucho más rico que el simple cara o cruz de un bit clásico."
@@ -196,7 +226,12 @@
         {
           "questionText": "Un qubit está en el estado |ψ⟩ = (1/√2)|0⟩ + (1/√2)|1⟩. ¿Cuál es la probabilidad de medir |0⟩?",
           "questionType": "multipleChoice",
-          "options": ["0", "1/4", "1/2", "1"],
+          "options": [
+            "0",
+            "1/4",
+            "1/2",
+            "1"
+          ],
           "correctAnswerIndex": 2,
           "explanation": "La probabilidad de medir |0⟩ es |α|² = |1/√2|² = 1/2 = 50%.",
           "difficultyLevel": 1
@@ -212,8 +247,20 @@
         "ko": "기저 상태의 중첩으로 나타낸 일반적인 큐비트 상태"
       },
       "variables": [
-        {"symbol": "α", "meaning": {"en": "Complex amplitude for state |0⟩", "ko": "|0⟩ 상태의 복소 진폭"}},
-        {"symbol": "β", "meaning": {"en": "Complex amplitude for state |1⟩", "ko": "|1⟩ 상태의 복소 진폭"}}
+        {
+          "symbol": "α",
+          "meaning": {
+            "en": "Complex amplitude for state |0⟩",
+            "ko": "|0⟩ 상태의 복소 진폭"
+          }
+        },
+        {
+          "symbol": "β",
+          "meaning": {
+            "en": "Complex amplitude for state |1⟩",
+            "ko": "|1⟩ 상태의 복소 진폭"
+          }
+        }
       ]
     },
     {
@@ -223,8 +270,20 @@
         "ko": "전체 확률이 1이 되도록 보장하는 정규화 조건"
       },
       "variables": [
-        {"symbol": "|α|²", "meaning": {"en": "Probability of measuring |0⟩", "ko": "|0⟩을 측정할 확률"}},
-        {"symbol": "|β|²", "meaning": {"en": "Probability of measuring |1⟩", "ko": "|1⟩을 측정할 확률"}}
+        {
+          "symbol": "|α|²",
+          "meaning": {
+            "en": "Probability of measuring |0⟩",
+            "ko": "|0⟩을 측정할 확률"
+          }
+        },
+        {
+          "symbol": "|β|²",
+          "meaning": {
+            "en": "Probability of measuring |1⟩",
+            "ko": "|1⟩을 측정할 확률"
+          }
+        }
       ]
     }
   ],
@@ -233,10 +292,13 @@
     "verifierName": "Eunmin Park",
     "verifierCredentials": "IEEE Member, Quantum Computing Educator",
     "verificationDate": "2026-04-07",
-    "reviewedSources": ["Nielsen & Chuang (2010)", "IBM Qiskit Textbook"],
+    "reviewedSources": [
+      "Nielsen & Chuang (2010)",
+      "IBM Qiskit Textbook"
+    ],
     "confidenceLevel": "undisputed"
   },
-  "lastReviewed": "2026-04-07",
+  "lastReviewed": "2026-07-10",
   "citationReferences": [
     "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.",
     "IBM Qiskit Textbook — Introduction to Quantum Computing."

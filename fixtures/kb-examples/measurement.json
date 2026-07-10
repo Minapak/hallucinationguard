@@ -1,11 +1,14 @@
 {
   "id": "measurement",
   "certainty": "established",
-  "certaintyNote": "Projective measurement per von Neumann (1932). QND vendor-behavior sentences are explicitly year-qualified (2024-2025) in text.",
+  "certaintyNote": "Projective measurement per von Neumann (1932). QND vendor-behavior sentences are explicitly year-qualified (2024-2025) in text. KO terms per the KPS 2020 glossary: measurement = 측정/재기, observation = 관측/관찰 (verified 2026-07-10).",
   "sourceRef": "M. Born, Zur Quantenmechanik der Stossvorgaenge, Z. Phys. 37, 863 (1926), doi:10.1007/BF01397477",
   "category": "foundations",
   "difficultyLevel": 1,
-  "prerequisites": ["qubit", "superposition"],
+  "prerequisites": [
+    "qubit",
+    "superposition"
+  ],
   "translations": {
     "en": {
       "title": "Quantum Measurement",
@@ -30,7 +33,12 @@
         {
           "questionText": "After measuring a qubit and obtaining the result |0⟩, what happens if you immediately measure the same qubit again in the same basis?",
           "questionType": "multipleChoice",
-          "options": ["You get |0⟩ or |1⟩ with equal probability", "You always get |0⟩", "You always get |1⟩", "The qubit returns to its original superposition"],
+          "options": [
+            "You get |0⟩ or |1⟩ with equal probability",
+            "You always get |0⟩",
+            "You always get |1⟩",
+            "The qubit returns to its original superposition"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "After measurement, the qubit is in state |0⟩. Measuring again in the same basis will deterministically yield |0⟩ since there is no superposition left.",
           "difficultyLevel": 1
@@ -60,7 +68,12 @@
         {
           "questionText": "큐비트를 측정하여 |0⟩ 결과를 얻은 후, 같은 기저로 같은 큐비트를 즉시 다시 측정하면 어떻게 됩니까?",
           "questionType": "multipleChoice",
-          "options": ["동일한 확률로 |0⟩ 또는 |1⟩을 얻는다", "항상 |0⟩을 얻는다", "항상 |1⟩을 얻는다", "큐비트가 원래 중첩으로 돌아간다"],
+          "options": [
+            "동일한 확률로 |0⟩ 또는 |1⟩을 얻는다",
+            "항상 |0⟩을 얻는다",
+            "항상 |1⟩을 얻는다",
+            "큐비트가 원래 중첩으로 돌아간다"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "측정 후 큐비트는 |0⟩ 상태에 있습니다. 같은 기저로 다시 측정하면 더 이상 중첩이 없으므로 결정론적으로 |0⟩을 산출합니다.",
           "difficultyLevel": 1
@@ -90,7 +103,12 @@
         {
           "questionText": "量子ビットを測定して|0⟩の結果を得た後、同じ基底で同じ量子ビットを直ちに再測定するとどうなりますか？",
           "questionType": "multipleChoice",
-          "options": ["等しい確率で|0⟩または|1⟩を得る", "常に|0⟩を得る", "常に|1⟩を得る", "量子ビットは元の重ね合わせに戻る"],
+          "options": [
+            "等しい確率で|0⟩または|1⟩を得る",
+            "常に|0⟩を得る",
+            "常に|1⟩を得る",
+            "量子ビットは元の重ね合わせに戻る"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "測定後、量子ビットは|0⟩の状態にあります。同じ基底で再度測定すると、重ね合わせがないため決定論的に|0⟩が得られます。",
           "difficultyLevel": 1
@@ -120,7 +138,12 @@
         {
           "questionText": "测量一个量子比特并获得结果|0⟩后，如果立即在同一基上再次测量同一量子比特，会发生什么？",
           "questionType": "multipleChoice",
-          "options": ["以相等概率得到|0⟩或|1⟩", "总是得到|0⟩", "总是得到|1⟩", "量子比特回到原来的叠加态"],
+          "options": [
+            "以相等概率得到|0⟩或|1⟩",
+            "总是得到|0⟩",
+            "总是得到|1⟩",
+            "量子比特回到原来的叠加态"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "测量后，量子比特处于|0⟩状态。在同一基上再次测量将确定性地得到|0⟩，因为不再有叠加态。",
           "difficultyLevel": 1
@@ -150,7 +173,12 @@
         {
           "questionText": "Nachdem ein Qubit gemessen wurde und das Ergebnis |0⟩ ergab, was passiert, wenn Sie dasselbe Qubit sofort erneut in derselben Basis messen?",
           "questionType": "multipleChoice",
-          "options": ["Sie erhalten |0⟩ oder |1⟩ mit gleicher Wahrscheinlichkeit", "Sie erhalten immer |0⟩", "Sie erhalten immer |1⟩", "Das Qubit kehrt zu seiner ursprünglichen Superposition zurück"],
+          "options": [
+            "Sie erhalten |0⟩ oder |1⟩ mit gleicher Wahrscheinlichkeit",
+            "Sie erhalten immer |0⟩",
+            "Sie erhalten immer |1⟩",
+            "Das Qubit kehrt zu seiner ursprünglichen Superposition zurück"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "Nach der Messung befindet sich das Qubit im Zustand |0⟩. Eine erneute Messung in derselben Basis ergibt deterministisch |0⟩, da keine Superposition mehr vorhanden ist.",
           "difficultyLevel": 1
@@ -180,7 +208,12 @@
         {
           "questionText": "Après avoir mesuré un qubit et obtenu le résultat |0⟩, que se passe-t-il si vous mesurez immédiatement le même qubit dans la même base ?",
           "questionType": "multipleChoice",
-          "options": ["Vous obtenez |0⟩ ou |1⟩ avec une probabilité égale", "Vous obtenez toujours |0⟩", "Vous obtenez toujours |1⟩", "Le qubit revient à sa superposition originale"],
+          "options": [
+            "Vous obtenez |0⟩ ou |1⟩ avec une probabilité égale",
+            "Vous obtenez toujours |0⟩",
+            "Vous obtenez toujours |1⟩",
+            "Le qubit revient à sa superposition originale"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "Après la mesure, le qubit est dans l'état |0⟩. Le mesurer à nouveau dans la même base donnera de manière déterministe |0⟩ puisqu'il n'y a plus de superposition.",
           "difficultyLevel": 1
@@ -210,7 +243,12 @@
         {
           "questionText": "Después de medir un qubit y obtener el resultado |0⟩, ¿qué sucede si inmediatamente mides el mismo qubit de nuevo en la misma base?",
           "questionType": "multipleChoice",
-          "options": ["Obtienes |0⟩ o |1⟩ con igual probabilidad", "Siempre obtienes |0⟩", "Siempre obtienes |1⟩", "El qubit vuelve a su superposición original"],
+          "options": [
+            "Obtienes |0⟩ o |1⟩ con igual probabilidad",
+            "Siempre obtienes |0⟩",
+            "Siempre obtienes |1⟩",
+            "El qubit vuelve a su superposición original"
+          ],
           "correctAnswerIndex": 1,
           "explanation": "Después de la medición, el qubit está en el estado |0⟩. Medirlo de nuevo en la misma base dará determinísticamente |0⟩ ya que no queda superposición.",
           "difficultyLevel": 1
@@ -226,8 +264,20 @@
         "ko": "보른 규칙: 결과 i를 측정할 확률"
       },
       "variables": [
-        {"symbol": "P(i)", "meaning": {"en": "Probability of outcome i", "ko": "결과 i의 확률"}},
-        {"symbol": "⟨i|ψ⟩", "meaning": {"en": "Inner product of measurement basis state i with the quantum state", "ko": "측정 기저 상태 i와 양자 상태의 내적"}}
+        {
+          "symbol": "P(i)",
+          "meaning": {
+            "en": "Probability of outcome i",
+            "ko": "결과 i의 확률"
+          }
+        },
+        {
+          "symbol": "⟨i|ψ⟩",
+          "meaning": {
+            "en": "Inner product of measurement basis state i with the quantum state",
+            "ko": "측정 기저 상태 i와 양자 상태의 내적"
+          }
+        }
       ]
     }
   ],
@@ -236,10 +286,13 @@
     "verifierName": "Eunmin Park",
     "verifierCredentials": "IEEE Member, Quantum Computing Educator",
     "verificationDate": "2026-04-07",
-    "reviewedSources": ["Nielsen & Chuang (2010)", "IBM Qiskit Textbook"],
+    "reviewedSources": [
+      "Nielsen & Chuang (2010)",
+      "IBM Qiskit Textbook"
+    ],
     "confidenceLevel": "undisputed"
   },
-  "lastReviewed": "2026-07-03",
+  "lastReviewed": "2026-07-10",
   "citationReferences": [
     "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.",
     "Born, M. (1926). Zur Quantenmechanik der Stoßvorgänge. Zeitschrift für Physik.",

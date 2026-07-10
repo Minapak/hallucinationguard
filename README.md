@@ -28,7 +28,7 @@ This is the public skeleton — the project is being extracted from a commercial
 | Path | Contents |
 |---|---|
 | [`fixtures/samples/hg120_sample_20.json`](fixtures/samples/hg120_sample_20.json) | 20 of 120 benchmark items — all 16 categories, all 3 ground-truth classes, 7 locales per item (280 multilingual fields in the sample) |
-| [`fixtures/kb-examples/`](fixtures/kb-examples/) | The 11 verified knowledge-base concepts the sample references — each with certainty grade, primary-source citation (DOIs), and verifier record |
+| [`fixtures/kb-examples/`](fixtures/kb-examples/) | 12 verified knowledge-base concepts — each with certainty grade, primary-source citation (DOIs), and verifier record. Korean terminology is aligned with the Korean Physical Society (KPS) 2020 glossary; time-sensitive status claims are explicitly date-qualified |
 | [`reference/score_v0.py`](reference/score_v0.py) | The production baseline scorer (V0 tokenizer, one-sided overlap, threshold 0.30, three-tier classification) — zero dependencies, stdlib only |
 | [`demo/metric_blindness_demo.py`](demo/metric_blindness_demo.py) | Reproduces the paper's core finding on your terminal in ~5 seconds |
 | [`docs/SCHEMA.md`](docs/SCHEMA.md) | One-page schema for benchmark items, KB entries, and the certainty taxonomy |
@@ -82,6 +82,7 @@ HallucinationGuard was born inside a commercial product — a paid quantum-educa
 
 - Product where the benchmark runs today: https://swiftquantum.tech (App Store: "SwiftQuantum")
 - Author: Eunmin Park — IEEE member, solo developer, Seoul
+- Content freshness: last full verification pass 2026-07-10 — KO terms aligned with the KPS 2020 physics glossary (e.g. decoherence = 결깨짐, with common-usage 결어긋남 noted); 2024–26 QEC milestones (Google Willow below-threshold, IBM gross qLDPC) and PQC standardization status (HQC, FIPS 206, EO 14412) added as explicitly year/date-qualified sentences; institution-confirmed misconception corrections (IBM/Caltech) applied, including replacing the "tries every answer at once" framing with amplitude interference
 
 ## License
 
