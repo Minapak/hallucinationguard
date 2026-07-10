@@ -19,7 +19,7 @@ Nearly identical, to an embedding. Try it yourself:
 python3 demo/metric_blindness_demo.py
 ```
 
-That finding is the subject of paper #305 submitted to IEEE Quantum Week 2026 (QCE26, QSEEC track). HallucinationGuard is the benchmark built to prove it.
+HallucinationGuard is the benchmark built around that finding. It is not a research prototype: it runs in production today, gating every AI-generated explanation shown to users of a live quantum-education app.
 
 ## What is in this repository (today)
 
@@ -81,7 +81,6 @@ Every KB claim carries one of four grades, enforced by CI gates — never auto-p
 HallucinationGuard was born inside a commercial product — a paid quantum-education app where it gates AI tutor output daily. This repository is the extraction of that benchmark into a public good under Apache-2.0, which means direct competitors of the author's own app can use it freely. That's the point: a hallucination benchmark only works if the people being measured trust it wasn't built to favor its author.
 
 - Product where the benchmark runs today: https://swiftquantum.tech (App Store: "SwiftQuantum")
-- Paper: IEEE QCE26 #305 (QSEEC track), submitted
 - Author: Eunmin Park — IEEE member, solo developer, Seoul
 
 ## License

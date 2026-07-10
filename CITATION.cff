@@ -13,9 +13,11 @@ keywords:
   - LLM evaluation
   - multilingual
 preferred-citation:
-  type: conference-paper
-  title: "Paper #305, IEEE International Conference on Quantum Computing and Engineering (QCE26), QSEEC track — submitted"
+  type: software
+  title: "HallucinationGuard: an open benchmark for measuring what LLMs get wrong about quantum computing"
   authors:
     - family-names: Park
       given-names: Eunmin
   year: 2026
+  repository-code: "https://github.com/Minapak/hallucinationguard"
+  license: Apache-2.0

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""The paper's core finding, on your terminal in ~5 seconds.
+"""HallucinationGuard's core finding, on your terminal in ~5 seconds.
 
 Two sentences. Opposite physics. Watch what the usual metrics say —
 then watch what HallucinationGuard says.
@@ -65,7 +65,7 @@ def main() -> int:
     print(f"  token Jaccard         {bar(jaccard(CORRECT, WRONG))}")
     print(f"  char SequenceMatcher  {bar(SequenceMatcher(None, CORRECT, WRONG).ratio())}")
     print(f"\n  {YELLOW}An answer about the right topic, with the wrong physics, still scores high.{RESET}")
-    print(f"  {DIM}(Word-embedding mean-pooling shows the same compositional blindness — paper §VI.){RESET}\n")
+    print(f"  {DIM}(Word-embedding mean-pooling shows the same compositional blindness.){RESET}\n")
     pause(1.4)
 
     print(f"{BOLD}What HallucinationGuard says:{RESET}\n")

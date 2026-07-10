@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """HallucinationGuard — production V0 baseline scorer.
 
-Reference implementation of the guard described in QCE26 paper #305 §III-C.
+Reference implementation of the guard that gates AI tutor output in production.
 Zero dependencies (stdlib only). Python 3.9+.
 
   Tokenizer V0 : case-folded whitespace split (no stemming, no punctuation stripping)
