@@ -30,7 +30,7 @@ This is the public skeleton — the project is being extracted from a commercial
 | [`fixtures/samples/hg120_sample_20.json`](fixtures/samples/hg120_sample_20.json) | 20 of 120 benchmark items — all 16 categories, all 3 ground-truth classes, 7 locales per item (280 multilingual fields in the sample) |
 | [`fixtures/kb-examples/`](fixtures/kb-examples/) | 12 verified knowledge-base concepts — each with certainty grade, primary-source citation (DOIs), and verifier record. Korean terminology is aligned with the Korean Physical Society (KPS) 2020 glossary; time-sensitive status claims are explicitly date-qualified |
 | [`reference/score_v0.py`](reference/score_v0.py) | The production baseline scorer (V0 tokenizer, one-sided overlap, threshold 0.30, three-tier classification) — zero dependencies, stdlib only |
-| [`demo/metric_blindness_demo.py`](demo/metric_blindness_demo.py) | Reproduces the paper's core finding on your terminal in ~5 seconds |
+| [`demo/metric_blindness_demo.py`](demo/metric_blindness_demo.py) | Reproduces the benchmark's core finding on your terminal in ~5 seconds |
 | [`docs/SCHEMA.md`](docs/SCHEMA.md) | One-page schema for benchmark items, KB entries, and the certainty taxonomy |
 | [`ROADMAP.md`](ROADMAP.md) | Four milestones to full release |
 
@@ -53,7 +53,7 @@ python3 reference/score_v0.py fixtures/samples/hg120_sample_20.json --locale en
 
 ## How the guard classifies
 
-Every model answer lands in one of three tiers (paper §III-C):
+Every model answer lands in one of three tiers (see [docs/SCHEMA.md](docs/SCHEMA.md)):
 
 - 🟢 `verifiedKnowledgeBase` — served directly from the expert-verified KB
 - 🔵 `aiValidatedAgainstKB` — generated answer, one-sided token overlap with the KB entry ≥ 0.30
@@ -61,7 +61,7 @@ Every model answer lands in one of three tiers (paper §III-C):
 
 Answers whose topic has no KB entry are `aiNoKBMatch` — passed through with an explicit caveat. In addition, each benchmark item carries `forbidden_claims`: known misconception patterns ("entanglement transmits information faster than light", "consciousness collapses the wave function") that must never be asserted.
 
-**Production baseline accuracy: 0.9083 (109/120) on the full HG120 set.** Stated honestly: the V0 lexical baseline has documented semantic-inversion boundary cases — two adversarial items in the full set defeat pure overlap scoring. That limitation is not a footnote; it is the paper's central finding, and the reason this benchmark needs to exist.
+**Production baseline accuracy: 0.9083 (109/120) on the full HG120 set.** Stated honestly: the V0 lexical baseline has documented semantic-inversion boundary cases — two adversarial items in the full set defeat pure overlap scoring. That limitation is not a footnote; it is this benchmark's central finding, and the reason it needs to exist.
 
 ## Certainty taxonomy
 

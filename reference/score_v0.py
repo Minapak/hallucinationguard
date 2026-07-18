@@ -56,7 +56,7 @@ def asserts_forbidden_claim(answer_text: str, forbidden_claims: list[str]) -> st
 
 
 def classify(kb_text: str | None, answer_text: str) -> tuple[str, float]:
-    """Three-tier classification per paper §III-C. Returns (tier, overlap_score)."""
+    """Three-tier classification per docs/SCHEMA.md. Returns (tier, overlap_score)."""
     if kb_text is None:
         return TIER_NO_KB, 0.0
     score = one_sided_overlap(kb_text, answer_text)
@@ -103,7 +103,7 @@ def score_fixture(fixture_path: Path, kb_dir: Path, locale: str) -> int:
         print("  " + "  ".join(str(c).ljust(w) for c, w in zip(row, widths)) + "  " + str(row[6] if len(row) > 6 else ""))
     n = len(items)
     print(f"\n  tier agreement with ground truth: {agree}/{n} = {agree / n:.4f}")
-    print(f"  (full 120-item set, paper-cited production baseline: 0.9083 = 109/120)\n")
+    print(f"  (full 120-item set, documented production baseline: 0.9083 = 109/120)\n")
     return 0
 
 
