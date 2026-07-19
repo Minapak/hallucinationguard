@@ -1,7 +1,7 @@
 # Roadmap
 
-- **M1 — Extraction:** all 120 items (1,680 fields) migrated from the production pipeline into this repo under Apache-2.0, schema doc final.
-- **M2 — Harness:** `pip install hallucinationguard` — CLI that scores any model's outputs against the set, per-category report.
-- **M3 — Validation:** native-speaker review pass on all 7 locales; CONTRIBUTING.md + item-proposal template; first external item accepted.
+- **M1 — Extraction:** all 120 items (1,680 fields) migrated from the production pipeline into this repo under Apache-2.0, schema doc final. Must include at least one item the V0 baseline misclassifies, so the benchmark's central finding is reproducible from the public set alone.
+- **M2 — Harness:** `pip install hallucinationguard` — CLI that scores any model's outputs against the set, per-category report. Reports the V0 lexical baseline alongside an NLI-based checker (MiniCheck/AlignScore class) so the lexical-vs-entailment gap becomes a published number. Python floor moves to 3.10 here (3.9 reached end-of-life 2025-10-31).
+- **M3 — Validation:** native-speaker review pass on all 7 locales — including the 2026-07-19 backfilled KB translations, which are faithful renderings of the verified EN text but not yet native-reviewed; CONTRIBUTING.md + item-proposal template; first external item accepted.
 - **M4 — Distribution:** baseline results for 3+ public models registered on Metriq; public results page; methods write-up.
-- **Continuous — freshness & terminology:** year/date-qualified experimental and ecosystem sentences re-verified against primary sources on each content pass (last: 2026-07-10); KO terminology kept aligned with the KPS 2020 physics glossary, with a full-vocabulary cross-check scheduled alongside the M3 native-speaker review.
+- **Continuous — freshness & terminology:** year/date-qualified experimental and ecosystem sentences re-verified against primary sources on each content pass (last: 2026-07-10; hardening audit: 2026-07-19); KO terminology kept aligned with the KPS 2020 physics glossary, with a full-vocabulary cross-check scheduled alongside the M3 native-speaker review.

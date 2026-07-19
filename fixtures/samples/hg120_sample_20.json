@@ -1,5 +1,5 @@
 {
-  "schema": "hg_benchmark_item_v3",
+  "schema": "hg_benchmark_item_v3.1",
   "version": "sample-20-of-120",
   "license": "Apache-2.0",
   "description": "20-item public sample of the HallucinationGuard 120-item benchmark (HG120). Full set: 120 items x 14 multilingual fields (7 prompt locales + 7 model-answer locales) = 1,680 verified fields. Full release is Milestone 1 of the open-sourcing roadmap (see ROADMAP.md).",
@@ -86,10 +86,43 @@
       "ai_confidence": 0.62,
       "expected_source": "aiWithLowConfidence",
       "expected_keywords": [],
-      "forbidden_claims": [
-        "Entanglement transmits information faster than light",
-        "Entanglement enables supernatural long-distance communication"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "Entanglement transmits information faster than light",
+          "Entanglement enables supernatural long-distance communication",
+          "When you observe one entangled particle, the partner instantly responds, achieving information transfer at faster-than-light speeds, letting distant users communicate via their entangled pair"
+        ],
+        "ko": [
+          "얽힘을 통해 빛보다 빠른 속도로 정보 전송이 이루어진다",
+          "얽힘은 초자연적인 원거리 통신을 가능하게 한다",
+          "한쪽을 관측하면 짝꿍 입자가 즉시 반응하여 빛보다 빠른 속도로 정보 전송이 이루어지며, 얽힌 쌍을 통해 원거리 사용자 간 통신이 가능하다"
+        ],
+        "ja": [
+          "量子もつれは光速を超える情報伝達を実現する",
+          "量子もつれは超自然的な長距離通信を可能にする",
+          "片方を観測するとパートナーが瞬時に応答し、光速を超える情報伝達が実現され、もつれペアを介して遠隔ユーザー間の通信ができる"
+        ],
+        "zh-Hans": [
+          "纠缠能以超越光速的速度传输信息",
+          "纠缠能实现超自然的远距离通信",
+          "观察其中一个纠缠粒子时，伙伴会立即响应，实现以超越光速的速度进行信息传输，让远距离用户通过纠缠对进行通信"
+        ],
+        "es": [
+          "El entrelazamiento transmite información más rápido que la luz",
+          "El entrelazamiento permite una comunicación sobrenatural a larga distancia",
+          "Cuando observas una partícula entrelazada, la compañera responde instantáneamente, logrando transferencia de información a velocidades superiores a la luz y permitiendo la comunicación entre usuarios distantes mediante pares entrelazados"
+        ],
+        "fr": [
+          "L'intrication transmet l'information plus vite que la lumière",
+          "L'intrication permet une communication surnaturelle à longue distance",
+          "Quand vous observez une particule intriquée, la partenaire répond instantanément, réalisant un transfert d'information à des vitesses supraluminiques, permettant aux utilisateurs distants de communiquer via leur paire intriquée"
+        ],
+        "de": [
+          "Verschränkung überträgt Information schneller als Licht",
+          "Verschränkung ermöglicht übernatürliche Kommunikation über weite Entfernungen",
+          "Wenn Sie eines der verschränkten Teilchen beobachten, antwortet der Partner sofort und erreicht eine Informationsübertragung mit Überlichtgeschwindigkeit, was die Kommunikation zwischen entfernten Nutzern über ihr verschränktes Paar ermöglicht"
+        ]
+      },
       "difficulty": "intermediate",
       "prompts": {
         "ko": "양자 얽힘이 정보를 빛보다 빠르게 전송할 수 있나?",
@@ -273,10 +306,36 @@
       "ai_confidence": 0.4,
       "expected_source": "aiWithLowConfidence",
       "expected_keywords": [],
-      "forbidden_claims": [
-        "Consciousness collapses the wave function",
-        "Measurement outcomes can be selected by mental choice"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "Consciousness collapses the wave function",
+          "Measurement outcomes can be selected by mental choice"
+        ],
+        "ko": [
+          "의식적 인식이 파동함수 붕괴를 일으킵니다.",
+          "마음이 측정 결과를 선택할 수 있다."
+        ],
+        "ja": [
+          "意識的な認識が波動関数の崩壊を引き起こす",
+          "心が測定結果を選択できる"
+        ],
+        "zh-Hans": [
+          "有意识的认知触发波函数坍缩",
+          "意识可以选择测量结果"
+        ],
+        "es": [
+          "La conciencia colapsa la función de onda",
+          "La mente puede elegir los resultados de la medición"
+        ],
+        "fr": [
+          "C'est la conscience qui déclenche l'effondrement de la fonction d'onde",
+          "L'esprit peut choisir les résultats de la mesure"
+        ],
+        "de": [
+          "Das Bewusstsein löst den Kollaps der Wellenfunktion aus",
+          "Der Geist kann experimentelle Ergebnisse auswählen"
+        ]
+      },
       "difficulty": "intermediate",
       "prompts": {
         "ko": "측정자의 의식이 파동함수를 붕괴시키나요?",
@@ -309,10 +368,36 @@
       "ai_confidence": 0.5,
       "expected_source": "aiWithLowConfidence",
       "expected_keywords": [],
-      "forbidden_claims": [
-        "S and Z gates are interchangeable without affecting circuit behavior",
-        "Quantum gates can be freely substituted based on hardware convenience"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "S and Z gates are interchangeable without affecting circuit behavior",
+          "Quantum gates can be freely substituted based on hardware convenience"
+        ],
+        "ko": [
+          "S 게이트와 Z 게이트는 회로 동작에 영향 없이 서로 교환 가능한 게이트입니다.",
+          "양자 게이트는 하드웨어에서 구현하기 쉬운 쪽을 자유롭게 골라 사용할 수 있습니다."
+        ],
+        "ja": [
+          "SゲートとZゲートは回路の動作に影響なく相互交換可能な単一量子ビットゲートです。",
+          "量子ゲートはハードウェア上で実装しやすい方を自由に選んで使うことができます。"
+        ],
+        "zh-Hans": [
+          "S门和Z门是可互换的单量子比特门，互换不影响电路的行为。",
+          "量子门可以自由替换，通常选择在硬件上更容易实现的那个。"
+        ],
+        "es": [
+          "Las puertas S y Z son intercambiables sin afectar el comportamiento del circuito.",
+          "Las puertas cuánticas pueden sustituirse libremente por la que sea más fácil de implementar en el hardware."
+        ],
+        "fr": [
+          "Les portes S et Z sont interchangeables sans affecter le comportement du circuit.",
+          "Les portes quantiques peuvent être librement remplacées par celle qui est la plus facile à implémenter sur le matériel."
+        ],
+        "de": [
+          "Das S-Gatter und das Z-Gatter sind austauschbare Einzelqubit-Gatter, die sich im Schaltkreis gleich verhalten.",
+          "Das eine Quantengatter kann frei durch das andere ersetzt werden, je nachdem, was auf der Hardware leichter zu implementieren ist."
+        ]
+      },
       "difficulty": "intermediate",
       "prompts": {
         "ko": "S 게이트는 Z 게이트와 같은가요?",
@@ -345,10 +430,36 @@
       "ai_confidence": 0.38,
       "expected_source": "aiWithLowConfidence",
       "expected_keywords": [],
-      "forbidden_claims": [
-        "Grover solves NP-complete problems in polynomial time",
-        "Grover's quadratic speedup is practically exponential"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "Grover solves NP-complete problems in polynomial time",
+          "Grover's quadratic speedup is practically exponential"
+        ],
+        "ko": [
+          "Grover 알고리즘은 NP-complete 문제를 다항 시간에 해결한다",
+          "Grover 알고리즘의 이차 속도향상은 실질적으로 지수적이다"
+        ],
+        "ja": [
+          "GroverはNP完全問題を多項式時間で解く",
+          "Groverの二次高速化は実質的に指数関数的です"
+        ],
+        "zh-Hans": [
+          "Grover算法能在多项式时间内解决NP完全问题",
+          "Grover的二次加速对现实世界的NP应用具有实质性的指数级意义"
+        ],
+        "es": [
+          "Grover resuelve problemas NP-completos en tiempo polinómico",
+          "La aceleración cuadrática de Grover es prácticamente exponencial"
+        ],
+        "fr": [
+          "Grover résout les problèmes NP-complets en temps polynomial",
+          "L'accélération quadratique de Grover est pratiquement exponentielle"
+        ],
+        "de": [
+          "Grover löst NP-vollständige Probleme in Polynomialzeit",
+          "Grovers quadratische Beschleunigung ist praktisch exponentiell"
+        ]
+      },
       "difficulty": "intermediate",
       "prompts": {
         "ko": "Grover 알고리즘으로 NP 문제를 다항 시간에 풀 수 있나요?",
@@ -383,11 +494,31 @@
       "expected_keywords": [
         "linear system",
         "sparse",
-        "condition number"
+        "well-conditioned"
       ],
-      "forbidden_claims": [
-        "HHL is a drop-in replacement for classical linear system solvers"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "HHL is a drop-in replacement for classical linear system solvers"
+        ],
+        "ko": [
+          "HHL은 고전 선형 해법기의 드롭인 교체이다."
+        ],
+        "ja": [
+          "HHLは古典線型ソルバの置き換えである。"
+        ],
+        "zh-Hans": [
+          "HHL是经典线性求解器的直接替代品。"
+        ],
+        "es": [
+          "HHL es un reemplazo directo para los solucionadores lineales clásicos."
+        ],
+        "fr": [
+          "HHL est un remplacement direct des solveurs linéaires classiques."
+        ],
+        "de": [
+          "HHL ist ein direkter Ersatz für klassische lineare Löser."
+        ]
+      },
       "difficulty": "advanced",
       "prompts": {
         "ko": "HHL 알고리즘의 가정은 무엇인가?",
@@ -420,10 +551,50 @@
       "ai_confidence": 0.3,
       "expected_source": "aiWithLowConfidence",
       "expected_keywords": [],
-      "forbidden_claims": [
-        "Error correction removes all errors regardless of physical error rate",
-        "Quantum computers ship with turnkey fault tolerance today"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "Error correction removes all errors regardless of physical error rate",
+          "Quantum computers ship with turnkey fault tolerance today",
+          "Error correction achieves error-free computation regardless of underlying hardware",
+          "Modern quantum computers have built-in fault tolerance ready to use"
+        ],
+        "ko": [
+          "오류 정정은 물리적 오류율과 상관없이 모든 오류를 제거한다",
+          "양자 컴퓨터는 오늘날 턴키 결함 허용을 갖추고 출시된다",
+          "오류 정정은 기반 하드웨어와 상관없이 오류 없는 계산을 달성합니다",
+          "현대 양자 컴퓨터는 내장된 결함 허용이 바로 사용 가능하여 모든 잡음이 자동으로 억제됩니다"
+        ],
+        "ja": [
+          "誤り訂正は物理誤り率に関係なくすべての誤りを除去する",
+          "量子コンピュータは今日ターンキーの耐故障性を備えて出荷される",
+          "誤り訂正は基盤ハードウェアに関係なく誤りのない計算を達成します",
+          "現代の量子コンピュータは組み込みの耐故障性がすぐに利用できるため、あらゆる雑音が自動的に抑制されます"
+        ],
+        "zh-Hans": [
+          "无论物理错误率如何，纠错都能清除所有错误",
+          "量子计算机如今出厂即带交钥匙式容错能力",
+          "纠错可以实现无差错计算，与底层硬件无关",
+          "现代量子计算机开箱即用地内置容错能力，任何噪声都会被自动抑制"
+        ],
+        "es": [
+          "La corrección de errores elimina todos los errores independientemente de la tasa de error física",
+          "Las computadoras cuánticas vienen hoy con tolerancia a fallos llave en mano",
+          "La corrección de errores logra computación libre de errores independientemente del hardware subyacente",
+          "Las computadoras cuánticas modernas tienen tolerancia a fallos incorporada lista para usar"
+        ],
+        "fr": [
+          "La correction d'erreurs élimine toutes les erreurs indépendamment du taux d'erreur physique",
+          "Les ordinateurs quantiques sont livrés aujourd'hui avec une tolérance aux fautes clé en main",
+          "La correction d'erreur atteint un calcul sans erreur indépendamment du matériel sous-jacent",
+          "Les ordinateurs quantiques modernes disposent d'une tolérance aux fautes intégrée prête à l'emploi"
+        ],
+        "de": [
+          "Die Fehlerkorrektur entfernt alle Fehler unabhängig von der physikalischen Fehlerrate",
+          "Quantencomputer werden heute mit schlüsselfertiger Fehlertoleranz ausgeliefert",
+          "Die Fehlerkorrektur erreicht fehlerfreie Berechnung unabhängig von der zugrunde liegenden Hardware",
+          "Moderne Quantencomputer verfügen über eingebaute Fehlertoleranz, die sofort einsatzbereit ist"
+        ]
+      },
       "difficulty": "intermediate",
       "prompts": {
         "ko": "양자 오류 정정은 모든 오류를 즉시 제거하나요?",
@@ -532,10 +703,36 @@
       "ai_confidence": 0.32,
       "expected_source": "aiWithLowConfidence",
       "expected_keywords": [],
-      "forbidden_claims": [
-        "ML-KEM provides information-theoretic or unconditional security",
-        "No further cryptanalysis is needed after NIST standardization"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "ML-KEM provides information-theoretic or unconditional security",
+          "No further cryptanalysis is needed after NIST standardization"
+        ],
+        "ko": [
+          "ML-KEM은 정보 이론적 또는 무조건적인, 영원히 깰 수 없는 보안을 제공합니다",
+          "NIST 표준화 이후 더 이상의 암호 분석이 필요 없습니다"
+        ],
+        "ja": [
+          "ML-KEMは情報理論的または無条件の安全性を提供します",
+          "NIST標準化以降、それ以上の暗号解析は不要です"
+        ],
+        "zh-Hans": [
+          "ML-KEM提供信息论或无条件的安全性",
+          "NIST标准化后，无需进一步的密码分析"
+        ],
+        "es": [
+          "ML-KEM da seguridad incondicional o de teoría de la información",
+          "Después de la estandarización de NIST no se necesita más análisis criptográfico"
+        ],
+        "fr": [
+          "ML-KEM fournit une sécurité inconditionnelle ou de théorie de l'information",
+          "Aucune analyse cryptographique supplémentaire n'est nécessaire après la standardisation du NIST"
+        ],
+        "de": [
+          "ML-KEM bietet informationstheoretische oder unbedingte Sicherheit",
+          "Nach der NIST-Standardisierung ist keine weitere kryptographische Analyse erforderlich"
+        ]
+      },
       "difficulty": "intermediate",
       "prompts": {
         "ko": "ML-KEM은 수학적으로 완벽한 보안을 제공하나요?",
@@ -681,13 +878,33 @@
       "ai_confidence": 0.78,
       "expected_source": "aiNoKBMatch",
       "expected_keywords": [
-        "flux qubit",
-        "benchmarks",
+        "flux-qubit",
+        "benchmarked",
         "stoquastic"
       ],
-      "forbidden_claims": [
-        "D-Wave delivers proven quantum speedup on general problems"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "D-Wave delivers proven quantum speedup on general problems"
+        ],
+        "ko": [
+          "D-Wave는 일반 문제에서 입증된 양자 속도향상을 제공한다"
+        ],
+        "ja": [
+          "D-Waveは一般的な問題で実証済みの量子高速化を提供する"
+        ],
+        "zh-Hans": [
+          "D-Wave在一般问题上提供已证明的量子加速"
+        ],
+        "es": [
+          "D-Wave ofrece una aceleración cuántica demostrada en problemas generales"
+        ],
+        "fr": [
+          "D-Wave offre une accélération quantique prouvée sur des problèmes généraux"
+        ],
+        "de": [
+          "D-Wave liefert bewiesene Quantenbeschleunigung bei allgemeinen Problemen"
+        ]
+      },
       "difficulty": "advanced",
       "prompts": {
         "ko": "D-Wave 머신은 실제로 양자 속도향상을 보이나?",
@@ -724,9 +941,29 @@
         "fermion parity",
         "Ising anyons"
       ],
-      "forbidden_claims": [
-        "Majorana zero modes have been unambiguously observed and deployed for universal topological computing"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "Majorana zero modes have been unambiguously observed and deployed for universal topological computing"
+        ],
+        "ko": [
+          "Majorana 영 모드는 명확하게 관측되어 보편적 위상 양자 컴퓨팅에 실전 배치되었다"
+        ],
+        "ja": [
+          "Majorana零モードは明確に観測され、普遍的な位相的量子計算に実用配備されている"
+        ],
+        "zh-Hans": [
+          "马约拉纳零模已被明确观测并已部署用于通用拓扑量子计算"
+        ],
+        "es": [
+          "Los modos cero de Majorana han sido observados inequívocamente y desplegados para la computación topológica universal"
+        ],
+        "fr": [
+          "Les modes zéro de Majorana ont été observés sans ambiguïté et déployés pour le calcul topologique universel"
+        ],
+        "de": [
+          "Majorana-Nullmoden wurden eindeutig beobachtet und für universelles topologisches Rechnen praktisch eingesetzt"
+        ]
+      },
       "difficulty": "advanced",
       "prompts": {
         "ko": "Majorana 영 모드는 위상 큐비트와 어떻게 관련되나?",
@@ -759,10 +996,36 @@
       "ai_confidence": 0.35,
       "expected_source": "aiWithLowConfidence",
       "expected_keywords": [],
-      "forbidden_claims": [
-        "Decoherence is eliminated by cooling alone",
-        "Thermal isolation is sufficient for error-free quantum computation"
-      ],
+      "forbidden_claims": {
+        "en": [
+          "Decoherence is eliminated by cooling alone",
+          "Thermal isolation is sufficient for error-free quantum computation"
+        ],
+        "ko": [
+          "차갑게 유지하는 것만으로 결어긋남을 영원히 제거하기에 충분합니다",
+          "열 절연만으로 양자 컴퓨터는 오류 없이 무한히 실행됩니다"
+        ],
+        "ja": [
+          "デコヒーレンスは冷たく保つだけで永遠に除去できます",
+          "熱絶縁だけで量子コンピュータは誤りなく無限に動作します"
+        ],
+        "zh-Hans": [
+          "保持低温足以永远消除退相干",
+          "热绝缘足以使量子计算机无错误地无限期运行"
+        ],
+        "es": [
+          "Mantener el qubit frío es suficiente para eliminar la decoherencia para siempre",
+          "El aislamiento térmico es suficiente para una computación cuántica sin errores"
+        ],
+        "fr": [
+          "Garder le qubit froid suffit pour éliminer la décohérence pour toujours",
+          "L'isolation thermique suffit pour que tout ordinateur quantique fonctionne sans erreurs"
+        ],
+        "de": [
+          "Das Qubit kalt zu halten reicht aus, um die Dekohärenz für immer zu eliminieren",
+          "Thermische Isolation genügt, damit jeder Quantencomputer unbegrenzt ohne Fehler läuft"
+        ]
+      },
       "difficulty": "intermediate",
       "prompts": {
         "ko": "결어긋남은 그냥 큐비트가 뜨거워져서 고장나는 것 아닌가요?",

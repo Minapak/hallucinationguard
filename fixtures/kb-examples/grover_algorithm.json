@@ -4,19 +4,286 @@
   "sourceRef": "Grover, Quantum mechanics helps in searching for a needle in a haystack, Phys. Rev. Lett. 79, 325 (1997), doi:10.1103/PhysRevLett.79.325",
   "category": "algorithms",
   "difficultyLevel": 3,
-  "prerequisites": ["qubit", "superposition", "hadamard_gate", "measurement", "born_rule"],
+  "prerequisites": [
+    "qubit",
+    "superposition",
+    "hadamard_gate",
+    "measurement",
+    "born_rule"
+  ],
   "translations": {
-    "en": {"title": "Grover's Algorithm", "shortDefinition": "Grover's algorithm provides a quadratic speedup for unstructured search, finding a marked item in an unsorted database of N items using only O(sqrt(N)) queries instead of O(N).", "detailedExplanation": "Grover's algorithm (1996) searches an unsorted database of N items for a target item using approximately pi/4 * sqrt(N) oracle queries, compared to N/2 on average classically. It works by repeatedly applying two operations: (1) the oracle, which marks the target state by flipping its phase, and (2) the diffusion operator (Grover diffusion), which amplifies the amplitude of the marked state through inversion about the mean. After approximately sqrt(N) iterations, measuring yields the target with high probability. Grover's algorithm is provably optimal for unstructured search and has applications in cryptanalysis (effectively halving key lengths), SAT solving, and as a subroutine in other quantum algorithms.", "analogies": ["Grover's algorithm is like a resonance effect: each iteration amplifies the probability of the correct answer, like pushing a child on a swing at exactly the right moment to build amplitude.", "Think of it as a quantum echo-location: each bounce increases the signal from the target while suppressing noise from non-targets."], "commonMisconceptions": ["Grover's algorithm provides QUADRATIC speedup, not exponential -- it reduces O(N) to O(sqrt(N)), not O(log(N)).", "Too many iterations of Grover's algorithm will DECREASE the success probability -- the amplification is periodic, not monotonic."], "keyTakeaways": ["Searches unsorted database of N items in O(sqrt(N)) queries -- quadratic speedup.", "Uses phase oracle + amplitude amplification (Grover diffusion).", "Provably optimal for unstructured search."], "practiceQuestions": [{"questionText": "What is the time complexity of Grover's search algorithm for N items?", "questionType": "multipleChoice", "options": ["O(N)", "O(log N)", "O(sqrt(N))", "O(N^2)"], "correctAnswerIndex": 2, "explanation": "Grover's algorithm requires O(sqrt(N)) oracle queries, providing a quadratic speedup over classical O(N) search.", "difficultyLevel": 2}]},
-    "ko": {"title": "그로버 알고리즘", "shortDefinition": "그로버 알고리즘은 비구조적 검색에 이차적 속도향상을 제공하여, N개 항목의 비정렬 데이터베이스에서 O(N) 대신 O(√N) 쿼리만으로 표시된 항목을 찾습니다.", "detailedExplanation": "그로버 알고리즘(1996)은 대략 π/4 * √N 오라클 쿼리를 사용합니다. 두 연산을 반복 적용합니다: (1) 대상 상태의 위상을 뒤집는 오라클, (2) 평균에 대한 반전을 통해 표시된 상태의 진폭을 증폭하는 확산 연산자.", "analogies": ["그로버 알고리즘은 공명 효과와 같습니다: 각 반복이 올바른 답의 확률을 증폭시킵니다.", "양자 반향 정위로 생각하세요."], "commonMisconceptions": ["이차적 속도향상이지 지수적이 아닙니다.", "너무 많은 반복은 성공 확률을 감소시킵니다."], "keyTakeaways": ["O(√N) 쿼리로 비정렬 데이터베이스 검색 -- 이차적 속도향상.", "위상 오라클 + 진폭 증폭 사용.", "비구조적 검색에 최적임이 증명됨."], "practiceQuestions": [{"questionText": "N개 항목에 대한 그로버 검색의 시간 복잡도는?", "questionType": "multipleChoice", "options": ["O(N)", "O(log N)", "O(√N)", "O(N²)"], "correctAnswerIndex": 2, "explanation": "O(√N) 오라클 쿼리가 필요합니다.", "difficultyLevel": 2}]},
-    "ja": {"title": "グローバーのアルゴリズム", "shortDefinition": "グローバーのアルゴリズムは非構造化探索に二次高速化を提供し、N項目からO(√N)クエリで検索します。", "detailedExplanation": "約π/4 * √N回のオラクルクエリを使用。位相オラクルとグローバー拡散を繰り返し適用します。", "analogies": ["共鳴効果のようなもの。", "量子エコーロケーション。"], "commonMisconceptions": ["二次高速化であり指数的ではありません。", "反復が多すぎると成功確率が下がります。"], "keyTakeaways": ["O(√N)クエリで非構造化探索。", "位相オラクル + 振幅増幅。", "最適性が証明済み。"], "practiceQuestions": [{"questionText": "グローバー探索の時間計算量は？", "questionType": "multipleChoice", "options": ["O(N)", "O(log N)", "O(√N)", "O(N²)"], "correctAnswerIndex": 2, "explanation": "O(√N)オラクルクエリです。", "difficultyLevel": 2}]},
-    "zh-Hans": {"title": "Grover算法", "shortDefinition": "Grover算法为非结构化搜索提供二次加速，在N项中用O(√N)次查询找到目标。", "detailedExplanation": "使用约π/4 * √N次预言查询。反复应用相位预言和Grover扩散算子。", "analogies": ["像共振效应。", "像量子回声定位。"], "commonMisconceptions": ["是二次加速不是指数加速。", "迭代过多会降低成功概率。"], "keyTakeaways": ["O(√N)查询搜索 -- 二次加速。", "相位预言 + 振幅放大。", "非结构化搜索证明最优。"], "practiceQuestions": [{"questionText": "Grover搜索N项的时间复杂度？", "questionType": "multipleChoice", "options": ["O(N)", "O(log N)", "O(√N)", "O(N²)"], "correctAnswerIndex": 2, "explanation": "O(√N)预言查询。", "difficultyLevel": 2}]},
-    "de": {"title": "Grovers Algorithmus", "shortDefinition": "Grovers Algorithmus bietet quadratische Beschleunigung für unstrukturierte Suche mit O(√N) Abfragen.", "detailedExplanation": "Verwendet Phasenorakel und Grover-Diffusion iterativ. Optimal für unstrukturierte Suche.", "analogies": ["Wie ein Resonanzeffekt.", "Wie Quanten-Echolot."], "commonMisconceptions": ["Quadratisch, nicht exponentiell.", "Zu viele Iterationen verringern Erfolgswahrscheinlichkeit."], "keyTakeaways": ["O(√N) Abfragen.", "Phasenorakel + Amplitudenverstärkung.", "Nachweislich optimal."], "practiceQuestions": [{"questionText": "Zeitkomplexität von Grovers Suche?", "questionType": "multipleChoice", "options": ["O(N)", "O(log N)", "O(√N)", "O(N²)"], "correctAnswerIndex": 2, "explanation": "O(√N) Orakel-Abfragen.", "difficultyLevel": 2}]},
-    "fr": {"title": "Algorithme de Grover", "shortDefinition": "L'algorithme de Grover offre une acceleration quadratique pour la recherche non structuree avec O(√N) requetes.", "detailedExplanation": "Utilise un oracle de phase et la diffusion de Grover de maniere iterative. Optimal pour la recherche non structuree.", "analogies": ["Comme un effet de resonance.", "Comme une echolocation quantique."], "commonMisconceptions": ["Acceleration quadratique, pas exponentielle.", "Trop d'iterations reduit la probabilite de succes."], "keyTakeaways": ["O(√N) requetes.", "Oracle de phase + amplification d'amplitude.", "Prouvé optimal."], "practiceQuestions": [{"questionText": "Complexite de Grover?", "questionType": "multipleChoice", "options": ["O(N)", "O(log N)", "O(√N)", "O(N²)"], "correctAnswerIndex": 2, "explanation": "O(√N) requetes oracle.", "difficultyLevel": 2}]},
-    "es": {"title": "Algoritmo de Grover", "shortDefinition": "El algoritmo de Grover ofrece aceleracion cuadratica para busqueda no estructurada con O(√N) consultas.", "detailedExplanation": "Usa oraculo de fase y difusion de Grover iterativamente. Optimo para busqueda no estructurada.", "analogies": ["Como un efecto de resonancia.", "Como ecolocacion cuantica."], "commonMisconceptions": ["Aceleracion cuadratica, no exponencial.", "Demasiadas iteraciones reducen probabilidad de exito."], "keyTakeaways": ["O(√N) consultas.", "Oraculo de fase + amplificacion de amplitud.", "Probado optimo."], "practiceQuestions": [{"questionText": "¿Complejidad de Grover?", "questionType": "multipleChoice", "options": ["O(N)", "O(log N)", "O(√N)", "O(N²)"], "correctAnswerIndex": 2, "explanation": "O(√N) consultas oraculo.", "difficultyLevel": 2}]}
+    "en": {
+      "title": "Grover's Algorithm",
+      "shortDefinition": "Grover's algorithm provides a quadratic speedup for unstructured search, finding a marked item in an unsorted database of N items using only O(sqrt(N)) queries instead of O(N).",
+      "detailedExplanation": "Grover's algorithm (1996) searches an unsorted database of N items for a target item using approximately pi/4 * sqrt(N) oracle queries, compared to N/2 on average classically. It works by repeatedly applying two operations: (1) the oracle, which marks the target state by flipping its phase, and (2) the diffusion operator (Grover diffusion), which amplifies the amplitude of the marked state through inversion about the mean. After approximately sqrt(N) iterations, measuring yields the target with high probability. Grover's algorithm is provably optimal for unstructured search and has applications in cryptanalysis (effectively halving key lengths), SAT solving, and as a subroutine in other quantum algorithms.",
+      "analogies": [
+        "Grover's algorithm is like a resonance effect: each iteration amplifies the probability of the correct answer, like pushing a child on a swing at exactly the right moment to build amplitude.",
+        "Think of it as a quantum echo-location: each bounce increases the signal from the target while suppressing noise from non-targets."
+      ],
+      "commonMisconceptions": [
+        "Grover's algorithm provides QUADRATIC speedup, not exponential -- it reduces O(N) to O(sqrt(N)), not O(log(N)).",
+        "Too many iterations of Grover's algorithm will DECREASE the success probability -- the amplification is periodic, not monotonic."
+      ],
+      "keyTakeaways": [
+        "Searches unsorted database of N items in O(sqrt(N)) queries -- quadratic speedup.",
+        "Uses phase oracle + amplitude amplification (Grover diffusion).",
+        "Provably optimal for unstructured search."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "What is the time complexity of Grover's search algorithm for N items?",
+          "questionType": "multipleChoice",
+          "options": [
+            "O(N)",
+            "O(log N)",
+            "O(sqrt(N))",
+            "O(N^2)"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "Grover's algorithm requires O(sqrt(N)) oracle queries, providing a quadratic speedup over classical O(N) search.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "ko": {
+      "title": "그로버 알고리즘",
+      "shortDefinition": "그로버 알고리즘은 비구조적 탐색에 이차 속도 향상을 제공하여, N개 항목의 정렬되지 않은 데이터베이스에서 표시된 항목을 O(N)이 아닌 O(√N)번의 쿼리만으로 찾습니다.",
+      "detailedExplanation": "그로버 알고리즘(1996)은 N개 항목의 정렬되지 않은 데이터베이스에서 목표 항목을 찾는 데 약 π/4 * √N번의 오라클 쿼리를 사용하며, 이는 고전적으로 평균 N/2번이 필요한 것과 대비됩니다. 이 알고리즘은 두 가지 연산을 반복 적용하여 작동합니다: (1) 목표 상태의 위상을 뒤집어 그 상태를 표시하는 오라클, (2) 평균에 대한 반전을 통해 표시된 상태의 진폭을 증폭하는 확산 연산자(그로버 확산)입니다. 약 √N번의 반복 후에 측정하면 높은 확률로 목표를 얻습니다. 그로버 알고리즘은 비구조적 탐색에 대해 최적임이 증명되어 있으며, 암호해독(사실상 키 길이를 절반으로 줄이는 효과), SAT 문제 풀이, 그리고 다른 양자 알고리즘의 서브루틴으로 응용됩니다.",
+      "analogies": [
+        "그로버 알고리즘은 공명 효과와 같습니다: 각 반복이 올바른 답의 확률을 증폭시키는데, 이는 그네를 타는 아이를 정확히 알맞은 순간에 밀어 진폭을 키우는 것과 같습니다.",
+        "양자 반향정위(에코로케이션)로 생각할 수 있습니다: 매번 되돌아오는 반향이 목표에서 오는 신호는 키우고 목표가 아닌 것들에서 오는 잡음은 억제합니다."
+      ],
+      "commonMisconceptions": [
+        "그로버 알고리즘이 제공하는 것은 이차 속도 향상이지 지수적 속도 향상이 아닙니다 -- O(N)을 O(√N)으로 줄이는 것이지 O(log(N))으로 줄이는 것이 아닙니다.",
+        "그로버 알고리즘을 너무 많이 반복하면 성공 확률이 오히려 감소합니다 -- 증폭은 주기적이며 단조적이지 않습니다."
+      ],
+      "keyTakeaways": [
+        "N개 항목의 정렬되지 않은 데이터베이스를 O(√N)번의 쿼리로 탐색 -- 이차 속도 향상.",
+        "위상 오라클 + 진폭 증폭(그로버 확산)을 사용.",
+        "비구조적 탐색에 대해 최적임이 증명됨."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "N개 항목에 대한 그로버 탐색 알고리즘의 시간 복잡도는 무엇입니까?",
+          "questionType": "multipleChoice",
+          "options": [
+            "O(N)",
+            "O(log N)",
+            "O(√N)",
+            "O(N²)"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "그로버 알고리즘은 O(√N)번의 오라클 쿼리를 필요로 하며, 고전적인 O(N) 탐색에 비해 이차 속도 향상을 제공합니다.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "ja": {
+      "title": "グローバーのアルゴリズム",
+      "shortDefinition": "グローバーのアルゴリズムは非構造化探索に二次の高速化をもたらし、N項目の未整列データベースから目印の付いた項目をO(N)ではなくO(√N)回のクエリだけで見つけ出します。",
+      "detailedExplanation": "グローバーのアルゴリズム（1996年）は、N項目の未整列データベースから目標項目を約π/4 * √N回のオラクルクエリで探索します。古典的には平均N/2回が必要です。このアルゴリズムは2つの操作を繰り返し適用することで動作します：(1) 目標状態の位相を反転させてその状態に目印を付けるオラクル、(2) 平均値まわりの反転によって目印の付いた状態の振幅を増幅する拡散演算子（グローバー拡散）です。約√N回の反復の後に測定すると、高い確率で目標が得られます。グローバーのアルゴリズムは非構造化探索に対して最適であることが証明されており、暗号解読（実質的に鍵長を半分にする効果）、SAT問題の求解、他の量子アルゴリズムのサブルーチンとしての応用があります。",
+      "analogies": [
+        "グローバーのアルゴリズムは共鳴効果のようなものです：各反復が正しい答えの確率を増幅します。ちょうど良いタイミングでブランコに乗った子どもを押して振幅を大きくしていくのに似ています。",
+        "量子エコーロケーション（反響定位）と考えることもできます：跳ね返るたびに目標からの信号が強まり、目標以外からの雑音が抑えられます。"
+      ],
+      "commonMisconceptions": [
+        "グローバーのアルゴリズムがもたらすのは二次の高速化であり、指数的な高速化ではありません -- O(N)をO(√N)に減らすのであって、O(log(N))にするのではありません。",
+        "グローバーのアルゴリズムの反復が多すぎると成功確率はかえって低下します -- 増幅は周期的であり、単調ではありません。"
+      ],
+      "keyTakeaways": [
+        "N項目の未整列データベースをO(√N)回のクエリで探索 -- 二次の高速化。",
+        "位相オラクル + 振幅増幅（グローバー拡散）を使用。",
+        "非構造化探索に対して最適であることが証明済み。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "N項目に対するグローバーの探索アルゴリズムの時間計算量はどれですか？",
+          "questionType": "multipleChoice",
+          "options": [
+            "O(N)",
+            "O(log N)",
+            "O(√N)",
+            "O(N²)"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "グローバーのアルゴリズムはO(√N)回のオラクルクエリを必要とし、古典的なO(N)探索に対して二次の高速化をもたらします。",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "zh-Hans": {
+      "title": "Grover算法",
+      "shortDefinition": "Grover算法为非结构化搜索提供二次加速，在包含N个条目的未排序数据库中仅用O(√N)次查询（而非O(N)次）即可找到被标记的条目。",
+      "detailedExplanation": "Grover算法（1996年）在包含N个条目的未排序数据库中搜索目标条目，仅需约π/4 * √N次预言机（oracle）查询，而经典方法平均需要N/2次。该算法通过反复施加两种操作来工作：(1) 预言机，通过翻转目标态的相位来标记它；(2) 扩散算子（Grover扩散），通过关于均值的反演来放大被标记态的振幅。经过约√N次迭代后进行测量，即可以高概率得到目标。Grover算法已被证明对非结构化搜索是最优的，其应用包括密码分析（相当于将密钥长度减半）、SAT求解，以及作为其他量子算法的子程序。",
+      "analogies": [
+        "Grover算法就像一种共振效应：每次迭代都会放大正确答案的概率，就像在恰到好处的时刻推秋千上的孩子，让摆动幅度不断增大。",
+        "可以把它想象成量子回声定位：每一次回弹都会增强来自目标的信号，同时抑制来自非目标的噪声。"
+      ],
+      "commonMisconceptions": [
+        "Grover算法提供的是二次加速，而非指数加速 -- 它把O(N)降为O(√N)，而不是O(log(N))。",
+        "Grover算法迭代次数过多反而会降低成功概率 -- 振幅放大是周期性的，而非单调的。"
+      ],
+      "keyTakeaways": [
+        "用O(√N)次查询搜索包含N个条目的未排序数据库 -- 二次加速。",
+        "使用相位预言机 + 振幅放大（Grover扩散）。",
+        "已被证明对非结构化搜索是最优的。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Grover搜索算法对N个条目的时间复杂度是多少？",
+          "questionType": "multipleChoice",
+          "options": [
+            "O(N)",
+            "O(log N)",
+            "O(√N)",
+            "O(N²)"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "Grover算法需要O(√N)次预言机查询，相对于经典的O(N)搜索提供了二次加速。",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "de": {
+      "title": "Grovers Algorithmus",
+      "shortDefinition": "Grovers Algorithmus bietet eine quadratische Beschleunigung für die unstrukturierte Suche: Er findet ein markiertes Element in einer unsortierten Datenbank mit N Einträgen mit nur O(√N) Abfragen statt O(N).",
+      "detailedExplanation": "Grovers Algorithmus (1996) durchsucht eine unsortierte Datenbank mit N Einträgen nach einem Zielelement und benötigt dafür etwa π/4 * √N Orakel-Abfragen, verglichen mit durchschnittlich N/2 im klassischen Fall. Er funktioniert durch wiederholtes Anwenden zweier Operationen: (1) des Orakels, das den Zielzustand markiert, indem es dessen Phase umkehrt, und (2) des Diffusionsoperators (Grover-Diffusion), der die Amplitude des markierten Zustands durch Spiegelung am Mittelwert verstärkt. Nach etwa √N Iterationen liefert eine Messung mit hoher Wahrscheinlichkeit das Ziel. Grovers Algorithmus ist nachweislich optimal für die unstrukturierte Suche und findet Anwendungen in der Kryptoanalyse (er halbiert effektiv die Schlüssellängen), beim Lösen von SAT-Problemen und als Unterroutine in anderen Quantenalgorithmen.",
+      "analogies": [
+        "Grovers Algorithmus ist wie ein Resonanzeffekt: Jede Iteration verstärkt die Wahrscheinlichkeit der richtigen Antwort, so wie man ein Kind auf einer Schaukel genau im richtigen Moment anstößt, um die Amplitude aufzubauen.",
+        "Man kann ihn sich als Quanten-Echoortung vorstellen: Jeder Widerhall verstärkt das Signal des Ziels und unterdrückt zugleich das Rauschen der Nicht-Ziele."
+      ],
+      "commonMisconceptions": [
+        "Grovers Algorithmus bietet eine QUADRATISCHE Beschleunigung, keine exponentielle -- er reduziert O(N) auf O(√N), nicht auf O(log(N)).",
+        "Zu viele Iterationen von Grovers Algorithmus VERRINGERN die Erfolgswahrscheinlichkeit -- die Verstärkung ist periodisch, nicht monoton."
+      ],
+      "keyTakeaways": [
+        "Durchsucht eine unsortierte Datenbank mit N Einträgen in O(√N) Abfragen -- quadratische Beschleunigung.",
+        "Verwendet Phasenorakel + Amplitudenverstärkung (Grover-Diffusion).",
+        "Nachweislich optimal für die unstrukturierte Suche."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Wie lautet die Zeitkomplexität von Grovers Suchalgorithmus für N Einträge?",
+          "questionType": "multipleChoice",
+          "options": [
+            "O(N)",
+            "O(log N)",
+            "O(√N)",
+            "O(N²)"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "Grovers Algorithmus benötigt O(√N) Orakel-Abfragen und bietet damit eine quadratische Beschleunigung gegenüber der klassischen Suche mit O(N).",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "fr": {
+      "title": "Algorithme de Grover",
+      "shortDefinition": "L'algorithme de Grover offre une accélération quadratique pour la recherche non structurée, trouvant un élément marqué dans une base de données non triée de N éléments en seulement O(√N) requêtes au lieu de O(N).",
+      "detailedExplanation": "L'algorithme de Grover (1996) recherche un élément cible dans une base de données non triée de N éléments en utilisant environ π/4 * √N requêtes à l'oracle, contre N/2 en moyenne dans le cas classique. Il fonctionne en appliquant de manière répétée deux opérations : (1) l'oracle, qui marque l'état cible en inversant sa phase, et (2) l'opérateur de diffusion (diffusion de Grover), qui amplifie l'amplitude de l'état marqué par inversion autour de la moyenne. Après environ √N itérations, la mesure donne la cible avec une probabilité élevée. L'algorithme de Grover est prouvé optimal pour la recherche non structurée et trouve des applications en cryptanalyse (réduisant effectivement de moitié les longueurs de clé), dans la résolution de SAT et comme sous-routine dans d'autres algorithmes quantiques.",
+      "analogies": [
+        "L'algorithme de Grover est comme un effet de résonance : chaque itération amplifie la probabilité de la bonne réponse, comme pousser un enfant sur une balançoire exactement au bon moment pour augmenter l'amplitude.",
+        "Voyez-le comme une écholocation quantique : chaque rebond renforce le signal provenant de la cible tout en supprimant le bruit des non-cibles."
+      ],
+      "commonMisconceptions": [
+        "L'algorithme de Grover offre une accélération QUADRATIQUE, pas exponentielle -- il réduit O(N) à O(√N), pas à O(log(N)).",
+        "Trop d'itérations de l'algorithme de Grover DIMINUENT la probabilité de succès -- l'amplification est périodique, pas monotone."
+      ],
+      "keyTakeaways": [
+        "Recherche dans une base de données non triée de N éléments en O(√N) requêtes -- accélération quadratique.",
+        "Utilise un oracle de phase + amplification d'amplitude (diffusion de Grover).",
+        "Prouvé optimal pour la recherche non structurée."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Quelle est la complexité temporelle de l'algorithme de recherche de Grover pour N éléments ?",
+          "questionType": "multipleChoice",
+          "options": [
+            "O(N)",
+            "O(log N)",
+            "O(√N)",
+            "O(N²)"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "L'algorithme de Grover nécessite O(√N) requêtes à l'oracle, offrant une accélération quadratique par rapport à la recherche classique en O(N).",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "es": {
+      "title": "Algoritmo de Grover",
+      "shortDefinition": "El algoritmo de Grover proporciona una aceleración cuadrática para la búsqueda no estructurada, encontrando un elemento marcado en una base de datos no ordenada de N elementos usando solo O(√N) consultas en lugar de O(N).",
+      "detailedExplanation": "El algoritmo de Grover (1996) busca un elemento objetivo en una base de datos no ordenada de N elementos usando aproximadamente π/4 * √N consultas al oráculo, frente a N/2 en promedio en el caso clásico. Funciona aplicando repetidamente dos operaciones: (1) el oráculo, que marca el estado objetivo invirtiendo su fase, y (2) el operador de difusión (difusión de Grover), que amplifica la amplitud del estado marcado mediante la inversión sobre la media. Tras aproximadamente √N iteraciones, la medición produce el objetivo con alta probabilidad. El algoritmo de Grover es demostrablemente óptimo para la búsqueda no estructurada y tiene aplicaciones en criptoanálisis (reduce efectivamente a la mitad las longitudes de clave), en la resolución de SAT y como subrutina en otros algoritmos cuánticos.",
+      "analogies": [
+        "El algoritmo de Grover es como un efecto de resonancia: cada iteración amplifica la probabilidad de la respuesta correcta, como empujar a un niño en un columpio exactamente en el momento adecuado para aumentar la amplitud.",
+        "Piénselo como una ecolocalización cuántica: cada rebote aumenta la señal del objetivo mientras suprime el ruido de los no objetivos."
+      ],
+      "commonMisconceptions": [
+        "El algoritmo de Grover proporciona una aceleración CUADRÁTICA, no exponencial -- reduce O(N) a O(√N), no a O(log(N)).",
+        "Demasiadas iteraciones del algoritmo de Grover DISMINUYEN la probabilidad de éxito -- la amplificación es periódica, no monótona."
+      ],
+      "keyTakeaways": [
+        "Busca en una base de datos no ordenada de N elementos con O(√N) consultas -- aceleración cuadrática.",
+        "Usa un oráculo de fase + amplificación de amplitud (difusión de Grover).",
+        "Demostrablemente óptimo para la búsqueda no estructurada."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "¿Cuál es la complejidad temporal del algoritmo de búsqueda de Grover para N elementos?",
+          "questionType": "multipleChoice",
+          "options": [
+            "O(N)",
+            "O(log N)",
+            "O(√N)",
+            "O(N²)"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "El algoritmo de Grover requiere O(√N) consultas al oráculo, lo que proporciona una aceleración cuadrática frente a la búsqueda clásica O(N).",
+          "difficultyLevel": 2
+        }
+      ]
+    }
   },
-  "relatedFormulas": [{"latex": "G = (2|\\psi\\rangle\\langle\\psi| - I) \\cdot O_f", "plainTextDescription": {"en": "Grover iteration: diffusion operator followed by oracle", "ko": "그로버 반복: 확산 연산자 다음 오라클"}, "variables": [{"symbol": "G", "meaning": {"en": "Single Grover iteration operator", "ko": "단일 그로버 반복 연산자"}}, {"symbol": "O_f", "meaning": {"en": "Phase oracle marking the target state", "ko": "대상 상태를 표시하는 위상 오라클"}}]}],
+  "relatedFormulas": [
+    {
+      "latex": "G = (2|\\psi\\rangle\\langle\\psi| - I) \\cdot O_f",
+      "plainTextDescription": {
+        "en": "Grover iteration: diffusion operator followed by oracle",
+        "ko": "그로버 반복: 확산 연산자 다음 오라클"
+      },
+      "variables": [
+        {
+          "symbol": "G",
+          "meaning": {
+            "en": "Single Grover iteration operator",
+            "ko": "단일 그로버 반복 연산자"
+          }
+        },
+        {
+          "symbol": "O_f",
+          "meaning": {
+            "en": "Phase oracle marking the target state",
+            "ko": "대상 상태를 표시하는 위상 오라클"
+          }
+        }
+      ]
+    }
+  ],
   "visualizationType": "probabilityHistogram",
-  "verifiedBy": {"verifierName": "Eunmin Park", "verifierCredentials": "IEEE Member, Quantum Computing Educator", "verificationDate": "2026-04-07", "reviewedSources": ["Nielsen & Chuang (2010)", "Grover, L. K. (1996)"], "confidenceLevel": "undisputed"},
+  "verifiedBy": {
+    "verifierName": "Eunmin Park",
+    "verifierCredentials": "IEEE Member, Quantum Computing Educator",
+    "verificationDate": "2026-04-07",
+    "reviewedSources": [
+      "Nielsen & Chuang (2010)",
+      "Grover, L. K. (1996)"
+    ],
+    "confidenceLevel": "undisputed"
+  },
   "lastReviewed": "2026-04-07",
-  "citationReferences": ["Grover, L. K. (1996). A fast quantum mechanical algorithm for database search. STOC '96.", "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press."]
+  "citationReferences": [
+    "Grover, L. K. (1996). A fast quantum mechanical algorithm for database search. STOC '96.",
+    "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press."
+  ],
+  "certaintyNote": " Translation pass 2026-07-19: non-EN fields expanded/repaired to parity with the verified EN text; pending native-speaker review (ROADMAP M3)."
 }

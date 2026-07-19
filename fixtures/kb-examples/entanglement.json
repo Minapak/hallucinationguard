@@ -1,7 +1,7 @@
 {
   "id": "entanglement",
   "certainty": "established",
-  "certaintyNote": "Term per Schroedinger, Naturwissenschaften 23, 807 (1935); nonlocal correlations per Bell 1964. Glove analogy carries an explicit Bell-test caveat (classical correlation vs. genuine entanglement). KO term 얽힘 confirmed as the KPS 2020 official term (quantum entanglement = 양자 얽힘), verified 2026-07-10.",
+  "certaintyNote": "Term per Schroedinger, Naturwissenschaften 23, 807 (1935); nonlocal correlations per Bell 1964. Glove analogy carries an explicit Bell-test caveat (classical correlation vs. genuine entanglement). KO term 얽힘 confirmed as the KPS 2020 official term (quantum entanglement = 양자 얽힘), verified 2026-07-10. Translation pass 2026-07-19: non-EN fields expanded/repaired to parity with the verified EN text; pending native-speaker review (ROADMAP M3).",
   "sourceRef": "Einstein, Podolsky & Rosen, Phys. Rev. 47, 777 (1935), doi:10.1103/PhysRev.47.777",
   "category": "entanglement",
   "difficultyLevel": 2,
@@ -48,32 +48,32 @@
     "ko": {
       "title": "양자 얽힘",
       "shortDefinition": "양자 얽힘은 시스템의 양자 상태가 개별 입자 상태의 곱으로 기술될 수 없는 양자 입자들 사이의 상관관계로, 거리에 관계없이 지속되는 비고전적 상관관계를 만듭니다.",
-      "detailedExplanation": "얽힘은 시스템의 양자 상태가 개별 큐비트 상태로 인수분해될 수 없을 때 발생합니다. 벨의 정리는 이 상관관계가 국소 숨은 변수 이론으로 설명할 수 없는 진정한 양자 현상임을 증명했습니다. 양자 컴퓨팅 속도향상, 텔레포테이션, 양자 암호의 핵심 자원입니다.",
+      "detailedExplanation": "얽힘은 둘 이상의 큐비트가 서로 상관되어 시스템의 양자 상태를 개별 큐비트 상태로 인수분해할 수 없게 될 때 발생합니다. (|00⟩+|11⟩)/sqrt(2)와 같은 얽힌 상태는 한 큐비트를 측정해 |0⟩이 나오면 다른 큐비트도 즉시 |0⟩임을 의미합니다. 아인슈타인은 이를 '유령 같은 원격 작용'이라고 불렀지만, 벨의 정리(1964)는 이 상관관계가 진정한 양자적 현상이며 국소 숨은 변수로는 설명할 수 없음을 증명했습니다. 얽힘은 단순한 호기심거리가 아니라 양자 컴퓨팅 속도향상, 양자 텔레포테이션, 양자 암호, 양자 오류 정정을 가능하게 하는 핵심 자원입니다. 얽힘은 얽힘 엔트로피와 콘커런스(concurrence) 같은 척도로 정량화할 수 있습니다.",
       "analogies": [
-        "별도 상자에 배송된 장갑 쌍과 같습니다 -- 하나를 열어 왼쪽 장갑을 발견하면 다른 것이 오른쪽임을 즉시 알 수 있지만, 양자역학에서 '좌우'는 볼 때까지 존재하지 않습니다 — 장갑과 달리, '열어보기 전에는 방향이 정해져 있지 않았다'는 사실 자체가 벨 테스트 실험(2022년 노벨 물리학상)으로 확인되었습니다.",
-        "양자 댄스 파트너로 생각하세요 -- 얼마나 멀리 떨어져 있든 항상 완벽하게 상보적인 동작을 합니다."
+        "얽힘은 별도 상자에 배송된 장갑 쌍과 같습니다 -- 하나를 열어 왼쪽 장갑을 발견하면 다른 것이 오른쪽임을 즉시 알 수 있지만, 양자역학에서 '좌우'는 볼 때까지 존재하지 않습니다 — 장갑과 달리, '열어보기 전에는 방향이 정해져 있지 않았다'는 사실 자체가 벨 테스트 실험(2022년 노벨 물리학상)으로 확인되었습니다.",
+        "얽힌 입자들을 양자 댄스 파트너로 생각하세요 -- 얼마나 멀리 떨어져 있든 항상 완벽하게 상보적인 동작을 수행합니다."
       ],
       "commonMisconceptions": [
-        "얽힘은 초광속 통신을 허용하지 않습니다.",
-        "얽힘은 입자들이 서로 영향을 준다는 의미가 아닙니다."
+        "얽힘은 초광속 통신을 허용하지 않습니다 -- 상관관계는 고전 통신을 통해 측정 결과를 비교해야만 확인할 수 있습니다.",
+        "얽힘은 입자들이 서로 영향을 준다는 의미가 아닙니다 -- 얽힘이 생성될 때 확립된 상관된 결과를 시스템이 갖는다는 의미입니다."
       ],
       "keyTakeaways": [
         "얽힌 상태는 개별 큐비트 상태의 곱으로 기술할 수 없습니다.",
-        "벨의 정리는 얽힘 상관관계가 국소 숨은 변수 이론을 초과함을 증명합니다.",
-        "양자 속도향상, 텔레포테이션, 암호의 핵심 양자 자원."
+        "벨의 정리는 얽힘 상관관계가 국소 숨은 변수 이론이 설명할 수 있는 범위를 초과함을 증명합니다.",
+        "얽힘은 계산 속도향상, 텔레포테이션, 암호를 위한 핵심 양자 자원입니다."
       ],
       "practiceQuestions": [
         {
-          "questionText": "다음 중 얽힌 상태는?",
+          "questionText": "다음 중 얽힌 상태는 어느 것입니까?",
           "questionType": "multipleChoice",
           "options": [
             "|00⟩",
             "|+⟩|0⟩",
-            "(|00⟩+|11⟩)/√2",
+            "(|00⟩+|11⟩)/sqrt(2)",
             "|0⟩|1⟩"
           ],
           "correctAnswerIndex": 2,
-          "explanation": "(|00⟩+|11⟩)/√2는 개별 큐비트 상태의 곱으로 쓸 수 없어 얽힌 상태입니다.",
+          "explanation": "(|00⟩+|11⟩)/sqrt(2)는 개별 큐비트 상태의 곱으로 쓸 수 없으므로 얽힌 상태입니다. 나머지 선택지는 모두 곱 상태(분리 가능한 상태)입니다.",
           "difficultyLevel": 2
         }
       ]
@@ -81,32 +81,32 @@
     "ja": {
       "title": "量子エンタングルメント",
       "shortDefinition": "量子エンタングルメントは、システムの量子状態が個々の粒子状態の積として記述できない量子粒子間の相関で、距離に関係なく持続する非古典的相関を生み出します。",
-      "detailedExplanation": "エンタングルメントはシステムの量子状態が個々の量子ビット状態に因数分解できないときに発生します。ベルの定理はこの相関が局所隠れ変数理論では説明できない本物の量子現象であることを証明しました。量子計算の高速化、テレポーテーション、量子暗号の鍵資源です。",
+      "detailedExplanation": "エンタングルメントは、2つ以上の量子ビットが相関し、系の量子状態を個々の量子ビット状態に因数分解できなくなるときに生じます。(|00⟩+|11⟩)/sqrt(2)のようなエンタングル状態では、一方の量子ビットを測定して|0⟩が得られれば、もう一方も瞬時に|0⟩であることが分かります。アインシュタインはこれを「不気味な遠隔作用」と呼びましたが、ベルの定理（1964）は、これらの相関が真に量子的であり、局所隠れ変数では説明できないことを証明しました。エンタングルメントは単なる好奇心の対象ではなく、量子計算の高速化、量子テレポーテーション、量子暗号、量子誤り訂正を可能にする鍵となる資源です。エンタングルメントは、エンタングルメント・エントロピーやコンカレンスといった尺度で定量化できます。",
       "analogies": [
-        "別々の箱に入った手袋のペアのようなもの — 手袋と違い、「開ける前には向きが決まっていなかった」ことこそが、ベルテスト実験（2022年ノーベル物理学賞）で確認された点です。",
-        "量子ダンスパートナーのようなもの。"
+        "エンタングルメントは、別々の箱で送られた手袋のペアのようなものです。片方を開けて左手袋を見つければ、もう一方が右手袋だと瞬時に分かります。しかし量子力学では、「向き」は見るまで存在しません — そして手袋と違い、「向き」が見る前には決まっていなかったという事実こそが、ベルテスト実験（2022年ノーベル物理学賞）で確認された点です。",
+        "エンタングルした粒子は量子ダンスパートナーのようなものです。どれほど離れていても、常に完全に相補的な動きを演じます。"
       ],
       "commonMisconceptions": [
-        "エンタングルメントは超光速通信を許しません。",
-        "粒子が互いに影響するという意味ではありません。"
+        "エンタングルメントは超光速通信を可能にしません。相関は、古典通信を介して測定結果を比較することでのみ確認できます。",
+        "エンタングルメントは粒子が互いに影響し合うという意味ではありません。エンタングルメントが生成されたときに確立された、相関した結果を系が持つという意味です。"
       ],
       "keyTakeaways": [
-        "エンタングル状態は個々の量子ビット状態の積で記述不可。",
-        "ベルの定理が局所隠れ変数を超えることを証明。",
-        "計算高速化、テレポーテーション、暗号の鍵資源。"
+        "エンタングル状態は個々の量子ビット状態の積として記述できません。",
+        "ベルの定理は、エンタングルメントの相関が局所隠れ変数理論で説明できる範囲を超えることを証明しています。",
+        "エンタングルメントは、計算の高速化、テレポーテーション、暗号のための鍵となる量子資源です。"
       ],
       "practiceQuestions": [
         {
-          "questionText": "次のうちエンタングル状態はどれ？",
+          "questionText": "次のうち、エンタングル状態はどれですか？",
           "questionType": "multipleChoice",
           "options": [
             "|00⟩",
             "|+⟩|0⟩",
-            "(|00⟩+|11⟩)/√2",
+            "(|00⟩+|11⟩)/sqrt(2)",
             "|0⟩|1⟩"
           ],
           "correctAnswerIndex": 2,
-          "explanation": "(|00⟩+|11⟩)/√2は積状態に分解できず、エンタングルしています。",
+          "explanation": "(|00⟩+|11⟩)/sqrt(2)は個々の量子ビット状態の積として書けないため、エンタングルしています。他の選択肢はすべて積状態（分離可能状態）です。",
           "difficultyLevel": 2
         }
       ]
@@ -114,19 +114,19 @@
     "zh-Hans": {
       "title": "量子纠缠",
       "shortDefinition": "量子纠缠是量子粒子之间的一种关联，系统的量子态不能被描述为单个粒子态的乘积，创造出不受距离影响的非经典关联。",
-      "detailedExplanation": "纠缠发生在系统的量子态无法分解为单个量子比特态时。贝尔定理证明这些关联是真正的量子现象。是量子计算加速、隐形传态、量子密码的关键资源。",
+      "detailedExplanation": "当两个或多个量子比特以某种方式相互关联，使得系统的量子态无法分解为单个量子比特态的乘积时，就产生了纠缠。像(|00⟩+|11⟩)/sqrt(2)这样的纠缠态意味着：测量其中一个量子比特得到|0⟩，就立即意味着另一个也是|0⟩。爱因斯坦称之为“鬼魅般的超距作用”，但贝尔定理（1964）证明这些关联是真正的量子关联，无法用局域隐变量来解释。纠缠不仅仅是一种奇特现象——它是实现量子计算加速、量子隐形传态、量子密码和量子纠错的关键资源。纠缠可以用纠缠熵和并发度（concurrence）等度量来量化。",
       "analogies": [
-        "像分装在不同盒子里的手套对——与手套不同，“在打开之前方向并未确定”这一点，正是贝尔实验（2022年诺贝尔物理学奖）所证实的。",
-        "像量子舞伴。"
+        "纠缠就像分装在两个盒子里寄出的一副手套——打开一个发现是左手手套，立刻就知道另一个是右手手套；但在量子力学中，“左右”在你观察之前并不存在——而且与手套不同，“在打开之前方向并未确定”这一事实，正是贝尔检验实验（2022年诺贝尔物理学奖）所证实的。",
+        "把纠缠的粒子想象成量子舞伴——无论相距多远，它们总是做出完美互补的动作。"
       ],
       "commonMisconceptions": [
-        "纠缠不允许超光速通信。",
-        "纠缠不意味着粒子互相影响。"
+        "纠缠不允许超光速通信——这些关联只能通过经典通信比较测量结果来验证。",
+        "纠缠并不意味着粒子在互相影响——它意味着系统具有在纠缠产生时就已确立的关联结果。"
       ],
       "keyTakeaways": [
         "纠缠态不能写成单个量子比特态的乘积。",
-        "贝尔定理证明超越局域隐变量。",
-        "计算加速和密码的关键资源。"
+        "贝尔定理证明纠缠关联超出了局域隐变量理论所能解释的范围。",
+        "纠缠是实现计算加速、隐形传态和密码学的关键量子资源。"
       ],
       "practiceQuestions": [
         {
@@ -135,110 +135,110 @@
           "options": [
             "|00⟩",
             "|+⟩|0⟩",
-            "(|00⟩+|11⟩)/√2",
+            "(|00⟩+|11⟩)/sqrt(2)",
             "|0⟩|1⟩"
           ],
           "correctAnswerIndex": 2,
-          "explanation": "(|00⟩+|11⟩)/√2不能写成乘积态，是纠缠态。",
+          "explanation": "(|00⟩+|11⟩)/sqrt(2)不能写成单个量子比特态的乘积，因此是纠缠态。其余选项都是乘积态（可分离态）。",
           "difficultyLevel": 2
         }
       ]
     },
     "de": {
       "title": "Quantenverschränkung",
-      "shortDefinition": "Quantenverschränkung ist eine Korrelation, bei der der Zustand des Systems nicht als Produkt einzelner Zustände beschrieben werden kann.",
-      "detailedExplanation": "Verschränkung tritt auf, wenn der Systemzustand nicht in individuelle Qubit-Zustände faktorisiert werden kann. Bells Theorem beweist, dass diese Korrelationen echte Quantenphänomene sind.",
+      "shortDefinition": "Quantenverschränkung ist eine Korrelation zwischen Quantenteilchen, bei der der Quantenzustand des Systems nicht als Produkt der Zustände der einzelnen Teilchen beschrieben werden kann, wodurch nichtklassische Korrelationen entstehen, die unabhängig von der Entfernung bestehen bleiben.",
+      "detailedExplanation": "Verschränkung tritt auf, wenn zwei oder mehr Qubits so miteinander korreliert werden, dass der Quantenzustand des Systems nicht in Zustände einzelner Qubits faktorisiert werden kann. Ein verschränkter Zustand wie (|00⟩+|11⟩)/sqrt(2) bedeutet: Misst man ein Qubit als |0⟩, folgt daraus augenblicklich, dass das andere ebenfalls |0⟩ ist. Einstein nannte dies 'spukhafte Fernwirkung', doch Bells Theorem (1964) bewies, dass diese Korrelationen echt quantenmechanisch sind und sich nicht durch lokale verborgene Variablen erklären lassen. Verschränkung ist nicht bloß eine Kuriosität – sie ist die Schlüsselressource, die Beschleunigungen des Quantenrechnens, Quantenteleportation, Quantenkryptographie und Quantenfehlerkorrektur ermöglicht. Verschränkung lässt sich durch Maße wie die Verschränkungsentropie und die Concurrence quantifizieren.",
       "analogies": [
-        "Wie ein Handschuhpaar in getrennten Boxen — und anders als bei Handschuhen wurde genau die Tatsache, dass die 'Händigkeit' vor dem Nachsehen nicht feststand, durch Bell-Test-Experimente (Physik-Nobelpreis 2022) bestätigt.",
-        "Wie Quanten-Tanzpartner."
+        "Verschränkung ist wie ein Paar Handschuhe, das in getrennten Kartons verschickt wird: Öffnet man einen und findet einen linken Handschuh, weiß man sofort, dass der andere der rechte ist. In der Quantenmechanik existiert die 'Händigkeit' jedoch erst, wenn man nachsieht — und anders als bei Handschuhen ist genau die Tatsache, dass die 'Händigkeit' vor dem Nachsehen nicht feststand, das, was Bell-Test-Experimente (Physik-Nobelpreis 2022) bestätigt haben.",
+        "Stellen Sie sich verschränkte Teilchen als Quanten-Tanzpartner vor: Egal wie weit sie voneinander entfernt sind, sie führen stets perfekt komplementäre Bewegungen aus."
       ],
       "commonMisconceptions": [
-        "Verschränkung erlaubt KEINE Überlichtgeschwindigkeitskommunikation.",
-        "Verschränkung bedeutet nicht gegenseitige Beeinflussung."
+        "Verschränkung erlaubt KEINE überlichtschnelle Kommunikation – die Korrelationen lassen sich nur durch den Vergleich von Messergebnissen über klassische Kommunikation überprüfen.",
+        "Verschränkung bedeutet NICHT, dass die Teilchen einander beeinflussen – sie bedeutet, dass das System korrelierte Messergebnisse besitzt, die bei der Erzeugung der Verschränkung festgelegt wurden."
       ],
       "keyTakeaways": [
-        "Verschränkte Zustände nicht als Produkt darstellbar.",
-        "Bells Theorem beweist Quantennatur.",
-        "Schlüsselressource für Berechnung und Kryptographie."
+        "Verschränkte Zustände lassen sich nicht als Produkte der Zustände einzelner Qubits beschreiben.",
+        "Bells Theorem beweist, dass die Korrelationen der Verschränkung über das hinausgehen, was Theorien mit lokalen verborgenen Variablen erklären können.",
+        "Verschränkung ist die zentrale Quantenressource für Rechenbeschleunigung, Teleportation und Kryptographie."
       ],
       "practiceQuestions": [
         {
-          "questionText": "Welcher ist ein verschränkter Zustand?",
+          "questionText": "Welcher der folgenden Zustände ist ein verschränkter Zustand?",
           "questionType": "multipleChoice",
           "options": [
             "|00⟩",
             "|+⟩|0⟩",
-            "(|00⟩+|11⟩)/√2",
+            "(|00⟩+|11⟩)/sqrt(2)",
             "|0⟩|1⟩"
           ],
           "correctAnswerIndex": 2,
-          "explanation": "(|00⟩+|11⟩)/√2 ist verschränkt.",
+          "explanation": "(|00⟩+|11⟩)/sqrt(2) kann nicht als Produkt der Zustände einzelner Qubits geschrieben werden und ist daher verschränkt. Die übrigen Optionen sind allesamt Produktzustände (separabel).",
           "difficultyLevel": 2
         }
       ]
     },
     "fr": {
       "title": "Intrication quantique",
-      "shortDefinition": "L'intrication quantique est une correlation ou l'etat du systeme ne peut etre decrit comme un produit d'etats individuels.",
-      "detailedExplanation": "L'intrication se produit quand l'etat du systeme ne peut etre factorise en etats individuels. Le theoreme de Bell prouve que ces correlations sont veritablement quantiques.",
+      "shortDefinition": "L'intrication quantique est une corrélation entre particules quantiques dans laquelle l'état quantique du système ne peut pas être décrit comme un produit des états des particules individuelles, créant des corrélations non classiques qui persistent quelle que soit la distance.",
+      "detailedExplanation": "L'intrication se produit lorsque deux qubits ou plus deviennent corrélés de telle manière que l'état quantique du système ne peut pas être factorisé en états de qubits individuels. Un état intriqué comme (|00⟩+|11⟩)/sqrt(2) signifie que mesurer un qubit dans l'état |0⟩ implique instantanément que l'autre est aussi |0⟩. Einstein qualifiait cela d'« action fantomatique à distance », mais le théorème de Bell (1964) a prouvé que ces corrélations sont authentiquement quantiques et ne peuvent pas être expliquées par des variables cachées locales. L'intrication n'est pas une simple curiosité : c'est la ressource clé qui rend possibles les accélérations du calcul quantique, la téléportation quantique, la cryptographie quantique et la correction d'erreurs quantique. L'intrication peut être quantifiée par des mesures telles que l'entropie d'intrication et la concurrence.",
       "analogies": [
-        "Comme une paire de gants dans des boites separees — et contrairement aux gants, le fait que la « latéralité » n'était pas fixée avant d'ouvrir la boîte est précisément ce que les expériences de test de Bell (prix Nobel de physique 2022) ont confirmé.",
-        "Comme des partenaires de danse quantiques."
+        "L'intrication est comme une paire de gants expédiés dans des boîtes séparées : en ouvrir une et y trouver un gant gauche vous indique instantanément que l'autre est le droit ; mais en mécanique quantique, la « latéralité » n'existe pas tant que vous ne regardez pas — et, contrairement aux gants, le fait que la « latéralité » n'était pas fixée avant d'ouvrir la boîte est précisément ce que les expériences de test de Bell (prix Nobel de physique 2022) ont confirmé.",
+        "Imaginez les particules intriquées comme des partenaires de danse quantiques : quelle que soit la distance qui les sépare, elles exécutent toujours des mouvements parfaitement complémentaires."
       ],
       "commonMisconceptions": [
-        "L'intrication ne permet PAS la communication supraluminique.",
-        "L'intrication ne signifie pas influence mutuelle."
+        "L'intrication ne permet PAS la communication supraluminique : les corrélations ne peuvent être vérifiées qu'en comparant les mesures via une communication classique.",
+        "L'intrication ne signifie PAS que les particules s'influencent mutuellement : elle signifie que le système présente des résultats corrélés qui ont été établis lors de la création de l'intrication."
       ],
       "keyTakeaways": [
-        "Etats intriques non decomposables en produit.",
-        "Theoreme de Bell prouve la nature quantique.",
-        "Ressource cle pour calcul et cryptographie."
+        "Les états intriqués ne peuvent pas être décrits comme des produits d'états de qubits individuels.",
+        "Le théorème de Bell prouve que les corrélations d'intrication dépassent ce que les théories à variables cachées locales peuvent expliquer.",
+        "L'intrication est la ressource quantique clé pour l'accélération du calcul, la téléportation et la cryptographie."
       ],
       "practiceQuestions": [
         {
-          "questionText": "Lequel est un etat intriqué?",
+          "questionText": "Lequel des états suivants est un état intriqué ?",
           "questionType": "multipleChoice",
           "options": [
             "|00⟩",
             "|+⟩|0⟩",
-            "(|00⟩+|11⟩)/√2",
+            "(|00⟩+|11⟩)/sqrt(2)",
             "|0⟩|1⟩"
           ],
           "correctAnswerIndex": 2,
-          "explanation": "(|00⟩+|11⟩)/√2 est intriqué.",
+          "explanation": "(|00⟩+|11⟩)/sqrt(2) ne peut pas s'écrire comme un produit d'états de qubits individuels, ce qui en fait un état intriqué. Les autres options sont toutes des états produits (séparables).",
           "difficultyLevel": 2
         }
       ]
     },
     "es": {
-      "title": "Entrelazamiento cuantico",
-      "shortDefinition": "El entrelazamiento cuantico es una correlacion donde el estado del sistema no puede describirse como un producto de estados individuales.",
-      "detailedExplanation": "El entrelazamiento ocurre cuando el estado del sistema no puede factorizarse en estados individuales. El teorema de Bell prueba que estas correlaciones son genuinamente cuanticas.",
+      "title": "Entrelazamiento cuántico",
+      "shortDefinition": "El entrelazamiento cuántico es una correlación entre partículas cuánticas en la que el estado cuántico del sistema no puede describirse como un producto de los estados de las partículas individuales, lo que crea correlaciones no clásicas que persisten independientemente de la distancia.",
+      "detailedExplanation": "El entrelazamiento ocurre cuando dos o más cúbits se correlacionan de tal manera que el estado cuántico del sistema no puede factorizarse en estados de cúbits individuales. Un estado entrelazado como (|00⟩+|11⟩)/sqrt(2) significa que medir un cúbit como |0⟩ implica instantáneamente que el otro también es |0⟩. Einstein llamó a esto 'acción fantasmal a distancia', pero el teorema de Bell (1964) demostró que estas correlaciones son genuinamente cuánticas y no pueden explicarse mediante variables ocultas locales. El entrelazamiento no es una mera curiosidad: es el recurso clave que hace posibles las aceleraciones de la computación cuántica, la teleportación cuántica, la criptografía cuántica y la corrección cuántica de errores. El entrelazamiento puede cuantificarse mediante medidas como la entropía de entrelazamiento y la concurrencia.",
       "analogies": [
-        "Como un par de guantes en cajas separadas — y a diferencia de los guantes, el hecho de que la 'lateralidad' no estuviera fijada antes de mirar es precisamente lo que confirmaron los experimentos de test de Bell (Premio Nobel de Física 2022).",
-        "Como companeros de baile cuanticos."
+        "El entrelazamiento es como un par de guantes enviados en cajas separadas: al abrir una y encontrar un guante izquierdo, sabes al instante que el otro es el derecho; pero en mecánica cuántica la 'lateralidad' no existe hasta que miras — y, a diferencia de los guantes, el hecho de que la 'lateralidad' no estuviera fijada antes de mirar es exactamente lo que confirmaron los experimentos de test de Bell (Premio Nobel de Física 2022).",
+        "Piensa en las partículas entrelazadas como compañeros de baile cuánticos: no importa cuán lejos estén, siempre ejecutan movimientos perfectamente complementarios."
       ],
       "commonMisconceptions": [
-        "El entrelazamiento NO permite comunicacion superluminica.",
-        "El entrelazamiento no significa influencia mutua."
+        "El entrelazamiento NO permite la comunicación más rápida que la luz: las correlaciones solo pueden verificarse comparando las mediciones mediante comunicación clásica.",
+        "El entrelazamiento NO significa que las partículas se influyan mutuamente: significa que el sistema tiene resultados correlacionados que quedaron establecidos cuando se creó el entrelazamiento."
       ],
       "keyTakeaways": [
-        "Estados entrelazados no descomponibles en producto.",
-        "Teorema de Bell prueba naturaleza cuantica.",
-        "Recurso clave para computacion y criptografia."
+        "Los estados entrelazados no pueden describirse como productos de estados de cúbits individuales.",
+        "El teorema de Bell demuestra que las correlaciones del entrelazamiento superan lo que las teorías de variables ocultas locales pueden explicar.",
+        "El entrelazamiento es el recurso cuántico clave para la aceleración computacional, la teleportación y la criptografía."
       ],
       "practiceQuestions": [
         {
-          "questionText": "¿Cual es un estado entrelazado?",
+          "questionText": "¿Cuál de los siguientes es un estado entrelazado?",
           "questionType": "multipleChoice",
           "options": [
             "|00⟩",
             "|+⟩|0⟩",
-            "(|00⟩+|11⟩)/√2",
+            "(|00⟩+|11⟩)/sqrt(2)",
             "|0⟩|1⟩"
           ],
           "correctAnswerIndex": 2,
-          "explanation": "(|00⟩+|11⟩)/√2 esta entrelazado.",
+          "explanation": "(|00⟩+|11⟩)/sqrt(2) no puede escribirse como un producto de estados de cúbits individuales, por lo que está entrelazado. Las demás opciones son todas estados producto (separables).",
           "difficultyLevel": 2
         }
       ]

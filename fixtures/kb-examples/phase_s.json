@@ -4,19 +4,276 @@
   "sourceRef": "Barenco et al., Phys. Rev. A 52, 3457 (1995), doi:10.1103/PhysRevA.52.3457",
   "category": "singleQubitGates",
   "difficultyLevel": 2,
-  "prerequisites": ["qubit", "pauli_z", "bloch_sphere"],
+  "prerequisites": [
+    "qubit",
+    "pauli_z",
+    "bloch_sphere"
+  ],
   "translations": {
-    "en": {"title": "Phase (S) Gate", "shortDefinition": "The S gate (phase gate) applies a 90-degree phase rotation to |1⟩, mapping |1⟩ to i|1⟩ while leaving |0⟩ unchanged. It is the square root of the Z gate.", "detailedExplanation": "The S gate, also called the phase gate or the sqrt(Z) gate, applies a relative phase of i (pi/2 radians) to the |1⟩ state. Its matrix is [[1,0],[0,i]]. On the Bloch sphere, it corresponds to a 90-degree rotation about the z-axis. Unlike the Pauli gates, S is NOT self-inverse: S-dagger (the conjugate transpose) is a separate gate that applies a -i phase. S-squared equals Z, establishing it as the square root of Z. The S gate is critical in the Clifford group and appears in many quantum error correction codes and stabilizer formalism.", "analogies": ["The S gate is like turning a clock hand 90 degrees -- a quarter turn that, when done twice, gives a half turn (Z gate).", "Think of it as adding a quarter-wave plate in optics that shifts the polarization phase by 90 degrees."], "commonMisconceptions": ["The S gate is NOT self-inverse -- applying S twice gives Z, not I. You need S-dagger to undo S.", "The S gate does NOT create superposition -- it only modifies the phase of |1⟩."], "keyTakeaways": ["S|0⟩ = |0⟩, S|1⟩ = i|1⟩ -- a 90-degree phase rotation on the Bloch sphere z-axis.", "S-squared = Z, so S is the square root of Z.", "The S gate is a key element of the Clifford group, essential for stabilizer codes."], "practiceQuestions": [{"questionText": "What gate results from applying the S gate twice?", "questionType": "multipleChoice", "options": ["Identity (I)", "Pauli-X", "Pauli-Z", "Hadamard"], "correctAnswerIndex": 2, "explanation": "S-squared = Z. The S gate is the square root of Z, so applying it twice gives the Pauli-Z gate.", "difficultyLevel": 2}]},
-    "ko": {"title": "위상(S) 게이트", "shortDefinition": "S 게이트(위상 게이트)는 |1⟩에 90도 위상 회전을 적용하여 |1⟩을 i|1⟩으로 매핑하고 |0⟩은 변경하지 않습니다. Z 게이트의 제곱근입니다.", "detailedExplanation": "S 게이트는 sqrt(Z) 게이트라고도 불리며, |1⟩ 상태에 i(π/2 라디안)의 상대적 위상을 적용합니다. 행렬은 [[1,0],[0,i]]입니다. 블로흐 구에서 z축에 대한 90도 회전에 대응합니다. S²= Z이므로 Z의 제곱근입니다. 클리포드 군의 핵심 요소입니다.", "analogies": ["S 게이트는 시계 바늘을 90도 돌리는 것과 같습니다 -- 두 번 하면 반 바퀴(Z 게이트)가 됩니다.", "광학에서 편광 위상을 90도 이동시키는 사분파장판을 추가하는 것으로 생각하세요."], "commonMisconceptions": ["S 게이트는 자체 역원이 아닙니다 -- S를 두 번 적용하면 I가 아닌 Z가 됩니다.", "S 게이트는 중첩을 만들지 않습니다 -- |1⟩의 위상만 수정합니다."], "keyTakeaways": ["S|0⟩ = |0⟩, S|1⟩ = i|1⟩.", "S² = Z이므로 S는 Z의 제곱근입니다.", "S 게이트는 클리포드 군의 핵심 요소입니다."], "practiceQuestions": [{"questionText": "S 게이트를 두 번 적용하면 어떤 게이트가 됩니까?", "questionType": "multipleChoice", "options": ["항등(I)", "파울리-X", "파울리-Z", "아다마르"], "correctAnswerIndex": 2, "explanation": "S² = Z. S 게이트는 Z의 제곱근이므로 두 번 적용하면 파울리-Z 게이트가 됩니다.", "difficultyLevel": 2}]},
-    "ja": {"title": "位相(S)ゲート", "shortDefinition": "Sゲート（位相ゲート）は|1⟩に90度の位相回転を適用し、|1⟩をi|1⟩にマッピングし|0⟩は変更しません。Zゲートの平方根です。", "detailedExplanation": "Sゲートはsqrt(Z)ゲートとも呼ばれ、|1⟩状態にi（π/2ラジアン）の相対位相を適用します。行列は[[1,0],[0,i]]です。ブロッホ球ではz軸周りの90度回転に対応します。S² = Zなのでzの平方根です。クリフォード群の重要な要素です。", "analogies": ["Sゲートは時計の針を90度回すようなものです -- 2回で半回転（Z）になります。", "光学で偏光位相を90度シフトする四分波長板のようなものです。"], "commonMisconceptions": ["Sゲートは自己逆元ではありません -- Sを2回適用するとZになります。", "Sゲートは重ね合わせを作りません -- |1⟩の位相のみ変更します。"], "keyTakeaways": ["S|0⟩ = |0⟩, S|1⟩ = i|1⟩。", "S² = ZなのでSはZの平方根です。", "Sゲートはクリフォード群の重要な要素です。"], "practiceQuestions": [{"questionText": "Sゲートを2回適用するとどのゲートになりますか？", "questionType": "multipleChoice", "options": ["恒等(I)", "パウリX", "パウリZ", "アダマール"], "correctAnswerIndex": 2, "explanation": "S² = Z。Sゲートは2回適用するとパウリZゲートになります。", "difficultyLevel": 2}]},
-    "zh-Hans": {"title": "相位(S)门", "shortDefinition": "S门（相位门）对|1⟩施加90度相位旋转，将|1⟩映射为i|1⟩，保持|0⟩不变。它是Z门的平方根。", "detailedExplanation": "S门也称为sqrt(Z)门，对|1⟩态施加i（π/2弧度）的相对相位。矩阵为[[1,0],[0,i]]。在布洛赫球上对应绕z轴的90度旋转。S² = Z，所以它是Z的平方根。它是Clifford群的关键元素。", "analogies": ["S门就像把时针转90度 -- 两次就是半圈（Z门）。", "想象光学中使偏振相位移动90度的四分之一波片。"], "commonMisconceptions": ["S门不是自逆的 -- 两次S得到Z，不是I。", "S门不创建叠加态 -- 只修改|1⟩的相位。"], "keyTakeaways": ["S|0⟩ = |0⟩, S|1⟩ = i|1⟩。", "S² = Z，S是Z的平方根。", "S门是Clifford群的关键元素。"], "practiceQuestions": [{"questionText": "两次施加S门得到什么门？", "questionType": "multipleChoice", "options": ["恒等(I)", "泡利X", "泡利Z", "阿达马"], "correctAnswerIndex": 2, "explanation": "S² = Z。S门是Z的平方根，两次得到泡利Z门。", "difficultyLevel": 2}]},
-    "de": {"title": "Phasen-Gatter (S)", "shortDefinition": "Das S-Gatter wendet eine 90-Grad-Phasendrehung auf |1⟩ an und ist die Quadratwurzel des Z-Gatters.", "detailedExplanation": "Das S-Gatter wendet eine relative Phase von i (π/2 Radian) auf |1⟩ an. Matrixdarstellung: [[1,0],[0,i]]. Auf der Bloch-Kugel eine 90-Grad-Rotation um die z-Achse. S² = Z. Ein Schlüsselelement der Clifford-Gruppe.", "analogies": ["Das S-Gatter ist wie ein Vierteldrehen eines Uhrzeigers.", "Wie eine Viertelwellenplatte in der Optik."], "commonMisconceptions": ["Das S-Gatter ist NICHT selbstinvers -- zweimal S ergibt Z.", "Das S-Gatter erzeugt KEINE Superposition."], "keyTakeaways": ["S|0⟩ = |0⟩, S|1⟩ = i|1⟩.", "S² = Z.", "Schlüsselelement der Clifford-Gruppe."], "practiceQuestions": [{"questionText": "Welches Gatter ergibt sich bei zweimaliger Anwendung von S?", "questionType": "multipleChoice", "options": ["Identität (I)", "Pauli-X", "Pauli-Z", "Hadamard"], "correctAnswerIndex": 2, "explanation": "S² = Z.", "difficultyLevel": 2}]},
-    "fr": {"title": "Porte de phase (S)", "shortDefinition": "La porte S applique une rotation de phase de 90 degres a |1⟩ et est la racine carree de la porte Z.", "detailedExplanation": "La porte S applique une phase relative de i (π/2 radians) a |1⟩. Matrice: [[1,0],[0,i]]. Sur la sphere de Bloch, rotation de 90 degres autour de l'axe z. S² = Z. Element cle du groupe de Clifford.", "analogies": ["La porte S est comme tourner l'aiguille d'une horloge de 90 degres.", "Comme une lame quart d'onde en optique."], "commonMisconceptions": ["La porte S n'est PAS auto-inverse -- deux S donnent Z.", "La porte S ne cree PAS de superposition."], "keyTakeaways": ["S|0⟩ = |0⟩, S|1⟩ = i|1⟩.", "S² = Z.", "Element cle du groupe de Clifford."], "practiceQuestions": [{"questionText": "Quelle porte resulte de deux applications de S ?", "questionType": "multipleChoice", "options": ["Identite (I)", "Pauli-X", "Pauli-Z", "Hadamard"], "correctAnswerIndex": 2, "explanation": "S² = Z.", "difficultyLevel": 2}]},
-    "es": {"title": "Puerta de fase (S)", "shortDefinition": "La puerta S aplica una rotacion de fase de 90 grados a |1⟩ y es la raiz cuadrada de la puerta Z.", "detailedExplanation": "La puerta S aplica una fase relativa de i (π/2 radianes) a |1⟩. Matriz: [[1,0],[0,i]]. En la esfera de Bloch, rotacion de 90 grados alrededor del eje z. S² = Z. Elemento clave del grupo de Clifford.", "analogies": ["La puerta S es como girar la aguja de un reloj 90 grados.", "Como una lamina de cuarto de onda en optica."], "commonMisconceptions": ["La puerta S NO es auto-inversa -- dos S dan Z.", "La puerta S NO crea superposicion."], "keyTakeaways": ["S|0⟩ = |0⟩, S|1⟩ = i|1⟩.", "S² = Z.", "Elemento clave del grupo de Clifford."], "practiceQuestions": [{"questionText": "¿Que puerta resulta de aplicar S dos veces?", "questionType": "multipleChoice", "options": ["Identidad (I)", "Pauli-X", "Pauli-Z", "Hadamard"], "correctAnswerIndex": 2, "explanation": "S² = Z.", "difficultyLevel": 2}]}
+    "en": {
+      "title": "Phase (S) Gate",
+      "shortDefinition": "The S gate (phase gate) applies a 90-degree phase rotation to |1⟩, mapping |1⟩ to i|1⟩ while leaving |0⟩ unchanged. It is the square root of the Z gate.",
+      "detailedExplanation": "The S gate, also called the phase gate or the sqrt(Z) gate, applies a relative phase of i (pi/2 radians) to the |1⟩ state. Its matrix is [[1,0],[0,i]]. On the Bloch sphere, it corresponds to a 90-degree rotation about the z-axis. Unlike the Pauli gates, S is NOT self-inverse: S-dagger (the conjugate transpose) is a separate gate that applies a -i phase. S-squared equals Z, establishing it as the square root of Z. The S gate is critical in the Clifford group and appears in many quantum error correction codes and stabilizer formalism.",
+      "analogies": [
+        "The S gate is like turning a clock hand 90 degrees -- a quarter turn that, when done twice, gives a half turn (Z gate).",
+        "Think of it as adding a quarter-wave plate in optics that shifts the polarization phase by 90 degrees."
+      ],
+      "commonMisconceptions": [
+        "The S gate is NOT self-inverse -- applying S twice gives Z, not I. You need S-dagger to undo S.",
+        "The S gate does NOT create superposition -- it only modifies the phase of |1⟩."
+      ],
+      "keyTakeaways": [
+        "S|0⟩ = |0⟩, S|1⟩ = i|1⟩ -- a 90-degree phase rotation on the Bloch sphere z-axis.",
+        "S-squared = Z, so S is the square root of Z.",
+        "The S gate is a key element of the Clifford group, essential for stabilizer codes."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "What gate results from applying the S gate twice?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Identity (I)",
+            "Pauli-X",
+            "Pauli-Z",
+            "Hadamard"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "S-squared = Z. The S gate is the square root of Z, so applying it twice gives the Pauli-Z gate.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "ko": {
+      "title": "위상(S) 게이트",
+      "shortDefinition": "S 게이트(위상 게이트)는 |1⟩에 90도 위상 회전을 적용하여 |1⟩을 i|1⟩으로 매핑하고 |0⟩은 변화시키지 않습니다. Z 게이트의 제곱근입니다.",
+      "detailedExplanation": "S 게이트는 위상 게이트 또는 sqrt(Z) 게이트라고도 불리며, |1⟩ 상태에 i(π/2 라디안)의 상대 위상을 적용합니다. 행렬은 [[1,0],[0,i]]입니다. 블로흐 구에서는 z축에 대한 90도 회전에 대응합니다. 파울리 게이트들과 달리 S는 자체 역원이 아닙니다: S-dagger(켤레 전치)는 -i 위상을 적용하는 별도의 게이트입니다. S를 제곱하면 Z가 되므로 S는 Z의 제곱근입니다. S 게이트는 클리포드 군에서 핵심적인 역할을 하며, 많은 양자 오류 정정 부호와 안정자 형식론에 등장합니다.",
+      "analogies": [
+        "S 게이트는 시계 바늘을 90도 돌리는 것과 같습니다 -- 두 번 하면 반 바퀴(Z 게이트)가 되는 4분의 1 바퀴 회전입니다.",
+        "광학에서 편광 위상을 90도 이동시키는 사분파장판을 추가하는 것으로 생각할 수 있습니다."
+      ],
+      "commonMisconceptions": [
+        "S 게이트는 자체 역원이 아닙니다 -- S를 두 번 적용하면 I가 아니라 Z가 됩니다. S를 되돌리려면 S-dagger가 필요합니다.",
+        "S 게이트는 중첩을 만들지 않습니다 -- |1⟩의 위상만 수정합니다."
+      ],
+      "keyTakeaways": [
+        "S|0⟩ = |0⟩, S|1⟩ = i|1⟩ -- 블로흐 구 z축에 대한 90도 위상 회전입니다.",
+        "S² = Z이므로 S는 Z의 제곱근입니다.",
+        "S 게이트는 클리포드 군의 핵심 요소이며 안정자 부호에 필수적입니다."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "S 게이트를 두 번 적용하면 어떤 게이트가 됩니까?",
+          "questionType": "multipleChoice",
+          "options": [
+            "항등(I)",
+            "파울리-X",
+            "파울리-Z",
+            "아다마르"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "S² = Z. S 게이트는 Z의 제곱근이므로 두 번 적용하면 파울리-Z 게이트가 됩니다.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "ja": {
+      "title": "位相(S)ゲート",
+      "shortDefinition": "Sゲート（位相ゲート）は|1⟩に90度の位相回転を適用し、|1⟩をi|1⟩に写し、|0⟩は変化させません。Zゲートの平方根です。",
+      "detailedExplanation": "Sゲートは、位相ゲートまたはsqrt(Z)ゲートとも呼ばれ、|1⟩状態にi（π/2ラジアン）の相対位相を適用します。その行列は[[1,0],[0,i]]です。ブロッホ球上では、z軸周りの90度回転に対応します。パウリゲートとは異なり、Sは自己逆元ではありません。S-dagger（共役転置）は-iの位相を適用する別のゲートです。Sを2乗するとZに等しくなるため、SはZの平方根として位置づけられます。Sゲートはクリフォード群において極めて重要であり、多くの量子誤り訂正符号やスタビライザー形式に現れます。",
+      "analogies": [
+        "Sゲートは時計の針を90度回すようなものです -- 4分の1回転を2回行うと半回転（Zゲート）になります。",
+        "光学で偏光位相を90度シフトさせる4分の1波長板を加えることに例えられます。"
+      ],
+      "commonMisconceptions": [
+        "Sゲートは自己逆元ではありません -- Sを2回適用するとIではなくZになります。Sを元に戻すにはS-daggerが必要です。",
+        "Sゲートは重ね合わせを作りません -- |1⟩の位相のみを変更します。"
+      ],
+      "keyTakeaways": [
+        "S|0⟩ = |0⟩, S|1⟩ = i|1⟩ -- ブロッホ球のz軸周りの90度の位相回転です。",
+        "S² = Zなので、SはZの平方根です。",
+        "Sゲートはクリフォード群の重要な要素であり、スタビライザー符号に不可欠です。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Sゲートを2回適用するとどのゲートになりますか？",
+          "questionType": "multipleChoice",
+          "options": [
+            "恒等(I)",
+            "パウリX",
+            "パウリZ",
+            "アダマール"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "S² = Z。SゲートはZの平方根であるため、2回適用するとパウリZゲートになります。",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "zh-Hans": {
+      "title": "相位(S)门",
+      "shortDefinition": "S门（相位门）对|1⟩施加90度相位旋转，将|1⟩映射为i|1⟩，同时保持|0⟩不变。它是Z门的平方根。",
+      "detailedExplanation": "S门也称为相位门或sqrt(Z)门，对|1⟩态施加i（π/2弧度）的相对相位。其矩阵为[[1,0],[0,i]]。在布洛赫球上，它对应绕z轴的90度旋转。与泡利门不同，S门不是自逆的：S-dagger（共轭转置）是施加-i相位的另一个门。S的平方等于Z，因此S是Z的平方根。S门在Clifford群中至关重要，并出现在许多量子纠错码和稳定子形式体系中。",
+      "analogies": [
+        "S门就像把时针转动90度 -- 四分之一圈转两次就是半圈（Z门）。",
+        "可以把它想象成光学中加入一块使偏振相位移动90度的四分之一波片。"
+      ],
+      "commonMisconceptions": [
+        "S门不是自逆的 -- 施加两次S得到的是Z，而不是I。要撤销S，需要使用S-dagger。",
+        "S门不创建叠加态 -- 它只修改|1⟩的相位。"
+      ],
+      "keyTakeaways": [
+        "S|0⟩ = |0⟩, S|1⟩ = i|1⟩ -- 绕布洛赫球z轴的90度相位旋转。",
+        "S² = Z，所以S是Z的平方根。",
+        "S门是Clifford群的关键元素，对稳定子码至关重要。"
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "施加两次S门会得到什么门？",
+          "questionType": "multipleChoice",
+          "options": [
+            "恒等(I)",
+            "泡利X",
+            "泡利Z",
+            "阿达马"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "S² = Z。S门是Z的平方根，因此施加两次得到泡利Z门。",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "de": {
+      "title": "Phasen-Gatter (S)",
+      "shortDefinition": "Das S-Gatter (Phasen-Gatter) wendet eine 90-Grad-Phasendrehung auf |1⟩ an, bildet |1⟩ auf i|1⟩ ab und lässt |0⟩ unverändert. Es ist die Quadratwurzel des Z-Gatters.",
+      "detailedExplanation": "Das S-Gatter, auch Phasen-Gatter oder sqrt(Z)-Gatter genannt, wendet eine relative Phase von i (π/2 Radiant) auf den Zustand |1⟩ an. Seine Matrix ist [[1,0],[0,i]]. Auf der Bloch-Kugel entspricht es einer 90-Grad-Rotation um die z-Achse. Anders als die Pauli-Gatter ist S NICHT selbstinvers: S-dagger (die konjugiert Transponierte) ist ein eigenes Gatter, das eine Phase von -i anwendet. S zum Quadrat ergibt Z, womit S als Quadratwurzel von Z etabliert ist. Das S-Gatter ist von zentraler Bedeutung in der Clifford-Gruppe und tritt in vielen Quantenfehlerkorrektur-Codes sowie im Stabilisator-Formalismus auf.",
+      "analogies": [
+        "Das S-Gatter ist wie das Drehen eines Uhrzeigers um 90 Grad -- eine Vierteldrehung, die zweimal ausgeführt eine halbe Drehung (Z-Gatter) ergibt.",
+        "Stellen Sie es sich wie das Einfügen einer Viertelwellenplatte in der Optik vor, die die Polarisationsphase um 90 Grad verschiebt."
+      ],
+      "commonMisconceptions": [
+        "Das S-Gatter ist NICHT selbstinvers -- zweimaliges Anwenden von S ergibt Z, nicht I. Um S rückgängig zu machen, benötigt man S-dagger.",
+        "Das S-Gatter erzeugt KEINE Superposition -- es verändert nur die Phase von |1⟩."
+      ],
+      "keyTakeaways": [
+        "S|0⟩ = |0⟩, S|1⟩ = i|1⟩ -- eine 90-Grad-Phasendrehung um die z-Achse der Bloch-Kugel.",
+        "S² = Z, also ist S die Quadratwurzel von Z.",
+        "Das S-Gatter ist ein Schlüsselelement der Clifford-Gruppe und wesentlich für Stabilisator-Codes."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Welches Gatter ergibt sich bei zweimaliger Anwendung des S-Gatters?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Identität (I)",
+            "Pauli-X",
+            "Pauli-Z",
+            "Hadamard"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "S² = Z. Das S-Gatter ist die Quadratwurzel von Z, daher ergibt zweimaliges Anwenden das Pauli-Z-Gatter.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "fr": {
+      "title": "Porte de phase (S)",
+      "shortDefinition": "La porte S (porte de phase) applique une rotation de phase de 90 degrés à |1⟩, transformant |1⟩ en i|1⟩ tout en laissant |0⟩ inchangé. Elle est la racine carrée de la porte Z.",
+      "detailedExplanation": "La porte S, également appelée porte de phase ou porte sqrt(Z), applique une phase relative de i (π/2 radians) à l'état |1⟩. Sa matrice est [[1,0],[0,i]]. Sur la sphère de Bloch, elle correspond à une rotation de 90 degrés autour de l'axe z. Contrairement aux portes de Pauli, S n'est PAS auto-inverse : S-dagger (la transposée conjuguée) est une porte distincte qui applique une phase de -i. S au carré est égal à Z, ce qui en fait la racine carrée de Z. La porte S est essentielle dans le groupe de Clifford et apparaît dans de nombreux codes de correction d'erreurs quantiques ainsi que dans le formalisme des stabilisateurs.",
+      "analogies": [
+        "La porte S est comme tourner l'aiguille d'une horloge de 90 degrés -- un quart de tour qui, effectué deux fois, donne un demi-tour (porte Z).",
+        "Pensez-y comme à l'ajout d'une lame quart d'onde en optique qui décale la phase de polarisation de 90 degrés."
+      ],
+      "commonMisconceptions": [
+        "La porte S n'est PAS auto-inverse -- appliquer S deux fois donne Z, pas I. Il faut S-dagger pour annuler S.",
+        "La porte S ne crée PAS de superposition -- elle ne modifie que la phase de |1⟩."
+      ],
+      "keyTakeaways": [
+        "S|0⟩ = |0⟩, S|1⟩ = i|1⟩ -- une rotation de phase de 90 degrés autour de l'axe z de la sphère de Bloch.",
+        "S² = Z, donc S est la racine carrée de Z.",
+        "La porte S est un élément clé du groupe de Clifford, essentiel pour les codes stabilisateurs."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "Quelle porte résulte de deux applications successives de la porte S ?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Identité (I)",
+            "Pauli-X",
+            "Pauli-Z",
+            "Hadamard"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "S² = Z. La porte S est la racine carrée de Z, donc l'appliquer deux fois donne la porte Pauli-Z.",
+          "difficultyLevel": 2
+        }
+      ]
+    },
+    "es": {
+      "title": "Puerta de fase (S)",
+      "shortDefinition": "La puerta S (puerta de fase) aplica una rotación de fase de 90 grados a |1⟩, mapeando |1⟩ a i|1⟩ mientras deja |0⟩ sin cambios. Es la raíz cuadrada de la puerta Z.",
+      "detailedExplanation": "La puerta S, también llamada puerta de fase o puerta sqrt(Z), aplica una fase relativa de i (π/2 radianes) al estado |1⟩. Su matriz es [[1,0],[0,i]]. En la esfera de Bloch, corresponde a una rotación de 90 grados alrededor del eje z. A diferencia de las puertas de Pauli, S NO es auto-inversa: S-dagger (la transpuesta conjugada) es una puerta distinta que aplica una fase de -i. S al cuadrado es igual a Z, lo que la establece como la raíz cuadrada de Z. La puerta S es fundamental en el grupo de Clifford y aparece en muchos códigos de corrección de errores cuánticos y en el formalismo de estabilizadores.",
+      "analogies": [
+        "La puerta S es como girar la aguja de un reloj 90 grados -- un cuarto de vuelta que, al hacerse dos veces, da media vuelta (puerta Z).",
+        "Piense en ella como añadir una lámina de cuarto de onda en óptica que desplaza la fase de polarización 90 grados."
+      ],
+      "commonMisconceptions": [
+        "La puerta S NO es auto-inversa -- aplicar S dos veces da Z, no I. Se necesita S-dagger para deshacer S.",
+        "La puerta S NO crea superposición -- solo modifica la fase de |1⟩."
+      ],
+      "keyTakeaways": [
+        "S|0⟩ = |0⟩, S|1⟩ = i|1⟩ -- una rotación de fase de 90 grados en el eje z de la esfera de Bloch.",
+        "S² = Z, por lo que S es la raíz cuadrada de Z.",
+        "La puerta S es un elemento clave del grupo de Clifford, esencial para los códigos de estabilizadores."
+      ],
+      "practiceQuestions": [
+        {
+          "questionText": "¿Qué puerta resulta de aplicar la puerta S dos veces?",
+          "questionType": "multipleChoice",
+          "options": [
+            "Identidad (I)",
+            "Pauli-X",
+            "Pauli-Z",
+            "Hadamard"
+          ],
+          "correctAnswerIndex": 2,
+          "explanation": "S² = Z. La puerta S es la raíz cuadrada de Z, por lo que aplicarla dos veces da la puerta Pauli-Z.",
+          "difficultyLevel": 2
+        }
+      ]
+    }
   },
-  "relatedFormulas": [{"latex": "S = \\begin{pmatrix} 1 & 0 \\\\ 0 & i \\end{pmatrix}", "plainTextDescription": {"en": "Matrix representation of the S (phase) gate", "ko": "S(위상) 게이트의 행렬 표현"}, "variables": [{"symbol": "S", "meaning": {"en": "Phase gate operator, square root of Z", "ko": "위상 게이트 연산자, Z의 제곱근"}}]}],
+  "relatedFormulas": [
+    {
+      "latex": "S = \\begin{pmatrix} 1 & 0 \\\\ 0 & i \\end{pmatrix}",
+      "plainTextDescription": {
+        "en": "Matrix representation of the S (phase) gate",
+        "ko": "S(위상) 게이트의 행렬 표현"
+      },
+      "variables": [
+        {
+          "symbol": "S",
+          "meaning": {
+            "en": "Phase gate operator, square root of Z",
+            "ko": "위상 게이트 연산자, Z의 제곱근"
+          }
+        }
+      ]
+    }
+  ],
   "visualizationType": "blochSphere",
-  "verifiedBy": {"verifierName": "Eunmin Park", "verifierCredentials": "IEEE Member, Quantum Computing Educator", "verificationDate": "2026-04-07", "reviewedSources": ["Nielsen & Chuang (2010)", "IBM Qiskit Textbook"], "confidenceLevel": "undisputed"},
+  "verifiedBy": {
+    "verifierName": "Eunmin Park",
+    "verifierCredentials": "IEEE Member, Quantum Computing Educator",
+    "verificationDate": "2026-04-07",
+    "reviewedSources": [
+      "Nielsen & Chuang (2010)",
+      "IBM Qiskit Textbook"
+    ],
+    "confidenceLevel": "undisputed"
+  },
   "lastReviewed": "2026-04-07",
-  "citationReferences": ["Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press."]
+  "citationReferences": [
+    "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press."
+  ],
+  "certaintyNote": " Translation pass 2026-07-19: non-EN fields expanded/repaired to parity with the verified EN text; pending native-speaker review (ROADMAP M3)."
 }

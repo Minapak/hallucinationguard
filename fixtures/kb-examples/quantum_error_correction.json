@@ -1,7 +1,7 @@
 {
   "id": "quantum_error_correction",
   "certainty": "established",
-  "certaintyNote": "Independently Steane, Phys. Rev. Lett. 77, 793 (1996). 2024-26 experimental-milestone sentences are explicitly year-qualified in text (re-verified 2026-07-10).",
+  "certaintyNote": "Independently Steane, Phys. Rev. Lett. 77, 793 (1996). 2024-26 experimental-milestone sentences are explicitly year-qualified in text (re-verified 2026-07-10). Translation pass 2026-07-19: non-EN fields expanded/repaired to parity with the verified EN text; pending native-speaker review (ROADMAP M3).",
   "sourceRef": "Shor, Scheme for reducing decoherence in quantum computer memory, Phys. Rev. A 52, R2493 (1995), doi:10.1103/PhysRevA.52.R2493",
   "category": "errorCorrection",
   "difficultyLevel": 4,
@@ -84,68 +84,68 @@
     },
     "ja": {
       "title": "量子誤り訂正",
-      "shortDefinition": "量子誤り訂正（QEC）は論理量子ビットを複数の物理量子ビットのエンタングル状態にエンコードし、デコヒーレンスとエラーから量子情報を保護します。",
-      "detailedExplanation": "QECは複製不可能と測定による崩壊の課題を克服します。シンドローム測定がエンコードされた情報を壊さずにエラーを検出します。閾値定理がスケーラブルな耐障害性計算を保証します。 実験の現状（年次明記）：2024年12月、GoogleのWillowプロセッサが初の閾値以下（below-threshold）表面符号動作を実証し、符号距離を2増やすごとに論理エラー率がΛ ≈ 2.14倍抑制されました（Acharya et al., Nature 638, 920 (2024)）。IBMの[[144,12,12]]「gross」qLDPC符号は表面符号に比べ物理量子ビットを約10分の1に削減しました（Bravyi et al., Nature 627 (2024)）。ただしWillowの著者自身が、実用水準のエラー率までは依然として桁違いの開きがあると警告しており、これは2026年7月現在も有効です。",
+      "shortDefinition": "量子誤り訂正（QEC）は、論理量子ビットを複数の物理量子ビットのエンタングル状態にエンコードすることで、デコヒーレンスとエラーから量子情報を保護し、耐障害性（フォールトトレラント）量子計算を可能にします。",
+      "detailedExplanation": "QECは、量子状態を複製できないこと（複製不可能定理）と、測定が重ね合わせを破壊してしまうことという二つの課題を克服します。複製する代わりに、QECは1つの論理量子ビットを複数の物理量子ビットのエンタングル状態にエンコードします（例：7量子ビットのSteane符号や表面符号）。シンドローム測定は、エンコードされた情報を崩壊させることなくエラーを検出します。閾値定理は、物理エラー率がある閾値（~1%）を下回れば、任意に長い量子計算を信頼性をもって実行できることを保証します。主要な符号には、表面符号（高い閾値、2次元配置）、カラー符号、連接符号があります。QECは、Shorのアルゴリズムやその他の深い回路を実行できる耐障害性量子コンピュータの構築に不可欠です。実験の現状（年次明記）：2024年12月、GoogleのWillowプロセッサが初の閾値以下（below-threshold）表面符号動作を実証し、符号距離を2増やすごとに論理エラー率がΛ ≈ 2.14倍抑制されました（Acharya et al., Nature 638, 920 (2024)）。IBMの[[144,12,12]]「gross」qLDPC符号は、表面符号に比べ約10分の1の物理量子ビットで同等の保護を達成しました（Bravyi et al., Nature 627 (2024)）。ただしWillowの著者自身が、実用水準のエラー率までは依然として桁違いの開きがあると警告しており、これは2026年7月現在も有効です。",
       "analogies": [
-        "クロスワードパズルにメッセージをエンコードするようなもの。",
-        "量子RAIDアレイのようなもの。"
+        "QECはクロスワードパズルにメッセージをエンコードするようなものです。各文字は複数の単語に現れるため、一部の文字が損傷しても、クロスワードの制約から完全なメッセージを再構成できます。",
+        "量子RAIDアレイと考えてください。情報が複数の量子ビットに分散されているため、どの単一量子ビットの故障も検出・訂正できます。"
       ],
       "commonMisconceptions": [
-        "QECは量子状態を複製しません。",
-        "QECはエラーを防止しません -- 検出して訂正します。"
+        "QECは量子状態を複製しません -- エンタングルメントを使って、状態そのものをコピーせずに情報を複数の量子ビットに分散させます。",
+        "QECはエラーを防止しません -- エラーが発生した後に検出・訂正するもので、その代償として大きな量子ビットのオーバーヘッドが必要です。"
       ],
       "keyTakeaways": [
-        "論理量子ビットをエンタングル状態にエンコード。",
-        "シンドローム測定で情報を壊さずエラー検出。",
-        "閾値定理が耐障害性を保証。",
+        "論理量子ビットを複数の物理量子ビットのエンタングル状態にエンコードします。",
+        "シンドローム測定は、エンコードされた量子情報を破壊せずにエラーを検出します。",
+        "閾値定理は、臨界エラー率以下でスケーラブルな耐障害性量子計算を保証します。",
         "閾値以下動作（「大きいほど良い」）は2024年（Google Willow）に初めて実証されました。実用水準のエラー率までは依然桁違いの開きがあります（2026-07時点）。"
       ],
       "practiceQuestions": [
         {
-          "questionText": "QECが単純にコピーできない理由は？",
+          "questionText": "量子誤り訂正が冗長化のために量子ビットの状態を単純にコピーできないのはなぜですか？",
           "questionType": "multipleChoice",
           "options": [
-            "コピーが遅い",
-            "複製不可能定理が禁止",
-            "量子ビット不足",
-            "エネルギー不足"
+            "コピーが遅すぎるから",
+            "複製不可能定理が未知の量子状態のコピーを禁じているから",
+            "量子ビットが足りないから",
+            "コピーに必要なエネルギーが大きすぎるから"
           ],
           "correctAnswerIndex": 1,
-          "explanation": "複製不可能定理が未知の量子状態のコピーを禁止します。",
+          "explanation": "複製不可能定理により、未知の量子状態はコピーできません。その代わり、QECはエンタングルメントを使って情報を冗長にエンコードします。",
           "difficultyLevel": 3
         }
       ]
     },
     "zh-Hans": {
       "title": "量子纠错",
-      "shortDefinition": "量子纠错（QEC）通过将逻辑量子比特编码为多个物理量子比特的纠缠态来保护量子信息，实现容错量子计算。",
-      "detailedExplanation": "QEC克服不可克隆和测量坍缩的挑战。综合征测量在不破坏编码信息的情况下检测错误。阈值定理保证可扩展的容错计算。 实验现状（明确标注年份）：2024年12月，谷歌Willow处理器首次实证了低于阈值（below-threshold）的表面码运行，码距每增加2，逻辑错误率被抑制Λ ≈ 2.14倍（Acharya et al., Nature 638, 920 (2024)）；IBM的[[144,12,12]]“gross” qLDPC码相比表面码将物理量子比特减少约10倍（Bravyi et al., Nature 627 (2024)）。但Willow作者自己也警告：距离实用水平的错误率仍差若干个数量级——截至2026年7月依然如此。",
+      "shortDefinition": "量子纠错（QEC）通过将逻辑量子比特编码为多个物理量子比特的纠缠态，保护量子信息免受退相干和错误的影响，从而实现容错量子计算。",
+      "detailedExplanation": "QEC克服了两个难题：量子态无法被复制（不可克隆定理），且测量会破坏叠加态。QEC不进行复制，而是将单个逻辑量子比特编码为多个物理量子比特的纠缠态（例如7量子比特Steane码或表面码）。综合征测量可以在不使编码信息坍缩的情况下检测错误。阈值定理保证：只要物理错误率低于某个阈值（~1%），就能可靠地执行任意长的量子计算。主流编码包括表面码（阈值高、二维布局）、颜色码和级联码。QEC对于构建能够运行Shor算法及其他深层电路的容错量子计算机至关重要。实验现状（明确标注年份）：2024年12月，谷歌Willow处理器首次实证了低于阈值（below-threshold）的表面码运行，码距每增加2，逻辑错误率被抑制Λ ≈ 2.14倍（Acharya et al., Nature 638, 920 (2024)）；IBM的[[144,12,12]]“gross” qLDPC码以约为表面码十分之一的物理量子比特数实现了相当的保护（Bravyi et al., Nature 627 (2024)）。但Willow作者自己也警告：距离实用水平的错误率仍差若干个数量级——截至2026年7月依然如此。",
       "analogies": [
-        "像在填字游戏中编码消息。",
-        "像量子RAID阵列。"
+        "QEC就像把一条消息编码进填字游戏：每个字母出现在多个单词中，因此即使部分字母受损，填字游戏的约束也能让你重建完整的消息。",
+        "可以把它想成量子RAID阵列：信息分布在多个量子比特上，因此任何单个量子比特的故障都能被检测并纠正。"
       ],
       "commonMisconceptions": [
-        "QEC不克隆量子态。",
-        "QEC不防止错误 -- 检测并纠正。"
+        "QEC并不克隆量子态 -- 它利用纠缠把信息分布到多个量子比特上，而不复制状态本身。",
+        "QEC并不防止错误 -- 它在错误发生后进行检测和纠正，代价是可观的量子比特开销。"
       ],
       "keyTakeaways": [
-        "将逻辑量子比特编码为纠缠态。",
-        "综合征测量不破坏信息地检测错误。",
-        "阈值定理保证容错。",
+        "将逻辑量子比特编码为多个物理量子比特的纠缠态。",
+        "综合征测量在不破坏编码量子信息的情况下检测错误。",
+        "阈值定理保证在临界错误率以下可扩展的容错量子计算。",
         "低于阈值的运行（“越大越好”）于2024年（谷歌Willow）首次得到实证；距实用错误率仍差数个数量级（截至2026-07）。"
       ],
       "practiceQuestions": [
         {
-          "questionText": "QEC为什么不能简单复制？",
+          "questionText": "量子纠错为什么不能简单地复制量子比特状态来实现冗余？",
           "questionType": "multipleChoice",
           "options": [
             "复制太慢",
-            "不可克隆定理禁止",
+            "不可克隆定理禁止复制未知量子态",
             "量子比特不够",
-            "能量不够"
+            "复制需要的能量太多"
           ],
           "correctAnswerIndex": 1,
-          "explanation": "不可克隆定理禁止复制未知量子态。",
+          "explanation": "不可克隆定理禁止复制未知量子态。因此，QEC改用纠缠来冗余地编码信息。",
           "difficultyLevel": 3
         }
       ]
@@ -186,34 +186,34 @@
     },
     "fr": {
       "title": "Correction d'erreurs quantiques",
-      "shortDefinition": "La QEC protege l'information quantique en encodant les qubits logiques dans des etats intrigues de qubits physiques.",
-      "detailedExplanation": "Surmonte le non-clonage et l'effondrement par mesure. Les mesures de syndrome detectent les erreurs sans detruire l'information. Le theoreme de seuil garantit le calcul tolerant aux fautes. État expérimental (explicitement daté) : en décembre 2024, le processeur Willow de Google a démontré le premier fonctionnement d'un code de surface sous le seuil, le taux d'erreur logique étant supprimé d'un facteur Λ ≈ 2,14 à chaque augmentation de 2 de la distance du code (Acharya et al., Nature 638, 920 (2024)) ; le code qLDPC « gross » [[144,12,12]] d'IBM a atteint une protection comparable avec environ 10 fois moins de qubits physiques (Bravyi et al., Nature 627 (2024)). Les auteurs de Willow avertissent eux-mêmes que des taux d'erreur utiles en pratique restent à des ordres de grandeur — toujours vrai en juillet 2026.",
+      "shortDefinition": "La correction d'erreurs quantiques (QEC) protège l'information quantique de la décohérence et des erreurs en encodant les qubits logiques dans des états intriqués de plusieurs qubits physiques, permettant ainsi le calcul quantique tolérant aux fautes.",
+      "detailedExplanation": "La QEC surmonte le double défi suivant : les états quantiques ne peuvent pas être copiés (non-clonage) et la mesure détruit la superposition. Au lieu de copier, la QEC encode un seul qubit logique dans un état intriqué de plusieurs qubits physiques (p. ex. le code de Steane à 7 qubits ou les codes de surface). Les mesures de syndrome détectent les erreurs sans faire s'effondrer l'information encodée. Le théorème du seuil garantit que, si le taux d'erreur physique est inférieur à un seuil (~1%), des calculs quantiques arbitrairement longs peuvent être effectués de manière fiable. Les principaux codes comprennent les codes de surface (seuil élevé, disposition 2D), les codes de couleur et les codes concaténés. La QEC est essentielle pour construire des ordinateurs quantiques tolérants aux fautes capables d'exécuter l'algorithme de Shor et d'autres circuits profonds. État expérimental, explicitement daté : en décembre 2024, le processeur Willow de Google a démontré le premier fonctionnement d'un code de surface sous le seuil, le taux d'erreur logique étant supprimé d'un facteur Λ ≈ 2.14 à chaque augmentation de 2 de la distance du code (Acharya et al., Nature 638, 920 (2024)) ; le code qLDPC « gross » [[144,12,12]] d'IBM a atteint une protection comparable avec environ 10 fois moins de qubits physiques que les codes de surface (Bravyi et al., Nature 627 (2024)). Les auteurs de Willow avertissent eux-mêmes que des taux d'erreur utiles en pratique restent éloignés de plusieurs ordres de grandeur — toujours vrai en juillet 2026 (2026-07).",
       "analogies": [
-        "Comme un mot croise.",
-        "Comme un RAID quantique."
+        "La QEC est comme encoder un message dans une grille de mots croisés : chaque lettre apparaît dans plusieurs mots, de sorte que même si certaines lettres sont endommagées, les contraintes de la grille permettent de reconstruire le message complet.",
+        "Pensez-y comme à une grappe RAID quantique : l'information est répartie sur plusieurs qubits de sorte que la défaillance de n'importe quel qubit isolé puisse être détectée et corrigée."
       ],
       "commonMisconceptions": [
-        "QEC ne clone PAS.",
-        "QEC ne previent pas les erreurs -- les detecte et corrige."
+        "La QEC ne clone PAS les états quantiques -- elle utilise l'intrication pour répartir l'information sur plusieurs qubits sans copier l'état lui-même.",
+        "La QEC n'empêche PAS les erreurs -- elle les détecte et les corrige après leur apparition, au prix d'un surcoût important en qubits."
       ],
       "keyTakeaways": [
-        "Encodage dans des etats intriques.",
-        "Mesures de syndrome detectent les erreurs.",
-        "Theoreme de seuil garantit la scalabilite.",
-        "Le fonctionnement sous le seuil (« plus grand = meilleur ») a été démontré pour la première fois en 2024 (Google Willow) ; les taux d'erreur pratiques restent à des ordres de grandeur (au 2026-07)."
+        "Encode les qubits logiques dans des états intriqués de plusieurs qubits physiques.",
+        "Les mesures de syndrome détectent les erreurs sans détruire l'information quantique encodée.",
+        "Le théorème du seuil garantit un calcul quantique tolérant aux fautes et extensible en dessous d'un taux d'erreur critique.",
+        "Le fonctionnement sous le seuil (« plus grand = meilleur ») a été démontré pour la première fois en 2024 (Google Willow) ; les taux d'erreur pratiques restent éloignés de plusieurs ordres de grandeur (au 2026-07)."
       ],
       "practiceQuestions": [
         {
-          "questionText": "Pourquoi QEC ne peut-elle pas simplement copier?",
+          "questionText": "Pourquoi la correction d'erreurs quantiques ne peut-elle pas simplement copier l'état du qubit pour assurer la redondance ?",
           "questionType": "multipleChoice",
           "options": [
-            "Trop lent",
-            "Theoreme de non-clonage l'interdit",
-            "Pas assez de qubits",
-            "Trop d'energie"
+            "La copie est trop lente",
+            "Le théorème de non-clonage interdit de copier des états quantiques inconnus",
+            "Il n'y a pas assez de qubits",
+            "La copie demanderait trop d'énergie"
           ],
           "correctAnswerIndex": 1,
-          "explanation": "Le theoreme de non-clonage l'interdit.",
+          "explanation": "Le théorème de non-clonage empêche de copier des états quantiques inconnus. À la place, la QEC utilise l'intrication pour encoder l'information de manière redondante.",
           "difficultyLevel": 3
         }
       ]
