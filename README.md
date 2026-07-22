@@ -108,6 +108,17 @@ HallucinationGuard was born inside a commercial product — a paid quantum-educa
 - Content freshness: last full verification pass 2026-07-10 — KO terms aligned with the KPS 2020 physics glossary (e.g. decoherence = 결깨짐, with common-usage 결어긋남 noted); 2024–26 QEC milestones (Google Willow below-threshold, IBM gross qLDPC) and PQC standardization status (HQC, FIPS 206, EO 14412) added as explicitly year/date-qualified sentences; institution-confirmed misconception corrections (IBM/Caltech) applied, including replacing the "tries every answer at once" framing with amplitude interference
 - Hardening pass 2026-07-19: full audit (27 confirmed findings, all fixed) — CJK-aware tokenizer, localized misconception gate, four-tier classifier, translation backfill with parity gates, pinned regression matrix, SHA-pinned CI. Method, evidence, and primary sources: [docs/AUDIT-2026-07-19.md](docs/AUDIT-2026-07-19.md). Backfilled translations are faithful renderings of the verified EN text and remain pending native-speaker review (Milestone 3)
 
+## Related work
+
+HallucinationGuard is designed to complement, not duplicate, existing efforts:
+
+- **Quantum-Audit** (arXiv:2602.10092, 2026) — a 2,700-question benchmark measuring whether models *know* quantum computing, with a Spanish/French subset. Measures model capability; HallucinationGuard verifies whether a *given generated explanation* is fabricated and gates it in production.
+- **PhysicBench** (Li et al., 2025) — quantum-physics QA benchmarking inside RAG pipelines. Pipeline evaluation, not an installable output-verification harness.
+- **SCIFACTCHECK** (arXiv:2606.21359, 2026) — general-science hallucination across five domains (unverifiability / overclaim / attribution). Not quantum-specific, not multilingual.
+- **Med-HALT** (Pal et al., 2023) — precedent for a domain-specific hallucination benchmark (medicine).
+
+**What is distinct here:** an installable (`pip install hallucinationguard-bench`), Apache-2.0 verification tool for quantum-education LLM output — 7 languages (EN, KO, JA, ZH-Hans, DE, FR, ES), every claim traced to primary literature, results published on Metriq. Existing work asks *"how much does this model know?"*; this asks *"is this particular sentence something a learner can trust?"*
+
 ## License
 
 [Apache-2.0](LICENSE). Fixture content, schema, and reference code alike.
