@@ -1,0 +1,366 @@
+{
+ "fixture": "hg120_sample_20.json",
+ "locale": "en",
+ "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "thresholds": {
+  "entail_min": 0.5,
+  "contra_min": 0.5
+ },
+ "results": [
+  {
+   "id": "HG001",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.4409,
+   "mean_support": 0.7993,
+   "max_conflict": 0.4502,
+   "nli_label": "nli_supported",
+   "worst_sentence": "Interference between components gives quantum algorithms power to explore computational paths in parallel.",
+   "sentences": [
+    {
+     "support": 0.9883,
+     "conflict": 0.0018,
+     "contradicted": false,
+     "text": "Superposition is a core principle of quantum mechanics."
+    },
+    {
+     "support": 0.9932,
+     "conflict": 0.2739,
+     "contradicted": false,
+     "text": "A quantum system can be in a coherent combination of multiple basis states simultaneously."
+    },
+    {
+     "support": 0.9751,
+     "conflict": 0.149,
+     "contradicted": false,
+     "text": "Mathematically expressed as |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, where cᵢ are complex coefficients."
+    },
+    {
+     "support": 0.0438,
+     "conflict": 0.4502,
+     "contradicted": false,
+     "text": "Interference between components gives quantum algorithms power to explore computational paths in parallel."
+    },
+    {
+     "support": 0.9961,
+     "conflict": 0.1755,
+     "contradicted": false,
+     "text": "Superposition is maintained while the system remains isolated from its environment."
+    }
+   ]
+  },
+  {
+   "id": "HG002",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0988,
+   "mean_support": 0.2529,
+   "max_conflict": 0.6099,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "This instantaneous correlation can signal across any distance, letting distant users communicate via their entangled pai",
+   "sentences": [
+    {
+     "support": 0.8135,
+     "conflict": 0.1465,
+     "contradicted": false,
+     "text": "Entangled particles share a correlation across space."
+    },
+    {
+     "support": 0.1863,
+     "conflict": 0.4927,
+     "contradicted": false,
+     "text": "When you observe one, the partner instantly responds, achieving information transfer at faster-than-light speeds."
+    },
+    {
+     "support": 0.0077,
+     "conflict": 0.6099,
+     "contradicted": true,
+     "text": "This instantaneous correlation can signal across any distance, letting distant users communicate via their entangled pai"
+    },
+    {
+     "support": 0.0041,
+     "conflict": 0.0052,
+     "contradicted": false,
+     "text": "Engineers could build phones exceeding light-speed limits, revolutionizing communication forever."
+    }
+   ]
+  },
+  {
+   "id": "HG004",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.3488,
+   "mean_support": 0.4407,
+   "max_conflict": 0.072,
+   "nli_label": "nli_unverified",
+   "worst_sentence": "A qubit is a two-level quantum system that admits coherent linear combinations of the basis states |0⟩ and |1⟩.",
+   "sentences": [
+    {
+     "support": 0.582,
+     "conflict": 0.072,
+     "contradicted": false,
+     "text": "A qubit is a two-level quantum system that admits coherent linear combinations of the basis states |0⟩ and |1⟩."
+    },
+    {
+     "support": 0.6675,
+     "conflict": 0.0176,
+     "contradicted": false,
+     "text": "Unlike a classical bit which holds either 0 or 1, the qubit state before measurement is described by complex amplitudes "
+    },
+    {
+     "support": 0.0726,
+     "conflict": 0.05,
+     "contradicted": false,
+     "text": "The two basis states form an orthonormal basis of a two-dimensional Hilbert space."
+    }
+   ]
+  },
+  {
+   "id": "HG005",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.3205,
+   "mean_support": 0.8073,
+   "max_conflict": 0.9575,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Rotations of the sphere visualize the action of single-qubit unitary gates.",
+   "sentences": [
+    {
+     "support": 0.3362,
+     "conflict": 0.9355,
+     "contradicted": true,
+     "text": "The Bloch sphere is a geometric representation of the pure state of a single qubit as a point on the surface of a three-"
+    },
+    {
+     "support": 0.9941,
+     "conflict": 0.0163,
+     "contradicted": false,
+     "text": "Using polar angle θ and azimuthal angle φ, the state is parameterized as |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩."
+    },
+    {
+     "support": 0.9019,
+     "conflict": 0.0116,
+     "contradicted": false,
+     "text": "The north pole corresponds to |0⟩ and the south pole to |1⟩."
+    },
+    {
+     "support": 0.9971,
+     "conflict": 0.9575,
+     "contradicted": false,
+     "text": "Rotations of the sphere visualize the action of single-qubit unitary gates."
+    }
+   ]
+  },
+  {
+   "id": "HG006",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.4265,
+   "mean_support": 0.5259,
+   "max_conflict": 0.7114,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "A ket |ψ⟩ denotes a state vector in a Hilbert space, while a bra ⟨ψ| is its dual vector, the Hermitian conjugate.",
+   "sentences": [
+    {
+     "support": 0.9941,
+     "conflict": 0.0155,
+     "contradicted": false,
+     "text": "Bra-ket notation is a notational system for quantum states introduced by Dirac."
+    },
+    {
+     "support": 0.1058,
+     "conflict": 0.7114,
+     "contradicted": true,
+     "text": "A ket |ψ⟩ denotes a state vector in a Hilbert space, while a bra ⟨ψ| is its dual vector, the Hermitian conjugate."
+    },
+    {
+     "support": 0.9956,
+     "conflict": 0.0297,
+     "contradicted": false,
+     "text": "The inner product ⟨φ|ψ⟩ is a complex number, and the outer product |ψ⟩⟨φ| defines an operator."
+    },
+    {
+     "support": 0.0081,
+     "conflict": 0.0191,
+     "contradicted": false,
+     "text": "This notation makes linear algebra expressions for quantum mechanics compact and manifestly coordinate-free."
+    }
+   ]
+  },
+  {
+   "id": "HG023",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1714,
+   "mean_support": 0.052,
+   "max_conflict": 0.3296,
+   "nli_label": "nli_unverified",
+   "worst_sentence": "Yes, conscious awareness is what triggers collapse in quantum mechanics.",
+   "sentences": [
+    {
+     "support": 0.1396,
+     "conflict": 0.3296,
+     "contradicted": false,
+     "text": "Yes, conscious awareness is what triggers collapse in quantum mechanics."
+    },
+    {
+     "support": 0.0099,
+     "conflict": 0.1292,
+     "contradicted": false,
+     "text": "When a human mind becomes aware of a measurement result, the wave function snaps from possibility into reality, and this"
+    },
+    {
+     "support": 0.0064,
+     "conflict": 0.1787,
+     "contradicted": false,
+     "text": "Experiments unequivocally show the mind can choose experimental outcomes, which is the foundation of all quantum technol"
+    }
+   ]
+  },
+  {
+   "id": "HG031",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1667,
+   "mean_support": 0.0092,
+   "max_conflict": 0.9927,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Yes, the S gate and Z gate are interchangeable single-qubit gates that both flip the qubit's phase completely.",
+   "sentences": [
+    {
+     "support": 0.0167,
+     "conflict": 0.9927,
+     "contradicted": true,
+     "text": "Yes, the S gate and Z gate are interchangeable single-qubit gates that both flip the qubit's phase completely."
+    },
+    {
+     "support": 0.0101,
+     "conflict": 0.563,
+     "contradicted": true,
+     "text": "They come up together in circuits and you can use either one where the other appears."
+    },
+    {
+     "support": 0.0009,
+     "conflict": 0.017,
+     "contradicted": false,
+     "text": "Quantum engineers typically pick whichever is easier to implement on the hardware because they produce the same computat"
+    }
+   ]
+  },
+  {
+   "id": "HG039",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1084,
+   "mean_support": 0.041,
+   "max_conflict": 0.033,
+   "nli_label": "nli_unverified",
+   "worst_sentence": "Yes, Grover's quadratic speedup reduces search time from O(2^n) to O(2^(n/2)), which offers significant improvement on N",
+   "sentences": [
+    {
+     "support": 0.0112,
+     "conflict": 0.033,
+     "contradicted": false,
+     "text": "Yes, Grover's quadratic speedup reduces search time from O(2^n) to O(2^(n/2)), which offers significant improvement on N"
+    },
+    {
+     "support": 0.0869,
+     "conflict": 0.0055,
+     "contradicted": false,
+     "text": "This makes traveling salesman, SAT, and NP-hard benchmarks tractable at much larger scales than classical algorithms can"
+    },
+    {
+     "support": 0.0249,
+     "conflict": 0.005,
+     "contradicted": false,
+     "text": "The quadratic speedup is practically transformative for real-world NP applications."
+    }
+   ]
+  },
+  {
+   "id": "HG051",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0483,
+   "mean_support": 0.0074,
+   "max_conflict": 0.3889,
+   "nli_label": "nli_unverified",
+   "worst_sentence": "This is why modern quantum hardware reliably runs long computations.",
+   "sentences": [
+    {
+     "support": 0.01,
+     "conflict": 0.1357,
+     "contradicted": false,
+     "text": "Yes, once properly configured, error correction achieves error-free computation regardless of underlying hardware."
+    },
+    {
+     "support": 0.0078,
+     "conflict": 0.0026,
+     "contradicted": false,
+     "text": "Modern quantum computers have built-in fault tolerance ready to use, so any noise is automatically suppressed during ope"
+    },
+    {
+     "support": 0.0044,
+     "conflict": 0.3889,
+     "contradicted": false,
+     "text": "This is why modern quantum hardware reliably runs long computations."
+    }
+   ]
+  },
+  {
+   "id": "HG073",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0932,
+   "mean_support": 0.041,
+   "max_conflict": 0.9824,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Yes, ML-KEM gives mathematically perfect, forever-unbreakable security under every conceivable attack.",
+   "sentences": [
+    {
+     "support": 0.0291,
+     "conflict": 0.9824,
+     "contradicted": true,
+     "text": "Yes, ML-KEM gives mathematically perfect, forever-unbreakable security under every conceivable attack."
+    },
+    {
+     "support": 0.0037,
+     "conflict": 0.98,
+     "contradicted": true,
+     "text": "After NIST standardization in 2024 no further cryptographic analysis is needed, since the math is closed."
+    },
+    {
+     "support": 0.1265,
+     "conflict": 0.9604,
+     "contradicted": true,
+     "text": "Any quantum computer, classical supercomputer, or future unknown device will be unable to extract keys from ML-KEM ciphe"
+    },
+    {
+     "support": 0.0048,
+     "conflict": 0.9771,
+     "contradicted": true,
+     "text": "This is why it has permanently replaced every previous cryptosystem."
+    }
+   ]
+  },
+  {
+   "id": "HG115",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1341,
+   "mean_support": 0.0022,
+   "max_conflict": 0.9663,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Decoherence is essentially the qubit getting too hot and burning out, so keeping it cold is sufficient to eliminate it f",
+   "sentences": [
+    {
+     "support": 0.0005,
+     "conflict": 0.9663,
+     "contradicted": true,
+     "text": "Decoherence is essentially the qubit getting too hot and burning out, so keeping it cold is sufficient to eliminate it f"
+    },
+    {
+     "support": 0.0014,
+     "conflict": 0.957,
+     "contradicted": true,
+     "text": "Modern dilution refrigerators reduce the temperature enough that decoherence simply disappears, and every cold-enough qu"
+    },
+    {
+     "support": 0.0046,
+     "conflict": 0.5723,
+     "contradicted": true,
+     "text": "This is why thermal isolation is the only engineering concern for practical quantum systems."
+    }
+   ]
+  }
+ ]
+}

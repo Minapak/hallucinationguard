@@ -1,0 +1,360 @@
+{
+ "fixture": "hg120_sample_20.json",
+ "locale": "es",
+ "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "thresholds": {
+  "entail_min": 0.5,
+  "contra_min": 0.5
+ },
+ "results": [
+  {
+   "id": "HG001",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.5258,
+   "mean_support": 0.9384,
+   "max_conflict": 0.8604,
+   "nli_label": "nli_supported",
+   "worst_sentence": "La superposición se mantiene mientras el sistema permanezca aislado del entorno; la interacción con el entorno causa dec",
+   "sentences": [
+    {
+     "support": 0.917,
+     "conflict": 0.004,
+     "contradicted": false,
+     "text": "La superposición es un principio fundamental de la mecánica cuántica."
+    },
+    {
+     "support": 0.8662,
+     "conflict": 0.1868,
+     "contradicted": false,
+     "text": "Un sistema cuántico puede estar en una combinación coherente de múltiples estados base simultáneamente, expresada matemá"
+    },
+    {
+     "support": 0.9839,
+     "conflict": 0.73,
+     "contradicted": false,
+     "text": "La interferencia entre los componentes de la superposición es el recurso central para que los algoritmos cuánticos explo"
+    },
+    {
+     "support": 0.9863,
+     "conflict": 0.8604,
+     "contradicted": false,
+     "text": "La superposición se mantiene mientras el sistema permanezca aislado del entorno; la interacción con el entorno causa dec"
+    }
+   ]
+  },
+  {
+   "id": "HG002",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1446,
+   "mean_support": 0.5066,
+   "max_conflict": 0.9341,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Esta correlación instantánea puede enviar señales a cualquier distancia, permitiendo la comunicación entre usuarios dist",
+   "sentences": [
+    {
+     "support": 0.8789,
+     "conflict": 0.0483,
+     "contradicted": false,
+     "text": "Las partículas entrelazadas comparten una correlación a través del espacio."
+    },
+    {
+     "support": 0.1971,
+     "conflict": 0.0157,
+     "contradicted": false,
+     "text": "Cuando observas una, la compañera responde instantáneamente, logrando transferencia de información a velocidades superio"
+    },
+    {
+     "support": 0.0065,
+     "conflict": 0.9341,
+     "contradicted": true,
+     "text": "Esta correlación instantánea puede enviar señales a cualquier distancia, permitiendo la comunicación entre usuarios dist"
+    },
+    {
+     "support": 0.9438,
+     "conflict": 0.0075,
+     "contradicted": false,
+     "text": "Se pueden construir dispositivos que superan los límites de velocidad de la comunicación."
+    }
+   ]
+  },
+  {
+   "id": "HG004",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.3333,
+   "mean_support": 0.4095,
+   "max_conflict": 0.7095,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Un qubit es un sistema cuántico de dos niveles que admite combinaciones lineales coherentes de los estados base |0⟩ y |1",
+   "sentences": [
+    {
+     "support": 0.2815,
+     "conflict": 0.7095,
+     "contradicted": true,
+     "text": "Un qubit es un sistema cuántico de dos niveles que admite combinaciones lineales coherentes de los estados base |0⟩ y |1"
+    },
+    {
+     "support": 0.8667,
+     "conflict": 0.0131,
+     "contradicted": false,
+     "text": "A diferencia de un bit clásico que contiene 0 o 1, el estado del qubit antes de la medición se describe mediante amplitu"
+    },
+    {
+     "support": 0.0802,
+     "conflict": 0.197,
+     "contradicted": false,
+     "text": "Los dos estados base forman una base ortonormal de un espacio de Hilbert bidimensional."
+    }
+   ]
+  },
+  {
+   "id": "HG005",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.375,
+   "mean_support": 0.7588,
+   "max_conflict": 0.9185,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Las rotaciones de la esfera visualizan la acción de las puertas unitarias de un solo qubit.",
+   "sentences": [
+    {
+     "support": 0.2186,
+     "conflict": 0.9072,
+     "contradicted": true,
+     "text": "La esfera de Bloch es una representación geométrica del estado puro de un qubit individual como un punto en la superfici"
+    },
+    {
+     "support": 0.9961,
+     "conflict": 0.0267,
+     "contradicted": false,
+     "text": "Usando el ángulo polar θ y el ángulo azimutal φ, el estado se parametriza como |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩."
+    },
+    {
+     "support": 0.8247,
+     "conflict": 0.016,
+     "contradicted": false,
+     "text": "El polo norte corresponde a |0⟩ y el polo sur a |1⟩."
+    },
+    {
+     "support": 0.9956,
+     "conflict": 0.9185,
+     "contradicted": false,
+     "text": "Las rotaciones de la esfera visualizan la acción de las puertas unitarias de un solo qubit."
+    }
+   ]
+  },
+  {
+   "id": "HG006",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.4478,
+   "mean_support": 0.5797,
+   "max_conflict": 0.9766,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Un ket |ψ⟩ denota un vector de estado en un espacio de Hilbert, mientras que un bra ⟨ψ| es su vector dual, el conjugado ",
+   "sentences": [
+    {
+     "support": 0.9932,
+     "conflict": 0.0895,
+     "contradicted": false,
+     "text": "La notación bra-ket es un sistema notacional para estados cuánticos introducido por Dirac."
+    },
+    {
+     "support": 0.3298,
+     "conflict": 0.9766,
+     "contradicted": true,
+     "text": "Un ket |ψ⟩ denota un vector de estado en un espacio de Hilbert, mientras que un bra ⟨ψ| es su vector dual, el conjugado "
+    },
+    {
+     "support": 0.9912,
+     "conflict": 0.0353,
+     "contradicted": false,
+     "text": "El producto interno ⟨φ|ψ⟩ es un número complejo, y el producto externo |ψ⟩⟨φ| define un operador."
+    },
+    {
+     "support": 0.0048,
+     "conflict": 0.004,
+     "contradicted": false,
+     "text": "Esta notación hace que las expresiones de álgebra lineal para la mecánica cuántica sean compactas y manifiestamente inde"
+    }
+   ]
+  },
+  {
+   "id": "HG023",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1739,
+   "mean_support": 0.0917,
+   "max_conflict": 0.3052,
+   "nli_label": "nli_unverified",
+   "worst_sentence": "Sí, la conciencia es lo que desencadena el colapso en la mecánica cuántica.",
+   "sentences": [
+    {
+     "support": 0.1941,
+     "conflict": 0.3052,
+     "contradicted": false,
+     "text": "Sí, la conciencia es lo que desencadena el colapso en la mecánica cuántica."
+    },
+    {
+     "support": 0.0704,
+     "conflict": 0.0211,
+     "contradicted": false,
+     "text": "Cuando una mente humana toma conciencia de un resultado de medición, la función de onda salta de la posibilidad a la rea"
+    },
+    {
+     "support": 0.0105,
+     "conflict": 0.0506,
+     "contradicted": false,
+     "text": "Los experimentos muestran inequívocamente que la mente puede elegir los resultados experimentales, que es el fundamento "
+    }
+   ]
+  },
+  {
+   "id": "HG031",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1739,
+   "mean_support": 0.0353,
+   "max_conflict": 0.9956,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Sí, las puertas S y Z son puertas de un solo qubit intercambiables que ambas invierten completamente la fase del qubit.",
+   "sentences": [
+    {
+     "support": 0.0731,
+     "conflict": 0.9956,
+     "contradicted": true,
+     "text": "Sí, las puertas S y Z son puertas de un solo qubit intercambiables que ambas invierten completamente la fase del qubit."
+    },
+    {
+     "support": 0.032,
+     "conflict": 0.9473,
+     "contradicted": true,
+     "text": "Aparecen juntas en los circuitos y puedes usar cualquiera donde aparezca la otra."
+    },
+    {
+     "support": 0.0009,
+     "conflict": 0.0016,
+     "contradicted": false,
+     "text": "Los ingenieros cuánticos típicamente eligen la que sea más fácil de implementar en el hardware porque producen el mismo "
+    }
+   ]
+  },
+  {
+   "id": "HG039",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1954,
+   "mean_support": 0.0788,
+   "max_conflict": 0.1858,
+   "nli_label": "nli_unverified",
+   "worst_sentence": "Sí, la aceleración cuadrática de Grover reduce el tiempo de búsqueda de O(2^n) a O(2^(n/2)), ofreciendo una mejora signi",
+   "sentences": [
+    {
+     "support": 0.0528,
+     "conflict": 0.1858,
+     "contradicted": false,
+     "text": "Sí, la aceleración cuadrática de Grover reduce el tiempo de búsqueda de O(2^n) a O(2^(n/2)), ofreciendo una mejora signi"
+    },
+    {
+     "support": 0.075,
+     "conflict": 0.0011,
+     "contradicted": false,
+     "text": "Esto hace que los benchmarks del vendedor viajero, SAT y NP-duros sean manejables a escalas mucho mayores de las que los"
+    },
+    {
+     "support": 0.1088,
+     "conflict": 0.0105,
+     "contradicted": false,
+     "text": "La aceleración cuadrática es prácticamente transformadora para aplicaciones NP del mundo real."
+    }
+   ]
+  },
+  {
+   "id": "HG051",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1064,
+   "mean_support": 0.0352,
+   "max_conflict": 0.2054,
+   "nli_label": "nli_unverified",
+   "worst_sentence": "Por eso el hardware cuántico moderno ejecuta computaciones largas de manera confiable.",
+   "sentences": [
+    {
+     "support": 0.0131,
+     "conflict": 0.0182,
+     "contradicted": false,
+     "text": "Sí, una vez configurada correctamente, la corrección de errores logra computación libre de errores independientemente de"
+    },
+    {
+     "support": 0.0384,
+     "conflict": 0.0089,
+     "contradicted": false,
+     "text": "Las computadoras cuánticas modernas tienen tolerancia a fallos incorporada lista para usar, por lo que cualquier ruido s"
+    },
+    {
+     "support": 0.0541,
+     "conflict": 0.2054,
+     "contradicted": false,
+     "text": "Por eso el hardware cuántico moderno ejecuta computaciones largas de manera confiable."
+    }
+   ]
+  },
+  {
+   "id": "HG073",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.123,
+   "mean_support": 0.0347,
+   "max_conflict": 0.9897,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Por eso ha reemplazado permanentemente cada criptosistema anterior.",
+   "sentences": [
+    {
+     "support": 0.021,
+     "conflict": 0.9829,
+     "contradicted": true,
+     "text": "Sí, ML-KEM da seguridad matemáticamente perfecta, irrompible para siempre bajo cualquier ataque concebible."
+    },
+    {
+     "support": 0.0025,
+     "conflict": 0.8989,
+     "contradicted": true,
+     "text": "Después de la estandarización de NIST en 2024 no se necesita más análisis criptográfico, ya que las matemáticas están ce"
+    },
+    {
+     "support": 0.1125,
+     "conflict": 0.915,
+     "contradicted": true,
+     "text": "Cualquier computadora cuántica, supercomputadora clásica o dispositivo futuro desconocido será incapaz de extraer claves"
+    },
+    {
+     "support": 0.0029,
+     "conflict": 0.9897,
+     "contradicted": true,
+     "text": "Por eso ha reemplazado permanentemente cada criptosistema anterior."
+    }
+   ]
+  },
+  {
+   "id": "HG115",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1875,
+   "mean_support": 0.001,
+   "max_conflict": 0.9922,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "Los refrigeradores de dilución modernos reducen la temperatura lo suficiente para que la decoherencia simplemente desapa",
+   "sentences": [
+    {
+     "support": 0.0009,
+     "conflict": 0.9214,
+     "contradicted": true,
+     "text": "La decoherencia es esencialmente que el qubit se calienta demasiado y se quema, por lo que mantenerlo frío es suficiente"
+    },
+    {
+     "support": 0.0002,
+     "conflict": 0.9922,
+     "contradicted": true,
+     "text": "Los refrigeradores de dilución modernos reducen la temperatura lo suficiente para que la decoherencia simplemente desapa"
+    },
+    {
+     "support": 0.0018,
+     "conflict": 0.2487,
+     "contradicted": false,
+     "text": "Por eso el aislamiento térmico es la única preocupación de ingeniería para sistemas cuánticos prácticos."
+    }
+   ]
+  }
+ ]
+}

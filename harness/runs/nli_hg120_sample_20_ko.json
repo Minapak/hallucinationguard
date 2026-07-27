@@ -1,0 +1,348 @@
+{
+ "fixture": "hg120_sample_20.json",
+ "locale": "ko",
+ "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "thresholds": {
+  "entail_min": 0.5,
+  "contra_min": 0.5
+ },
+ "results": [
+  {
+   "id": "HG001",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.4022,
+   "mean_support": 0.8575,
+   "max_conflict": 0.9595,
+   "nli_label": "nli_supported",
+   "worst_sentence": "중첩은 시스템이 환경으로부터 격리된 동안 유지되며, 환경과의 상호작용은 결어긋남을 유발합니다.",
+   "sentences": [
+    {
+     "support": 0.9512,
+     "conflict": 0.0149,
+     "contradicted": false,
+     "text": "중첩은 양자역학의 근본 원리입니다."
+    },
+    {
+     "support": 0.5698,
+     "conflict": 0.2222,
+     "contradicted": false,
+     "text": "양자 시스템은 여러 기저 상태의 결맞은 조합으로 동시에 존재할 수 있으며, 수학적으로 |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩로 표현됩니다."
+    },
+    {
+     "support": 0.8955,
+     "conflict": 0.6143,
+     "contradicted": false,
+     "text": "여기서 cᵢ는 복소 계수입니다."
+    },
+    {
+     "support": 0.9038,
+     "conflict": 0.0262,
+     "contradicted": false,
+     "text": "중첩의 서로 다른 성분 사이의 간섭이 양자 알고리즘이 계산 경로를 병렬로 탐색하는 핵심 자원입니다."
+    },
+    {
+     "support": 0.9673,
+     "conflict": 0.9595,
+     "contradicted": false,
+     "text": "중첩은 시스템이 환경으로부터 격리된 동안 유지되며, 환경과의 상호작용은 결어긋남을 유발합니다."
+    }
+   ]
+  },
+  {
+   "id": "HG002",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0714,
+   "mean_support": 0.3501,
+   "max_conflict": 0.8096,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "이 즉각적 상관관계는 임의의 거리를 가로질러 신호를 보낼 수 있게 해주며, 얽힌 쌍을 통해 원거리 사용자 간 통신이 가능합니다.",
+   "sentences": [
+    {
+     "support": 0.1218,
+     "conflict": 0.647,
+     "contradicted": true,
+     "text": "얽힌 입자들은 우주 공간을 가로지르는 상관관계를 공유합니다."
+    },
+    {
+     "support": 0.5059,
+     "conflict": 0.4641,
+     "contradicted": false,
+     "text": "한쪽을 관측하면 짝꿍 입자가 즉시 반응하여 빛보다 빠른 속도로 정보 전송이 이루어집니다."
+    },
+    {
+     "support": 0.0661,
+     "conflict": 0.8096,
+     "contradicted": true,
+     "text": "이 즉각적 상관관계는 임의의 거리를 가로질러 신호를 보낼 수 있게 해주며, 얽힌 쌍을 통해 원거리 사용자 간 통신이 가능합니다."
+    },
+    {
+     "support": 0.7065,
+     "conflict": 0.0488,
+     "contradicted": false,
+     "text": "통신 속도 한계를 초월하는 장치를 만들 수 있습니다."
+    }
+   ]
+  },
+  {
+   "id": "HG004",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1316,
+   "mean_support": 0.262,
+   "max_conflict": 0.335,
+   "nli_label": "nli_unverified",
+   "worst_sentence": "큐비트는 양자역학적 두 수준 시스템으로, |0⟩과 |1⟩의 결맞은 선형 조합 상태를 허용합니다.",
+   "sentences": [
+    {
+     "support": 0.4729,
+     "conflict": 0.335,
+     "contradicted": false,
+     "text": "큐비트는 양자역학적 두 수준 시스템으로, |0⟩과 |1⟩의 결맞은 선형 조합 상태를 허용합니다."
+    },
+    {
+     "support": 0.0511,
+     "conflict": 0.0695,
+     "contradicted": false,
+     "text": "고전 비트가 0 또는 1 중 하나를 가리키는 것과 달리, 큐비트는 측정 전에는 복소 진폭 α, β로 기술되는 결맞은 상태에 놓입니다."
+    }
+   ]
+  },
+  {
+   "id": "HG005",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1912,
+   "mean_support": 0.7664,
+   "max_conflict": 0.8208,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "블로흐 구는 단일 큐비트의 순수 상태를 3차원 구면의 점으로 시각화하는 기하학적 표현입니다.",
+   "sentences": [
+    {
+     "support": 0.4119,
+     "conflict": 0.8208,
+     "contradicted": true,
+     "text": "블로흐 구는 단일 큐비트의 순수 상태를 3차원 구면의 점으로 시각화하는 기하학적 표현입니다."
+    },
+    {
+     "support": 0.9653,
+     "conflict": 0.0826,
+     "contradicted": false,
+     "text": "극각 θ와 방위각 φ를 사용하여 |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩로 매개화됩니다."
+    },
+    {
+     "support": 0.9219,
+     "conflict": 0.0533,
+     "contradicted": false,
+     "text": "북극은 |0⟩, 남극은 |1⟩에 대응합니다."
+    }
+   ]
+  },
+  {
+   "id": "HG006",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.3019,
+   "mean_support": 0.8493,
+   "max_conflict": 0.563,
+   "nli_label": "nli_supported",
+   "worst_sentence": "내적 ⟨φ|ψ⟩는 복소수이며, 외적 |ψ⟩⟨φ|는 연산자가 됩니다.",
+   "sentences": [
+    {
+     "support": 0.9946,
+     "conflict": 0.0343,
+     "contradicted": false,
+     "text": "브라-켓 표기법은 디랙이 도입한 양자 상태 표기 체계입니다."
+    },
+    {
+     "support": 0.5562,
+     "conflict": 0.3423,
+     "contradicted": false,
+     "text": "켓 |ψ⟩는 힐베르트 공간의 상태 벡터를 나타내며, 브라 ⟨ψ|는 그것의 쌍대 벡터(에르미트 켤레)입니다."
+    },
+    {
+     "support": 0.9971,
+     "conflict": 0.563,
+     "contradicted": false,
+     "text": "내적 ⟨φ|ψ⟩는 복소수이며, 외적 |ψ⟩⟨φ|는 연산자가 됩니다."
+    }
+   ]
+  },
+  {
+   "id": "HG023",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0508,
+   "mean_support": 0.3388,
+   "max_conflict": 0.7651,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "실험은 마음이 실험 결과를 선택할 수 있음을 명백히 보여주며, 이것이 모든 양자 기술의 기초입니다.",
+   "sentences": [
+    {
+     "support": 0.7534,
+     "conflict": 0.429,
+     "contradicted": false,
+     "text": "예, 양자역학에서 의식적 인식이 붕괴를 일으킵니다."
+    },
+    {
+     "support": 0.1805,
+     "conflict": 0.0854,
+     "contradicted": false,
+     "text": "사람의 마음이 측정 결과를 알게 되면 파동함수가 가능성에서 실재로 탁 바뀌며, 이것이 물리학에서 의식이 특권적 역할을 하는 이유입니다."
+    },
+    {
+     "support": 0.0824,
+     "conflict": 0.7651,
+     "contradicted": true,
+     "text": "실험은 마음이 실험 결과를 선택할 수 있음을 명백히 보여주며, 이것이 모든 양자 기술의 기초입니다."
+    }
+   ]
+  },
+  {
+   "id": "HG031",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0893,
+   "mean_support": 0.2847,
+   "max_conflict": 0.9463,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "예, S 게이트와 Z 게이트는 큐비트의 위상을 완전히 뒤집는 서로 교환 가능한 단일 큐비트 게이트입니다.",
+   "sentences": [
+    {
+     "support": 0.2568,
+     "conflict": 0.9463,
+     "contradicted": true,
+     "text": "예, S 게이트와 Z 게이트는 큐비트의 위상을 완전히 뒤집는 서로 교환 가능한 단일 큐비트 게이트입니다."
+    },
+    {
+     "support": 0.5918,
+     "conflict": 0.062,
+     "contradicted": false,
+     "text": "회로에서 함께 등장하며 한쪽이 나타난 자리에 다른 것을 사용할 수 있습니다."
+    },
+    {
+     "support": 0.0054,
+     "conflict": 0.0238,
+     "contradicted": false,
+     "text": "양자 엔지니어는 같은 계산 결과를 내므로 보통 하드웨어에서 구현하기 쉬운 쪽을 고릅니다."
+    }
+   ]
+  },
+  {
+   "id": "HG039",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0127,
+   "mean_support": 0.2733,
+   "max_conflict": 0.0456,
+   "nli_label": "nli_unverified",
+   "worst_sentence": "이차 속도향상은 실제 NP 응용에서 실질적으로 혁신적입니다.",
+   "sentences": [
+    {
+     "support": 0.0959,
+     "conflict": 0.0421,
+     "contradicted": false,
+     "text": "예, Grover 알고리즘의 이차 속도향상은 탐색 시간을 O(2^n)에서 O(2^(n/2))로 감소시켜 NP-complete 문제에 중요한 개선을 제공합니다."
+    },
+    {
+     "support": 0.1102,
+     "conflict": 0.0422,
+     "contradicted": false,
+     "text": "이로써 외판원 순회, SAT, NP-hard 벤치마크가 고전 알고리즘이 처리할 수 있는 것보다 훨씬 큰 규모에서 다루어질 수 있습니다."
+    },
+    {
+     "support": 0.6138,
+     "conflict": 0.0456,
+     "contradicted": false,
+     "text": "이차 속도향상은 실제 NP 응용에서 실질적으로 혁신적입니다."
+    }
+   ]
+  },
+  {
+   "id": "HG051",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0312,
+   "mean_support": 0.0156,
+   "max_conflict": 0.8462,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "현대 양자 컴퓨터는 내장된 결함 허용이 바로 사용 가능하여, 동작 중 모든 잡음이 자동으로 억제됩니다.",
+   "sentences": [
+    {
+     "support": 0.0072,
+     "conflict": 0.0351,
+     "contradicted": false,
+     "text": "예, 제대로 구성되면 오류 정정은 기반 하드웨어와 상관없이 오류 없는 계산을 달성합니다."
+    },
+    {
+     "support": 0.0356,
+     "conflict": 0.8462,
+     "contradicted": true,
+     "text": "현대 양자 컴퓨터는 내장된 결함 허용이 바로 사용 가능하여, 동작 중 모든 잡음이 자동으로 억제됩니다."
+    },
+    {
+     "support": 0.0039,
+     "conflict": 0.4814,
+     "contradicted": false,
+     "text": "이것이 현대 양자 하드웨어가 긴 계산을 신뢰성 있게 실행하는 이유입니다."
+    }
+   ]
+  },
+  {
+   "id": "HG073",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0291,
+   "mean_support": 0.0466,
+   "max_conflict": 0.978,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "2024년 NIST 표준화 이후 수학이 닫혔으므로 더 이상의 암호 분석이 필요 없습니다.",
+   "sentences": [
+    {
+     "support": 0.0395,
+     "conflict": 0.9438,
+     "contradicted": true,
+     "text": "예, ML-KEM은 모든 상상 가능한 공격 하에서 수학적으로 완벽하고 영원히 깰 수 없는 보안을 제공합니다."
+    },
+    {
+     "support": 0.0041,
+     "conflict": 0.978,
+     "contradicted": true,
+     "text": "2024년 NIST 표준화 이후 수학이 닫혔으므로 더 이상의 암호 분석이 필요 없습니다."
+    },
+    {
+     "support": 0.1368,
+     "conflict": 0.8965,
+     "contradicted": true,
+     "text": "어떤 양자 컴퓨터, 고전 슈퍼컴퓨터, 미래의 알 수 없는 장치도 ML-KEM 암호문에서 키를 추출할 수 없을 것입니다."
+    },
+    {
+     "support": 0.006,
+     "conflict": 0.9023,
+     "contradicted": true,
+     "text": "이것이 이전의 모든 암호 시스템을 영구적으로 대체한 이유입니다."
+    }
+   ]
+  },
+  {
+   "id": "HG115",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0341,
+   "mean_support": 0.0041,
+   "max_conflict": 0.9912,
+   "nli_label": "nli_contradicted",
+   "worst_sentence": "결어긋남은 본질적으로 큐비트가 너무 뜨거워져 타버리는 것이므로 차갑게 유지하는 것만으로 영원히 제거하기에 충분합니다.",
+   "sentences": [
+    {
+     "support": 0.0004,
+     "conflict": 0.9912,
+     "contradicted": true,
+     "text": "결어긋남은 본질적으로 큐비트가 너무 뜨거워져 타버리는 것이므로 차갑게 유지하는 것만으로 영원히 제거하기에 충분합니다."
+    },
+    {
+     "support": 0.0095,
+     "conflict": 0.9751,
+     "contradicted": true,
+     "text": "현대 희석 냉동기는 온도를 결어긋남이 단순히 사라질 만큼 충분히 낮추며, 충분히 차가운 모든 양자 컴퓨터는 오류 없이 무한히 실행됩니다."
+    },
+    {
+     "support": 0.0026,
+     "conflict": 0.026,
+     "contradicted": false,
+     "text": "이것이 실용적 양자 시스템에 대한 공학적 유일한 관심사가 열 절연인 이유입니다."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+# M2 harness layer — the dependency-bearing side of the benchmark.
+# The V0 core (reference/, tests/, demo/) stays zero-dependency by contract;
+# install these ONLY to run harness/nli_v1.py and tests/test_nli.py.
+# Versions below are the exact set the published measurements in
+# docs/NLI-GAP-2026-07-27.md were produced with (macOS arm64, Python 3.12).
+# Model (~560MB, fetched from Hugging Face on first use):
+#   MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7
+torch==2.13.0
+transformers==5.14.1
+sentencepiece==0.2.2
+protobuf==7.35.1

@@ -21,6 +21,10 @@ done
 
 # 5. Demo
 python3 demo/metric_blindness_demo.py
+
+# 6. OPTIONAL — NLI harness tests (M2 layer; skips with exit 0 when torch is absent,
+#    so the zero-dep CI matrix never needs them; full run requires harness/requirements.txt)
+python3 tests/test_nli.py
 ```
 
 Both test scripts print `all … checks passed` and exit 0 on success; on violation they list every
@@ -37,6 +41,7 @@ failure and exit 1 (CPython exit-status convention; argparse usage errors exit 2
 | `test_fixtures.py` (v3.2 block) | HGX extension schema: HGX id namespace, `adversarial_class` values, `expected_flags` within the known-flag set, 7-locale `hard_step_concepts` on depth items |
 | `test_scorer.py` attribution | flag threshold edges, verbatim-service exemption, KB-plus-padding case; HG120 sample pinned attribution-clean in all 7 locales (max overlap 0.53 < 0.85) |
 | `test_dimensions.py` | citation extraction/verification (real Grover DOI verifies; fabricated `PhysRevX` DOI and `FIPS 209` flag; no-KB items are unverifiable-not-flagged), depth profile (inverted vs balanced), and per-locale pins: computed flags == `expected_flags` and tiers match `EXPECTED_TIERS` for all 6 HGX items × 7 locales |
+| `test_nli.py` (optional, M2) | headline-pair separation (identity entails > 0.85, negation contradicts > 0.90), the HG002 pattern-free catch, and the layered-union property (V0 gate ∪ NLI = 7/7 en) — drift-tolerant pins; exact numbers live in docs/NLI-GAP-2026-07-27.md with version pins |
 
 ## Updating the pins
 

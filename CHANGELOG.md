@@ -2,6 +2,17 @@
 
 All notable changes to this repository. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions track `CITATION.cff`.
 
+## [0.4.0] — 2026-07-27 · NLI backend: the gap becomes a number
+
+### Added
+- **`harness/nli_v1.py`** — the M2 NLI verification backend, working and measured: multilingual NLI cross-encoder (`MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7`, ~560MB), SummaC-style sentence-by-sentence grounding (whole-document NLI was measured to fail silently: HG002's FTL answer rated entailed 0.88, a correct bra-ket answer contradicted 0.72), batched inference, per-run JSON artifacts in `harness/runs/`. Optional deps pinned in `harness/requirements.txt`; the zero-dependency core contract is untouched.
+- **`docs/NLI-GAP-2026-07-27.md`** — the published lexical-vs-entailment gap: headline pair (BoW cosine 0.87 vs NLI contradiction 0.989); per-locale pattern-free misconception catches (4–6 of 7) vs false alarms on faithful answers (1–3 of 4); the layering result (V0 gate ∪ NLI = 7/7 in every locale — neither alone suffices); measured residual limits (notation-dense false alarms, max-aggregation brittleness on multi-sentence KB, per-locale variance, latency).
+- **`tests/test_nli.py`** — skips cleanly (exit 0) without torch so the zero-dep CI matrix is unaffected; with the harness venv it locks the headline pair, the HG002 catch, and the layered-union property with drift-tolerant pins.
+- **Production shadow integration (QuantumNative)** — backend `app/services/hg_nli_shadow.py` (env-gated, lazy, optional deps, never writes the tier; additive `nli_shadow` response field on `/api/v1/knowledge/validate`; 43-test suite green) and EDU-web BFF fire-and-forget forwarder (`hgNliShadowForward.ts`, no-op unless configured; 32-test suite green). Deployed iOS/macOS clients are untouched by construction: they compute the guard on-device and never call the backend guard endpoint (verified).
+
+### Honest accounting
+- The NLI dimension is a **shadow observer, not a gate**: it misses complexity-class misconceptions the pattern gate catches (HG039 conflict 0.03), false-alarms on formula-dense correct answers (HG005/HG006), and zero-shot max-aggregation misfires on multi-sentence KB (the HGX control triggers it). Promotion to a gate requires calibrated aggregation (M2 remainder) and, for the on-device verdict users see, an iOS/macOS release — both deliberate future decisions.
+
 ## [0.3.0] — 2026-07-27 · Provenance & exposition dimensions
 
 Motivated by two verified 2026 primary sources: the First Proof second batch (Abouzaid, Srivastava, Ward & Williams, arXiv:2606.18119 — uncited line-by-line reuse "would have been flagged for plagiarism"; hallucinated references; "glossing over the most difficult steps") and Terence Tao's ICM 2026 public lecture (proof indigestion, exposition dwelling on trivialities, Goodhart warning, "AI evaluation tools may serve as helpful filters … but cannot substitute for community acceptance"). Correctness is one axis; these failures are orthogonal to it.
