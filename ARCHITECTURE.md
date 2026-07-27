@@ -21,9 +21,10 @@ hallucinationguard/
 ├── reference/dimensions_v1.py         # separate-dimension report: correctness · attribution ·
 │                                      #   citation integrity · exposition depth (stdlib only)
 ├── harness/                           # M2 dependency-bearing layer (torch+transformers, OPTIONAL):
-│   ├── nli_v1.py                      #   multilingual NLI checker beside the V0 baseline —
-│   ├── requirements.txt               #   the measured lexical-vs-entailment gap
-│   └── runs/*.json                    #   (docs/NLI-GAP-2026-07-27.md); core stays zero-dep
+│   ├── nli_v1.py                      #   multilingual NLI checker beside the V0 baseline + the V2
+│   ├── requirements.txt               #   gate (nli_gate(): bidirectional confirmation, low-confidence
+│   └── runs/*.json                    #   -only, GATE_LOCALES {en,es,fr} — 0 measured false blocks;
+│                                      #   docs/NLI-GAP-2026-07-27.md §6); core stays zero-dep
 ├── demo/metric_blindness_demo.py      # 5-second reproduction of the core finding
 ├── tests/
 │   ├── test_fixtures.py               # schema + certainty gates + parity/orthography gates (both fixtures)
