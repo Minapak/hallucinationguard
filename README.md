@@ -29,7 +29,9 @@ This is the public skeleton — the project is being extracted from a commercial
 |---|---|
 | [`fixtures/samples/hg120_sample_20.json`](fixtures/samples/hg120_sample_20.json) | 20 of 120 benchmark items — all 16 categories, 3 of 4 ground-truth classes, 7 locales per item (280 multilingual fields in the sample), forbidden-claim misconception patterns localized to all 7 locales (schema v3.1) |
 | [`fixtures/kb-examples/`](fixtures/kb-examples/) | 12 verified knowledge-base concepts — each with certainty grade, primary-source citation (DOIs), and verifier record. Korean terminology is aligned with the Korean Physical Society (KPS) 2020 glossary; time-sensitive status claims are explicitly date-qualified |
-| [`reference/score_v0.py`](reference/score_v0.py) | The production baseline scorer (tokenizer V0.1 with CJK character bigrams, one-sided overlap, threshold 0.30, four-tier classification, locale-aware forbidden-claim gate) — zero dependencies, stdlib only |
+| [`reference/score_v0.py`](reference/score_v0.py) | The production baseline scorer (tokenizer V0.1 with CJK character bigrams, one-sided overlap, threshold 0.30, four-tier classification, locale-aware forbidden-claim gate, attribution flag) — zero dependencies, stdlib only |
+| [`reference/dimensions_v1.py`](reference/dimensions_v1.py) | Separate-dimension report: correctness · attribution · citation integrity · exposition depth — zero dependencies; M2 NLI/judge backend slots in behind `computed_flags()` |
+| [`fixtures/samples/hgx_provenance_6.json`](fixtures/samples/hgx_provenance_6.json) | 6 synthetic adversarial extension items (schema v3.2, 7 locales): uncited near-verbatim, hallucinated citation, depth inversion + control — not part of HG120 |
 | [`demo/metric_blindness_demo.py`](demo/metric_blindness_demo.py) | Reproduces the benchmark's core finding on your terminal in ~5 seconds |
 | [`tests/`](tests/) | Fixture schema + certainty gates, scorer unit tests, and a pinned per-locale regression matrix — tier or gate drift fails CI instead of passing silently (how to run: [docs/TEST_GUIDE.md](docs/TEST_GUIDE.md)) |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | Repo layout, scorer data flow, and the four design invariants |
@@ -118,6 +120,32 @@ HallucinationGuard is designed to complement, not duplicate, existing efforts:
 - **Med-HALT** (Pal et al., 2023) — precedent for a domain-specific hallucination benchmark (medicine).
 
 **What is distinct here:** an installable (`pip install hallucinationguard-bench`), Apache-2.0 verification tool for quantum-education LLM output — 7 languages (EN, KO, JA, ZH-Hans, DE, FR, ES), every claim traced to primary literature, results published on Metriq. Existing work asks *"how much does this model know?"*; this asks *"is this particular sentence something a learner can trust?"*
+
+### 2026 evidence that checking, not generating, is the bottleneck
+
+Two independent 2026 sources make the case this benchmark is built on:
+
+- **First Proof, second batch** ([Abouzaid, Srivastava, Ward & Williams, arXiv:2606.18119](https://arxiv.org/abs/2606.18119)) — ten unpublished research problems, four AI harnesses under controlled conditions, blind refereeing at Harvard CMSA. Seven of ten were solved at publication level, yet the organizers' hardest findings were about *checking*: solutions reusing prior work "even line by line … without citing the paper anywhere — if a human had submitted such a solution it would have been flagged for plagiarism"; a system that "hallucinates that a key result exists in a previous paper" and then "trivially deduces the desired theorem" from it; answers handling "routine parts of an argument in meticulous detail while glossing over the most difficult steps."
+- **Terence Tao, ICM 2026 public lecture** ([slides](https://teorth.github.io/tao-web/slides/age-of-ai-icm-2026.pdf)) — conditional on AI doing a "reasonable fraction" of research-level tasks, the pipeline bottleneck moves to verification, exposition, digestion, and canonicalization ("proof indigestion": "we will transition from an era of proof scarcity to an era of proof abundance"). Two lines matter directly here: "AI evaluation tools may serve as helpful filters … but such tools cannot substitute for community acceptance completely" — which is exactly this guard's production role (filter, not substitute) — and the Goodhart warning that "all metrics, when excessively optimized for, are at risk," which applies to this repo's own thresholds (0.30 overlap, 0.60 claim recall, 0.85 attribution) as much as to anyone else's. The [Leiden Declaration](https://leidendeclaration.ai) (June 2026) supplies the disclosure and attribution norms the provenance dimension encodes.
+
+Tao closes by asking whether a proof verified correct but understood by no one counts as knowledge. In education the answer is concrete: **an explanation a learner cannot follow has failed even when the physics is right** — which is why correctness is only one of the dimensions below.
+
+## Beyond correctness: provenance & exposition dimensions (v3.2)
+
+[`reference/dimensions_v1.py`](reference/dimensions_v1.py) reports four dimensions side by side — never blended into one number (HELM's multi-metric rationale) — and [`fixtures/samples/hgx_provenance_6.json`](fixtures/samples/hgx_provenance_6.json) ships six synthetic adversarial items (HGX01–06, all 7 locales) that exercise them:
+
+| Failure class | The V0 correctness metric says | The dimension layer says |
+|---|---|---|
+| Uncited near-verbatim KB reproduction | overlap 1.00 — its *best* non-verbatim score | `attributionRequired` — the lexical metric's second blind spot, mirror image of the first: it punishes honest paraphrase *and rewards uncited copying* |
+| Hallucinated citation (fake DOI / FIPS number) | validated or low-confidence on vocabulary alone | `hallucinatedCitation` — structured identifiers verified against the KB entry's reference corpus |
+| Depth inversion (verbose trivia, hand-waved hard step) | often indistinguishable from a good answer | `depthInverted` — annotated hard-step coverage vs development share (crude proxy; the M2 NLI/judge backend replaces it behind the same interface) |
+
+```bash
+# multi-dimension report + CI-enforced flag agreement, any locale
+python3 reference/dimensions_v1.py fixtures/samples/hgx_provenance_6.json --locale ko --check-flags
+```
+
+Every detector is a documented lexical floor with stated limits (see [docs/SCHEMA.md](docs/SCHEMA.md)) — prose citations pass the citation check unseen, and the depth thresholds are hand-set and Goodhart-prone. Measuring where these floors fail is the same job this benchmark already does for overlap scoring.
 
 ## License
 

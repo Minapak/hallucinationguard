@@ -2,6 +2,21 @@
 
 All notable changes to this repository. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions track `CITATION.cff`.
 
+## [0.3.0] — 2026-07-27 · Provenance & exposition dimensions
+
+Motivated by two verified 2026 primary sources: the First Proof second batch (Abouzaid, Srivastava, Ward & Williams, arXiv:2606.18119 — uncited line-by-line reuse "would have been flagged for plagiarism"; hallucinated references; "glossing over the most difficult steps") and Terence Tao's ICM 2026 public lecture (proof indigestion, exposition dwelling on trivialities, Goodhart warning, "AI evaluation tools may serve as helpful filters … but cannot substitute for community acceptance"). Correctness is one axis; these failures are orthogonal to it.
+
+### Added
+- **`attributionRequired` flag** in `reference/score_v0.py` (provenance axis, tier unaffected): a generated answer covering ≥ 0.85 of the KB entry's tokens without being served as the KB answer needs attribution — the lexical metric's second blind spot, mirror of the first (it punishes honest paraphrase *and rewards uncited copying*). No HG120 sample item fires it (max overlap 0.53); pinned per locale.
+- **`reference/dimensions_v1.py`**: separate-dimension report (HELM rationale — never blended): correctness · attribution · citation integrity (DOI/arXiv/FIPS identifiers verified against the KB reference corpus) · exposition depth (annotated hard-step coverage vs development share). `--check-flags` exits non-zero on any computed-vs-expected flag mismatch. All detectors are documented lexical floors; the M2 NLI/judge backend replaces the depth proxy behind the same `computed_flags()` interface.
+- **`fixtures/samples/hgx_provenance_6.json`** (schema `hg_benchmark_item_v3.2`, 6 synthetic adversarial items × 7 locales, explicitly not part of HG120 and not counted in the 1,680 verified fields): HGX01/02 uncited near-verbatim (built from KB text, overlap 1.00, attribution must fire), HGX03/04 hallucinated citations (fabricated `doi:10.1103/PhysRevX.99.123456`, nonexistent `FIPS 209`), HGX05 depth-inverted vs HGX06 balanced control on the same prompt. New v3.2 fields: `adversarial_class`, `expected_flags`, `hard_step_concepts`.
+- Tests: attribution unit tests + HG120 attribution pins (empty set, all locales); `tests/test_dimensions.py` (citation extraction/verification, depth profile, per-locale flag agreement and tier pins for all 6 HGX items); fixture-schema checks for v3.2 fields. CI runs the dimension flag check for all 7 locales.
+- Docs: README "2026 evidence" + dimensions section with the Tao/First Proof/Leiden citations and the education reading of Tao's closing question (an explanation a learner cannot follow has failed even when the physics is right); SCHEMA v3.2 section incl. the Goodhart caveat applied to our own detectors; ROADMAP M1/M2 updated.
+
+### Trade-offs, stated plainly
+- The extension items were tuned so the detectors fire on them — Goodhart's law therefore applies to these flags exactly as documented; they are floors, not definitions of the failure classes.
+- The citation checker sees only structured identifiers; prose citations pass unseen. The depth thresholds (coverage ≥ 0.5, share < 0.20) are hand-set on one item pair.
+
 ## [0.2.0] — 2026-07-19 · Hardening pass
 
 Full audit → adversarial re-verification → fix of all 27 confirmed findings (10 findings refuted and left unchanged, on record). Evidence and primary sources for every decision: [docs/AUDIT-2026-07-19.md](docs/AUDIT-2026-07-19.md).

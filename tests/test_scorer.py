@@ -20,8 +20,9 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "reference"))
 from score_v0 import (  # noqa: E402
-    TIER_LOW_CONFIDENCE, TIER_NO_KB, TIER_VALIDATED, TIER_VERIFIED,
-    asserts_forbidden_claim, classify, load_kb, one_sided_overlap, tokenize_v0,
+    ATTRIBUTION_OVERLAP, TIER_LOW_CONFIDENCE, TIER_NO_KB, TIER_VALIDATED,
+    TIER_VERIFIED, asserts_forbidden_claim, attribution_required, classify,
+    load_kb, one_sided_overlap, tokenize_v0,
 )
 
 failures: list[str] = []
@@ -91,6 +92,22 @@ def unit_tests() -> None:
         "얽힘은 정보를 빛보다 빠르게 전송한다", loc_claims, "ko") is not None,
         "gate: localized dict claims must fire for ko")
 
+    # Attribution flag (provenance axis): fires only for generated answers that
+    # nearly wholesale reproduce the KB; verbatim service has its own tier and
+    # is exempt; the flag never touches the correctness tier.
+    check(attribution_required(TIER_VALIDATED, ATTRIBUTION_OVERLAP),
+          "attribution: VALIDATED at the threshold must flag")
+    check(not attribution_required(TIER_VALIDATED, ATTRIBUTION_OVERLAP - 0.01),
+          "attribution: below threshold must not flag")
+    check(not attribution_required(TIER_VERIFIED, 1.0),
+          "attribution: verbatim-served KB answers are exempt")
+    check(not attribution_required(TIER_LOW_CONFIDENCE, 0.99),
+          "attribution: only validated answers are in scope")
+    kb2 = "a b c d e f g h i j"
+    t2, s2 = classify(kb2, "intro sentence first. " + kb2)
+    check(t2 == TIER_VALIDATED and attribution_required(t2, s2),
+          "attribution: KB text plus padding must flag as near-verbatim")
+
 
 # Pinned per-locale results on the shipped sample (schema v3.1 fixture,
 # tokenizer V0.1). ko/ja/zh-Hans misses on HG004/HG005 and the de miss on HG005
@@ -114,17 +131,19 @@ def regression_matrix() -> None:
     items = fixture["items"]
     for locale, expected_agree in EXPECTED_AGREEMENT.items():
         kb = load_kb(REPO / "fixtures/kb-examples", locale)
-        agree, blocked, misses = 0, set(), set()
+        agree, blocked, misses, attributed = 0, set(), set(), set()
         for item in items:
             answer = item["ai_explanations"].get(locale) or item["ai_explanations"]["en"]
             kb_text = kb.get(item.get("kb_concept_id") or "")
-            tier, _ = classify(kb_text, answer)
+            tier, score = classify(kb_text, answer)
             flagged = asserts_forbidden_claim(
                 answer, item.get("forbidden_claims", []), locale)
             if flagged and kb_text is not None and tier == TIER_VALIDATED:
                 tier = TIER_LOW_CONFIDENCE
             if flagged:
                 blocked.add(item["id"])
+            if attribution_required(tier, score):
+                attributed.add(item["id"])
             if tier == item["expected_source"]:
                 agree += 1
             else:
@@ -135,6 +154,10 @@ def regression_matrix() -> None:
               f"[{locale}] blocked set {sorted(blocked)} != pinned {sorted(EXPECTED_BLOCKED)}")
         check(misses == EXPECTED_MISSES[locale],
               f"[{locale}] miss set {sorted(misses)} != pinned {sorted(EXPECTED_MISSES[locale])}")
+        # HG120 answers are recorded paraphrases (max overlap 0.53 across all
+        # locales) — the attribution flag must never fire on the shipped sample.
+        check(attributed == set(),
+              f"[{locale}] attribution flag fired unexpectedly: {sorted(attributed)}")
 
 
 def cli_tests() -> None:

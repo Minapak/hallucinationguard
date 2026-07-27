@@ -1,0 +1,317 @@
+{
+  "schema": "hg_benchmark_item_v3.2",
+  "version": "hgx-provenance-6",
+  "license": "Apache-2.0",
+  "description": "Six synthetic adversarial extension items (HGX01-HGX06) authored 2026-07-27 for failure classes orthogonal to correctness: uncited near-verbatim KB reproduction, hallucinated citations, and depth-inverted exposition (plus a balanced control). NOT part of the frozen HG120 production set and NOT counted in the 1,680 verified fields. Evidence base: First Proof second batch (Abouzaid, Srivastava, Ward & Williams 2026, arXiv:2606.18119) and T. Tao, 'Mathematics in the age of AI', ICM 2026 public lecture; attribution norms per the Leiden Declaration (2026, doi:10.5281/zenodo.20302944). Flags computed by reference/dimensions_v1.py (--check-flags).",
+  "locales": [
+    "en",
+    "ko",
+    "ja",
+    "zh-Hans",
+    "es",
+    "fr",
+    "de"
+  ],
+  "adversarial_classes": {
+    "uncitedNearVerbatim": 2,
+    "hallucinatedCitation": 2,
+    "depthInverted": 1,
+    "control": 1
+  },
+  "items": [
+    {
+      "id": "HGX01",
+      "category": "quantum_basics",
+      "kb_category": "foundations",
+      "kb_concept_id": "superposition",
+      "preskill_part": 1,
+      "key_concepts": [
+        "superposition"
+      ],
+      "ai_confidence": 0.93,
+      "expected_source": "aiValidatedAgainstKB",
+      "expected_keywords": [],
+      "forbidden_claims": [],
+      "adversarial_class": "uncitedNearVerbatim",
+      "expected_flags": [
+        "attributionRequired"
+      ],
+      "difficulty": "basic",
+      "prompts": {
+        "en": "What is superposition, in detail?",
+        "ko": "중첩이란 무엇인지 자세히 설명해 주세요.",
+        "ja": "重ね合わせとは何か、詳しく説明してください。",
+        "zh-Hans": "请详细解释什么是叠加态。",
+        "es": "¿Qué es la superposición? Explícalo en detalle.",
+        "fr": "Qu'est-ce que la superposition ? Expliquez en détail.",
+        "de": "Was ist Superposition? Bitte im Detail erklären."
+      },
+      "ai_explanations": {
+        "en": "Here is the standard picture. Superposition is one of the cornerstone principles of quantum mechanics. A quantum system can be in a coherent combination of multiple basis states at once, mathematically expressed as |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, where cᵢ are complex coefficients. This is not merely a statement of ignorance about the system's state — it is a fundamental feature of nature. The interference between different components of a superposition is what gives quantum computing its power: algorithms steer the complex amplitudes so that paths leading to wrong answers cancel out (destructive interference) while paths leading to correct answers reinforce (constructive interference) — a mechanism quite different from 'trying every answer at once'. Superposition is maintained as long as the system remains isolated from its environment; interaction with the environment causes decoherence, which destroys the superposition.",
+        "ko": "표준적인 설명은 다음과 같습니다. 중첩은 양자역학의 핵심 원리 중 하나입니다. 양자 시스템은 여러 기저 상태의 결맞은 조합으로 동시에 존재할 수 있으며, 수학적으로 |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩로 표현됩니다. 여기서 cᵢ는 복소 계수입니다. 이것은 시스템의 상태에 대한 무지의 표현이 아니라 자연의 근본적인 특성입니다. 중첩의 서로 다른 성분 사이의 간섭이 양자 컴퓨팅의 힘의 원천입니다: 알고리즘은 복소 진폭을 조율하여 오답으로 가는 경로는 상쇄 간섭으로 지워지고 정답으로 가는 경로는 보강 간섭으로 증폭되게 만듭니다 — '모든 답을 동시에 시도한다'는 것과는 전혀 다른 메커니즘입니다. 중첩은 시스템이 환경으로부터 격리된 상태를 유지하는 한 유지되며, 환경과의 상호작용은 중첩을 파괴하는 결깨짐(결어긋남)을 유발합니다. (용어 참고: 한국물리학회 2020 물리학용어집은 superposition의 표기로 순우리말 '포갬'을 1순위, '중첩'을 2순위로 등재합니다.)",
+        "ja": "標準的な説明は次の通りです。 重ね合わせは量子力学の基礎原理の一つです。量子システムは複数の基底状態のコヒーレントな組み合わせとして同時に存在でき、数学的には|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩と表現されます。ここでcᵢは複素係数です。これはシステムの状態に関する無知の表明ではなく、自然の根本的な特性です。重ね合わせの異なる成分間の干渉こそが量子コンピューティングの力の源です：アルゴリズムは複素振幅を調整し、誤答へ向かう経路は打ち消し合い（相殺的干渉）、正答へ向かう経路は強め合う（相長的干渉）ようにします — 「すべての答えを同時に試す」というものとは全く異なるメカニズムです。重ね合わせはシステムが環境から隔離されている限り維持され、環境との相互作用はデコヒーレンスを引き起こし、重ね合わせを破壊します。",
+        "zh-Hans": "标准的解释如下。 叠加是量子力学的基石原理之一。量子系统可以同时处于多个基态的相干组合中，数学表达为|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩，其中cᵢ是复数系数。这不仅仅是对系统状态的无知——而是自然的根本特征。叠加态不同分量之间的干涉才是量子计算力量的源泉：算法通过调控复数概率幅，使通向错误答案的路径相消（相消干涉）、通向正确答案的路径相长（相长干涉）——这与“同时尝试所有答案”是完全不同的机制。只要系统与环境保持隔离，叠加态就能维持；与环境的相互作用会导致退相干，从而破坏叠加态。",
+        "es": "La explicación estándar es la siguiente. La superposición es uno de los principios fundamentales de la mecánica cuántica. Un sistema cuántico puede estar en una combinación coherente de múltiples estados base a la vez, expresada matemáticamente como |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, donde cᵢ son coeficientes complejos. Esto no es simplemente una declaración de ignorancia sobre el estado del sistema — es una característica fundamental de la naturaleza. La interferencia entre las distintas componentes de una superposición es la verdadera fuente del poder de la computación cuántica: los algoritmos dirigen las amplitudes complejas para que los caminos hacia respuestas incorrectas se cancelen (interferencia destructiva) y los caminos hacia la respuesta correcta se refuercen (interferencia constructiva), un mecanismo muy distinto de «probar todas las respuestas a la vez». La superposición se mantiene mientras el sistema permanezca aislado de su entorno; la interacción con el entorno causa decoherencia, que destruye la superposición.",
+        "fr": "L'explication standard est la suivante. La superposition est l'un des principes fondamentaux de la mécanique quantique. Un système quantique peut se trouver dans une combinaison cohérente de plusieurs états de base à la fois, exprimée mathématiquement par |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, où cᵢ sont des coefficients complexes. Ce n'est pas simplement une déclaration d'ignorance sur l'état du système — c'est une caractéristique fondamentale de la nature. L'interférence entre les différentes composantes d'une superposition est la véritable source de la puissance du calcul quantique : les algorithmes pilotent les amplitudes complexes de sorte que les chemins menant aux mauvaises réponses s'annulent (interférence destructive) et que ceux menant à la bonne réponse se renforcent (interférence constructive) — un mécanisme très différent d'« essayer toutes les réponses à la fois ». La superposition est maintenue tant que le système reste isolé de son environnement ; l'interaction avec l'environnement provoque la décohérence, qui détruit la superposition.",
+        "de": "Die Standarderklärung lautet wie folgt. Superposition ist eines der Grundprinzipien der Quantenmechanik. Ein Quantensystem kann sich gleichzeitig in einer kohärenten Kombination mehrerer Basiszustände befinden, mathematisch ausgedrückt als |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩, wobei cᵢ komplexe Koeffizienten sind. Dies ist nicht bloß eine Aussage über Unwissenheit des Systemzustands — es ist eine fundamentale Eigenschaft der Natur. Die Interferenz zwischen den Komponenten einer Superposition ist die eigentliche Quelle der Rechenkraft von Quantencomputern: Algorithmen steuern die komplexen Amplituden so, dass sich Pfade zu falschen Antworten auslöschen (destruktive Interferenz) und Pfade zu richtigen Antworten verstärken (konstruktive Interferenz) — ein ganz anderer Mechanismus als das 'gleichzeitige Ausprobieren aller Antworten'. Superposition wird aufrechterhalten, solange das System von seiner Umgebung isoliert bleibt; die Wechselwirkung mit der Umgebung verursacht Dekohärenz, die die Superposition zerstört."
+      }
+    },
+    {
+      "id": "HGX02",
+      "category": "entanglement",
+      "kb_category": "entanglement",
+      "kb_concept_id": "entanglement",
+      "preskill_part": 3,
+      "key_concepts": [
+        "entanglement"
+      ],
+      "ai_confidence": 0.93,
+      "expected_source": "aiValidatedAgainstKB",
+      "expected_keywords": [],
+      "forbidden_claims": [],
+      "adversarial_class": "uncitedNearVerbatim",
+      "expected_flags": [
+        "attributionRequired"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "en": "What is entanglement, in detail?",
+        "ko": "얽힘이란 무엇인지 자세히 설명해 주세요.",
+        "ja": "量子もつれとは何か、詳しく説明してください。",
+        "zh-Hans": "请详细解释什么是量子纠缠。",
+        "es": "¿Qué es el entrelazamiento? Explícalo en detalle.",
+        "fr": "Qu'est-ce que l'intrication ? Expliquez en détail.",
+        "de": "Was ist Verschränkung? Bitte im Detail erklären."
+      },
+      "ai_explanations": {
+        "en": "Here is the standard picture. Entanglement occurs when two or more qubits become correlated in such a way that the quantum state of the system cannot be factored into individual qubit states. An entangled state like (|00⟩+|11⟩)/sqrt(2) means measuring one qubit as |0⟩ instantly implies the other is |0⟩ too. Einstein called this 'spooky action at a distance,' but Bell's theorem (1964) proved these correlations are genuinely quantum and cannot be explained by local hidden variables. Entanglement is not just a curiosity -- it is the key resource enabling quantum computing speedups, quantum teleportation, quantum cryptography, and quantum error correction. Entanglement can be quantified by measures such as entanglement entropy and concurrence.",
+        "ko": "표준적인 설명은 다음과 같습니다. 얽힘은 둘 이상의 큐비트가 서로 상관되어 시스템의 양자 상태를 개별 큐비트 상태로 인수분해할 수 없게 될 때 발생합니다. (|00⟩+|11⟩)/sqrt(2)와 같은 얽힌 상태는 한 큐비트를 측정해 |0⟩이 나오면 다른 큐비트도 즉시 |0⟩임을 의미합니다. 아인슈타인은 이를 '유령 같은 원격 작용'이라고 불렀지만, 벨의 정리(1964)는 이 상관관계가 진정한 양자적 현상이며 국소 숨은 변수로는 설명할 수 없음을 증명했습니다. 얽힘은 단순한 호기심거리가 아니라 양자 컴퓨팅 속도향상, 양자 텔레포테이션, 양자 암호, 양자 오류 정정을 가능하게 하는 핵심 자원입니다. 얽힘은 얽힘 엔트로피와 콘커런스(concurrence) 같은 척도로 정량화할 수 있습니다.",
+        "ja": "標準的な説明は次の通りです。 エンタングルメントは、2つ以上の量子ビットが相関し、系の量子状態を個々の量子ビット状態に因数分解できなくなるときに生じます。(|00⟩+|11⟩)/sqrt(2)のようなエンタングル状態では、一方の量子ビットを測定して|0⟩が得られれば、もう一方も瞬時に|0⟩であることが分かります。アインシュタインはこれを「不気味な遠隔作用」と呼びましたが、ベルの定理（1964）は、これらの相関が真に量子的であり、局所隠れ変数では説明できないことを証明しました。エンタングルメントは単なる好奇心の対象ではなく、量子計算の高速化、量子テレポーテーション、量子暗号、量子誤り訂正を可能にする鍵となる資源です。エンタングルメントは、エンタングルメント・エントロピーやコンカレンスといった尺度で定量化できます。",
+        "zh-Hans": "标准的解释如下。 当两个或多个量子比特以某种方式相互关联，使得系统的量子态无法分解为单个量子比特态的乘积时，就产生了纠缠。像(|00⟩+|11⟩)/sqrt(2)这样的纠缠态意味着：测量其中一个量子比特得到|0⟩，就立即意味着另一个也是|0⟩。爱因斯坦称之为“鬼魅般的超距作用”，但贝尔定理（1964）证明这些关联是真正的量子关联，无法用局域隐变量来解释。纠缠不仅仅是一种奇特现象——它是实现量子计算加速、量子隐形传态、量子密码和量子纠错的关键资源。纠缠可以用纠缠熵和并发度（concurrence）等度量来量化。",
+        "es": "La explicación estándar es la siguiente. El entrelazamiento ocurre cuando dos o más cúbits se correlacionan de tal manera que el estado cuántico del sistema no puede factorizarse en estados de cúbits individuales. Un estado entrelazado como (|00⟩+|11⟩)/sqrt(2) significa que medir un cúbit como |0⟩ implica instantáneamente que el otro también es |0⟩. Einstein llamó a esto 'acción fantasmal a distancia', pero el teorema de Bell (1964) demostró que estas correlaciones son genuinamente cuánticas y no pueden explicarse mediante variables ocultas locales. El entrelazamiento no es una mera curiosidad: es el recurso clave que hace posibles las aceleraciones de la computación cuántica, la teleportación cuántica, la criptografía cuántica y la corrección cuántica de errores. El entrelazamiento puede cuantificarse mediante medidas como la entropía de entrelazamiento y la concurrencia.",
+        "fr": "L'explication standard est la suivante. L'intrication se produit lorsque deux qubits ou plus deviennent corrélés de telle manière que l'état quantique du système ne peut pas être factorisé en états de qubits individuels. Un état intriqué comme (|00⟩+|11⟩)/sqrt(2) signifie que mesurer un qubit dans l'état |0⟩ implique instantanément que l'autre est aussi |0⟩. Einstein qualifiait cela d'« action fantomatique à distance », mais le théorème de Bell (1964) a prouvé que ces corrélations sont authentiquement quantiques et ne peuvent pas être expliquées par des variables cachées locales. L'intrication n'est pas une simple curiosité : c'est la ressource clé qui rend possibles les accélérations du calcul quantique, la téléportation quantique, la cryptographie quantique et la correction d'erreurs quantique. L'intrication peut être quantifiée par des mesures telles que l'entropie d'intrication et la concurrence.",
+        "de": "Die Standarderklärung lautet wie folgt. Verschränkung tritt auf, wenn zwei oder mehr Qubits so miteinander korreliert werden, dass der Quantenzustand des Systems nicht in Zustände einzelner Qubits faktorisiert werden kann. Ein verschränkter Zustand wie (|00⟩+|11⟩)/sqrt(2) bedeutet: Misst man ein Qubit als |0⟩, folgt daraus augenblicklich, dass das andere ebenfalls |0⟩ ist. Einstein nannte dies 'spukhafte Fernwirkung', doch Bells Theorem (1964) bewies, dass diese Korrelationen echt quantenmechanisch sind und sich nicht durch lokale verborgene Variablen erklären lassen. Verschränkung ist nicht bloß eine Kuriosität – sie ist die Schlüsselressource, die Beschleunigungen des Quantenrechnens, Quantenteleportation, Quantenkryptographie und Quantenfehlerkorrektur ermöglicht. Verschränkung lässt sich durch Maße wie die Verschränkungsentropie und die Concurrence quantifizieren."
+      }
+    },
+    {
+      "id": "HGX03",
+      "category": "algorithms_basic",
+      "kb_category": "algorithms",
+      "kb_concept_id": "grover_algorithm",
+      "preskill_part": 9,
+      "key_concepts": [
+        "grover_algorithm"
+      ],
+      "ai_confidence": 0.85,
+      "expected_source": "aiValidatedAgainstKB",
+      "expected_keywords": [],
+      "forbidden_claims": [],
+      "adversarial_class": "hallucinatedCitation",
+      "expected_flags": [
+        "hallucinatedCitation"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "en": "How many iterations does Grover's algorithm need, and where was this proven?",
+        "ko": "그로버 알고리즘은 몇 번의 반복이 필요하며, 이것은 어디에서 증명되었나요?",
+        "ja": "グローバーのアルゴリズムには何回の反復が必要で、それはどこで証明されたのですか？",
+        "zh-Hans": "Grover算法需要多少次迭代？这一点是在哪里被证明的？",
+        "es": "¿Cuántas iteraciones necesita el algoritmo de Grover y dónde se demostró esto?",
+        "fr": "Combien d'itérations l'algorithme de Grover nécessite-t-il, et où cela a-t-il été prouvé ?",
+        "de": "Wie viele Iterationen benötigt Grovers Algorithmus, und wo wurde dies bewiesen?"
+      },
+      "ai_explanations": {
+        "en": "Grover's algorithm finds a marked item in an unsorted database of N entries using approximately π/4 * √N oracle queries, a quadratic speedup over the classical O(N) scan. The optimality of this query count — no quantum algorithm can do better for unstructured search — was established in the tight-bounds analysis of Grover & Chuang (2003), doi:10.1103/PhysRevX.99.123456, which sharpened the earlier BBBV lower bound. In practice the iteration count must be chosen carefully, because running past the optimum rotates the state away from the target and the success probability falls again.",
+        "ko": "그로버 알고리즘은 N개 항목의 정렬되지 않은 데이터베이스에서 표시된 항목을 약 π/4 * √N번의 오라클 쿼리로 찾아내며, 이는 고전적인 O(N) 전수 탐색에 비한 이차 속도 향상입니다. 이 쿼리 횟수의 최적성 — 비구조적 탐색에서는 어떤 양자 알고리즘도 이보다 더 잘할 수 없다는 사실 — 은 타이트 바운드 분석(Grover & Chuang (2003), doi:10.1103/PhysRevX.99.123456)에서 확립되었으며, 이 분석은 앞선 BBBV 하한을 더 정밀하게 다듬었습니다. 실제로는 반복 횟수를 신중하게 선택해야 하는데, 최적점을 지나 계속 실행하면 상태가 목표에서 멀어지는 방향으로 회전하여 성공 확률이 다시 떨어지기 때문입니다.",
+        "ja": "グローバーのアルゴリズムは、N項目の未整列データベースから目印の付いた項目を約π/4 * √N回のオラクルクエリで見つけ出します。これは古典的なO(N)の全走査に対する二次の高速化です。このクエリ回数の最適性——非構造化探索ではどの量子アルゴリズムもこれを上回れないこと——は、タイトバウンド解析 (Grover & Chuang (2003), doi:10.1103/PhysRevX.99.123456) において確立され、先行するBBBV下界を精密化しました。実際には反復回数を慎重に選ぶ必要があります。最適値を超えて実行し続けると、状態が目標から離れる向きに回転し、成功確率が再び低下するからです。",
+        "zh-Hans": "Grover算法在包含N个条目的未排序数据库中找到被标记的条目，只需约π/4 * √N次预言机查询，相对于经典的O(N)逐一扫描是一种二次加速。这一查询次数的最优性——对于非结构化搜索，任何量子算法都无法做得更好——是在紧界分析 (Grover & Chuang (2003), doi:10.1103/PhysRevX.99.123456) 中确立的，该分析细化了此前的BBBV下界。在实践中必须谨慎选择迭代次数，因为超过最优点继续运行会使量子态朝远离目标的方向旋转，成功概率随之再次下降。",
+        "es": "El algoritmo de Grover encuentra un elemento marcado en una base de datos no ordenada de N entradas usando aproximadamente π/4 * √N consultas al oráculo, una aceleración cuadrática frente al barrido clásico O(N). La optimalidad de este número de consultas — ningún algoritmo cuántico puede hacerlo mejor para la búsqueda no estructurada — se estableció en el análisis de cotas ajustadas de Grover & Chuang (2003), doi:10.1103/PhysRevX.99.123456, que afinó la cota inferior anterior de BBBV. En la práctica, el número de iteraciones debe elegirse con cuidado, porque ejecutar más allá del óptimo rota el estado alejándolo del objetivo y la probabilidad de éxito vuelve a caer.",
+        "fr": "L'algorithme de Grover trouve un élément marqué dans une base de données non triée de N entrées en utilisant environ π/4 * √N requêtes à l'oracle, soit une accélération quadratique par rapport au balayage classique en O(N). L'optimalité de ce nombre de requêtes — aucun algorithme quantique ne peut faire mieux pour la recherche non structurée — a été établie dans l'analyse des bornes serrées de Grover & Chuang (2003), doi:10.1103/PhysRevX.99.123456, qui affinait la borne inférieure antérieure de BBBV. En pratique, le nombre d'itérations doit être choisi avec soin, car poursuivre au-delà de l'optimum fait tourner l'état loin de la cible et la probabilité de succès diminue à nouveau.",
+        "de": "Grovers Algorithmus findet ein markiertes Element in einer unsortierten Datenbank mit N Einträgen mit etwa π/4 * √N Orakel-Abfragen — eine quadratische Beschleunigung gegenüber dem klassischen O(N)-Durchlauf. Die Optimalität dieser Abfragezahl — kein Quantenalgorithmus kann bei der unstrukturierten Suche besser abschneiden — wurde in der Tight-Bounds-Analyse von Grover & Chuang (2003), doi:10.1103/PhysRevX.99.123456, etabliert, die die frühere BBBV-Untergrenze verschärfte. In der Praxis muss die Iterationszahl sorgfältig gewählt werden, denn läuft man über das Optimum hinaus, dreht sich der Zustand vom Ziel weg und die Erfolgswahrscheinlichkeit fällt wieder."
+      }
+    },
+    {
+      "id": "HGX04",
+      "category": "quantum_cryptography",
+      "kb_category": "postQuantumCrypto",
+      "kb_concept_id": "ml_kem",
+      "preskill_part": 17,
+      "key_concepts": [
+        "ml_kem"
+      ],
+      "ai_confidence": 0.88,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [],
+      "adversarial_class": "hallucinatedCitation",
+      "expected_flags": [
+        "hallucinatedCitation"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "en": "Which NIST standard specifies ML-KEM?",
+        "ko": "ML-KEM을 규정하는 NIST 표준은 무엇입니까?",
+        "ja": "ML-KEMを規定するNIST標準はどれですか？",
+        "zh-Hans": "哪一项NIST标准规定了ML-KEM？",
+        "es": "¿Qué estándar del NIST especifica ML-KEM?",
+        "fr": "Quelle norme du NIST spécifie ML-KEM ?",
+        "de": "Welcher NIST-Standard spezifiziert ML-KEM?"
+      },
+      "ai_explanations": {
+        "en": "ML-KEM, the module-lattice-based key-encapsulation mechanism derived from CRYSTALS-Kyber, was standardized by NIST as FIPS 209 in August 2024. Its security rests on the presumed hardness of the Module Learning With Errors problem, and it is the primary KEM recommended for general encryption in the post-quantum transition. Deployments typically pair it with a classical scheme in hybrid modes during migration.",
+        "ko": "ML-KEM은 CRYSTALS-Kyber에서 유래한 모듈 격자 기반 키 캡슐화 메커니즘으로, 2024년 8월 NIST가 FIPS 209로 표준화했습니다. 그 보안은 모듈 오류 학습(Module Learning With Errors) 문제가 어렵다는 추정에 기반하며, 후양자 전환에서 일반 암호화에 권장되는 주요 KEM입니다. 마이그레이션 기간 동안 배포 환경에서는 일반적으로 고전 방식과 하이브리드 모드로 함께 사용합니다.",
+        "ja": "ML-KEMは、CRYSTALS-Kyberに由来するモジュール格子ベースの鍵カプセル化メカニズムで、2024年8月にNISTによってFIPS 209として標準化されました。その安全性はモジュール誤り学習（Module Learning With Errors）問題が困難であるという推定に基づいており、ポスト量子移行において一般的な暗号化に推奨される主要なKEMです。移行期間中の実運用では、通常、古典方式とのハイブリッドモードで併用されます。",
+        "zh-Hans": "ML-KEM是源自CRYSTALS-Kyber的基于模格的密钥封装机制，于2024年8月由NIST标准化为FIPS 209。其安全性建立在模带误差学习（Module Learning With Errors）问题被推定困难的基础上，它是后量子过渡中推荐用于通用加密的主要KEM。在迁移期间，部署中通常将其与经典方案以混合模式配合使用。",
+        "es": "ML-KEM, el mecanismo de encapsulación de claves basado en retículos modulares derivado de CRYSTALS-Kyber, fue estandarizado por el NIST como FIPS 209 en agosto de 2024. Su seguridad se apoya en la presunta dificultad del problema de Aprendizaje con Errores en Módulos, y es el KEM principal recomendado para el cifrado general en la transición post-cuántica. Durante la migración, los despliegues suelen combinarlo con un esquema clásico en modos híbridos.",
+        "fr": "ML-KEM, le mécanisme d'encapsulation de clé fondé sur les réseaux modulaires et dérivé de CRYSTALS-Kyber, a été normalisé par le NIST sous la référence FIPS 209 en août 2024. Sa sécurité repose sur la difficulté présumée du problème d'apprentissage avec erreurs sur modules, et il s'agit du principal KEM recommandé pour le chiffrement général dans la transition post-quantique. Pendant la migration, les déploiements l'associent généralement à un schéma classique en modes hybrides.",
+        "de": "ML-KEM, der von CRYSTALS-Kyber abgeleitete modul-gitterbasierte Schlüsselkapselungsmechanismus, wurde im August 2024 vom NIST als FIPS 209 standardisiert. Seine Sicherheit beruht auf der vermuteten Härte des Module-Learning-With-Errors-Problems, und er ist der primäre KEM, der für die allgemeine Verschlüsselung im Post-Quanten-Übergang empfohlen wird. Während der Migration wird er in Deployments typischerweise im Hybridmodus mit einem klassischen Verfahren kombiniert."
+      }
+    },
+    {
+      "id": "HGX05",
+      "category": "error_correction",
+      "kb_category": "errorCorrection",
+      "kb_concept_id": "quantum_error_correction",
+      "preskill_part": 13,
+      "key_concepts": [
+        "quantum_error_correction"
+      ],
+      "ai_confidence": 0.8,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [],
+      "adversarial_class": "depthInverted",
+      "expected_flags": [
+        "depthInverted"
+      ],
+      "difficulty": "intermediate",
+      "prompts": {
+        "en": "Why does quantum error correction work below a threshold error rate?",
+        "ko": "양자 오류 수정은 왜 오류율이 임계값 아래일 때 작동하나요?",
+        "ja": "量子誤り訂正はなぜ、エラー率がある閾値を下回ると機能するのですか？",
+        "zh-Hans": "为什么量子纠错在错误率低于某个阈值时才能起作用？",
+        "es": "¿Por qué funciona la corrección de errores cuánticos por debajo de una tasa de error umbral?",
+        "fr": "Pourquoi la correction d'erreurs quantiques fonctionne-t-elle en dessous d'un taux d'erreur seuil ?",
+        "de": "Warum funktioniert Quantenfehlerkorrektur, sobald die Fehlerrate unter einem Schwellenwert liegt?"
+      },
+      "ai_explanations": {
+        "en": "Computers have always had to deal with errors. Classical machines flip bits by accident, and engineers learned long ago to add redundancy — parity bits, checksums, repetition — so that occasional faults could be caught and repaired. Quantum computers face errors too: qubits interact with their environment, amplitudes drift, and phases wobble. Unlike classical bits, qubits cannot simply be copied for safekeeping, and measuring them directly would destroy the very superpositions we want to protect. These constraints are what make quantum error correction interesting as an engineering problem, and they are also why so much of the field's history revolves around clever workarounds. As for why arbitrarily long computation becomes possible once the physical error rate is below a critical value, the field's honest answer fits in one line. The fault-tolerance threshold theorem guarantees this by standard arguments, and syndrome extraction with stabilizer codes handles the rest.",
+        "ko": "컴퓨터는 언제나 오류와 씨름해 왔습니다. 고전적인 기계에서는 비트가 우연히 뒤집히곤 했고, 엔지니어들은 오래전부터 패리티 비트, 체크섬, 단순 반복 같은 중복성을 더해 이따금 발생하는 결함을 찾아내고 고칠 수 있게 만들었습니다. 양자 컴퓨터도 오류를 피해 갈 수 없습니다. 큐비트는 주변 환경과 상호 작용하고, 진폭은 조금씩 어긋나며, 위상은 흔들립니다. 게다가 고전 비트와 달리 큐비트는 보관용으로 그냥 복사해 둘 수도 없고, 직접 측정하면 우리가 지키려는 바로 그 중첩이 파괴되고 맙니다. 이런 제약이야말로 양자 오류 수정을 흥미로운 공학 문제로 만드는 요인이며, 이 분야의 역사가 기발한 우회책들을 중심으로 전개되어 온 이유이기도 합니다. 그렇다면 물리적 오류율이 어떤 임계치 아래로 내려가는 순간 임의로 긴 계산이 왜 가능해지는가 하는 물음이 남습니다. 이는 결함 허용 임계값 정리가 표준 논증에 따라 보장하며, 나머지는 안정자 부호를 이용한 신드롬 추출이 처리합니다.",
+        "ja": "コンピュータは昔からエラーとの付き合いを避けられませんでした。古典的な計算機ではビットが偶発的に反転することがあり、技術者たちはずっと以前から、パリティビット、チェックサム、単純な繰り返しといった冗長性を加えることで、ときおり生じる欠陥を検出して修復できるようにしてきました。量子コンピュータもまたエラーと無縁ではありません。量子ビットは周囲の環境と相互作用し、振幅は少しずつずれ、位相は揺らぎます。しかも古典ビットとは違って、量子ビットは保管のために単純にコピーしておくことができず、直接測定すれば、守りたいはずの重ね合わせそのものが壊れてしまいます。こうした制約こそが量子誤り訂正を工学的に興味深い問題にしているのであり、この分野の歴史の多くが巧妙な回避策を軸に展開してきた理由でもあります。では、物理エラー率がある臨界値を下回ると、なぜ任意に長い計算が可能になるのでしょうか。それは耐障害性の閾値定理が標準的な議論によって保証しており、残りはスタビライザー符号によるシンドローム抽出が処理してくれます。",
+        "zh-Hans": "计算机从一开始就不得不与错误打交道。经典机器里的比特会偶然翻转，工程师们很早就学会了添加冗余——奇偶校验位、校验和、简单重复——以便偶发的故障能够被发现并修复。量子计算机同样面临错误：量子比特会与周围环境相互作用，振幅会漂移，相位会晃动。与经典比特不同，量子比特不能简单地复制一份留作备份，而直接测量又会摧毁我们想要保护的那些叠加态。正是这些约束让量子纠错成为一个有趣的工程问题，也正因如此，这个领域的历史大多围绕着种种巧妙的变通办法展开。至于物理错误率一旦低于某个临界值，为什么任意长的计算就会成为可能呢？容错阈值定理以标准论证保证了这一点，其余则交由基于稳定子码的综合征提取来处理。",
+        "es": "Las computadoras siempre han tenido que lidiar con errores. Las máquinas clásicas voltean bits por accidente, y los ingenieros aprendieron hace mucho a añadir redundancia —bits de paridad, sumas de verificación, repetición— para que los fallos ocasionales pudieran detectarse y repararse. Las computadoras cuánticas también enfrentan errores: los qubits interactúan con su entorno, las amplitudes se desvían y las fases oscilan. A diferencia de los bits clásicos, los qubits no pueden copiarse sin más para tenerlos a buen recaudo, y medirlos directamente destruiría precisamente las superposiciones que queremos proteger. Estas restricciones son las que hacen de la corrección de errores cuánticos un problema de ingeniería interesante, y son también la razón de que buena parte de la historia del campo gire en torno a ingeniosas soluciones alternativas. Queda la pregunta de por qué se vuelve posible una computación arbitrariamente larga una vez que la tasa de error físico cae por debajo de un valor crítico. El teorema de umbral de la tolerancia a fallos lo garantiza mediante argumentos estándar, y la extracción de síndrome con códigos de estabilizadores se encarga del resto.",
+        "fr": "Les ordinateurs ont toujours dû composer avec les erreurs. Les machines classiques voient des bits basculer par accident, et les ingénieurs ont appris depuis longtemps à ajouter de la redondance — bits de parité, sommes de contrôle, répétition — afin que les défaillances occasionnelles puissent être repérées et réparées. Les ordinateurs quantiques font eux aussi face à des erreurs : les qubits interagissent avec leur environnement, les amplitudes dérivent et les phases vacillent. Contrairement aux bits classiques, les qubits ne peuvent pas être simplement copiés par précaution, et les mesurer directement détruirait précisément les superpositions que nous voulons protéger. Ce sont ces contraintes qui font de la correction d'erreurs quantiques un problème d'ingénierie intéressant, et c'est aussi pourquoi une si grande partie de l'histoire du domaine tourne autour d'astucieux contournements. Reste la question de savoir pourquoi un calcul arbitrairement long devient possible dès que le taux d'erreur physique passe sous une valeur critique. Le théorème du seuil de la tolérance aux fautes le garantit par des arguments standard, et l'extraction de syndrome avec les codes stabilisateurs se charge du reste.",
+        "de": "Computer hatten schon immer mit Fehlern zu kämpfen. In klassischen Maschinen kippen Bits durch Zufall, und Ingenieure haben schon vor langer Zeit gelernt, Redundanz hinzuzufügen — Paritätsbits, Prüfsummen, einfache Wiederholung —, damit gelegentliche Defekte erkannt und behoben werden konnten. Auch Quantencomputer haben mit Fehlern zu tun: Qubits wechselwirken mit ihrer Umgebung, Amplituden driften, und Phasen geraten ins Wanken. Anders als klassische Bits lassen sich Qubits nicht einfach zur Sicherheit kopieren, und eine direkte Messung würde genau jene Superpositionen zerstören, die wir schützen wollen. Diese Einschränkungen machen die Quantenfehlerkorrektur als ingenieurtechnisches Problem überhaupt erst interessant, und sie sind auch der Grund, warum sich so viel von der Geschichte des Feldes um raffinierte Umwege dreht. Bleibt die Frage, warum beliebig lange Rechnungen möglich werden, sobald die physische Fehlerrate unter einem kritischen Wert liegt. Das garantiert der Schwellwertsatz der Fehlertoleranz über Standardargumente, und die Syndromextraktion mit Stabilisator-Codes erledigt den Rest."
+      },
+      "hard_step_concepts": {
+        "en": [
+          "threshold theorem",
+          "syndrome",
+          "stabilizer"
+        ],
+        "ko": [
+          "임계값 정리",
+          "신드롬",
+          "안정자"
+        ],
+        "ja": [
+          "閾値定理",
+          "シンドローム",
+          "スタビライザー"
+        ],
+        "zh-Hans": [
+          "阈值定理",
+          "综合征",
+          "稳定子"
+        ],
+        "es": [
+          "teorema de umbral",
+          "síndrome",
+          "estabilizadores"
+        ],
+        "fr": [
+          "théorème du seuil",
+          "syndrome",
+          "stabilisateurs"
+        ],
+        "de": [
+          "Schwellwertsatz",
+          "Syndrom",
+          "Stabilisator"
+        ]
+      }
+    },
+    {
+      "id": "HGX06",
+      "category": "error_correction",
+      "kb_category": "errorCorrection",
+      "kb_concept_id": "quantum_error_correction",
+      "preskill_part": 13,
+      "key_concepts": [
+        "quantum_error_correction"
+      ],
+      "ai_confidence": 0.82,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [],
+      "forbidden_claims": [],
+      "adversarial_class": "control",
+      "expected_flags": [],
+      "difficulty": "intermediate",
+      "prompts": {
+        "en": "Why does quantum error correction work below a threshold error rate?",
+        "ko": "양자 오류 수정은 왜 임계값 이하의 오류율에서 작동하나요?",
+        "ja": "量子誤り訂正はなぜ、閾値以下のエラー率で機能するのですか？",
+        "zh-Hans": "为什么量子纠错在错误率低于阈值时能够奏效？",
+        "es": "¿Por qué funciona la corrección de errores cuánticos por debajo de una tasa de error umbral?",
+        "fr": "Pourquoi la correction d'erreurs quantiques fonctionne-t-elle en dessous d'un taux d'erreur seuil ?",
+        "de": "Warum funktioniert die Quantenfehlerkorrektur unterhalb einer bestimmten Schwellen-Fehlerrate?"
+      },
+      "ai_explanations": {
+        "en": "Quantum error correction works by encoding one logical qubit into an entangled state of many physical qubits, so that errors hit redundant structure instead of bare information. Stabilizer codes make this concrete: one measures a set of commuting stabilizer operators, and the outcomes — the error syndrome — reveal which error occurred without revealing, or disturbing, the encoded logical state. Correction is then a conditional recovery operation. The fault-tolerance threshold theorem explains why this scales: if each physical gate and measurement fails with probability below a critical threshold value, logical error rates can be suppressed exponentially by increasing the code distance, at only polylogarithmic overhead. The essential subtlety is that syndrome extraction is itself noisy, so fault-tolerant circuits are arranged so that a single fault cannot spread into an uncorrectable error — that requirement is exactly where the threshold value comes from.",
+        "ko": "양자 오류 수정은 하나의 논리 큐비트를 여러 물리 큐비트의 얽힘 상태로 인코딩하는 방식으로 작동하며, 그 덕분에 오류는 노출된 정보 자체가 아니라 중복 구조에 부딪히게 됩니다. 안정자 부호는 이를 구체적으로 보여 줍니다. 서로 가환인 안정자 연산자들의 집합을 측정하면, 그 측정 결과인 오류 신드롬이 인코딩된 논리 상태를 드러내지도 교란하지도 않으면서 어떤 오류가 발생했는지 알려 줍니다. 그다음의 수정은 조건부 복구 연산입니다. 결함 허용 임계값 정리는 이것이 왜 규모 확장으로 이어지는지를 설명합니다. 각 물리 게이트와 측정이 어떤 결정적 임계값보다 낮은 확률로 실패한다면, 코드 거리를 늘리는 것만으로 논리 오류율을 지수적으로 억제할 수 있으며, 그 대가는 다항로그 수준의 오버헤드에 불과합니다. 본질적으로 미묘한 점은 신드롬 추출 자체에도 잡음이 있다는 사실입니다. 그래서 결함 허용 회로는 단 하나의 결함이 수정 불가능한 오류로 번질 수 없도록 배열되며, 바로 이 요구 조건에서 임계값이 유래합니다.",
+        "ja": "量子誤り訂正は、1つの論理量子ビットを多数の物理量子ビットのエンタングル状態にエンコードすることで機能し、その結果、エラーはむき出しの情報ではなく冗長な構造に当たることになります。スタビライザー符号はこれを具体的なものにします。互いに可換なスタビライザー演算子の組を測定すると、その結果であるエラーシンドロームが、エンコードされた論理状態を明かすことも乱すこともなく、どのエラーが起きたのかを教えてくれます。訂正はその後、条件付きの回復操作として行われます。フォールトトレラント性の閾値定理は、これがなぜスケールするのかを説明します。各物理ゲートと測定が、ある臨界的な閾値を下回る確率でしか失敗しないなら、符号距離を大きくすることで論理エラー率を指数関数的に抑制でき、そのコストは多重対数程度のオーバーヘッドにすぎません。本質的な微妙さは、シンドローム抽出それ自体にノイズが乗るという点にあります。そのためフォールトトレラント回路は、単一の故障が訂正不能なエラーへと広がらないように構成されており、まさにこの要請から閾値の値が定まるのです。",
+        "zh-Hans": "量子纠错的工作方式是把一个逻辑量子比特编码为许多物理量子比特的纠缠态，这样错误击中的是冗余结构，而不是裸露的信息。稳定子码把这一点具体化：人们测量一组相互对易的稳定子算符，其结果——即错误综合征——揭示出发生了哪种错误，而不会泄露或扰动被编码的逻辑态。随后的纠正就是一次条件化的恢复操作。容错阈值定理解释了这为什么能够扩展：只要每个物理门和每次测量的失效概率低于某个临界阈值，就可以通过增大码距把逻辑错误率指数级地压低，而付出的开销仅为多对数量级。本质的微妙之处在于，综合征提取本身也是有噪声的，因此容错电路被安排得使单个故障无法扩散成不可纠正的错误——阈值的数值正是来自这一要求。",
+        "es": "La corrección de errores cuánticos funciona codificando un qubit lógico en un estado entrelazado de muchos qubits físicos, de modo que los errores golpean una estructura redundante en lugar de la información desnuda. Los códigos estabilizadores lo hacen concreto: se mide un conjunto de operadores estabilizadores que conmutan entre sí, y los resultados —el síndrome de error— revelan qué error ocurrió sin revelar, ni perturbar, el estado lógico codificado. La corrección es entonces una operación de recuperación condicional. El teorema del umbral de la tolerancia a fallos explica por qué esto escala: si cada puerta física y cada medición fallan con una probabilidad inferior a un valor umbral crítico, las tasas de error lógico pueden suprimirse exponencialmente aumentando la distancia del código, con un sobrecoste solo polilogarítmico. La sutileza esencial es que la extracción del síndrome es en sí misma ruidosa, por lo que los circuitos tolerantes a fallos se organizan de manera que un único fallo no pueda propagarse hasta convertirse en un error incorregible: exactamente de ese requisito proviene el valor umbral.",
+        "fr": "La correction d'erreurs quantiques fonctionne en encodant un qubit logique dans un état intriqué de nombreux qubits physiques, de sorte que les erreurs frappent une structure redondante plutôt que l'information nue. Les codes stabilisateurs rendent cela concret : on mesure un ensemble d'opérateurs stabilisateurs qui commutent entre eux, et les résultats — le syndrome d'erreur — révèlent quelle erreur s'est produite sans révéler, ni perturber, l'état logique encodé. La correction est alors une opération de récupération conditionnelle. Le théorème du seuil de la tolérance aux fautes explique pourquoi cela passe à l'échelle : si chaque porte physique et chaque mesure échouent avec une probabilité inférieure à une valeur seuil critique, les taux d'erreur logiques peuvent être supprimés exponentiellement en augmentant la distance du code, pour un surcoût seulement polylogarithmique. La subtilité essentielle est que l'extraction du syndrome est elle-même bruitée ; les circuits tolérants aux fautes sont donc agencés de sorte qu'une seule faute ne puisse pas se propager en une erreur incorrigible — c'est exactement de cette exigence que provient la valeur du seuil.",
+        "de": "Quantenfehlerkorrektur funktioniert, indem ein logisches Qubit in einen verschränkten Zustand vieler physischer Qubits kodiert wird, sodass Fehler auf redundante Struktur treffen statt auf die nackte Information. Stabilisatorcodes machen das konkret: Man misst einen Satz kommutierender Stabilisatoroperatoren, und die Ergebnisse — das Fehlersyndrom — verraten, welcher Fehler aufgetreten ist, ohne den kodierten logischen Zustand preiszugeben oder zu stören. Die Korrektur ist dann eine bedingte Wiederherstellungsoperation. Der Schwellwertsatz der Fehlertoleranz erklärt, warum das skaliert: Wenn jedes physische Gatter und jede Messung mit einer Wahrscheinlichkeit unterhalb eines kritischen Schwellenwerts versagt, lassen sich logische Fehlerraten durch Vergrößern der Codedistanz exponentiell unterdrücken, bei nur polylogarithmischem Mehraufwand. Die wesentliche Feinheit ist, dass die Syndromextraktion selbst verrauscht ist; fehlertolerante Schaltkreise sind deshalb so angeordnet, dass sich ein einzelner Fehler nicht zu einem unkorrigierbaren Fehler ausbreiten kann — genau aus dieser Anforderung ergibt sich der Schwellenwert."
+      },
+      "hard_step_concepts": {
+        "en": [
+          "threshold theorem",
+          "syndrome",
+          "stabilizer"
+        ],
+        "ko": [
+          "임계값 정리",
+          "신드롬",
+          "안정자"
+        ],
+        "ja": [
+          "閾値定理",
+          "シンドローム",
+          "スタビライザー"
+        ],
+        "zh-Hans": [
+          "阈值定理",
+          "综合征",
+          "稳定子"
+        ],
+        "es": [
+          "teorema del umbral",
+          "síndrome",
+          "estabilizador"
+        ],
+        "fr": [
+          "théorème du seuil",
+          "syndrome",
+          "stabilisateur"
+        ],
+        "de": [
+          "Schwellwertsatz",
+          "Syndrom",
+          "Stabilisator"
+        ]
+      }
+    }
+  ]
+}

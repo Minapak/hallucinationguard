@@ -134,8 +134,47 @@ def main() -> int:
                   f"{it['id']}: kb_category {it.get('kb_category')!r} != KB entry "
                   f"category {kb_categories.get(cid)!r}")
 
+    # ---- v3.2 provenance/exposition extension fixture (synthetic, not HG120) ----
+    ext_path = REPO / "fixtures/samples/hgx_provenance_6.json"
+    KNOWN_FLAGS = {"attributionRequired", "hallucinatedCitation", "depthInverted"}
+    CLASSES = {"uncitedNearVerbatim", "hallucinatedCitation", "depthInverted", "control"}
+    ext_items = []
+    if ext_path.exists():
+        ext = json.loads(ext_path.read_text(encoding="utf-8"))
+        check(ext.get("schema") == "hg_benchmark_item_v3.2",
+              f"extension: schema {ext.get('schema')!r} != hg_benchmark_item_v3.2")
+        ext_items = ext["items"]
+        ext_ids = [it["id"] for it in ext_items]
+        check(len(set(ext_ids)) == len(ext_ids), "extension: duplicate item ids")
+        check(all(i.startswith("HGX") for i in ext_ids),
+              "extension: ids must use the HGX namespace (never HG1xx — not part of HG120)")
+        for it in ext_items:
+            for loc in LOCALES:
+                check(bool(it["prompts"].get(loc, "").strip()),
+                      f"{it['id']}: empty prompt [{loc}]")
+                check(bool(it["ai_explanations"].get(loc, "").strip()),
+                      f"{it['id']}: empty answer [{loc}]")
+            check(it.get("adversarial_class") in CLASSES,
+                  f"{it['id']}: bad adversarial_class {it.get('adversarial_class')!r}")
+            flags = it.get("expected_flags")
+            check(isinstance(flags, list) and set(flags) <= KNOWN_FLAGS,
+                  f"{it['id']}: expected_flags must be a list within {sorted(KNOWN_FLAGS)}")
+            check(it.get("kb_concept_id") in kb_ids,
+                  f"{it['id']}: kb_concept_id {it.get('kb_concept_id')!r} not in kb-examples")
+            check(it["expected_source"] in TIERS, f"{it['id']}: bad tier {it['expected_source']}")
+            if "depthInverted" in (flags or []) or it["adversarial_class"] in ("depthInverted", "control"):
+                hsc = it.get("hard_step_concepts")
+                check(isinstance(hsc, dict) and set(hsc) >= set(LOCALES)
+                      and all(isinstance(hsc[loc], list) and hsc[loc]
+                              and all(isinstance(c, str) and c.strip() for c in hsc[loc])
+                              for loc in LOCALES),
+                      f"{it['id']}: depth items need 7-locale hard_step_concepts")
+    else:
+        check(False, "extension fixture fixtures/samples/hgx_provenance_6.json missing")
+
     field_count = sum(len(it["prompts"]) + len(it["ai_explanations"]) for it in items)
-    print(f"items: {len(items)} · multilingual fields: {field_count} · KB entries: {len(kb_ids)}")
+    print(f"items: {len(items)} (+{len(ext_items)} HGX extension) · "
+          f"multilingual fields: {field_count} · KB entries: {len(kb_ids)}")
 
     if failures:
         print("\nFAIL:")

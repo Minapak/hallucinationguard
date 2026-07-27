@@ -76,6 +76,43 @@ errors and their pre-KPS terminology); they are never "corrected" — correcting
   solution. Measuring where this floor fails is this benchmark's purpose; NLI-based checkers
   (AlignScore, MiniCheck) are the documented upgrade path (see README).
 
+## Provenance/exposition extension items (`hg_benchmark_item_v3.2`, `fixtures/samples/hgx_provenance_6.json`)
+
+Six **synthetic adversarial items** (HGX01–HGX06) authored 2026-07-27 for failure classes that are
+*orthogonal to correctness* — an answer can be physically right and still fail a learner or an
+editorial standard. They are **not** part of the frozen HG120 production set and are **not**
+counted in the 1,680 verified fields. Evidence base: the First Proof second batch (uncited
+line-by-line reuse that "would have been flagged for plagiarism"; a system that "hallucinates that
+a key result exists in a previous paper"; meticulous routine detail while "glossing over the most
+difficult steps") and Tao's ICM 2026 lecture (exposition that "dwells at length on trivialities,
+while passing very briefly through … the most interesting and novel portions").
+
+v3.2 adds three fields on top of v3.1:
+
+```jsonc
+{
+  "adversarial_class": "uncitedNearVerbatim",   // uncitedNearVerbatim | hallucinatedCitation | depthInverted | control
+  "expected_flags": ["attributionRequired"],    // dimension flags the guard must raise (may be [] for controls)
+  "hard_step_concepts": { "en": ["threshold theorem", "syndrome", "stabilizer"], /* 7 locales */ }
+                                                // only for depth items: the locale's renderings of the
+                                                // concepts that constitute the hard step, substring-matchable
+}
+```
+
+### Dimension flags (computed by `reference/dimensions_v1.py`; CI-checked via `--check-flags`)
+
+| Flag | Fires when | Detector floor, stated plainly |
+|---|---|---|
+| `attributionRequired` | a generated (non-verbatim-served) answer covers ≥ 0.85 of the KB entry's tokens | token coverage, not sequence match; the tier is never changed — provenance is a separate axis from correctness |
+| `hallucinatedCitation` | the answer mentions a structured identifier (DOI / arXiv / FIPS) absent from the KB entry's reference corpus (sourceRef + citationReferences + certaintyNote + en text + reviewedSources) | only structured identifiers; prose citations ("Smith et al. showed…") pass unseen |
+| `depthInverted` | annotated hard-step concepts are *mentioned* (coverage ≥ 0.5) but *undeveloped* (< 20% of answer chars in hard-step sentences) | crude annotated-coverage proxy with hand-set thresholds; replaced by the M2 NLI/judge backend behind the same `computed_flags()` interface |
+
+Dimensions are reported **separately and never blended** into one score (HELM's multi-metric
+design rationale). Goodhart's law (Tao's ICM warning: "all metrics, when excessively optimized
+for, are at risk") applies to these detectors as to every metric in this repo — the extension
+items were tuned so the detectors fire on them, which is exactly why the flags are a floor, not
+a definition of the failure class.
+
 ## KB entry (`fixtures/kb-examples/*.json`)
 
 ```jsonc

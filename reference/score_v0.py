@@ -35,6 +35,16 @@ from pathlib import Path
 THRESHOLD = 0.30
 FORBIDDEN_ASSERT_THRESHOLD = 0.60  # token recall of a forbidden claim inside the answer
 MIN_KB_TOKENS = 5  # below this the overlap denominator is too small to be meaningful
+# Above this KB-token coverage, a generated (non-verbatim-served) answer is
+# reproducing the KB entry nearly wholesale and must carry attribution instead
+# of passing silently as "validated". Provenance axis, separate from
+# correctness: the tier is unaffected. Motivated by the First Proof second
+# batch (Abouzaid et al. 2026: solutions reusing prior text "even line by
+# line … without citing the paper anywhere — if a human had submitted such a
+# solution it would have been flagged for plagiarism") and the Leiden
+# Declaration's proper-attribution recommendation (2026). Lexical floor:
+# token coverage, not sequence match — see docs/SCHEMA.md for limits.
+ATTRIBUTION_OVERLAP = 0.85
 
 TIER_VERIFIED = "verifiedKnowledgeBase"
 TIER_VALIDATED = "aiValidatedAgainstKB"
@@ -203,6 +213,14 @@ def classify(kb_text: str | None, answer_text: str) -> tuple[str, float]:
     return TIER_LOW_CONFIDENCE, score
 
 
+def attribution_required(tier: str, score: float) -> bool:
+    """Provenance flag: a generated answer that reproduces >= ATTRIBUTION_OVERLAP
+    of the KB entry's tokens without being served (and labeled) as the KB answer
+    needs attribution. Verbatim service is its own tier and is labeled by the
+    serving path, so it is exempt; the flag never changes the correctness tier."""
+    return tier == TIER_VALIDATED and score >= ATTRIBUTION_OVERLAP
+
+
 def load_kb(kb_dir: Path, locale: str, *, warn: bool = False) -> dict[str, str]:
     """Map concept id -> detailedExplanation in the requested locale.
 
@@ -255,14 +273,16 @@ def score_fixture(fixture_path: Path, kb_dir: Path, locale: str) -> int:
         expected = item["expected_source"]
         ok = tier == expected
         agree += ok
-        blocked = ""
+        notes = []
         if flagged:
-            blocked = "BLOCKED: " + (flagged[:40] + "…" if len(flagged) > 40 else flagged)
+            notes.append("BLOCKED: " + (flagged[:40] + "…" if len(flagged) > 40 else flagged))
+        if attribution_required(tier, score):
+            notes.append(f"ATTRIBUTION REQUIRED (ovl {score:.2f} ≥ {ATTRIBUTION_OVERLAP})")
         rows.append((item["id"], item["category"], f"{score:.2f}", tier, expected,
-                     "OK" if ok else "MISS", blocked))
+                     "OK" if ok else "MISS", "; ".join(notes)))
 
     widths = [6, 22, 5, 24, 24, 4, 20]
-    header = ("id", "category", "ovl", "guard tier", "ground truth", "", "forbidden-claim gate")
+    header = ("id", "category", "ovl", "guard tier", "ground truth", "", "gate flags")
     print(f"\nHallucinationGuard V0 baseline — {fixture_path.name} · locale={locale}\n")
     for row in (header, *rows):
         print("  " + "  ".join(str(c).ljust(w) for c, w in zip(row, widths)).rstrip())
