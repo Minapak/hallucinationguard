@@ -109,6 +109,7 @@ HallucinationGuard was born inside a commercial product — a paid quantum-educa
 - Author: Eunmin Park — IEEE member, solo developer, Seoul
 - Content freshness: last full verification pass 2026-07-10 — KO terms aligned with the KPS 2020 physics glossary (e.g. decoherence = 결깨짐, with common-usage 결어긋남 noted); 2024–26 QEC milestones (Google Willow below-threshold, IBM gross qLDPC) and PQC standardization status (HQC, FIPS 206, EO 14412) added as explicitly year/date-qualified sentences; institution-confirmed misconception corrections (IBM/Caltech) applied, including replacing the "tries every answer at once" framing with amplitude interference
 - Hardening pass 2026-07-19: full audit (27 confirmed findings, all fixed) — CJK-aware tokenizer, localized misconception gate, four-tier classifier, translation backfill with parity gates, pinned regression matrix, SHA-pinned CI. Method, evidence, and primary sources: [docs/AUDIT-2026-07-19.md](docs/AUDIT-2026-07-19.md). Backfilled translations are faithful renderings of the verified EN text and remain pending native-speaker review (Milestone 3)
+- Provenance/exposition dimensions 2026-07-27 (v0.3.0): attribution flag, dimension report layer, 6-item HGX adversarial extension with per-locale flag and tier pins in CI — see [CHANGELOG.md](CHANGELOG.md) and the dimensions section above
 
 ## Related work
 

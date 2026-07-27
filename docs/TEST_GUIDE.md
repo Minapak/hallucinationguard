@@ -10,12 +10,16 @@ python3 tests/test_fixtures.py
 # 2. Scorer unit tests + pinned per-locale regression matrix + CLI error paths
 python3 tests/test_scorer.py
 
-# 3. End-to-end scorer run, all 7 locales
+# 3. Dimension-layer unit tests + per-locale flag & tier pins (HGX extension)
+python3 tests/test_dimensions.py
+
+# 4. End-to-end runs, all 7 locales, both fixtures
 for loc in en ko ja zh-Hans es fr de; do
   python3 reference/score_v0.py fixtures/samples/hg120_sample_20.json --locale "$loc" > /dev/null
+  python3 reference/dimensions_v1.py fixtures/samples/hgx_provenance_6.json --locale "$loc" --check-flags > /dev/null
 done
 
-# 4. Demo
+# 5. Demo
 python3 demo/metric_blindness_demo.py
 ```
 
@@ -30,11 +34,15 @@ failure and exit 1 (CPython exit-status convention; argparse usage errors exit 2
 | `test_scorer.py` unit tests | tokenizer regressions (Latin punctuation attachment is *asserted*, CJK bigrams required, ko eojeol preserved), overlap edge cases, four-tier classification incl. verbatim-vs-superset distinction, gate directionality (assertion fires; denial, mention-frame, legacy-list-on-non-en do not; pseudo-negation still fires) |
 | `test_scorer.py` regression matrix | any change to tier agreement (en/es/fr 20/20 · de 19/20 · ko/ja/zh-Hans 18/20), per-locale miss sets, or the blocked set {HG002, HG023, HG031, HG039, HG051, HG073, HG115} — identical across all 7 locales by construction |
 | `test_scorer.py` CLI tests | missing/malformed/empty fixture diagnostics + exit codes, bare-filename `--kb` default resolution |
+| `test_fixtures.py` (v3.2 block) | HGX extension schema: HGX id namespace, `adversarial_class` values, `expected_flags` within the known-flag set, 7-locale `hard_step_concepts` on depth items |
+| `test_scorer.py` attribution | flag threshold edges, verbatim-service exemption, KB-plus-padding case; HG120 sample pinned attribution-clean in all 7 locales (max overlap 0.53 < 0.85) |
+| `test_dimensions.py` | citation extraction/verification (real Grover DOI verifies; fabricated `PhysRevX` DOI and `FIPS 209` flag; no-KB items are unverifiable-not-flagged), depth profile (inverted vs balanced), and per-locale pins: computed flags == `expected_flags` and tiers match `EXPECTED_TIERS` for all 6 HGX items × 7 locales |
 
 ## Updating the pins
 
 The pinned numbers in `tests/test_scorer.py` (`EXPECTED_AGREEMENT`, `EXPECTED_BLOCKED`,
-`EXPECTED_MISSES`) are a *ratchet*, not a target. If a legitimate change moves them
+`EXPECTED_MISSES`) and `tests/test_dimensions.py` (`EXPECTED_TIERS`, per-item
+`expected_flags`) are a *ratchet*, not a target. If a legitimate change moves them
 (new fixture items, tokenizer change, gate tuning):
 
 1. Re-run the matrix and inspect **which** items flipped and **why** — a flip must be explainable
