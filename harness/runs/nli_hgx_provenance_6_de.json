@@ -1,0 +1,339 @@
+{
+ "fixture": "hgx_provenance_6.json",
+ "locale": "de",
+ "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "thresholds": {
+  "entail_min": 0.5,
+  "contra_min": 0.5
+ },
+ "results": [
+  {
+   "id": "HGX01",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.874,
+   "max_conflict": 0.8799,
+   "nli_label": "nli_supported",
+   "gate_blocked": false,
+   "worst_sentence": "Superposition wird aufrechterhalten, solange das System von seiner Umgebung isoliert bleibt; die Wechselwirkung mit der ",
+   "sentences": [
+    {
+     "support": 0.813,
+     "conflict": 0.1086,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Die Standarderklärung lautet wie folgt."
+    },
+    {
+     "support": 0.9956,
+     "conflict": 0.0204,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Superposition ist eines der Grundprinzipien der Quantenmechanik."
+    },
+    {
+     "support": 0.8213,
+     "conflict": 0.3015,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Ein Quantensystem kann sich gleichzeitig in einer kohärenten Kombination mehrerer Basiszustände befinden, mathematisch a"
+    },
+    {
+     "support": 0.9707,
+     "conflict": 0.012,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Dies ist nicht bloß eine Aussage über Unwissenheit des Systemzustands — es ist eine fundamentale Eigenschaft der Natur."
+    },
+    {
+     "support": 0.6924,
+     "conflict": 0.0176,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Die Interferenz zwischen den Komponenten einer Superposition ist die eigentliche Quelle der Rechenkraft von Quantencompu"
+    },
+    {
+     "support": 0.9512,
+     "conflict": 0.8799,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Superposition wird aufrechterhalten, solange das System von seiner Umgebung isoliert bleibt; die Wechselwirkung mit der "
+    }
+   ]
+  },
+  {
+   "id": "HGX02",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.7833,
+   "max_conflict": 0.6377,
+   "nli_label": "nli_supported",
+   "gate_blocked": false,
+   "worst_sentence": "Verschränkung tritt auf, wenn zwei oder mehr Qubits so miteinander korreliert werden, dass der Quantenzustand des System",
+   "sentences": [
+    {
+     "support": 0.2993,
+     "conflict": 0.0566,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Die Standarderklärung lautet wie folgt."
+    },
+    {
+     "support": 0.9106,
+     "conflict": 0.6377,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Verschränkung tritt auf, wenn zwei oder mehr Qubits so miteinander korreliert werden, dass der Quantenzustand des System"
+    },
+    {
+     "support": 0.8491,
+     "conflict": 0.201,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Ein verschränkter Zustand wie (|00⟩+|11⟩)/sqrt(2) bedeutet: Misst man ein Qubit als |0⟩, folgt daraus augenblicklich, da"
+    },
+    {
+     "support": 0.8628,
+     "conflict": 0.6284,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Einstein nannte dies 'spukhafte Fernwirkung', doch Bells Theorem (1964) bewies, dass diese Korrelationen echt quantenmec"
+    },
+    {
+     "support": 0.7974,
+     "conflict": 0.0267,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Verschränkung ist nicht bloß eine Kuriosität – sie ist die Schlüsselressource, die Beschleunigungen des Quantenrechnens,"
+    },
+    {
+     "support": 0.9805,
+     "conflict": 0.0275,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Verschränkung lässt sich durch Maße wie die Verschränkungsentropie und die Concurrence quantifizieren."
+    }
+   ]
+  },
+  {
+   "id": "HGX03",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.2326,
+   "mean_support": 0.1674,
+   "max_conflict": 0.8945,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "Die Optimalität dieser Abfragezahl — kein Quantenalgorithmus kann bei der unstrukturierten Suche besser abschneiden — wu",
+   "sentences": [
+    {
+     "support": 0.4553,
+     "conflict": 0.1605,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Grovers Algorithmus findet ein markiertes Element in einer unsortierten Datenbank mit N Einträgen mit etwa π/4 * √N Orak"
+    },
+    {
+     "support": 0.0342,
+     "conflict": 0.8945,
+     "conflict_rev": 0.0022,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "Die Optimalität dieser Abfragezahl — kein Quantenalgorithmus kann bei der unstrukturierten Suche besser abschneiden — wu"
+    },
+    {
+     "support": 0.2871,
+     "conflict": 0.7915,
+     "conflict_rev": 0.0333,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "1103/PhysRevX."
+    },
+    {
+     "support": 0.0601,
+     "conflict": 0.7246,
+     "conflict_rev": 0.0127,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "123456, etabliert, die die frühere BBBV-Untergrenze verschärfte."
+    },
+    {
+     "support": 0.0002,
+     "conflict": 0.0017,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "In der Praxis muss die Iterationszahl sorgfältig gewählt werden, denn läuft man über das Optimum hinaus, dreht sich der "
+    }
+   ]
+  },
+  {
+   "id": "HGX04",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1731,
+   "mean_support": 0.016,
+   "max_conflict": 0.9526,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "ML-KEM, der von CRYSTALS-Kyber abgeleitete modul-gitterbasierte Schlüsselkapselungsmechanismus, wurde im August 2024 vom",
+   "sentences": [
+    {
+     "support": 0.014,
+     "conflict": 0.9526,
+     "conflict_rev": 0.7783,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "ML-KEM, der von CRYSTALS-Kyber abgeleitete modul-gitterbasierte Schlüsselkapselungsmechanismus, wurde im August 2024 vom"
+    },
+    {
+     "support": 0.0115,
+     "conflict": 0.3076,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Seine Sicherheit beruht auf der vermuteten Härte des Module-Learning-With-Errors-Problems, und er ist der primäre KEM, d"
+    },
+    {
+     "support": 0.0226,
+     "conflict": 0.1278,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Während der Migration wird er in Deployments typischerweise im Hybridmodus mit einem klassischen Verfahren kombiniert."
+    }
+   ]
+  },
+  {
+   "id": "HGX05",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1512,
+   "mean_support": 0.0205,
+   "max_conflict": 0.6558,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "Bleibt die Frage, warum beliebig lange Rechnungen möglich werden, sobald die physische Fehlerrate unter einem kritischen",
+   "sentences": [
+    {
+     "support": 0.007,
+     "conflict": 0.625,
+     "conflict_rev": 0.5317,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "Computer hatten schon immer mit Fehlern zu kämpfen."
+    },
+    {
+     "support": 0.0149,
+     "conflict": 0.0088,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "In klassischen Maschinen kippen Bits durch Zufall, und Ingenieure haben schon vor langer Zeit gelernt, Redundanz hinzuzu"
+    },
+    {
+     "support": 0.0237,
+     "conflict": 0.0129,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Auch Quantencomputer haben mit Fehlern zu tun: Qubits wechselwirken mit ihrer Umgebung, Amplituden driften, und Phasen g"
+    },
+    {
+     "support": 0.02,
+     "conflict": 0.011,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Anders als klassische Bits lassen sich Qubits nicht einfach zur Sicherheit kopieren, und eine direkte Messung würde gena"
+    },
+    {
+     "support": 0.0004,
+     "conflict": 0.0011,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Diese Einschränkungen machen die Quantenfehlerkorrektur als ingenieurtechnisches Problem überhaupt erst interessant, und"
+    },
+    {
+     "support": 0.0531,
+     "conflict": 0.6558,
+     "conflict_rev": 0.9053,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "Bleibt die Frage, warum beliebig lange Rechnungen möglich werden, sobald die physische Fehlerrate unter einem kritischen"
+    },
+    {
+     "support": 0.0248,
+     "conflict": 0.2174,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Das garantiert der Schwellwertsatz der Fehlertoleranz über Standardargumente, und die Syndromextraktion mit Stabilisator"
+    }
+   ]
+  },
+  {
+   "id": "HGX06",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.2326,
+   "mean_support": 0.1607,
+   "max_conflict": 0.8667,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "Stabilisatorcodes machen das konkret: Man misst einen Satz kommutierender Stabilisatoroperatoren, und die Ergebnisse — d",
+   "sentences": [
+    {
+     "support": 0.1113,
+     "conflict": 0.0269,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Quantenfehlerkorrektur funktioniert, indem ein logisches Qubit in einen verschränkten Zustand vieler physischer Qubits k"
+    },
+    {
+     "support": 0.5684,
+     "conflict": 0.8667,
+     "conflict_rev": 0.0,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "Stabilisatorcodes machen das konkret: Man misst einen Satz kommutierender Stabilisatoroperatoren, und die Ergebnisse — d"
+    },
+    {
+     "support": 0.0496,
+     "conflict": 0.0278,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Die Korrektur ist dann eine bedingte Wiederherstellungsoperation."
+    },
+    {
+     "support": 0.0319,
+     "conflict": 0.0917,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Der Schwellwertsatz der Fehlertoleranz erklärt, warum das skaliert: Wenn jedes physische Gatter und jede Messung mit ein"
+    },
+    {
+     "support": 0.0421,
+     "conflict": 0.0822,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Die wesentliche Feinheit ist, dass die Syndromextraktion selbst verrauscht ist; fehlertolerante Schaltkreise sind deshal"
+    }
+   ]
+  }
+ ]
+}

@@ -2,6 +2,17 @@
 
 All notable changes to this repository. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions track `CITATION.cff`.
 
+## [0.5.0] — 2026-07-27 · V2 NLI gate: shadow → gate, by measurement
+
+### Added
+- **V2 gate rule (R7)** in `harness/nli_v1.py`: bidirectional contradiction confirmation (symmetric min ≥ 0.5 — true A-vs-not-A contradictions are symmetric, spurious topical ones mostly are not: en false blocks 5→1) + support-exemption + **lexical-agreement scoping** (gate applies only to `aiWithLowConfidence` answers — every measured NLI false alarm sat on a lexically-validated answer) + **measured-clean locale scope {en, es, fr}** (0 false blocks on the full 16-item × 7-locale grid; ko/ja/zh-Hans/de still false-block and stay shadow — per-segment rollout by measured quality). `nli_gate()`, V2-gate CLI column, regenerated per-locale runs, gate pins in `tests/test_nli.py`.
+- **Backend gate mode** (`HG_NLI_GATE=1`): additive `nli_blocked` suppression signal on `/api/v1/knowledge/validate` (same contract shape as `blocked_claim`; the tier is never rewritten). E2E with the real model: wrong-en blocked at conflict 0.9985, good-en exempt, wrong-ko scope-blocked-off. 48 tests green.
+- **Web BFF gate adoption** (`HG_NLI_GATE_URL`, default unset): tutor route awaits the gate for in-scope low-confidence answers and serves the safe fallback on `nli_blocked`; fail-open. 36 tests green.
+- **iOS/macOS client** (`HGNliGateService.swift` + `AITutorService` escalation + `Features.enableServerNLIGate`): release-ready server-assisted gate behind an unconditionally-false compile-time flag (Release and Debug identical; QA UserDefaults override) — shipped binaries structurally unchanged. 8 new unit tests + 6 scorer-parity tests green on the iOS simulator.
+
+### Honest accounting
+- The gate's zero-false-block record is a claim about the measured grid, not the universe; the scope exists precisely because de HG005 false-blocks at symmetric 0.93 — above several true catches — so no threshold separates it. Calibrated aggregation (SummaC-Conv precedent) remains the M2 path to widening the scope.
+
 ## [0.4.0] — 2026-07-27 · NLI backend: the gap becomes a number
 
 ### Added

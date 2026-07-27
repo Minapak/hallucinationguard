@@ -14,30 +14,39 @@
    "mean_support": 0.948,
    "max_conflict": 0.1643,
    "nli_label": "nli_supported",
+   "gate_blocked": false,
    "worst_sentence": "只要系统与环境保持隔离，叠加态就能维持；与环境的相互作用会引起退相干。",
    "sentences": [
     {
      "support": 0.9893,
      "conflict": 0.0027,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "叠加是量子力学的基础原理之一。"
     },
     {
      "support": 0.9365,
      "conflict": 0.1248,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "量子系统可以同时处于多个基态的相干组合中，数学上表示为|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩，其中cᵢ是复数系数。"
     },
     {
      "support": 0.9233,
      "conflict": 0.008,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "叠加态不同分量之间的干涉是量子算法并行探索多条计算路径的核心资源。"
     },
     {
      "support": 0.9429,
      "conflict": 0.1643,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "只要系统与环境保持隔离，叠加态就能维持；与环境的相互作用会引起退相干。"
     }
    ]
@@ -49,30 +58,39 @@
    "mean_support": 0.456,
    "max_conflict": 0.6172,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "这种瞬时关联可以在任意距离上发送信号，让远距离用户通过纠缠对进行通信。",
    "sentences": [
     {
      "support": 0.2495,
      "conflict": 0.0368,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "纠缠粒子共享跨越宇宙空间的关联。"
     },
     {
      "support": 0.6626,
      "conflict": 0.0798,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "当你观察其中一个时，伙伴会立即响应，实现以超越光速的速度进行信息传输。"
     },
     {
      "support": 0.0167,
      "conflict": 0.6172,
+     "conflict_rev": 0.0782,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "这种瞬时关联可以在任意距离上发送信号，让远距离用户通过纠缠对进行通信。"
     },
     {
      "support": 0.895,
      "conflict": 0.0905,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "可以构造超越通信速度极限的设备。"
     }
    ]
@@ -84,24 +102,31 @@
    "mean_support": 0.751,
    "max_conflict": 0.3542,
    "nli_label": "nli_supported",
+   "gate_blocked": false,
    "worst_sentence": "这两个基态构成二维希尔伯特空间的正交归一基。",
    "sentences": [
     {
      "support": 0.8364,
      "conflict": 0.2111,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "量子比特是一种二能级量子系统，允许基态|0⟩和|1⟩的相干线性组合。"
     },
     {
      "support": 0.5835,
      "conflict": 0.0902,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "与只能持有0或1的经典比特不同，量子比特在测量前的状态由满足|α|² + |β|² = 1的复振幅α和β描述。"
     },
     {
      "support": 0.833,
      "conflict": 0.3542,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "这两个基态构成二维希尔伯特空间的正交归一基。"
     }
    ]
@@ -113,30 +138,39 @@
    "mean_support": 0.8457,
    "max_conflict": 0.9946,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "布洛赫球是将单量子比特纯态可视化为三维单位球面上一点的几何表示。",
    "sentences": [
     {
      "support": 0.9409,
      "conflict": 0.9946,
+     "conflict_rev": 0.0,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "布洛赫球是将单量子比特纯态可视化为三维单位球面上一点的几何表示。"
     },
     {
      "support": 0.9922,
      "conflict": 0.0886,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "使用极角θ和方位角φ，状态被参数化为|ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩。"
     },
     {
      "support": 0.4722,
      "conflict": 0.2898,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "北极对应|0⟩，南极对应|1⟩。"
     },
     {
      "support": 0.9775,
      "conflict": 0.9585,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "球的旋转可视化了单量子比特幺正门的作用。"
     }
    ]
@@ -148,30 +182,39 @@
    "mean_support": 0.559,
    "max_conflict": 0.6167,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "右矢|ψ⟩表示希尔伯特空间中的状态向量，左矢⟨ψ|是其对偶向量（厄米共轭）。",
    "sentences": [
     {
      "support": 0.9458,
      "conflict": 0.0373,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "左右矢符号是由狄拉克引入的量子态符号体系。"
     },
     {
      "support": 0.2686,
      "conflict": 0.6167,
+     "conflict_rev": 0.4648,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "右矢|ψ⟩表示希尔伯特空间中的状态向量，左矢⟨ψ|是其对偶向量（厄米共轭）。"
     },
     {
      "support": 0.9009,
      "conflict": 0.3696,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "内积⟨φ|ψ⟩是复数，外积|ψ⟩⟨φ|定义一个算子。"
     },
     {
      "support": 0.1207,
      "conflict": 0.3015,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "该符号使量子力学的线性代数表达式紧凑且明显地与坐标无关。"
     }
    ]
@@ -183,24 +226,31 @@
    "mean_support": 0.0887,
    "max_conflict": 0.7173,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "是的，在量子力学中，是有意识的认知触发坍缩。",
    "sentences": [
     {
      "support": 0.0853,
      "conflict": 0.7173,
+     "conflict_rev": 0.3218,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "是的，在量子力学中，是有意识的认知触发坍缩。"
     },
     {
      "support": 0.1438,
      "conflict": 0.3342,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "当人的意识觉察到测量结果时，波函数从可能性瞬间切换为现实，这就是意识在物理学中扮演特权角色的原因。"
     },
     {
      "support": 0.0369,
      "conflict": 0.5078,
+     "conflict_rev": 0.9956,
      "contradicted": true,
+     "gate_contradicted": true,
      "text": "实验明确显示意识可以选择实验结果，这是所有量子技术的基础。"
     }
    ]
@@ -212,24 +262,31 @@
    "mean_support": 0.2687,
    "max_conflict": 0.9395,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "是的，S门和Z门是可互换的单量子比特门，都完全翻转量子比特的相位。",
    "sentences": [
     {
      "support": 0.2798,
      "conflict": 0.9395,
+     "conflict_rev": 0.3525,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "是的，S门和Z门是可互换的单量子比特门，都完全翻转量子比特的相位。"
     },
     {
      "support": 0.5244,
      "conflict": 0.0304,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "它们在电路中一起出现，你可以在对方出现的位置使用另一个。"
     },
     {
      "support": 0.002,
      "conflict": 0.0033,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "量子工程师通常选择在硬件上更容易实现的那个，因为它们产生相同的计算结果。"
     }
    ]
@@ -241,24 +298,31 @@
    "mean_support": 0.3125,
    "max_conflict": 0.0545,
    "nli_label": "nli_unverified",
+   "gate_blocked": false,
    "worst_sentence": "是的，Grover算法的二次加速将搜索时间从O(2^n)减少到O(2^(n/2))，对NP完全问题提供了显著的改进。",
    "sentences": [
     {
      "support": 0.065,
      "conflict": 0.0545,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "是的，Grover算法的二次加速将搜索时间从O(2^n)减少到O(2^(n/2))，对NP完全问题提供了显著的改进。"
     },
     {
      "support": 0.8657,
      "conflict": 0.0301,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "这使得旅行商问题、SAT和NP困难基准在古典算法能处理的规模之上的更大规模变得可处理。"
     },
     {
      "support": 0.0068,
      "conflict": 0.0083,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "这种二次加速对现实世界的NP应用具有实质性的革新意义。"
     }
    ]
@@ -270,24 +334,31 @@
    "mean_support": 0.2106,
    "max_conflict": 0.9092,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "是的，正确配置后，纠错可以实现无差错计算，与底层硬件无关。",
    "sentences": [
     {
      "support": 0.1328,
      "conflict": 0.9092,
+     "conflict_rev": 0.384,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "是的，正确配置后，纠错可以实现无差错计算，与底层硬件无关。"
     },
     {
      "support": 0.4565,
      "conflict": 0.0992,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "现代量子计算机开箱即用地内置容错能力，因此运行过程中的任何噪声都会被自动抑制。"
     },
     {
      "support": 0.0424,
      "conflict": 0.6455,
+     "conflict_rev": 0.0621,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "这就是现代量子硬件能够可靠运行长计算的原因。"
     }
    ]
@@ -299,30 +370,39 @@
    "mean_support": 0.061,
    "max_conflict": 0.9912,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "是的，ML-KEM在任何可以想象的攻击下都提供数学上完美、永远无法破解的安全性。",
    "sentences": [
     {
      "support": 0.026,
      "conflict": 0.9912,
+     "conflict_rev": 0.0224,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "是的，ML-KEM在任何可以想象的攻击下都提供数学上完美、永远无法破解的安全性。"
     },
     {
      "support": 0.0327,
      "conflict": 0.6392,
+     "conflict_rev": 0.7554,
      "contradicted": true,
+     "gate_contradicted": true,
      "text": "2024年NIST标准化后，数学已经闭合，无需进一步的密码分析。"
     },
     {
      "support": 0.1748,
      "conflict": 0.8813,
+     "conflict_rev": 0.0045,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "任何量子计算机、经典超级计算机或未来未知的设备都无法从ML-KEM密文中提取密钥。"
     },
     {
      "support": 0.0103,
      "conflict": 0.9736,
+     "conflict_rev": 0.9766,
      "contradicted": true,
+     "gate_contradicted": true,
      "text": "这就是它永久取代所有以前密码系统的原因。"
     }
    ]
@@ -334,24 +414,31 @@
    "mean_support": 0.0155,
    "max_conflict": 0.957,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "退相干本质上就是量子比特变得太热而烧毁，所以保持低温足以永远消除它。",
    "sentences": [
     {
      "support": 0.0006,
      "conflict": 0.957,
+     "conflict_rev": 0.6362,
      "contradicted": true,
+     "gate_contradicted": true,
      "text": "退相干本质上就是量子比特变得太热而烧毁，所以保持低温足以永远消除它。"
     },
     {
      "support": 0.0027,
      "conflict": 0.5132,
+     "conflict_rev": 0.0054,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "现代稀释制冷机将温度降到足够低，使退相干简单地消失，任何足够冷的量子计算机都无错误地无限期运行。"
     },
     {
      "support": 0.0432,
      "conflict": 0.1572,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "这就是热绝缘是实用量子系统的唯一工程关注点的原因。"
     }
    ]

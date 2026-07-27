@@ -14,42 +14,55 @@
    "mean_support": 0.7819,
    "max_conflict": 0.9473,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "Superposition is maintained as long as the system remains isolated from its environment; interaction with the environmen",
    "sentences": [
     {
      "support": 0.47,
      "conflict": 0.8691,
+     "conflict_rev": 0.0341,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "Here is the standard picture."
     },
     {
      "support": 0.9927,
      "conflict": 0.0022,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Superposition is one of the cornerstone principles of quantum mechanics."
     },
     {
      "support": 0.8008,
      "conflict": 0.1552,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "A quantum system can be in a coherent combination of multiple basis states at once, mathematically expressed as |ψ⟩ = Σᵢ"
     },
     {
      "support": 0.9639,
      "conflict": 0.0676,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "This is not merely a statement of ignorance about the system's state — it is a fundamental feature of nature."
     },
     {
      "support": 0.4976,
      "conflict": 0.0145,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "The interference between different components of a superposition is what gives quantum computing its power: algorithms s"
     },
     {
      "support": 0.9668,
      "conflict": 0.9473,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Superposition is maintained as long as the system remains isolated from its environment; interaction with the environmen"
     }
    ]
@@ -61,42 +74,55 @@
    "mean_support": 0.8379,
    "max_conflict": 0.9663,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "Here is the standard picture.",
    "sentences": [
     {
      "support": 0.5366,
      "conflict": 0.9663,
+     "conflict_rev": 0.0,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "Here is the standard picture."
     },
     {
      "support": 0.8735,
      "conflict": 0.3823,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Entanglement occurs when two or more qubits become correlated in such a way that the quantum state of the system cannot "
     },
     {
      "support": 0.8149,
      "conflict": 0.5386,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "An entangled state like (|00⟩+|11⟩)/sqrt(2) means measuring one qubit as |0⟩ instantly implies the other is |0⟩ too."
     },
     {
      "support": 0.876,
      "conflict": 0.0487,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Einstein called this 'spooky action at a distance,' but Bell's theorem (1964) proved these correlations are genuinely qu"
     },
     {
      "support": 0.9307,
      "conflict": 0.0273,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Entanglement is not just a curiosity -- it is the key resource enabling quantum computing speedups, quantum teleportatio"
     },
     {
      "support": 0.9956,
      "conflict": 0.004,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Entanglement can be quantified by measures such as entanglement entropy and concurrence."
     }
    ]
@@ -108,36 +134,47 @@
    "mean_support": 0.0974,
    "max_conflict": 0.959,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "123456, which sharpened the earlier BBBV lower bound.",
    "sentences": [
     {
      "support": 0.0249,
      "conflict": 0.1484,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Grover's algorithm finds a marked item in an unsorted database of N entries using approximately π/4 * √N oracle queries,"
     },
     {
      "support": 0.0052,
      "conflict": 0.6699,
+     "conflict_rev": 0.9561,
      "contradicted": true,
+     "gate_contradicted": true,
      "text": "The optimality of this query count — no quantum algorithm can do better for unstructured search — was established in the"
     },
     {
      "support": 0.366,
      "conflict": 0.8359,
+     "conflict_rev": 0.023,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "1103/PhysRevX."
     },
     {
      "support": 0.0906,
      "conflict": 0.959,
+     "conflict_rev": 0.0697,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "123456, which sharpened the earlier BBBV lower bound."
     },
     {
      "support": 0.0003,
      "conflict": 0.0013,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "In practice the iteration count must be chosen carefully, because running past the optimum rotates the state away from t"
     }
    ]
@@ -149,24 +186,31 @@
    "mean_support": 0.042,
    "max_conflict": 0.9678,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "ML-KEM, the module-lattice-based key-encapsulation mechanism derived from CRYSTALS-Kyber, was standardized by NIST as FI",
    "sentences": [
     {
      "support": 0.014,
      "conflict": 0.9678,
+     "conflict_rev": 0.0934,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "ML-KEM, the module-lattice-based key-encapsulation mechanism derived from CRYSTALS-Kyber, was standardized by NIST as FI"
     },
     {
      "support": 0.0341,
      "conflict": 0.0467,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Its security rests on the presumed hardness of the Module Learning With Errors problem, and it is the primary KEM recomm"
     },
     {
      "support": 0.0779,
      "conflict": 0.5732,
+     "conflict_rev": 0.1672,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "Deployments typically pair it with a classical scheme in hybrid modes during migration."
     }
    ]
@@ -178,48 +222,63 @@
    "mean_support": 0.1554,
    "max_conflict": 0.686,
    "nli_label": "nli_unverified",
+   "gate_blocked": false,
    "worst_sentence": "As for why arbitrarily long computation becomes possible once the physical error rate is below a critical value, the fie",
    "sentences": [
     {
      "support": 0.0041,
      "conflict": 0.1948,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Computers have always had to deal with errors."
     },
     {
      "support": 0.0048,
      "conflict": 0.011,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Classical machines flip bits by accident, and engineers learned long ago to add redundancy — parity bits, checksums, rep"
     },
     {
      "support": 0.0283,
      "conflict": 0.0028,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Quantum computers face errors too: qubits interact with their environment, amplitudes drift, and phases wobble."
     },
     {
      "support": 0.1982,
      "conflict": 0.0458,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Unlike classical bits, qubits cannot simply be copied for safekeeping, and measuring them directly would destroy the ver"
     },
     {
      "support": 0.0003,
      "conflict": 0.0006,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "These constraints are what make quantum error correction interesting as an engineering problem, and they are also why so"
     },
     {
      "support": 0.7764,
      "conflict": 0.686,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "As for why arbitrarily long computation becomes possible once the physical error rate is below a critical value, the fie"
     },
     {
      "support": 0.0758,
      "conflict": 0.0785,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "The fault-tolerance threshold theorem guarantees this by standard arguments, and syndrome extraction with stabilizer cod"
     }
    ]
@@ -231,36 +290,47 @@
    "mean_support": 0.1368,
    "max_conflict": 0.8003,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "Stabilizer codes make this concrete: one measures a set of commuting stabilizer operators, and the outcomes — the error ",
    "sentences": [
     {
      "support": 0.0687,
      "conflict": 0.0393,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Quantum error correction works by encoding one logical qubit into an entangled state of many physical qubits, so that er"
     },
     {
      "support": 0.3823,
      "conflict": 0.8003,
+     "conflict_rev": 0.0073,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "Stabilizer codes make this concrete: one measures a set of commuting stabilizer operators, and the outcomes — the error "
     },
     {
      "support": 0.1478,
      "conflict": 0.1101,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "Correction is then a conditional recovery operation."
     },
     {
      "support": 0.0595,
      "conflict": 0.5234,
+     "conflict_rev": 0.1979,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "The fault-tolerance threshold theorem explains why this scales: if each physical gate and measurement fails with probabi"
     },
     {
      "support": 0.0253,
      "conflict": 0.0445,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "The essential subtlety is that syndrome extraction is itself noisy, so fault-tolerant circuits are arranged so that a si"
     }
    ]

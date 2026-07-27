@@ -31,8 +31,8 @@ except ImportError:
           "harness/requirements.txt (the zero-dep CI matrix skips them by design)")
     raise SystemExit(0)
 
-from nli_v1 import CONTRA_MIN, NLIChecker  # noqa: E402
-from score_v0 import load_kb  # noqa: E402
+from nli_v1 import CONTRA_MIN, GATE_LOCALES, NLIChecker, nli_gate  # noqa: E402
+from score_v0 import classify, load_kb  # noqa: E402
 
 failures: list[str] = []
 
@@ -85,6 +85,36 @@ def main() -> int:
     check(len(nli_caught) >= 3,
           f"NLI must catch >=3 misconceptions pattern-free, got {sorted(nli_caught)}")
     check((nli_caught | v0_caught) == set(mis), "layered union must cover all 7")
+
+    # 4. V2 GATE — zero false blocks on faithful answers in the measured-clean
+    #    scope, real blocks on wrong ones, and hard-off outside the scope.
+    check(GATE_LOCALES == {"en", "es", "fr"},
+          f"gate scope changed without a measurement pass: {sorted(GATE_LOCALES)}")
+    good = ["HG001", "HG004", "HG005", "HG006"]
+    for locale in ("en", "es", "fr"):
+        kb_l = load_kb(REPO / "fixtures/kb-examples", locale)
+        blocked, false_blocked = set(), set()
+        for hid in mis + good:
+            it = items[hid]
+            ans = it["ai_explanations"][locale]
+            kb_text = kb_l.get(it.get("kb_concept_id") or "")
+            if not kb_text:
+                continue
+            tier, _ = classify(kb_text, ans)
+            if nli_gate(tier, checker.check(kb_text, ans), locale):
+                (false_blocked if hid in good else blocked).add(hid)
+        check(false_blocked == set(),
+              f"[{locale}] V2 gate FALSE-blocked faithful answers: {sorted(false_blocked)}")
+        check(len(blocked) >= 3,
+              f"[{locale}] V2 gate must block >=3 wrong answers, got {sorted(blocked)}")
+    # Outside the measured-clean scope the gate must never fire, whatever the model says.
+    kb_ko = load_kb(REPO / "fixtures/kb-examples", "ko")
+    it = items["HG115"]
+    ans_ko = it["ai_explanations"]["ko"]
+    kb_text = kb_ko.get(it["kb_concept_id"])
+    tier_ko, _ = classify(kb_text, ans_ko)
+    check(nli_gate(tier_ko, checker.check(kb_text, ans_ko), "ko") is False,
+          "gate must be hard-off outside GATE_LOCALES (ko)")
 
     if failures:
         print("\nFAIL:")

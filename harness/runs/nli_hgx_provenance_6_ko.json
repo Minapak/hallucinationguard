@@ -1,0 +1,387 @@
+{
+ "fixture": "hgx_provenance_6.json",
+ "locale": "ko",
+ "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "thresholds": {
+  "entail_min": 0.5,
+  "contra_min": 0.5
+ },
+ "results": [
+  {
+   "id": "HGX01",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.7312,
+   "max_conflict": 0.7891,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "중첩은 시스템이 환경으로부터 격리된 상태를 유지하는 한 유지되며, 환경과의 상호작용은 중첩을 파괴하는 결깨짐(결어긋남)을 유발합니다.",
+   "sentences": [
+    {
+     "support": 0.9814,
+     "conflict": 0.1628,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "표준적인 설명은 다음과 같습니다."
+    },
+    {
+     "support": 0.9683,
+     "conflict": 0.0116,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "중첩은 양자역학의 핵심 원리 중 하나입니다."
+    },
+    {
+     "support": 0.5698,
+     "conflict": 0.2222,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "양자 시스템은 여러 기저 상태의 결맞은 조합으로 동시에 존재할 수 있으며, 수학적으로 |ψ⟩ = Σᵢ cᵢ|ψᵢ⟩로 표현됩니다."
+    },
+    {
+     "support": 0.8955,
+     "conflict": 0.6143,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "여기서 cᵢ는 복소 계수입니다."
+    },
+    {
+     "support": 0.8604,
+     "conflict": 0.2849,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "이것은 시스템의 상태에 대한 무지의 표현이 아니라 자연의 근본적인 특성입니다."
+    },
+    {
+     "support": 0.4111,
+     "conflict": 0.2051,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "중첩의 서로 다른 성분 사이의 간섭이 양자 컴퓨팅의 힘의 원천입니다: 알고리즘은 복소 진폭을 조율하여 오답으로 가는 경로는 상쇄 간섭으로 지워지고 정답으로 가는 경로는 보강 간섭으로 증폭되게 만듭니다 — '모든 답을"
+    },
+    {
+     "support": 0.9165,
+     "conflict": 0.7891,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "중첩은 시스템이 환경으로부터 격리된 상태를 유지하는 한 유지되며, 환경과의 상호작용은 중첩을 파괴하는 결깨짐(결어긋남)을 유발합니다."
+    },
+    {
+     "support": 0.2468,
+     "conflict": 0.7358,
+     "conflict_rev": 0.1521,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "(용어 참고: 한국물리학회 2020 물리학용어집은 superposition의 표기로 순우리말 '포갬'을 1순위, '중첩'을 2순위로 등재합니다."
+    }
+   ]
+  },
+  {
+   "id": "HGX02",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.7598,
+   "max_conflict": 0.9629,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "아인슈타인은 이를 '유령 같은 원격 작용'이라고 불렀지만, 벨의 정리(1964)는 이 상관관계가 진정한 양자적 현상이며 국소 숨은 변수로는 설명할 수 없음을 증명했습니다.",
+   "sentences": [
+    {
+     "support": 0.9629,
+     "conflict": 0.0533,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "표준적인 설명은 다음과 같습니다."
+    },
+    {
+     "support": 0.8638,
+     "conflict": 0.7646,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "얽힘은 둘 이상의 큐비트가 서로 상관되어 시스템의 양자 상태를 개별 큐비트 상태로 인수분해할 수 없게 될 때 발생합니다."
+    },
+    {
+     "support": 0.5371,
+     "conflict": 0.3362,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "(|00⟩+|11⟩)/sqrt(2)와 같은 얽힌 상태는 한 큐비트를 측정해 |0⟩이 나오면 다른 큐비트도 즉시 |0⟩임을 의미합니다."
+    },
+    {
+     "support": 0.5454,
+     "conflict": 0.9629,
+     "conflict_rev": 0.0,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "아인슈타인은 이를 '유령 같은 원격 작용'이라고 불렀지만, 벨의 정리(1964)는 이 상관관계가 진정한 양자적 현상이며 국소 숨은 변수로는 설명할 수 없음을 증명했습니다."
+    },
+    {
+     "support": 0.7246,
+     "conflict": 0.0353,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "얽힘은 단순한 호기심거리가 아니라 양자 컴퓨팅 속도향상, 양자 텔레포테이션, 양자 암호, 양자 오류 정정을 가능하게 하는 핵심 자원입니다."
+    },
+    {
+     "support": 0.9248,
+     "conflict": 0.8027,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "얽힘은 얽힘 엔트로피와 콘커런스(concurrence) 같은 척도로 정량화할 수 있습니다."
+    }
+   ]
+  },
+  {
+   "id": "HGX03",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.2532,
+   "mean_support": 0.1043,
+   "max_conflict": 0.8369,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "이 쿼리 횟수의 최적성 — 비구조적 탐색에서는 어떤 양자 알고리즘도 이보다 더 잘할 수 없다는 사실 — 은 타이트 바운드 분석(Grover & Chuang (2003), doi:10.",
+   "sentences": [
+    {
+     "support": 0.0323,
+     "conflict": 0.002,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "그로버 알고리즘은 N개 항목의 정렬되지 않은 데이터베이스에서 표시된 항목을 약 π/4 * √N번의 오라클 쿼리로 찾아내며, 이는 고전적인 O(N) 전수 탐색에 비한 이차 속도 향상입니다."
+    },
+    {
+     "support": 0.0423,
+     "conflict": 0.8369,
+     "conflict_rev": 0.3901,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "이 쿼리 횟수의 최적성 — 비구조적 탐색에서는 어떤 양자 알고리즘도 이보다 더 잘할 수 없다는 사실 — 은 타이트 바운드 분석(Grover & Chuang (2003), doi:10."
+    },
+    {
+     "support": 0.3181,
+     "conflict": 0.6846,
+     "conflict_rev": 0.2159,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "1103/PhysRevX."
+    },
+    {
+     "support": 0.1278,
+     "conflict": 0.2815,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "123456)에서 확립되었으며, 이 분석은 앞선 BBBV 하한을 더 정밀하게 다듬었습니다."
+    },
+    {
+     "support": 0.0011,
+     "conflict": 0.0058,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "실제로는 반복 횟수를 신중하게 선택해야 하는데, 최적점을 지나 계속 실행하면 상태가 목표에서 멀어지는 방향으로 회전하여 성공 확률이 다시 떨어지기 때문입니다."
+    }
+   ]
+  },
+  {
+   "id": "HGX04",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.0971,
+   "mean_support": 0.0705,
+   "max_conflict": 0.9912,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "ML-KEM은 CRYSTALS-Kyber에서 유래한 모듈 격자 기반 키 캡슐화 메커니즘으로, 2024년 8월 NIST가 FIPS 209로 표준화했습니다.",
+   "sentences": [
+    {
+     "support": 0.0368,
+     "conflict": 0.9912,
+     "conflict_rev": 0.9653,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "ML-KEM은 CRYSTALS-Kyber에서 유래한 모듈 격자 기반 키 캡슐화 메커니즘으로, 2024년 8월 NIST가 FIPS 209로 표준화했습니다."
+    },
+    {
+     "support": 0.0746,
+     "conflict": 0.3462,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "그 보안은 모듈 오류 학습(Module Learning With Errors) 문제가 어렵다는 추정에 기반하며, 후양자 전환에서 일반 암호화에 권장되는 주요 KEM입니다."
+    },
+    {
+     "support": 0.1,
+     "conflict": 0.2393,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "마이그레이션 기간 동안 배포 환경에서는 일반적으로 고전 방식과 하이브리드 모드로 함께 사용합니다."
+    }
+   ]
+  },
+  {
+   "id": "HGX05",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1042,
+   "mean_support": 0.1662,
+   "max_conflict": 0.958,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "양자 컴퓨터도 오류를 피해 갈 수 없습니다.",
+   "sentences": [
+    {
+     "support": 0.0041,
+     "conflict": 0.8384,
+     "conflict_rev": 0.0038,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "컴퓨터는 언제나 오류와 씨름해 왔습니다."
+    },
+    {
+     "support": 0.0176,
+     "conflict": 0.0035,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "고전적인 기계에서는 비트가 우연히 뒤집히곤 했고, 엔지니어들은 오래전부터 패리티 비트, 체크섬, 단순 반복 같은 중복성을 더해 이따금 발생하는 결함을 찾아내고 고칠 수 있게 만들었습니다."
+    },
+    {
+     "support": 0.1128,
+     "conflict": 0.958,
+     "conflict_rev": 0.3032,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "양자 컴퓨터도 오류를 피해 갈 수 없습니다."
+    },
+    {
+     "support": 0.5278,
+     "conflict": 0.8062,
+     "conflict_rev": 0.0,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "큐비트는 주변 환경과 상호 작용하고, 진폭은 조금씩 어긋나며, 위상은 흔들립니다."
+    },
+    {
+     "support": 0.0457,
+     "conflict": 0.5801,
+     "conflict_rev": 0.4336,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "게다가 고전 비트와 달리 큐비트는 보관용으로 그냥 복사해 둘 수도 없고, 직접 측정하면 우리가 지키려는 바로 그 중첩이 파괴되고 맙니다."
+    },
+    {
+     "support": 0.0052,
+     "conflict": 0.0037,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "이런 제약이야말로 양자 오류 수정을 흥미로운 공학 문제로 만드는 요인이며, 이 분야의 역사가 기발한 우회책들을 중심으로 전개되어 온 이유이기도 합니다."
+    },
+    {
+     "support": 0.5234,
+     "conflict": 0.181,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "그렇다면 물리적 오류율이 어떤 임계치 아래로 내려가는 순간 임의로 긴 계산이 왜 가능해지는가 하는 물음이 남습니다."
+    },
+    {
+     "support": 0.0928,
+     "conflict": 0.1034,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "이는 결함 허용 임계값 정리가 표준 논증에 따라 보장하며, 나머지는 안정자 부호를 이용한 신드롬 추출이 처리합니다."
+    }
+   ]
+  },
+  {
+   "id": "HGX06",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1771,
+   "mean_support": 0.2206,
+   "max_conflict": 0.7393,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "안정자 부호는 이를 구체적으로 보여 줍니다.",
+   "sentences": [
+    {
+     "support": 0.3218,
+     "conflict": 0.6455,
+     "conflict_rev": 0.9946,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "양자 오류 수정은 하나의 논리 큐비트를 여러 물리 큐비트의 얽힘 상태로 인코딩하는 방식으로 작동하며, 그 덕분에 오류는 노출된 정보 자체가 아니라 중복 구조에 부딪히게 됩니다."
+    },
+    {
+     "support": 0.3484,
+     "conflict": 0.7393,
+     "conflict_rev": 0.106,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "안정자 부호는 이를 구체적으로 보여 줍니다."
+    },
+    {
+     "support": 0.2693,
+     "conflict": 0.6001,
+     "conflict_rev": 0.8867,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "서로 가환인 안정자 연산자들의 집합을 측정하면, 그 측정 결과인 오류 신드롬이 인코딩된 논리 상태를 드러내지도 교란하지도 않으면서 어떤 오류가 발생했는지 알려 줍니다."
+    },
+    {
+     "support": 0.1754,
+     "conflict": 0.066,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "그다음의 수정은 조건부 복구 연산입니다."
+    },
+    {
+     "support": 0.0119,
+     "conflict": 0.0335,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "결함 허용 임계값 정리는 이것이 왜 규모 확장으로 이어지는지를 설명합니다."
+    },
+    {
+     "support": 0.3889,
+     "conflict": 0.4294,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "각 물리 게이트와 측정이 어떤 결정적 임계값보다 낮은 확률로 실패한다면, 코드 거리를 늘리는 것만으로 논리 오류율을 지수적으로 억제할 수 있으며, 그 대가는 다항로그 수준의 오버헤드에 불과합니다."
+    },
+    {
+     "support": 0.1718,
+     "conflict": 0.0341,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "본질적으로 미묘한 점은 신드롬 추출 자체에도 잡음이 있다는 사실입니다."
+    },
+    {
+     "support": 0.0771,
+     "conflict": 0.0158,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "그래서 결함 허용 회로는 단 하나의 결함이 수정 불가능한 오류로 번질 수 없도록 배열되며, 바로 이 요구 조건에서 임계값이 유래합니다."
+    }
+   ]
+  }
+ ]
+}

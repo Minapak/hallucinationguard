@@ -1,0 +1,395 @@
+{
+ "fixture": "hgx_provenance_6.json",
+ "locale": "ja",
+ "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "thresholds": {
+  "entail_min": 0.5,
+  "contra_min": 0.5
+ },
+ "results": [
+  {
+   "id": "HGX01",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.8408,
+   "max_conflict": 0.8848,
+   "nli_label": "nli_supported",
+   "gate_blocked": false,
+   "worst_sentence": "重ね合わせはシステムが環境から隔離されている限り維持され、環境との相互作用はデコヒーレンスを引き起こし、重ね合わせを破壊します。",
+   "sentences": [
+    {
+     "support": 0.981,
+     "conflict": 0.0664,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "標準的な説明は次の通りです。"
+    },
+    {
+     "support": 0.9863,
+     "conflict": 0.0248,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "重ね合わせは量子力学の基礎原理の一つです。"
+    },
+    {
+     "support": 0.8667,
+     "conflict": 0.1982,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "量子システムは複数の基底状態のコヒーレントな組み合わせとして同時に存在でき、数学的には|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩と表現されます。"
+    },
+    {
+     "support": 0.9189,
+     "conflict": 0.2319,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "ここでcᵢは複素係数です。"
+    },
+    {
+     "support": 0.9678,
+     "conflict": 0.0613,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "これはシステムの状態に関する無知の表明ではなく、自然の根本的な特性です。"
+    },
+    {
+     "support": 0.2462,
+     "conflict": 0.2214,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "重ね合わせの異なる成分間の干渉こそが量子コンピューティングの力の源です：アルゴリズムは複素振幅を調整し、誤答へ向かう経路は打ち消し合い（相殺的干渉）、正答へ向かう経路は強め合う（相長的干渉）ようにします — 「すべての答えを同時に試す」とい"
+    },
+    {
+     "support": 0.9189,
+     "conflict": 0.8848,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "重ね合わせはシステムが環境から隔離されている限り維持され、環境との相互作用はデコヒーレンスを引き起こし、重ね合わせを破壊します。"
+    }
+   ]
+  },
+  {
+   "id": "HGX02",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.6805,
+   "max_conflict": 0.3518,
+   "nli_label": "nli_supported",
+   "gate_blocked": false,
+   "worst_sentence": "(|00⟩+|11⟩)/sqrt(2)のようなエンタングル状態では、一方の量子ビットを測定して|0⟩が得られれば、もう一方も瞬時に|0⟩であることが分かります。",
+   "sentences": [
+    {
+     "support": 0.958,
+     "conflict": 0.1632,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "標準的な説明は次の通りです。"
+    },
+    {
+     "support": 0.8301,
+     "conflict": 0.3076,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "エンタングルメントは、2つ以上の量子ビットが相関し、系の量子状態を個々の量子ビット状態に因数分解できなくなるときに生じます。"
+    },
+    {
+     "support": 0.4346,
+     "conflict": 0.3518,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "(|00⟩+|11⟩)/sqrt(2)のようなエンタングル状態では、一方の量子ビットを測定して|0⟩が得られれば、もう一方も瞬時に|0⟩であることが分かります。"
+    },
+    {
+     "support": 0.4524,
+     "conflict": 0.3022,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "アインシュタインはこれを「不気味な遠隔作用」と呼びましたが、ベルの定理（1964）は、これらの相関が真に量子的であり、局所隠れ変数では説明できないことを証明しました。"
+    },
+    {
+     "support": 0.6118,
+     "conflict": 0.0737,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "エンタングルメントは単なる好奇心の対象ではなく、量子計算の高速化、量子テレポーテーション、量子暗号、量子誤り訂正を可能にする鍵となる資源です。"
+    },
+    {
+     "support": 0.7959,
+     "conflict": 0.2507,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "エンタングルメントは、エンタングルメント・エントロピーやコンカレンスといった尺度で定量化できます。"
+    }
+   ]
+  },
+  {
+   "id": "HGX03",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.3607,
+   "mean_support": 0.3313,
+   "max_conflict": 0.6377,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "1103/PhysRevX.",
+   "sentences": [
+    {
+     "support": 0.9761,
+     "conflict": 0.3013,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "グローバーのアルゴリズムは、N項目の未整列データベースから目印の付いた項目を約π/4 * √N回のオラクルクエリで見つけ出します。"
+    },
+    {
+     "support": 0.6348,
+     "conflict": 0.2751,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "これは古典的なO(N)の全走査に対する二次の高速化です。"
+    },
+    {
+     "support": 0.1487,
+     "conflict": 0.6064,
+     "conflict_rev": 0.1981,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "このクエリ回数の最適性——非構造化探索ではどの量子アルゴリズムもこれを上回れないこと——は、タイトバウンド解析 (Grover & Chuang (2003), doi:10."
+    },
+    {
+     "support": 0.3389,
+     "conflict": 0.6377,
+     "conflict_rev": 0.1857,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "1103/PhysRevX."
+    },
+    {
+     "support": 0.2101,
+     "conflict": 0.5566,
+     "conflict_rev": 0.0592,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "123456) において確立され、先行するBBBV下界を精密化しました。"
+    },
+    {
+     "support": 0.0085,
+     "conflict": 0.0036,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "実際には反復回数を慎重に選ぶ必要があります。"
+    },
+    {
+     "support": 0.0018,
+     "conflict": 0.4607,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "最適値を超えて実行し続けると、状態が目標から離れる向きに回転し、成功確率が再び低下するからです。"
+    }
+   ]
+  },
+  {
+   "id": "HGX04",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.2047,
+   "mean_support": 0.1316,
+   "max_conflict": 0.9604,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "ML-KEMは、CRYSTALS-Kyberに由来するモジュール格子ベースの鍵カプセル化メカニズムで、2024年8月にNISTによってFIPS 209として標準化されました。",
+   "sentences": [
+    {
+     "support": 0.2786,
+     "conflict": 0.9604,
+     "conflict_rev": 0.9243,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "ML-KEMは、CRYSTALS-Kyberに由来するモジュール格子ベースの鍵カプセル化メカニズムで、2024年8月にNISTによってFIPS 209として標準化されました。"
+    },
+    {
+     "support": 0.0597,
+     "conflict": 0.2369,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "その安全性はモジュール誤り学習（Module Learning With Errors）問題が困難であるという推定に基づいており、ポスト量子移行において一般的な暗号化に推奨される主要なKEMです。"
+    },
+    {
+     "support": 0.0566,
+     "conflict": 0.046,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "移行期間中の実運用では、通常、古典方式とのハイブリッドモードで併用されます。"
+    }
+   ]
+  },
+  {
+   "id": "HGX05",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.2342,
+   "mean_support": 0.4035,
+   "max_conflict": 0.6421,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "しかも古典ビットとは違って、量子ビットは保管のために単純にコピーしておくことができず、直接測定すれば、守りたいはずの重ね合わせそのものが壊れてしまいます。",
+   "sentences": [
+    {
+     "support": 0.2554,
+     "conflict": 0.6001,
+     "conflict_rev": 0.0084,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "コンピュータは昔からエラーとの付き合いを避けられませんでした。"
+    },
+    {
+     "support": 0.3098,
+     "conflict": 0.0197,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "古典的な計算機ではビットが偶発的に反転することがあり、技術者たちはずっと以前から、パリティビット、チェックサム、単純な繰り返しといった冗長性を加えることで、ときおり生じる欠陥を検出して修復できるようにしてきました。"
+    },
+    {
+     "support": 0.353,
+     "conflict": 0.1376,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "量子コンピュータもまたエラーと無縁ではありません。"
+    },
+    {
+     "support": 0.9902,
+     "conflict": 0.4353,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "量子ビットは周囲の環境と相互作用し、振幅は少しずつずれ、位相は揺らぎます。"
+    },
+    {
+     "support": 0.4456,
+     "conflict": 0.6421,
+     "conflict_rev": 0.8394,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "しかも古典ビットとは違って、量子ビットは保管のために単純にコピーしておくことができず、直接測定すれば、守りたいはずの重ね合わせそのものが壊れてしまいます。"
+    },
+    {
+     "support": 0.0058,
+     "conflict": 0.0023,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "こうした制約こそが量子誤り訂正を工学的に興味深い問題にしているのであり、この分野の歴史の多くが巧妙な回避策を軸に展開してきた理由でもあります。"
+    },
+    {
+     "support": 0.7852,
+     "conflict": 0.2185,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "では、物理エラー率がある臨界値を下回ると、なぜ任意に長い計算が可能になるのでしょうか。"
+    },
+    {
+     "support": 0.0834,
+     "conflict": 0.1033,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "それは耐障害性の閾値定理が標準的な議論によって保証しており、残りはスタビライザー符号によるシンドローム抽出が処理してくれます。"
+    }
+   ]
+  },
+  {
+   "id": "HGX06",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.2523,
+   "mean_support": 0.4126,
+   "max_conflict": 0.9297,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "互いに可換なスタビライザー演算子の組を測定すると、その結果であるエラーシンドロームが、エンコードされた論理状態を明かすことも乱すこともなく、どのエラーが起きたのかを教えてくれます。",
+   "sentences": [
+    {
+     "support": 0.752,
+     "conflict": 0.1499,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "量子誤り訂正は、1つの論理量子ビットを多数の物理量子ビットのエンタングル状態にエンコードすることで機能し、その結果、エラーはむき出しの情報ではなく冗長な構造に当たることになります。"
+    },
+    {
+     "support": 0.6611,
+     "conflict": 0.1792,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "スタビライザー符号はこれを具体的なものにします。"
+    },
+    {
+     "support": 0.1361,
+     "conflict": 0.9297,
+     "conflict_rev": 0.1298,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "互いに可換なスタビライザー演算子の組を測定すると、その結果であるエラーシンドロームが、エンコードされた論理状態を明かすことも乱すこともなく、どのエラーが起きたのかを教えてくれます。"
+    },
+    {
+     "support": 0.1948,
+     "conflict": 0.0592,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "訂正はその後、条件付きの回復操作として行われます。"
+    },
+    {
+     "support": 0.5229,
+     "conflict": 0.0698,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "フォールトトレラント性の閾値定理は、これがなぜスケールするのかを説明します。"
+    },
+    {
+     "support": 0.793,
+     "conflict": 0.0869,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "各物理ゲートと測定が、ある臨界的な閾値を下回る確率でしか失敗しないなら、符号距離を大きくすることで論理エラー率を指数関数的に抑制でき、そのコストは多重対数程度のオーバーヘッドにすぎません。"
+    },
+    {
+     "support": 0.1031,
+     "conflict": 0.3184,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "本質的な微妙さは、シンドローム抽出それ自体にノイズが乗るという点にあります。"
+    },
+    {
+     "support": 0.1378,
+     "conflict": 0.0077,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "そのためフォールトトレラント回路は、単一の故障が訂正不能なエラーへと広がらないように構成されており、まさにこの要請から閾値の値が定まるのです。"
+    }
+   ]
+  }
+ ]
+}

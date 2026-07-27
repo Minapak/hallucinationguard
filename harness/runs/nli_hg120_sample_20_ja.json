@@ -14,36 +14,47 @@
    "mean_support": 0.9101,
    "max_conflict": 0.6504,
    "nli_label": "nli_supported",
+   "gate_blocked": false,
    "worst_sentence": "重ね合わせはシステムが環境から隔離されている限り維持され、環境との相互作用はデコヒーレンスを引き起こします。",
    "sentences": [
     {
      "support": 0.9526,
      "conflict": 0.0523,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "重ね合わせは量子力学の基礎原理です。"
     },
     {
      "support": 0.8667,
      "conflict": 0.1982,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "量子システムは複数の基底状態のコヒーレントな組み合わせとして同時に存在でき、数学的には|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩と表現されます。"
     },
     {
      "support": 0.9189,
      "conflict": 0.2319,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "ここでcᵢは複素係数です。"
     },
     {
      "support": 0.8599,
      "conflict": 0.0251,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "重ね合わせの異なる成分間の干渉が、量子アルゴリズムが計算経路を並列に探索するための中心資源です。"
     },
     {
      "support": 0.9521,
      "conflict": 0.6504,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "重ね合わせはシステムが環境から隔離されている限り維持され、環境との相互作用はデコヒーレンスを引き起こします。"
     }
    ]
@@ -55,30 +66,39 @@
    "mean_support": 0.4438,
    "max_conflict": 0.1653,
    "nli_label": "nli_unverified",
+   "gate_blocked": false,
    "worst_sentence": "光速限界を超える通信機器を構築することができます。",
    "sentences": [
     {
      "support": 0.7798,
      "conflict": 0.0257,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "もつれた粒子は宇宙空間を横切る相関を共有しています。"
     },
     {
      "support": 0.5854,
      "conflict": 0.0315,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "片方を観測するとパートナーが瞬時に応答し、光速を超える情報伝達が実現されます。"
     },
     {
      "support": 0.0192,
      "conflict": 0.1483,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "この瞬時的な相関は任意の距離にわたって信号を送ることを可能にし、もつれペアを介した遠隔ユーザー間の通信を実現します。"
     },
     {
      "support": 0.3906,
      "conflict": 0.1653,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "光速限界を超える通信機器を構築することができます。"
     }
    ]
@@ -90,24 +110,31 @@
    "mean_support": 0.568,
    "max_conflict": 0.5562,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "二つの基底状態は2次元ヒルベルト空間の正規直交基底を成します。",
    "sentences": [
     {
      "support": 0.8901,
      "conflict": 0.4722,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "量子ビットは二準位の量子システムで、基底状態|0⟩と|1⟩のコヒーレントな線形結合を許容します。"
     },
     {
      "support": 0.478,
      "conflict": 0.1238,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "古典ビットが0か1のどちらかを保持するのとは異なり、量子ビットの状態は測定前には複素振幅αとβ（|α|² + |β|² = 1）で記述されます。"
     },
     {
      "support": 0.3357,
      "conflict": 0.5562,
+     "conflict_rev": 0.11,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "二つの基底状態は2次元ヒルベルト空間の正規直交基底を成します。"
     }
    ]
@@ -119,30 +146,39 @@
    "mean_support": 0.8458,
    "max_conflict": 0.9731,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "球の回転は単一量子ビットユニタリゲートの作用を可視化します。",
    "sentences": [
     {
      "support": 0.4883,
      "conflict": 0.9526,
+     "conflict_rev": 0.2559,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "ブロッホ球は単一量子ビットの純粋状態を3次元単位球面上の点として視覚化する幾何学的表現です。"
     },
     {
      "support": 0.9648,
      "conflict": 0.0763,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "極角θと方位角φを用いて|ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩とパラメータ化されます。"
     },
     {
      "support": 0.9722,
      "conflict": 0.084,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "北極が|0⟩、南極が|1⟩に対応します。"
     },
     {
      "support": 0.958,
      "conflict": 0.9731,
+     "conflict_rev": 0.0,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "球の回転は単一量子ビットユニタリゲートの作用を可視化します。"
     }
    ]
@@ -154,30 +190,39 @@
    "mean_support": 0.593,
    "max_conflict": 0.5923,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "ケット|ψ⟩はヒルベルト空間の状態ベクトルを表し、ブラ⟨ψ|はその双対ベクトル（エルミート共役）です。",
    "sentences": [
     {
      "support": 0.9907,
      "conflict": 0.0415,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "ブラケット記法はディラックが導入した量子状態の記法体系です。"
     },
     {
      "support": 0.3774,
      "conflict": 0.5923,
+     "conflict_rev": 0.6704,
      "contradicted": true,
+     "gate_contradicted": true,
      "text": "ケット|ψ⟩はヒルベルト空間の状態ベクトルを表し、ブラ⟨ψ|はその双対ベクトル（エルミート共役）です。"
     },
     {
      "support": 0.9829,
      "conflict": 0.1171,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "内積⟨φ|ψ⟩は複素数で、外積|ψ⟩⟨φ|は演算子を定義します。"
     },
     {
      "support": 0.0209,
      "conflict": 0.0017,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "この記法は量子力学の線形代数表現を簡潔にし、明示的に座標系に依存しない形で書くことを可能にします。"
     }
    ]
@@ -189,30 +234,39 @@
    "mean_support": 0.2514,
    "max_conflict": 0.5557,
    "nli_label": "nli_unverified",
+   "gate_blocked": false,
    "worst_sentence": "はい、量子力学では意識的な認識が崩壊を引き起こします。",
    "sentences": [
     {
      "support": 0.7397,
      "conflict": 0.5557,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "はい、量子力学では意識的な認識が崩壊を引き起こします。"
     },
     {
      "support": 0.0201,
      "conflict": 0.1262,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "人間の心が測定結果を認識すると、波動関数は可能性から実在へとパチンと切り替わります。"
     },
     {
      "support": 0.229,
      "conflict": 0.1343,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "これが物理学で意識が特権的な役割を持つ理由です。"
     },
     {
      "support": 0.0167,
      "conflict": 0.1256,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "実験は心が実験結果を選択できることを明白に示しており、これがすべての量子技術の基礎です。"
     }
    ]
@@ -224,24 +278,31 @@
    "mean_support": 0.2859,
    "max_conflict": 0.9736,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "はい、SゲートとZゲートは量子ビットの位相を完全に反転させる相互交換可能な単一量子ビットゲートです。",
    "sentences": [
     {
      "support": 0.0651,
      "conflict": 0.9736,
+     "conflict_rev": 0.1271,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "はい、SゲートとZゲートは量子ビットの位相を完全に反転させる相互交換可能な単一量子ビットゲートです。"
     },
     {
      "support": 0.7778,
      "conflict": 0.8862,
+     "conflict_rev": 0.0,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "回路では一緒に現れ、一方が登場する場所で他方を使うことができます。"
     },
     {
      "support": 0.0148,
      "conflict": 0.8374,
+     "conflict_rev": 0.2343,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "量子エンジニアは同じ計算結果を生むので、通常はハードウェア上で実装しやすい方を選びます。"
     }
    ]
@@ -253,24 +314,31 @@
    "mean_support": 0.28,
    "max_conflict": 0.5605,
    "nli_label": "nli_unverified",
+   "gate_blocked": false,
    "worst_sentence": "これにより、巡回セールスマン、SAT、NP困難ベンチマークが古典アルゴリズムで扱える規模よりはるかに大きな規模で扱えるようになります。",
    "sentences": [
     {
      "support": 0.0303,
      "conflict": 0.0282,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "はい、Groverアルゴリズムの二次高速化は探索時間をO(2^n)からO(2^(n/2))に減らし、NP完全問題に重要な改善を提供します。"
     },
     {
      "support": 0.6733,
      "conflict": 0.5605,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "これにより、巡回セールスマン、SAT、NP困難ベンチマークが古典アルゴリズムで扱える規模よりはるかに大きな規模で扱えるようになります。"
     },
     {
      "support": 0.1364,
      "conflict": 0.0728,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "この二次高速化は実世界のNP応用において実質的に革新的です。"
     }
    ]
@@ -282,24 +350,31 @@
    "mean_support": 0.0242,
    "max_conflict": 0.8501,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "これが現代の量子ハードウェアが長い計算を信頼性高く実行できる理由です。",
    "sentences": [
     {
      "support": 0.0102,
      "conflict": 0.2888,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "はい、適切に構成すれば誤り訂正は基盤ハードウェアに関係なく誤りのない計算を達成します。"
     },
     {
      "support": 0.0348,
      "conflict": 0.2124,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "現代の量子コンピュータは組み込みの耐故障性がすぐに利用できるため、動作中のあらゆる雑音が自動的に抑制されます。"
     },
     {
      "support": 0.0277,
      "conflict": 0.8501,
+     "conflict_rev": 0.0055,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "これが現代の量子ハードウェアが長い計算を信頼性高く実行できる理由です。"
     }
    ]
@@ -311,30 +386,39 @@
    "mean_support": 0.0843,
    "max_conflict": 0.9863,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "はい、ML-KEMはあらゆる想像可能な攻撃の下で数学的に完璧で、永遠に破られない安全性を提供します。",
    "sentences": [
     {
      "support": 0.0472,
      "conflict": 0.9863,
+     "conflict_rev": 0.001,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "はい、ML-KEMはあらゆる想像可能な攻撃の下で数学的に完璧で、永遠に破られない安全性を提供します。"
     },
     {
      "support": 0.0124,
      "conflict": 0.894,
+     "conflict_rev": 0.9614,
      "contradicted": true,
+     "gate_contradicted": true,
      "text": "2024年のNIST標準化以降、数学が閉じているのでそれ以上の暗号解析は不要です。"
     },
     {
      "support": 0.2617,
      "conflict": 0.9849,
+     "conflict_rev": 0.0896,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "どんな量子コンピュータも、古典スーパーコンピュータも、未来の未知の装置もML-KEM暗号文から鍵を抽出することはできません。"
     },
     {
      "support": 0.0158,
      "conflict": 0.9736,
+     "conflict_rev": 0.9663,
      "contradicted": true,
+     "gate_contradicted": true,
      "text": "これがあらゆる以前の暗号システムを恒久的に置き換えた理由です。"
     }
    ]
@@ -346,24 +430,31 @@
    "mean_support": 0.0028,
    "max_conflict": 0.9956,
    "nli_label": "nli_contradicted",
+   "gate_blocked": false,
    "worst_sentence": "デコヒーレンスは本質的に量子ビットが熱くなりすぎて焼き切れることなので、冷たく保つだけで永遠に除去するのに十分です。",
    "sentences": [
     {
      "support": 0.0002,
      "conflict": 0.9956,
+     "conflict_rev": 0.9727,
      "contradicted": true,
+     "gate_contradicted": true,
      "text": "デコヒーレンスは本質的に量子ビットが熱くなりすぎて焼き切れることなので、冷たく保つだけで永遠に除去するのに十分です。"
     },
     {
      "support": 0.0011,
      "conflict": 0.9531,
+     "conflict_rev": 0.0045,
      "contradicted": true,
+     "gate_contradicted": false,
      "text": "現代の希釈冷凍機はデコヒーレンスが単に消えるほど温度を下げ、十分に冷たいすべての量子コンピュータは誤りなく無限に動作します。"
     },
     {
      "support": 0.0071,
      "conflict": 0.023,
+     "conflict_rev": 0.0,
      "contradicted": false,
+     "gate_contradicted": false,
      "text": "これが実用的な量子システムに対する工学的な唯一の関心事が熱絶縁である理由です。"
     }
    ]

@@ -60,17 +60,41 @@ DEFAULT_MODEL = "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"
 
 ENTAIL_MIN = 0.50
 CONTRA_MIN = 0.50
+SUPPORT_EXEMPT = 0.50  # a sentence some KB sentence entails this strongly is never gated
+
+# V2 GATE — rule R7, selected by measurement (docs/NLI-GAP-2026-07-27.md §6):
+#   gate fires on an answer iff
+#     (1) the lexical layer did NOT validate it (tier == aiWithLowConfidence;
+#         VALIDATED answers are exempt — every measured NLI false alarm sat on
+#         a lexically-validated answer, and NO_KB has no premise), and
+#     (2) some sentence has bidirectional contradiction — forward AND reverse
+#         >= CONTRA_MIN (true A-vs-not-A contradictions are symmetric; spurious
+#         topical ones are mostly not: 5/8 en false blocks -> 1/8 measured), and
+#     (3) that sentence's support < SUPPORT_EXEMPT, and
+#     (4) the locale is in GATE_LOCALES — the measured-clean scope. On the full
+#         benchmark grid (16 items x 7 locales) en/es/fr show 0 false blocks;
+#         ko/ja/zh-Hans/de still false-block 1-2 faithful answers each (worst:
+#         de HG005 at symmetric 0.93 — above many true catches, so no threshold
+#         separates), and therefore stay SHADOW until better calibration (M2).
+GATE_LOCALES = frozenset({"en", "es", "fr"})
 
 
 @dataclass
 class SentenceVerdict:
     sentence: str
-    support: float   # max entailment over KB sentences
-    conflict: float  # max contradiction over KB sentences
+    support: float        # max entailment over KB sentences
+    conflict: float       # max contradiction over KB sentences (forward)
+    conflict_rev: float = 0.0  # reverse-direction contradiction of the argmax pair
 
     @property
     def contradicted(self) -> bool:
         return self.conflict >= CONTRA_MIN and self.conflict > self.support
+
+    @property
+    def gate_contradicted(self) -> bool:
+        """Bidirectionally confirmed contradiction on an unsupported sentence."""
+        return (min(self.conflict, self.conflict_rev) >= CONTRA_MIN
+                and self.support < SUPPORT_EXEMPT)
 
 
 @dataclass
@@ -96,6 +120,19 @@ class NLIVerdict:
         if self.sentences and self.mean_support >= ENTAIL_MIN:
             return "nli_supported"
         return "nli_unverified"
+
+    @property
+    def gate_contradicted(self) -> bool:
+        return any(s.gate_contradicted for s in self.sentences)
+
+
+def nli_gate(tier: str, verdict: "NLIVerdict", locale: str) -> bool:
+    """V2 gate (rule R7): fires only on lexically-unvalidated answers, with
+    bidirectionally confirmed unsupported contradiction, inside the
+    measured-clean locale scope. See the GATE_LOCALES comment for the numbers."""
+    return (locale in GATE_LOCALES
+            and tier == TIER_LOW_CONFIDENCE
+            and verdict.gate_contradicted)
 
 
 class NLIChecker:
@@ -127,16 +164,27 @@ class NLIChecker:
         return [{self.id2label[i]: p for i, p in enumerate(row)} for row in probs]
 
     def check(self, kb_text: str, answer_text: str) -> NLIVerdict:
-        """SummaC-style sentence-by-sentence grounding of answer against KB."""
+        """SummaC-style sentence-by-sentence grounding of answer against KB.
+
+        For gate candidates (forward conflict >= CONTRA_MIN on an unsupported
+        sentence) the argmax-conflict pair is re-scored in the reverse direction
+        — the bidirectional-confirmation step of the V2 gate."""
         kb_sents = [s for s in _sentences(kb_text) if len(s) >= 8]
         ans_sents = [s for s in _sentences(answer_text) if len(s) >= 8]
         verdicts = []
         for asent in ans_sents:
             rows = self.scores_batch([(k, asent) for k in kb_sents]) if kb_sents else []
+            support = max((r["entailment"] for r in rows), default=0.0)
+            conflict, conflict_rev = 0.0, 0.0
+            if rows:
+                ci = max(range(len(rows)), key=lambda i: rows[i]["contradiction"])
+                conflict = rows[ci]["contradiction"]
+                if conflict >= CONTRA_MIN and support < SUPPORT_EXEMPT:
+                    conflict_rev = self.scores_batch(
+                        [(asent, kb_sents[ci])])[0]["contradiction"]
             verdicts.append(SentenceVerdict(
-                sentence=asent,
-                support=max((r["entailment"] for r in rows), default=0.0),
-                conflict=max((r["contradiction"] for r in rows), default=0.0)))
+                sentence=asent, support=support,
+                conflict=conflict, conflict_rev=conflict_rev))
         return NLIVerdict(sentences=verdicts)
 
 
@@ -158,10 +206,12 @@ def score_fixture(checker: NLIChecker, fixture_path: Path, kb_dir: Path, locale:
     items = data["items"]
     kb = load_kb(kb_dir, locale)
 
+    gate_in_scope = locale in GATE_LOCALES
     print(f"\nHallucinationGuard NLI V1 — {fixture_path.name} · locale={locale} "
-          f"· model={DEFAULT_MODEL.split('/')[-1]}\n")
-    widths = [6, 24, 5, 8, 9, 16]
-    header = ("id", "V0 tier (lexical)", "ovl", "support", "conflict", "NLI label")
+          f"· model={DEFAULT_MODEL.split('/')[-1]}"
+          f" · gate {'ACTIVE' if gate_in_scope else 'shadow (locale outside measured-clean scope)'}\n")
+    widths = [6, 24, 5, 8, 9, 16, 9]
+    header = ("id", "V0 tier (lexical)", "ovl", "support", "conflict", "NLI label", "V2 gate")
     rows = [header]
     lex_gap, results = [], []
     for item in items:
@@ -169,9 +219,10 @@ def score_fixture(checker: NLIChecker, fixture_path: Path, kb_dir: Path, locale:
         kb_text = kb.get(item.get("kb_concept_id") or "")
         tier, score = classify(kb_text, answer)
         if kb_text is None:
-            rows.append((item["id"], tier, f"{score:.2f}", "-", "-", "no KB"))
+            rows.append((item["id"], tier, f"{score:.2f}", "-", "-", "no KB", "-"))
             continue
         v = checker.check(kb_text, answer)
+        gate_blocked = nli_gate(tier, v, locale)
         nli_pass = v.label == "nli_supported"
         lex_pass = tier == TIER_VALIDATED
         if nli_pass != lex_pass:
@@ -180,13 +231,17 @@ def score_fixture(checker: NLIChecker, fixture_path: Path, kb_dir: Path, locale:
         results.append({"id": item["id"], "v0_tier": tier, "overlap": round(score, 4),
                         "mean_support": round(v.mean_support, 4),
                         "max_conflict": round(v.max_conflict, 4), "nli_label": v.label,
+                        "gate_blocked": gate_blocked,
                         "worst_sentence": (worst.sentence[:120] if worst else ""),
                         "sentences": [{"support": round(s.support, 4),
                                        "conflict": round(s.conflict, 4),
+                                       "conflict_rev": round(s.conflict_rev, 4),
                                        "contradicted": s.contradicted,
+                                       "gate_contradicted": s.gate_contradicted,
                                        "text": s.sentence[:120]} for s in v.sentences]})
         rows.append((item["id"], tier, f"{score:.2f}", f"{v.mean_support:.2f}",
-                     f"{v.max_conflict:.2f}", v.label))
+                     f"{v.max_conflict:.2f}", v.label,
+                     "BLOCK" if gate_blocked else "-"))
     for row in rows:
         print("  " + "  ".join(str(c).ljust(w) for c, w in zip(row, widths)).rstrip())
     print(f"\n  lexical-vs-NLI disagreements (KB-backed items): {len(lex_gap)}")

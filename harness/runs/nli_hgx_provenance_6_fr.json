@@ -1,0 +1,339 @@
+{
+ "fixture": "hgx_provenance_6.json",
+ "locale": "fr",
+ "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "thresholds": {
+  "entail_min": 0.5,
+  "contra_min": 0.5
+ },
+ "results": [
+  {
+   "id": "HGX01",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.8401,
+   "max_conflict": 0.9546,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "La superposition est maintenue tant que le système reste isolé de son environnement ; l'interaction avec l'environnement",
+   "sentences": [
+    {
+     "support": 0.9556,
+     "conflict": 0.0829,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "L'explication standard est la suivante."
+    },
+    {
+     "support": 0.9873,
+     "conflict": 0.0055,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "La superposition est l'un des principes fondamentaux de la mécanique quantique."
+    },
+    {
+     "support": 0.9141,
+     "conflict": 0.0754,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Un système quantique peut se trouver dans une combinaison cohérente de plusieurs états de base à la fois, exprimée mathé"
+    },
+    {
+     "support": 0.8867,
+     "conflict": 0.355,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Ce n'est pas simplement une déclaration d'ignorance sur l'état du système — c'est une caractéristique fondamentale de la"
+    },
+    {
+     "support": 0.3538,
+     "conflict": 0.0176,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "L'interférence entre les différentes composantes d'une superposition est la véritable source de la puissance du calcul q"
+    },
+    {
+     "support": 0.9434,
+     "conflict": 0.9546,
+     "conflict_rev": 0.0,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "La superposition est maintenue tant que le système reste isolé de son environnement ; l'interaction avec l'environnement"
+    }
+   ]
+  },
+  {
+   "id": "HGX02",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.8175,
+   "max_conflict": 0.5288,
+   "nli_label": "nli_supported",
+   "gate_blocked": false,
+   "worst_sentence": "L'explication standard est la suivante.",
+   "sentences": [
+    {
+     "support": 0.8232,
+     "conflict": 0.5288,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "L'explication standard est la suivante."
+    },
+    {
+     "support": 0.9321,
+     "conflict": 0.162,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "L'intrication se produit lorsque deux qubits ou plus deviennent corrélés de telle manière que l'état quantique du systèm"
+    },
+    {
+     "support": 0.7891,
+     "conflict": 0.1279,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Un état intriqué comme (|00⟩+|11⟩)/sqrt(2) signifie que mesurer un qubit dans l'état |0⟩ implique instantanément que l'a"
+    },
+    {
+     "support": 0.6494,
+     "conflict": 0.3079,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Einstein qualifiait cela d'« action fantomatique à distance », mais le théorème de Bell (1964) a prouvé que ces corrélat"
+    },
+    {
+     "support": 0.7251,
+     "conflict": 0.0262,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "L'intrication n'est pas une simple curiosité : c'est la ressource clé qui rend possibles les accélérations du calcul qua"
+    },
+    {
+     "support": 0.9863,
+     "conflict": 0.0069,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "L'intrication peut être quantifiée par des mesures telles que l'entropie d'intrication et la concurrence."
+    }
+   ]
+  },
+  {
+   "id": "HGX03",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 0.4045,
+   "mean_support": 0.2597,
+   "max_conflict": 0.9106,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "123456, qui affinait la borne inférieure antérieure de BBBV.",
+   "sentences": [
+    {
+     "support": 0.603,
+     "conflict": 0.1185,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "L'algorithme de Grover trouve un élément marqué dans une base de données non triée de N entrées en utilisant environ π/4"
+    },
+    {
+     "support": 0.0073,
+     "conflict": 0.1737,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "L'optimalité de ce nombre de requêtes — aucun algorithme quantique ne peut faire mieux pour la recherche non structurée "
+    },
+    {
+     "support": 0.4956,
+     "conflict": 0.7192,
+     "conflict_rev": 0.02,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "1103/PhysRevX."
+    },
+    {
+     "support": 0.1924,
+     "conflict": 0.9106,
+     "conflict_rev": 0.0009,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "123456, qui affinait la borne inférieure antérieure de BBBV."
+    },
+    {
+     "support": 0.0003,
+     "conflict": 0.0008,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "En pratique, le nombre d'itérations doit être choisi avec soin, car poursuivre au-delà de l'optimum fait tourner l'état "
+    }
+   ]
+  },
+  {
+   "id": "HGX04",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.2188,
+   "mean_support": 0.0342,
+   "max_conflict": 0.978,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "ML-KEM, le mécanisme d'encapsulation de clé fondé sur les réseaux modulaires et dérivé de CRYSTALS-Kyber, a été normalis",
+   "sentences": [
+    {
+     "support": 0.019,
+     "conflict": 0.978,
+     "conflict_rev": 0.1978,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "ML-KEM, le mécanisme d'encapsulation de clé fondé sur les réseaux modulaires et dérivé de CRYSTALS-Kyber, a été normalis"
+    },
+    {
+     "support": 0.0019,
+     "conflict": 0.0095,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Sa sécurité repose sur la difficulté présumée du problème d'apprentissage avec erreurs sur modules, et il s'agit du prin"
+    },
+    {
+     "support": 0.0817,
+     "conflict": 0.7007,
+     "conflict_rev": 0.2307,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "Pendant la migration, les déploiements l'associent généralement à un schéma classique en modes hybrides."
+    }
+   ]
+  },
+  {
+   "id": "HGX05",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.227,
+   "mean_support": 0.1839,
+   "max_conflict": 0.5605,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "Les ordinateurs ont toujours dû composer avec les erreurs.",
+   "sentences": [
+    {
+     "support": 0.0731,
+     "conflict": 0.5605,
+     "conflict_rev": 0.0936,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "Les ordinateurs ont toujours dû composer avec les erreurs."
+    },
+    {
+     "support": 0.0137,
+     "conflict": 0.0093,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Les machines classiques voient des bits basculer par accident, et les ingénieurs ont appris depuis longtemps à ajouter d"
+    },
+    {
+     "support": 0.0287,
+     "conflict": 0.0027,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Les ordinateurs quantiques font eux aussi face à des erreurs : les qubits interagissent avec leur environnement, les amp"
+    },
+    {
+     "support": 0.0309,
+     "conflict": 0.1229,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Contrairement aux bits classiques, les qubits ne peuvent pas être simplement copiés par précaution, et les mesurer direc"
+    },
+    {
+     "support": 0.0004,
+     "conflict": 0.0008,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Ce sont ces contraintes qui font de la correction d'erreurs quantiques un problème d'ingénierie intéressant, et c'est au"
+    },
+    {
+     "support": 0.7778,
+     "conflict": 0.5039,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Reste la question de savoir pourquoi un calcul arbitrairement long devient possible dès que le taux d'erreur physique pa"
+    },
+    {
+     "support": 0.3625,
+     "conflict": 0.3235,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Le théorème du seuil de la tolérance aux fautes le garantit par des arguments standard, et l'extraction de syndrome avec"
+    }
+   ]
+  },
+  {
+   "id": "HGX06",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.2883,
+   "mean_support": 0.1247,
+   "max_conflict": 0.645,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "Les codes stabilisateurs rendent cela concret : on mesure un ensemble d'opérateurs stabilisateurs qui commutent entre eu",
+   "sentences": [
+    {
+     "support": 0.2991,
+     "conflict": 0.0726,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "La correction d'erreurs quantiques fonctionne en encodant un qubit logique dans un état intriqué de nombreux qubits phys"
+    },
+    {
+     "support": 0.1179,
+     "conflict": 0.645,
+     "conflict_rev": 0.0191,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "Les codes stabilisateurs rendent cela concret : on mesure un ensemble d'opérateurs stabilisateurs qui commutent entre eu"
+    },
+    {
+     "support": 0.1338,
+     "conflict": 0.0732,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "La correction est alors une opération de récupération conditionnelle."
+    },
+    {
+     "support": 0.0361,
+     "conflict": 0.0989,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Le théorème du seuil de la tolérance aux fautes explique pourquoi cela passe à l'échelle : si chaque porte physique et c"
+    },
+    {
+     "support": 0.0369,
+     "conflict": 0.313,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "La subtilité essentielle est que l'extraction du syndrome est elle-même bruitée ; les circuits tolérants aux fautes sont"
+    }
+   ]
+  }
+ ]
+}

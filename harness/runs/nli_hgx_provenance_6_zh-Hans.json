@@ -1,0 +1,339 @@
+{
+ "fixture": "hgx_provenance_6.json",
+ "locale": "zh-Hans",
+ "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "thresholds": {
+  "entail_min": 0.5,
+  "contra_min": 0.5
+ },
+ "results": [
+  {
+   "id": "HGX01",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.8035,
+   "max_conflict": 0.6855,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "叠加态不同分量之间的干涉才是量子计算力量的源泉：算法通过调控复数概率幅，使通向错误答案的路径相消（相消干涉）、通向正确答案的路径相长（相长干涉）——这与“同时尝试所有答案”是完全不同的机制。",
+   "sentences": [
+    {
+     "support": 0.5645,
+     "conflict": 0.189,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "标准的解释如下。"
+    },
+    {
+     "support": 0.9976,
+     "conflict": 0.0069,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "叠加是量子力学的基石原理之一。"
+    },
+    {
+     "support": 0.9307,
+     "conflict": 0.1324,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "量子系统可以同时处于多个基态的相干组合中，数学表达为|ψ⟩ = Σᵢ cᵢ|ψᵢ⟩，其中cᵢ是复数系数。"
+    },
+    {
+     "support": 0.978,
+     "conflict": 0.5186,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "这不仅仅是对系统状态的无知——而是自然的根本特征。"
+    },
+    {
+     "support": 0.5552,
+     "conflict": 0.6855,
+     "conflict_rev": 0.0,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "叠加态不同分量之间的干涉才是量子计算力量的源泉：算法通过调控复数概率幅，使通向错误答案的路径相消（相消干涉）、通向正确答案的路径相长（相长干涉）——这与“同时尝试所有答案”是完全不同的机制。"
+    },
+    {
+     "support": 0.7949,
+     "conflict": 0.6274,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "只要系统与环境保持隔离，叠加态就能维持；与环境的相互作用会导致退相干，从而破坏叠加态。"
+    }
+   ]
+  },
+  {
+   "id": "HGX02",
+   "v0_tier": "aiValidatedAgainstKB",
+   "overlap": 1.0,
+   "mean_support": 0.7175,
+   "max_conflict": 0.9824,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "爱因斯坦称之为“鬼魅般的超距作用”，但贝尔定理（1964）证明这些关联是真正的量子关联，无法用局域隐变量来解释。",
+   "sentences": [
+    {
+     "support": 0.4458,
+     "conflict": 0.6143,
+     "conflict_rev": 0.1584,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "标准的解释如下。"
+    },
+    {
+     "support": 0.9834,
+     "conflict": 0.0992,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "当两个或多个量子比特以某种方式相互关联，使得系统的量子态无法分解为单个量子比特态的乘积时，就产生了纠缠。"
+    },
+    {
+     "support": 0.79,
+     "conflict": 0.1334,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "像(|00⟩+|11⟩)/sqrt(2)这样的纠缠态意味着：测量其中一个量子比特得到|0⟩，就立即意味着另一个也是|0⟩。"
+    },
+    {
+     "support": 0.4016,
+     "conflict": 0.9824,
+     "conflict_rev": 0.938,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "爱因斯坦称之为“鬼魅般的超距作用”，但贝尔定理（1964）证明这些关联是真正的量子关联，无法用局域隐变量来解释。"
+    },
+    {
+     "support": 0.8794,
+     "conflict": 0.0283,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "纠缠不仅仅是一种奇特现象——它是实现量子计算加速、量子隐形传态、量子密码和量子纠错的关键资源。"
+    },
+    {
+     "support": 0.8047,
+     "conflict": 0.9395,
+     "conflict_rev": 0.0,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "纠缠可以用纠缠熵和并发度（concurrence）等度量来量化。"
+    }
+   ]
+  },
+  {
+   "id": "HGX03",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.2564,
+   "mean_support": 0.4056,
+   "max_conflict": 0.6626,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "1103/PhysRevX.",
+   "sentences": [
+    {
+     "support": 0.9766,
+     "conflict": 0.0803,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "Grover算法在包含N个条目的未排序数据库中找到被标记的条目，只需约π/4 * √N次预言机查询，相对于经典的O(N)逐一扫描是一种二次加速。"
+    },
+    {
+     "support": 0.0964,
+     "conflict": 0.3943,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "这一查询次数的最优性——对于非结构化搜索，任何量子算法都无法做得更好——是在紧界分析 (Grover & Chuang (2003), doi:10."
+    },
+    {
+     "support": 0.3899,
+     "conflict": 0.6626,
+     "conflict_rev": 0.1503,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "1103/PhysRevX."
+    },
+    {
+     "support": 0.564,
+     "conflict": 0.1688,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "123456) 中确立的，该分析细化了此前的BBBV下界。"
+    },
+    {
+     "support": 0.0011,
+     "conflict": 0.0279,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "在实践中必须谨慎选择迭代次数，因为超过最优点继续运行会使量子态朝远离目标的方向旋转，成功概率随之再次下降。"
+    }
+   ]
+  },
+  {
+   "id": "HGX04",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1695,
+   "mean_support": 0.2116,
+   "max_conflict": 0.9883,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "ML-KEM是源自CRYSTALS-Kyber的基于模格的密钥封装机制，于2024年8月由NIST标准化为FIPS 209。",
+   "sentences": [
+    {
+     "support": 0.0863,
+     "conflict": 0.9883,
+     "conflict_rev": 0.8003,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "ML-KEM是源自CRYSTALS-Kyber的基于模格的密钥封装机制，于2024年8月由NIST标准化为FIPS 209。"
+    },
+    {
+     "support": 0.4565,
+     "conflict": 0.106,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "其安全性建立在模带误差学习（Module Learning With Errors）问题被推定困难的基础上，它是后量子过渡中推荐用于通用加密的主要KEM。"
+    },
+    {
+     "support": 0.092,
+     "conflict": 0.0831,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "在迁移期间，部署中通常将其与经典方案以混合模式配合使用。"
+    }
+   ]
+  },
+  {
+   "id": "HGX05",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1451,
+   "mean_support": 0.2308,
+   "max_conflict": 0.9536,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "计算机从一开始就不得不与错误打交道。",
+   "sentences": [
+    {
+     "support": 0.08,
+     "conflict": 0.9536,
+     "conflict_rev": 0.5601,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "计算机从一开始就不得不与错误打交道。"
+    },
+    {
+     "support": 0.0095,
+     "conflict": 0.0052,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "经典机器里的比特会偶然翻转，工程师们很早就学会了添加冗余——奇偶校验位、校验和、简单重复——以便偶发的故障能够被发现并修复。"
+    },
+    {
+     "support": 0.3264,
+     "conflict": 0.6543,
+     "conflict_rev": 0.0008,
+     "contradicted": true,
+     "gate_contradicted": false,
+     "text": "量子计算机同样面临错误：量子比特会与周围环境相互作用，振幅会漂移，相位会晃动。"
+    },
+    {
+     "support": 0.1494,
+     "conflict": 0.1843,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "与经典比特不同，量子比特不能简单地复制一份留作备份，而直接测量又会摧毁我们想要保护的那些叠加态。"
+    },
+    {
+     "support": 0.0209,
+     "conflict": 0.0099,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "正是这些约束让量子纠错成为一个有趣的工程问题，也正因如此，这个领域的历史大多围绕着种种巧妙的变通办法展开。"
+    },
+    {
+     "support": 0.8784,
+     "conflict": 0.7158,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "至于物理错误率一旦低于某个临界值，为什么任意长的计算就会成为可能呢？"
+    },
+    {
+     "support": 0.1509,
+     "conflict": 0.1724,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "容错阈值定理以标准论证保证了这一点，其余则交由基于稳定子码的综合征提取来处理。"
+    }
+   ]
+  },
+  {
+   "id": "HGX06",
+   "v0_tier": "aiWithLowConfidence",
+   "overlap": 0.1843,
+   "mean_support": 0.3494,
+   "max_conflict": 0.915,
+   "nli_label": "nli_contradicted",
+   "gate_blocked": false,
+   "worst_sentence": "稳定子码把这一点具体化：人们测量一组相互对易的稳定子算符，其结果——即错误综合征——揭示出发生了哪种错误，而不会泄露或扰动被编码的逻辑态。",
+   "sentences": [
+    {
+     "support": 0.9277,
+     "conflict": 0.1958,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "量子纠错的工作方式是把一个逻辑量子比特编码为许多物理量子比特的纠缠态，这样错误击中的是冗余结构，而不是裸露的信息。"
+    },
+    {
+     "support": 0.2214,
+     "conflict": 0.915,
+     "conflict_rev": 0.8174,
+     "contradicted": true,
+     "gate_contradicted": true,
+     "text": "稳定子码把这一点具体化：人们测量一组相互对易的稳定子算符，其结果——即错误综合征——揭示出发生了哪种错误，而不会泄露或扰动被编码的逻辑态。"
+    },
+    {
+     "support": 0.2876,
+     "conflict": 0.4604,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "随后的纠正就是一次条件化的恢复操作。"
+    },
+    {
+     "support": 0.1838,
+     "conflict": 0.0878,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "容错阈值定理解释了这为什么能够扩展：只要每个物理门和每次测量的失效概率低于某个临界阈值，就可以通过增大码距把逻辑错误率指数级地压低，而付出的开销仅为多对数量级。"
+    },
+    {
+     "support": 0.1266,
+     "conflict": 0.0911,
+     "conflict_rev": 0.0,
+     "contradicted": false,
+     "gate_contradicted": false,
+     "text": "本质的微妙之处在于，综合征提取本身也是有噪声的，因此容错电路被安排得使单个故障无法扩散成不可纠正的错误——阈值的数值正是来自这一要求。"
+    }
+   ]
+  }
+ ]
+}
