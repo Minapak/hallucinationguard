@@ -2,7 +2,7 @@
 
 **An open benchmark for measuring what LLMs get wrong about quantum computing.**
 
-1,680 verified fields. 7 locales. Every claim traced upstream to primary literature — original papers with DOIs, NIST standards, canonical texts (Nielsen & Chuang, Preskill's lecture notes, Mermin). Running in production today, gating every AI-generated explanation shown to real learners.
+1,680 verified fields. 7 locales. Every claim traced upstream to primary literature — original papers with DOIs, NIST standards, canonical texts (Nielsen & Chuang, Preskill's lecture notes, Mermin). Running in production today in a live quantum-education app: on the web tutor it gates AI-generated explanations (a failed check swaps in a safe fallback); in the iOS app it scores them and shows a verification badge, and only the on-device path substitutes knowledge-base text at low confidence.
 
 When a language model explains quantum mechanics to a learner — who is checking the physics?
 
@@ -19,7 +19,7 @@ Nearly identical, to an embedding. This is a documented failure class, not an an
 python3 demo/metric_blindness_demo.py
 ```
 
-HallucinationGuard is the benchmark built around that finding. It is not a research prototype: it runs in production today, gating every AI-generated explanation shown to users of a live quantum-education app.
+HallucinationGuard is the benchmark built around that finding. It is not a research prototype: it runs in production today in a live quantum-education app — as a gate on the web tutor (failed checks are replaced by a safe fallback) and as a displayed verification badge on the iOS app's cloud tutor path (it labels, it does not block there).
 
 ## What is in this repository (today)
 
@@ -116,7 +116,7 @@ HallucinationGuard was born inside a commercial product — a paid quantum-educa
 
 HallucinationGuard is designed to complement, not duplicate, existing efforts:
 
-- **Quantum-Audit** (arXiv:2602.10092, 2026) — a 2,700-question benchmark measuring whether models *know* quantum computing, with a Spanish/French subset. Measures model capability; HallucinationGuard verifies whether a *given generated explanation* is fabricated and gates it in production.
+- **Quantum-Audit** (arXiv:2602.10092, 2026) — a 2,700-question benchmark measuring whether models *know* quantum computing, with a Spanish/French subset. Measures model capability; HallucinationGuard verifies whether a *given generated explanation* is fabricated, and in production gates it (web) or labels it (iOS).
 - **PhysicBench** (Li et al., 2025) — quantum-physics QA benchmarking inside RAG pipelines. Pipeline evaluation, not an installable output-verification harness.
 - **SCIFACTCHECK** (arXiv:2606.21359, 2026) — general-science hallucination across five domains (unverifiability / overclaim / attribution). Not quantum-specific, not multilingual.
 - **Med-HALT** (Pal et al., 2023) — precedent for a domain-specific hallucination benchmark (medicine).

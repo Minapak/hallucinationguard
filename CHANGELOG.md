@@ -2,6 +2,11 @@
 
 All notable changes to this repository. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions track `CITATION.cff`.
 
+## [Unreleased] — 2026-09-23 · README accuracy
+
+### Changed
+- README no longer says the guard gates *every* AI explanation in production. Measured against the consuming app's code: the web tutor gates (failed validation → safe fallback), the iOS cloud tutor path attaches a verification badge only, and the iOS on-device path substitutes knowledge-base text when confidence ≤ 0.3. No code or benchmark change.
+
 ## [0.5.0] — 2026-07-27 · V2 NLI gate: shadow → gate, by measurement
 
 ### Added
