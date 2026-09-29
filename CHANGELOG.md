@@ -2,6 +2,15 @@
 
 All notable changes to this repository. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions track `CITATION.cff`.
 
+## [0.5.1] — 2026-09-29 · Superposition misconception claims
+
+### Added
+- **`fixtures/samples/hgm_misconceptions_3.json`** (schema v3.1, HGM01–HGM03, synthetic, not part of HG120): forbidden claims in all 7 locales for the spinning-coin picture of a qubit, "superposition is simply both 0 and 1 at the same time", and "the qubit secretly already has a definite value we don't know". The `ai_explanations` are authored wrong answers, labelled as such. Because the consuming apps union every sample file's claims into their production gate, the claims were phrased content-word-dominant and negation-free and measured against 7,722 texts from the consuming app's KB and lessons (0 false blocks) before being added.
+- `tests/test_scorer.py` `misconception_matrix()`: each claim fires on its wrong answer and stays silent on a correct denial and on correct explanations that share its vocabulary, in every locale. `tests/test_fixtures.py` validates the new file and rejects claims that contain a negation cue (pseudo-negation would switch off the denial guard).
+
+### Fixed
+- Negation cues: ko `아닙` (formal copula negation "아닙니다", the most common way to say "is not") and de `" nicht,"` ("bedeutet nicht, dass …") were missing, so the most natural Korean and German denials of a claim were scored as assertions. The pinned HG120 matrix is unchanged by the addition.
+
 ## [Unreleased] — 2026-09-23 · README accuracy
 
 ### Changed

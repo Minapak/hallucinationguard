@@ -172,8 +172,65 @@ def main() -> int:
     else:
         check(False, "extension fixture fixtures/samples/hgx_provenance_6.json missing")
 
+    # ---- v3.1 misconception extension fixture (synthetic, not HG120) ----
+    # Same item schema as HG120; forbidden_claims here feed the consuming apps'
+    # production gate (the sync scripts union every fixtures/samples/*.json), so
+    # the claims must carry all 7 locales and must not contain a negation cue —
+    # a claim that itself contains a cue skips the scorer's negation guard
+    # (pseudo-negation), which would let a correct denial fire.
+    from importlib import util as _util
+    _spec = _util.spec_from_file_location("score_v0", REPO / "reference/score_v0.py")
+    _score = _util.module_from_spec(_spec)
+    _spec.loader.exec_module(_score)
+    hgm_path = REPO / "fixtures/samples/hgm_misconceptions_3.json"
+    hgm_items = []
+    if hgm_path.exists():
+        hgm = json.loads(hgm_path.read_text(encoding="utf-8"))
+        check(hgm.get("schema") == "hg_benchmark_item_v3.1",
+              f"misconception ext: schema {hgm.get('schema')!r} != hg_benchmark_item_v3.1")
+        hgm_items = hgm["items"]
+        hgm_ids = [it["id"] for it in hgm_items]
+        check(len(set(hgm_ids)) == len(hgm_ids), "misconception ext: duplicate item ids")
+        check(all(i.startswith("HGM") for i in hgm_ids),
+              "misconception ext: ids must use the HGM namespace (never HG1xx — not part of HG120)")
+        hgm_dist: dict = {}
+        for it in hgm_items:
+            hgm_dist[it["expected_source"]] = hgm_dist.get(it["expected_source"], 0) + 1
+            check(it["expected_source"] in TIERS, f"{it['id']}: bad tier {it['expected_source']}")
+            check(it.get("kb_concept_id") in kb_ids,
+                  f"{it['id']}: kb_concept_id {it.get('kb_concept_id')!r} not in kb-examples")
+            check(it.get("kb_category") == kb_categories.get(it.get("kb_concept_id")),
+                  f"{it['id']}: kb_category mismatch")
+            check(isinstance(it.get("preskill_part"), int) and 1 <= it["preskill_part"] <= 24,
+                  f"{it['id']}: preskill_part out of range 1-24")
+            check(isinstance(it.get("ai_confidence"), (int, float)) and 0 <= it["ai_confidence"] <= 1,
+                  f"{it['id']}: ai_confidence out of range 0-1")
+            en_answer = it["ai_explanations"].get("en", "").casefold()
+            for kw in it.get("expected_keywords") or []:
+                check(kw.casefold() in en_answer,
+                      f"{it['id']}: expected_keyword {kw!r} absent from en answer")
+            fc = it.get("forbidden_claims")
+            check(isinstance(fc, dict) and set(fc) >= set(LOCALES)
+                  and all(isinstance(fc[loc], list) and fc[loc]
+                          and all(isinstance(c, str) and c.strip() for c in fc[loc])
+                          for loc in LOCALES),
+                  f"{it['id']}: forbidden_claims must carry all locales {LOCALES}")
+            for loc in LOCALES:
+                check(bool(it["prompts"].get(loc, "").strip()), f"{it['id']}: empty prompt [{loc}]")
+                check(bool(it["ai_explanations"].get(loc, "").strip()), f"{it['id']}: empty answer [{loc}]")
+                for claim in (fc or {}).get(loc, []):
+                    check(not _score._denies(claim, loc),
+                          f"{it['id']}: [{loc}] claim contains a negation cue (pseudo-negation "
+                          f"would disable the denial guard): {claim!r}")
+        check(hgm.get("sample_distribution") == hgm_dist,
+              f"misconception ext: sample_distribution {hgm.get('sample_distribution')} != {hgm_dist}")
+        check(sorted(hgm.get("categories_in_sample", [])) == sorted({it["category"] for it in hgm_items}),
+              "misconception ext: categories_in_sample does not match item categories")
+    else:
+        check(False, "misconception fixture fixtures/samples/hgm_misconceptions_3.json missing")
+
     field_count = sum(len(it["prompts"]) + len(it["ai_explanations"]) for it in items)
-    print(f"items: {len(items)} (+{len(ext_items)} HGX extension) · "
+    print(f"items: {len(items)} (+{len(ext_items)} HGX, +{len(hgm_items)} HGM extension) · "
           f"multilingual fields: {field_count} · KB entries: {len(kb_ids)}")
 
     if failures:

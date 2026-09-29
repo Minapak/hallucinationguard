@@ -1,0 +1,199 @@
+{
+  "schema": "hg_benchmark_item_v3.1",
+  "version": "hgm-misconceptions-3",
+  "license": "Apache-2.0",
+  "description": "Three synthetic misconception items (HGM01-HGM03) authored 2026-09-29 for the intro-level superposition misconceptions: the spinning-coin picture, 'simply both 0 and 1 at the same time', and 'already has a definite value we don't know'. The ai_explanations are authored wrong answers (not recorded model outputs) that assert each misconception, so every locale's forbidden_claims fire on them. NOT part of the frozen HG120 production set and NOT counted in the 1,680 verified fields. Claims were phrased to be content-word dominant and free of negation cues, and were measured to produce zero false blocks against 7,722 texts from the consuming app's content (its 77-concept knowledge base in 7 locales, including the misconception notes, plus its 46-level lesson bodies) before being added. Regression tests pin that each claim fires on its wrong answer and stays silent on negated and correct phrasings in every locale.",
+  "locales": [
+    "en",
+    "ko",
+    "ja",
+    "zh-Hans",
+    "es",
+    "fr",
+    "de"
+  ],
+  "sample_distribution": {
+    "aiWithLowConfidence": 3
+  },
+  "categories_in_sample": [
+    "quantum_basics",
+    "quantum_foundations"
+  ],
+  "items": [
+    {
+      "id": "HGM01",
+      "category": "quantum_basics",
+      "kb_category": "foundations",
+      "kb_concept_id": "qubit",
+      "preskill_part": 2,
+      "key_concepts": [
+        "qubit",
+        "superposition"
+      ],
+      "ai_confidence": 0.9,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [
+        "qubit",
+        "spinning coin"
+      ],
+      "forbidden_claims": {
+        "en": [
+          "A qubit is a spinning coin showing heads and tails simultaneously"
+        ],
+        "ko": [
+          "큐비트는 앞면과 뒷면을 동시에 보여 주는 회전하는 동전이다"
+        ],
+        "ja": [
+          "量子ビットは表と裏を同時に見せる回転するコインだ"
+        ],
+        "zh-Hans": [
+          "量子比特是一枚同时显示正面和反面的旋转硬币"
+        ],
+        "es": [
+          "Un qubit equivale a una moneda girando, cara y cruz simultáneamente"
+        ],
+        "fr": [
+          "Un qubit est une pièce qui tourne en montrant pile et face simultanément"
+        ],
+        "de": [
+          "Ein Qubit ist eine rotierende Münze, die Kopf und Zahl gleichzeitig zeigt"
+        ]
+      },
+      "difficulty": "basic",
+      "prompts": {
+        "en": "Is a qubit like a spinning coin?",
+        "ko": "큐비트는 회전하는 동전과 같은가요?",
+        "ja": "量子ビットは回転するコインのようなものですか？",
+        "zh-Hans": "量子比特像一枚旋转的硬币吗？",
+        "es": "¿Es un qubit como una moneda girando?",
+        "fr": "Un qubit est-il comme une pièce qui tourne ?",
+        "de": "Ist ein Qubit wie eine sich drehende Münze?"
+      },
+      "ai_explanations": {
+        "en": "A qubit is a spinning coin showing heads and tails simultaneously. While it spins it holds both answers, and when you catch it the coin lands on one side. Measuring a qubit is exactly like catching that coin.",
+        "ko": "큐비트는 앞면과 뒷면을 동시에 보여 주는 회전하는 동전이다. 도는 동안에는 두 답을 모두 가지고 있다가, 손으로 잡는 순간 한 면으로 떨어집니다. 큐비트를 측정하는 것은 바로 그 동전을 잡는 것과 같습니다.",
+        "ja": "量子ビットは表と裏を同時に見せる回転するコインだ。回っている間は両方の答えを持っていて、つかんだ瞬間にどちらかの面に落ち着きます。量子ビットの測定は、そのコインをつかむことと同じです。",
+        "zh-Hans": "量子比特是一枚同时显示正面和反面的旋转硬币。旋转时它同时拥有两个答案，一把抓住时硬币就落到某一面。测量量子比特正是抓住这枚硬币。",
+        "es": "Un qubit equivale a una moneda girando, cara y cruz simultáneamente. Mientras gira tiene ambas respuestas y, cuando la atrapas, cae de un lado. Medir un qubit es exactamente atrapar esa moneda.",
+        "fr": "Un qubit est une pièce qui tourne en montrant pile et face simultanément. Tant qu'elle tourne, elle contient les deux réponses, et quand on l'attrape, elle tombe d'un côté. Mesurer un qubit, c'est exactement attraper cette pièce.",
+        "de": "Ein Qubit ist eine rotierende Münze, die Kopf und Zahl gleichzeitig zeigt. Solange sie sich dreht, hält sie beide Antworten, und wenn man sie fängt, landet sie auf einer Seite. Ein Qubit zu messen heißt genau, diese Münze zu fangen."
+      }
+    },
+    {
+      "id": "HGM02",
+      "category": "quantum_basics",
+      "kb_category": "foundations",
+      "kb_concept_id": "superposition",
+      "preskill_part": 2,
+      "key_concepts": [
+        "superposition",
+        "qubit"
+      ],
+      "ai_confidence": 0.9,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [
+        "superposition"
+      ],
+      "forbidden_claims": {
+        "en": [
+          "Superposition simply means being both 0 and 1 at the same time"
+        ],
+        "ko": [
+          "큐비트는 그냥 0과 1을 동시에 가지고 있다"
+        ],
+        "ja": [
+          "重ね合わせは単に0と1が同時に存在するだけだ"
+        ],
+        "zh-Hans": [
+          "叠加就是同时既是0又是1"
+        ],
+        "es": [
+          "La superposición consiste simplemente en ser 0 y 1 a la vez"
+        ],
+        "fr": [
+          "En superposition, un qubit vaut tout bêtement 0 et 1 simultanément"
+        ],
+        "de": [
+          "Superposition heißt einfach, zugleich 0 und 1 zu sein"
+        ]
+      },
+      "difficulty": "basic",
+      "prompts": {
+        "en": "Is a qubit in superposition both 0 and 1 at the same time?",
+        "ko": "중첩 상태의 큐비트는 0과 1이 동시에 있는 것인가요?",
+        "ja": "重ね合わせ状態の量子ビットは0と1が同時に存在しているのですか？",
+        "zh-Hans": "处于叠加态的量子比特是同时既是0又是1吗？",
+        "es": "¿Un qubit en superposición es 0 y 1 al mismo tiempo?",
+        "fr": "Un qubit en superposition est-il 0 et 1 en même temps ?",
+        "de": "Ist ein Qubit in Superposition gleichzeitig 0 und 1?"
+      },
+      "ai_explanations": {
+        "en": "Superposition simply means being both 0 and 1 at the same time. It holds both bit values at once, so a register of qubits stores every number simultaneously.",
+        "ko": "큐비트는 그냥 0과 1을 동시에 가지고 있다. 두 비트 값을 한꺼번에 담고 있으므로 큐비트 레지스터는 모든 수를 한꺼번에 저장합니다.",
+        "ja": "重ね合わせは単に0と1が同時に存在するだけだ。2つのビット値を一度に保持するので、量子ビットのレジスタはすべての数を一度に記憶します。",
+        "zh-Hans": "叠加就是同时既是0又是1。它一次保存两个比特值，所以量子比特寄存器一次存储所有的数。",
+        "es": "La superposición consiste simplemente en ser 0 y 1 a la vez. Guarda ambos valores de bit a la vez, así que un registro de qubits almacena todos los números simultáneamente.",
+        "fr": "En superposition, un qubit vaut tout bêtement 0 et 1 simultanément. Il contient les deux valeurs de bit à la fois, donc un registre de qubits stocke tous les nombres simultanément.",
+        "de": "Superposition heißt einfach, zugleich 0 und 1 zu sein. Es hält beide Bitwerte auf einmal, daher speichert ein Qubit-Register alle Zahlen gleichzeitig."
+      }
+    },
+    {
+      "id": "HGM03",
+      "category": "quantum_foundations",
+      "kb_category": "foundations",
+      "kb_concept_id": "superposition",
+      "preskill_part": 2,
+      "key_concepts": [
+        "superposition",
+        "measurement"
+      ],
+      "ai_confidence": 0.9,
+      "expected_source": "aiWithLowConfidence",
+      "expected_keywords": [
+        "superposition"
+      ],
+      "forbidden_claims": {
+        "en": [
+          "Superposition means the qubit secretly already has a definite value we are merely unaware of"
+        ],
+        "ko": [
+          "중첩은 큐비트가 이미 정해진 값을 몰래 가지고 있는데 우리가 모를 뿐이라는 뜻이다"
+        ],
+        "ja": [
+          "重ね合わせとは、量子ビットがすでに決まった値をひそかに持っていて、私たちが知らずにいるだけという意味だ"
+        ],
+        "zh-Hans": [
+          "叠加意味着量子比特早已暗中具有确定的值，只是我们不知道"
+        ],
+        "es": [
+          "La superposición significa que el qubit ya tiene en secreto un valor definido que simplemente desconocemos"
+        ],
+        "fr": [
+          "La superposition signifie que le qubit possède déjà en secret une valeur définie que nous ignorons simplement"
+        ],
+        "de": [
+          "Superposition bedeutet, dass das Qubit insgeheim bereits einen festen Wert hat, der uns lediglich unbekannt ist"
+        ]
+      },
+      "difficulty": "basic",
+      "prompts": {
+        "en": "Does superposition just mean we do not know the qubit's value yet?",
+        "ko": "중첩은 큐비트의 값을 아직 모른다는 뜻일 뿐인가요?",
+        "ja": "重ね合わせとは、量子ビットの値をまだ知らないというだけの意味ですか？",
+        "zh-Hans": "叠加只是意味着我们还不知道量子比特的值吗？",
+        "es": "¿La superposición solo significa que aún no conocemos el valor del qubit?",
+        "fr": "La superposition signifie-t-elle seulement que nous ne connaissons pas encore la valeur du qubit ?",
+        "de": "Bedeutet Superposition nur, dass wir den Wert des Qubits noch nicht kennen?"
+      },
+      "ai_explanations": {
+        "en": "Superposition means the qubit secretly already has a definite value we are merely unaware of. Measurement simply reveals which value it had all along, like opening a sealed envelope.",
+        "ko": "중첩은 큐비트가 이미 정해진 값을 몰래 가지고 있는데 우리가 모를 뿐이라는 뜻이다. 측정은 봉인된 봉투를 여는 것처럼 처음부터 가지고 있던 값을 드러낼 뿐입니다.",
+        "ja": "重ね合わせとは、量子ビットがすでに決まった値をひそかに持っていて、私たちが知らずにいるだけという意味だ。測定は封筒を開けるように、最初から持っていた値を明らかにするだけです。",
+        "zh-Hans": "叠加意味着量子比特早已暗中具有确定的值，只是我们不知道。测量只是像拆开密封的信封一样，揭示它原本就有的值。",
+        "es": "La superposición significa que el qubit ya tiene en secreto un valor definido que simplemente desconocemos. La medición solo revela el valor que tenía desde el principio, como abrir un sobre cerrado.",
+        "fr": "La superposition signifie que le qubit possède déjà en secret une valeur définie que nous ignorons simplement. La mesure révèle seulement la valeur qu'il avait depuis le début, comme on ouvre une enveloppe scellée.",
+        "de": "Superposition bedeutet, dass das Qubit insgeheim bereits einen festen Wert hat, der uns lediglich unbekannt ist. Die Messung enthüllt nur den Wert, den es die ganze Zeit hatte, wie beim Öffnen eines versiegelten Umschlags."
+      }
+    }
+  ]
+}

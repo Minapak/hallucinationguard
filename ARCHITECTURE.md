@@ -15,6 +15,9 @@ hallucinationguard/
 │   ├── samples/hgx_provenance_6.json  # 6 synthetic adversarial extension items (schema v3.2, HGX01-06):
 │   │                                  #   uncited near-verbatim / hallucinated citation / depth inversion
 │   │                                  #   + control — NOT part of HG120, not in the 1,680-field count
+│   ├── samples/hgm_misconceptions_3.json # 3 synthetic misconception items (schema v3.1, HGM01-03):
+│   │                                  #   spinning coin / "simply both 0 and 1" / hidden definite value
+│   │                                  #   — authored wrong answers, NOT part of HG120
 │   └── kb-examples/*.json             # 12 verified KB concepts: certainty grade, DOI sourceRef,
 │                                      #   7-locale translations, verifier record
 ├── reference/score_v0.py              # the production V0 baseline scorer (single file, stdlib only)

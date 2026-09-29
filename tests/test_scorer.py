@@ -8,7 +8,8 @@ Covers: tokenizer (incl. CJK character bigrams), overlap metric, four-tier
 classification, the forbidden-claim gate (locale claims, negation-cue guard,
 pseudo-negation, mention-vs-assertion framing), CLI error paths, and a pinned
 per-locale regression matrix over the shipped 20-item sample so any tier or
-gate drift fails CI instead of passing silently.
+gate drift fails CI instead of passing silently, plus a both-directions
+matrix over the 3-item misconception extension (HGM01-03).
 """
 from __future__ import annotations
 
@@ -91,6 +92,16 @@ def unit_tests() -> None:
     check(asserts_forbidden_claim(
         "얽힘은 정보를 빛보다 빠르게 전송한다", loc_claims, "ko") is not None,
         "gate: localized dict claims must fire for ko")
+    # Formal copula negation (ko "아닙니다") and a comma-attached German
+    # "nicht," ("bedeutet nicht, dass …") are denials too (added 2026-09-29).
+    ko_claim = {"ko": ["중첩은 큐비트가 이미 정해진 값을 몰래 가지고 있는데 우리가 모를 뿐이라는 뜻이다"]}
+    check(asserts_forbidden_claim(
+        "중첩은 큐비트가 이미 정해진 값을 몰래 가지고 있는데 우리가 모를 뿐이라는 뜻이 아닙니다.",
+        ko_claim, "ko") is None, "gate: ko 아닙니다 denial must NOT fire")
+    de_claim = {"de": ["Superposition bedeutet, dass das Qubit insgeheim bereits einen festen Wert hat"]}
+    check(asserts_forbidden_claim(
+        "Superposition bedeutet nicht, dass das Qubit insgeheim bereits einen festen Wert hat.",
+        de_claim, "de") is None, "gate: de 'nicht,' denial must NOT fire")
 
     # Attribution flag (provenance axis): fires only for generated answers that
     # nearly wholesale reproduce the KB; verbatim service has its own tier and
@@ -160,6 +171,120 @@ def regression_matrix() -> None:
               f"[{locale}] attribution flag fired unexpectedly: {sorted(attributed)}")
 
 
+# Misconception extension (fixtures/samples/hgm_misconceptions_3.json, synthetic,
+# not HG120). These claims are unioned into the consuming apps' production gate,
+# so besides "fires on the wrong answer" we pin the other direction: a correct
+# denial of each claim, and correct explanations that share its vocabulary, must
+# stay silent in every locale. The ko denials deliberately use the formal
+# copula negation "아닙니다" and the de ones "nicht, dass" — both were missing
+# from the negation-cue tables until 2026-09-29.
+HGM_DENIALS = {
+    "en": [
+        "A qubit is not simply both 0 and 1 at the same time.",
+        "A qubit is NOT like a spinning coin that is both heads and tails at once.",
+        "Superposition does not mean the qubit secretly already has a definite value we are merely unaware of.",
+        "A common misconception is that a qubit in superposition is simply both 0 and 1 at the same time.",
+    ],
+    "ko": [
+        "중첩 상태의 큐비트는 그냥 0과 1이 동시에 있는 것이 아닙니다.",
+        "큐비트는 앞면과 뒷면이 동시에 되는 회전하는 동전과 같지 않습니다.",
+        "중첩은 큐비트가 이미 정해진 값을 몰래 가지고 있는데 우리가 모를 뿐이라는 뜻이 아닙니다.",
+    ],
+    "ja": [
+        "重ね合わせ状態の量子ビットは単に0と1が同時に存在しているわけではありません。",
+        "量子ビットは表と裏が同時に成り立つ回転するコインのようなものではありません。",
+        "重ね合わせとは、量子ビットがすでに決まった値をひそかに持っていて、私たちが知らずにいるだけという意味ではありません。",
+    ],
+    "zh-Hans": [
+        "处于叠加态的量子比特并非就是同时既是0又是1。",
+        "量子比特并不像一枚同时是正面和反面的旋转硬币。",
+        "叠加并非意味着量子比特早已暗中具有确定的值，只是我们不知道。",
+    ],
+    "es": [
+        "Un qubit en superposición no es simplemente 0 y 1 al mismo tiempo.",
+        "Un qubit no equivale a una moneda girando, cara y cruz simultáneamente.",
+        "La superposición no significa que el qubit ya tiene en secreto un valor definido que simplemente desconocemos.",
+    ],
+    "fr": [
+        "En superposition, un qubit ne vaut pas tout bêtement 0 et 1 simultanément.",
+        "Un qubit n'est pas comme une pièce qui tourne, à la fois pile et face.",
+        "La superposition ne signifie pas que le qubit possède déjà en secret une valeur définie que nous ignorons simplement.",
+    ],
+    "de": [
+        "Ein Qubit in Superposition ist nicht einfach gleichzeitig 0 und 1.",
+        "Ein Qubit ist nicht wie eine sich drehende Münze, die gleichzeitig Kopf und Zahl ist.",
+        "Superposition bedeutet nicht, dass das Qubit insgeheim bereits einen festen Wert hat, der uns lediglich unbekannt ist.",
+    ],
+}
+
+HGM_CORRECT = {
+    "en": [
+        "A qubit's state is a combination α|0⟩ + β|1⟩ of two complex amplitudes. Measuring it still gives just 0 or 1, with P(0) = |α|² and P(1) = |β|².",
+        "A qubit in superposition is described by amplitudes for 0 and 1, and measuring it gives 0 or 1 at random with those probabilities.",
+        "Superposition means the qubit is in a definite state α|0⟩ + β|1⟩; the value 0 or 1 appears only when we measure, with probabilities |α|² and |β|².",
+        "A classical coin shows heads or tails. A qubit has amplitudes that can cancel, which a coin cannot do.",
+        "Like light polarized at 45°, a qubit in superposition points in one definite direction between 0 and 1; a measurement gives 0 or 1, 50/50.",
+    ],
+    "ko": [
+        "큐비트의 상태는 두 복소 진폭의 조합 α|0⟩ + β|1⟩입니다. 측정하면 여전히 0 또는 1만 나오며, P(0) = |α|², P(1) = |β|²입니다.",
+        "중첩 상태의 큐비트는 0과 1의 진폭으로 기술되며, 측정하면 그 확률에 따라 0 또는 1이 나옵니다.",
+        "45°로 편광된 빛처럼, 중첩 상태의 큐비트는 0과 1 사이의 한 방향을 가리킵니다. 측정하면 0 또는 1이 50:50으로 나옵니다.",
+        "고전 동전은 앞면 또는 뒷면을 보여 줍니다. 큐비트의 진폭은 상쇄될 수 있습니다.",
+    ],
+    "ja": [
+        "量子ビットの状態は2つの複素振幅の結合 α|0⟩ + β|1⟩ です。測定してもやはり0か1しか出ず、P(0) = |α|²、P(1) = |β|² です。",
+        "重ね合わせ状態の量子ビットは0と1の振幅で記述され、測定するとその確率で0か1が出ます。",
+        "45°に偏光した光のように、重ね合わせ状態の量子ビットは0と1の間の1つの方向を指します。",
+    ],
+    "zh-Hans": [
+        "量子比特的状态是两个复振幅的组合 α|0⟩ + β|1⟩。测量时仍然只得到 0 或 1，且 P(0) = |α|²、P(1) = |β|²。",
+        "处于叠加态的量子比特由0和1的振幅描述，测量时按这些概率得到0或1。",
+        "就像45°偏振的光，处于叠加态的量子比特指向0和1之间的一个确定方向。",
+    ],
+    "es": [
+        "El estado de un qubit es una combinación α|0⟩ + β|1⟩ de dos amplitudes complejas. Al medirlo sigue dando solo 0 o 1, con P(0) = |α|² y P(1) = |β|².",
+        "Un qubit en superposición se describe con amplitudes para 0 y 1, y al medirlo da 0 o 1 con esas probabilidades.",
+        "Una moneda clásica muestra cara o cruz; las amplitudes de un qubit pueden cancelarse.",
+    ],
+    "fr": [
+        "L'état d'un qubit est une combinaison α|0⟩ + β|1⟩ de deux amplitudes complexes. Sa mesure donne toujours 0 ou 1, avec P(0) = |α|² et P(1) = |β|².",
+        "Un qubit en superposition est décrit par des amplitudes pour 0 et 1, et sa mesure donne 0 ou 1 avec ces probabilités.",
+        "Une pièce classique montre pile ou face ; les amplitudes d'un qubit peuvent s'annuler.",
+    ],
+    "de": [
+        "Der Zustand eines Qubits ist eine Kombination α|0⟩ + β|1⟩ aus zwei komplexen Amplituden. Die Messung liefert trotzdem nur 0 oder 1, mit P(0) = |α|² und P(1) = |β|².",
+        "Ein Qubit in Superposition wird durch Amplituden für 0 und 1 beschrieben, und die Messung liefert 0 oder 1 mit diesen Wahrscheinlichkeiten.",
+        "Eine klassische Münze zeigt Kopf oder Zahl; die Amplituden eines Qubits können sich auslöschen.",
+    ],
+}
+
+
+def misconception_matrix() -> None:
+    fixture = json.loads(
+        (REPO / "fixtures/samples/hgm_misconceptions_3.json").read_text(encoding="utf-8"))
+    items = fixture["items"]
+    locales = fixture["locales"]
+    for locale in locales:
+        kb = load_kb(REPO / "fixtures/kb-examples", locale)
+        union = {locale: [c for it in items for c in it["forbidden_claims"][locale]]}
+        for item in items:
+            answer = item["ai_explanations"][locale]
+            flagged = asserts_forbidden_claim(answer, item["forbidden_claims"], locale)
+            check(flagged is not None,
+                  f"[{locale}] {item['id']}: wrong answer must be blocked by its own claim")
+            tier, _ = classify(kb.get(item["kb_concept_id"]), answer)
+            if flagged and tier == TIER_VALIDATED:
+                tier = TIER_LOW_CONFIDENCE
+            check(tier == item["expected_source"],
+                  f"[{locale}] {item['id']}: tier {tier} != expected {item['expected_source']}")
+        for text in HGM_DENIALS[locale]:
+            hit = asserts_forbidden_claim(text, union, locale)
+            check(hit is None, f"[{locale}] correct denial blocked: {text!r} -> {hit!r}")
+        for text in HGM_CORRECT[locale]:
+            hit = asserts_forbidden_claim(text, union, locale)
+            check(hit is None, f"[{locale}] correct explanation blocked: {text!r} -> {hit!r}")
+
+
 def cli_tests() -> None:
     scorer = str(REPO / "reference/score_v0.py")
     kb_dir = str(REPO / "fixtures/kb-examples")
@@ -197,6 +322,7 @@ def cli_tests() -> None:
 def main() -> int:
     unit_tests()
     regression_matrix()
+    misconception_matrix()
     cli_tests()
     if failures:
         print("\nFAIL:")

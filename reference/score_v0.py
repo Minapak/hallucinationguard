@@ -70,12 +70,12 @@ _CJK_RANGES = (
 # would let an asserted misconception through.
 _NEGATION_CUES = {
     "en": (" not ", "n't ", "n't.", " never ", " no ", " cannot ", " nor "),
-    "ko": ("않", "없", "아니", "불가능", "못한", "못 한", "못합"),
+    "ko": ("않", "없", "아니", "아닙", "불가능", "못한", "못 한", "못합"),
     "ja": ("ない", "ありません", "ません", "できな", "不可能", "せず", "わけではな"),
     "zh-Hans": ("不能", "不会", "无法", "并非", "没有", "不可能", "并不"),
     "es": (" no ", " nunca ", " jamás ", " tampoco ", " ni "),
     "fr": (" ne ", " n'", " pas ", " jamais ", " aucun", " ni "),
-    "de": (" nicht ", " kein", " nie ", " niemals ", " weder "),
+    "de": (" nicht ", " nicht,", " kein", " nie ", " niemals ", " weder "),
 }
 
 # Denial-framing cues: a sentence that MENTIONS a misconception inside a warning

@@ -113,6 +113,20 @@ for, are at risk") applies to these detectors as to every metric in this repo â€
 items were tuned so the detectors fire on them, which is exactly why the flags are a floor, not
 a definition of the failure class.
 
+## Misconception extension items (`hg_benchmark_item_v3.1`, `fixtures/samples/hgm_misconceptions_3.json`)
+
+Three **synthetic items** (HGM01â€“HGM03) authored 2026-09-29 for intro-level superposition
+misconceptions: the spinning-coin picture, "simply both 0 and 1 at the same time", and "the
+qubit already has a definite value we don't know". Same v3.1 item schema as HG120, no extra
+fields. The `ai_explanations` are authored wrong answers that assert each misconception, not
+recorded model outputs. They are **not** part of HG120 and **not** counted in the 1,680 fields.
+
+Extra constraints (checked by `tests/test_fixtures.py`): ids use the `HGM` namespace,
+`forbidden_claims` carry all 7 locales, and no claim contains a locale negation cue. Consuming
+apps union every `fixtures/samples/*.json` claim into their production gate, so claims are kept
+content-word dominant; the file's `description` records the false-block measurement done before
+adding them.
+
 ## KB entry (`fixtures/kb-examples/*.json`)
 
 ```jsonc
