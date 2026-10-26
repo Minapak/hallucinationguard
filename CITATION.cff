@@ -6,8 +6,8 @@ authors:
     given-names: Eunmin
 repository-code: "https://github.com/Minapak/hallucinationguard"
 license: Apache-2.0
-version: 0.5.1
-date-released: 2026-09-29
+version: 0.6.0
+date-released: 2026-10-26
 keywords:
   - quantum computing
   - hallucination

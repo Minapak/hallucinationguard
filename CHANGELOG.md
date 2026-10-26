@@ -2,6 +2,18 @@
 
 All notable changes to this repository. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions track `CITATION.cff`.
 
+## [0.6.0] — 2026-10-26 · KB concept wiki behind a verification gate
+
+### Added
+- **`reference/kb_wiki.py`** (zero-dependency, CPython 3.9+): builds an interlinked wiki (bank `hg:wiki:kb`, in-memory) from the 12 verified KB concepts. Each concept is one source. Term pages (concept titles) and DOI pages (12, from `sourceRef`/`certaintyNote`) link the concepts. Every write passes a gate. KB concepts: certainty grade (`established` + DOI, or `timebound` + `asOfDate`), own-locale text, and the score_v0 forbidden-claim gate per field. `propose(candidate_text, concept_id=None)`: score_v0 tier ≥ `aiValidatedAgainstKB` (overlap ≥ 0.30), no forbidden claim, no citation outside the anchor's reference corpus, and an optional NLI contradiction check (only when `harness/nli_v1.py`'s deps are importable; en/es/fr only). Candidates that fail go to an `unverified` queue with reasons and scores and are never ingested. CLI: `python3 -m reference.kb_wiki build|lint|query|propose [--json]`. Docs: [docs/KB-WIKI.md](docs/KB-WIKI.md).
+- **`reference/sq_memory/`**: the shared SwiftQuantum memory module (1.0.0), installed verbatim with the owner's sync tool and not edited here. Its SQLAlchemy import is soft, so importing it stays zero-dependency (verified in package-free venvs on 3.9.6 and 3.14.4). Attribution: its own `NOTICE.md` (Hindsight MIT, supermemory schemas MIT, Karpathy's LLM-Wiki pattern; no GPL code) and the new repo-level **`NOTICE`**.
+- `tests/test_kb_wiki.py` (stdlib, in CI): build, term/DOI links, gate accept/queue paths, an injected NLI checker, lint, query, CLI, and zero-dependency import with sqlalchemy/torch blocked. `tests/test_nli.py` adds a real-model check of the wiki gate (runs only with the harness deps).
+
+### Honest accounting
+- Run on the concatenated concept text, the V0 forbidden-claim gate false-blocks 3 of 12 verified concepts (whole-text token recall, scattered tokens). Checked per field, it blocks 0 of 12. The wiki gates per field, and the measurement is pinned.
+- The 0.30 overlap floor queues short but correct proposals, and inversions with high overlap pass every lexical check. Without the NLI layer the gate is a lexical floor, not a truth check.
+- Lint ignores bracket notation such as `[[144,12,12]]` inside note text (the shared module reads wiki links only from the Related section).
+
 ## [0.5.1] — 2026-09-29 · Superposition misconception claims
 
 ### Added

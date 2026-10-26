@@ -116,6 +116,21 @@ def main() -> int:
     check(nli_gate(tier_ko, checker.check(kb_text, ans_ko), "ko") is False,
           "gate must be hard-off outside GATE_LOCALES (ko)")
 
+    # KB wiki gate (reference/kb_wiki.py) with the real checker: a measurement
+    # inversion clears both lexical layers (overlap and forbidden claims) and
+    # only the NLI layer queues it; the verbatim KB text is accepted.
+    sys.path.insert(0, str(REPO))
+    from reference.kb_wiki import KBWiki
+    kw = KBWiki(nli=checker).build()
+    q = kw.entries["qubit"]["translations"]["en"]["detailedExplanation"]
+    inverted = q.replace("Upon measurement, the qubit collapses to either",
+                         "Measurement never changes the qubit; it simply reveals")
+    r = kw.propose(inverted, "qubit")
+    check(r.scores["tier"] == "aiValidatedAgainstKB" and not r.accepted
+          and r.scores["nli"] == "nli_contradicted",
+          f"kb_wiki: real NLI must queue the measurement inversion, got {r.scores}")
+    check(kw.propose(q, "qubit").accepted, "kb_wiki: verbatim KB text must pass with real NLI")
+
     if failures:
         print("\nFAIL:")
         for f in failures:

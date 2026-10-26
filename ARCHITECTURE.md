@@ -23,6 +23,9 @@ hallucinationguard/
 ├── reference/score_v0.py              # the production V0 baseline scorer (single file, stdlib only)
 ├── reference/dimensions_v1.py         # separate-dimension report: correctness · attribution ·
 │                                      #   citation integrity · exposition depth (stdlib only)
+├── reference/kb_wiki.py              # KB concept wiki + verification gate (stdlib only; docs/KB-WIKI.md)
+├── reference/sq_memory/               # shared SwiftQuantum memory module, vendored verbatim (Wiki,
+│                                      #   InMemoryStore; soft SQLAlchemy import), own NOTICE.md
 ├── harness/                           # M2 dependency-bearing layer (torch+transformers, OPTIONAL):
 │   ├── nli_v1.py                      #   multilingual NLI checker beside the V0 baseline + the V2
 │   ├── requirements.txt               #   gate (nli_gate(): bidirectional confirmation, low-confidence
@@ -32,8 +35,9 @@ hallucinationguard/
 ├── tests/
 │   ├── test_fixtures.py               # schema + certainty gates + parity/orthography gates (both fixtures)
 │   ├── test_scorer.py                 # unit tests + pinned per-locale regression matrix (HG120 sample)
-│   └── test_dimensions.py             # citation/depth unit tests + per-locale flag & tier pins (HGX)
-├── docs/                              # SCHEMA.md · TEST_GUIDE.md · AUDIT-2026-07-19.md
+│   ├── test_dimensions.py             # citation/depth unit tests + per-locale flag & tier pins (HGX)
+│   └── test_kb_wiki.py                # KB wiki build/links/gate/lint/query/CLI + zero-dep import
+├── docs/                              # SCHEMA.md · TEST_GUIDE.md · AUDIT-2026-07-19.md · KB-WIKI.md
 └── .github/workflows/ci.yml           # SHA-pinned, least-privilege, Python 3.9+3.14 matrix
 ```
 
@@ -73,6 +77,22 @@ Flags never change the correctness tier. `--check-flags` compares computed flags
 item's `expected_flags` and exits non-zero on mismatch — CI runs it for all 7 locales against
 the HGX extension fixture. The M2 NLI/judge backend slots in behind the same `computed_flags()`
 signature.
+
+## KB concept wiki (`reference/kb_wiki.py`, v0.6.0)
+
+```
+kb-examples/*.json ──► gate_concept   certainty grade + DOI/asOfDate · own-locale text ·
+                     │                score_v0 forbidden-claim gate per field
+                     ├─ pass ──► Wiki.ingest(source_id = concept id, entities = titles + DOIs)
+                     └─ fail ──► unverified queue (reasons, scores) — never ingested
+propose(text) ─────► gate_candidate   score_v0 tier ≥ aiValidatedAgainstKB (overlap ≥ 0.30) ·
+                                      no forbidden claim · citations ⊆ KB corpus ·
+                                      [optional] harness/nli_v1 contradiction, en/es/fr only
+```
+
+The wiki engine is the vendored shared module (`reference/sq_memory/`, rules mode, in-memory
+store). Neither the module nor kb_wiki imports a third-party package unless the optional NLI
+layer is present. Details and thresholds: [docs/KB-WIKI.md](docs/KB-WIKI.md).
 
 Design invariants (enforced by `tests/`, documented in [docs/SCHEMA.md](docs/SCHEMA.md) and
 [docs/AUDIT-2026-07-19.md](docs/AUDIT-2026-07-19.md)):

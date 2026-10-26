@@ -1,0 +1,22 @@
+HallucinationGuard
+Copyright 2026 Eunmin Park
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+-------------------------------------------------------------------------------
+reference/sq_memory/
+
+This directory is a verbatim copy of the shared SwiftQuantum memory module
+(swiftquantum_common.memory 1.0.0), installed with the owner's sync tool and
+not edited here. It is original code by the same owner, Eunmin Park
+(SwiftQuantum), contributed to this repository under the Apache License 2.0;
+its terms are compatible with the MIT-licensed projects it credits.
+
+It carries its own attribution file, reference/sq_memory/NOTICE.md, which
+credits the ideas and data shapes it implements independently:
+  - Hindsight (Vectorize AI, Inc.), MIT License — ideas only, no code included
+  - supermemory published schemas (supermemory), MIT License — schema ideas
+    only; the closed-source engine was not used
+  - Andrej Karpathy's "LLM Wiki" pattern (public gist) — the pattern only
+No code, prompts or formats from GPL-licensed implementations of the LLM-Wiki
+pattern (e.g. nashsu/llm_wiki) are included.
