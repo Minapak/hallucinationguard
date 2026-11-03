@@ -36,6 +36,10 @@ jobs:
         run: python3 tests/test_dimensions.py
       - name: KB wiki + verification gate tests (zero-dependency)
         run: python3 tests/test_kb_wiki.py
+      - name: Provenance Ink (sentence-level receipt) tests
+        run: python3 tests/test_provenance.py
+      - name: Discrete semantic entropy tests (injected judge)
+        run: python3 tests/test_semantic_entropy.py
       - name: Reference scorer runs end-to-end (all 7 locales)
         run: |
           for loc in en ko ja zh-Hans es fr de; do

@@ -1,0 +1,51 @@
+{
+ "en": {
+  "verified": 0,
+  "validated": 12,
+  "disagree": 0,
+  "low": 19,
+  "unanchored": 37
+ },
+ "ko": {
+  "verified": 2,
+  "validated": 5,
+  "disagree": 0,
+  "low": 21,
+  "unanchored": 37
+ },
+ "ja": {
+  "verified": 2,
+  "validated": 10,
+  "disagree": 0,
+  "low": 26,
+  "unanchored": 30
+ },
+ "zh-Hans": {
+  "verified": 0,
+  "validated": 10,
+  "disagree": 0,
+  "low": 25,
+  "unanchored": 30
+ },
+ "es": {
+  "verified": 0,
+  "validated": 13,
+  "disagree": 0,
+  "low": 19,
+  "unanchored": 35
+ },
+ "fr": {
+  "verified": 0,
+  "validated": 12,
+  "disagree": 0,
+  "low": 22,
+  "unanchored": 33
+ },
+ "de": {
+  "verified": 1,
+  "validated": 12,
+  "disagree": 0,
+  "low": 15,
+  "unanchored": 39
+ }
+}

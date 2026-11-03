@@ -2,6 +2,19 @@
 
 All notable changes to this repository. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions track `CITATION.cff`.
 
+## [0.7.0] — 2026-11-03 · Provenance Ink: sentence-level verdicts, a receipt, and a guard that can say "I don't know"
+
+### Added
+- **`reference/provenance_v1.py`** (zero-dependency): runs beside the unchanged four-tier verdict and gives every answer sentence its own ink state — `verified` (verbatim KB sentence), `validated` (anchored to the KB sentence it overlaps most, same V0.1 tokenizer / one-sided overlap / 0.30 floor), `disagree` (the lexical anchor says yes but an injected NLI judge confirms a bidirectional contradiction on an unsupported sentence in a measured-clean locale {en, es, fr} — rule R7), `low` (forbidden claim in this sentence, or an anchor below 0.30), `unanchored` (no KB sentence shares a content token — reported, not folded into `low`). The receipt carries sha256 of answer and KB, the tier (copied from `score_v0`, byte for byte), per-state counts, which checks ran (`checks.nli` is false when no judge was injected, so `disagree` can never appear from a check that did not run) and every sentence's anchor, overlap and reasons. CLI: `python3 reference/provenance_v1.py --kb "<kb>" --answer "<answer>" [--json]`, or a fixture + `--locale`.
+- **`harness/semantic_entropy_v1.py`**: our implementation of discrete semantic entropy over bidirectional-entailment clusters, from the Methods of Farquhar, Kossen, Kuhn & Gal, Nature 630:625 (2024). A *consistency* dimension beside the KB verdict (does the model even have one answer?); entailment judge injected, same 0.50 threshold as the NLI layer.
+- **`docs/literature/`**: vendored full texts of the two CC BY 4.0 primary sources this release ports (Farquhar et al. 2024 via PMC; Kalai, Nachum, Vempala & Zhang, "Why Language Models Hallucinate", arXiv:2509.04664, 2025) with licence headers, and a `README.md` table of every source consulted, its licence, and exactly what was taken (SummaC Apache-2.0, MiniCheck Apache-2.0, AlignScore MIT, jlko/semantic_uncertainty BSD-3-Clause-Clear — algorithms only, no code copied; the Nature 2026 "accuracy incentivizes hallucinations" paper and arXiv:2606.18422 are cited, not reproduced).
+- `tests/test_provenance.py` (+ `tests/provenance_matrix_pins.json`, a pinned per-locale state matrix over the 20-item sample) and `tests/test_semantic_entropy.py`, both stdlib, both in CI.
+
+### Honest accounting
+- Without an NLI judge the sentence layer inherits every lexical blindness: on the 20-item sample the inverted "Measurement **never** collapses…" sentence is `validated`, and the matrix pins say so (en: 12 validated · 19 low · 37 unanchored · 0 disagree). The point of `disagree` is to make the two-layer disagreement visible when the judge is present — it is not a fix for the lexical layer.
+- An anchor needs a shared token of ≥ 4 characters (or any CJK bigram): function words alone produced a 0.29 overlap against a seven-token KB sentence. The overlap *number* is still the V0 metric; only the existence test for an anchor looks at token length.
+- The same port now runs in the QuantumNative backend (`/api/v1/knowledge/validate` → `provenance`), the EDU web BFF (`validation.provenance`, rendered inline) and the iOS app (`HGProvenance`), each with parity pins against this file.
+
 ## [0.6.0] — 2026-10-26 · KB concept wiki behind a verification gate
 
 ### Added

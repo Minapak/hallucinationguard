@@ -23,10 +23,14 @@ hallucinationguard/
 ├── reference/score_v0.py              # the production V0 baseline scorer (single file, stdlib only)
 ├── reference/dimensions_v1.py         # separate-dimension report: correctness · attribution ·
 │                                      #   citation integrity · exposition depth (stdlib only)
+├── reference/provenance_v1.py         # Provenance Ink: sentence-level ink states + receipt beside the
+│                                      #   unchanged tier (stdlib only; NLI judge injected; v0.7.0)
 ├── reference/kb_wiki.py              # KB concept wiki + verification gate (stdlib only; docs/KB-WIKI.md)
 ├── reference/sq_memory/               # shared SwiftQuantum memory module, vendored verbatim (Wiki,
 │                                      #   InMemoryStore; soft SQLAlchemy import), own NOTICE.md
 ├── harness/                           # M2 dependency-bearing layer (torch+transformers, OPTIONAL):
+│   ├── semantic_entropy_v1.py         #   discrete semantic entropy over bidirectional-entailment clusters
+│   │                                  #   (Farquhar et al. 2024 Methods; judge injected; stdlib file)
 │   ├── nli_v1.py                      #   multilingual NLI checker beside the V0 baseline + the V2
 │   ├── requirements.txt               #   gate (nli_gate(): bidirectional confirmation, low-confidence
 │   └── runs/*.json                    #   -only, GATE_LOCALES {en,es,fr} — 0 measured false blocks;
@@ -36,8 +40,12 @@ hallucinationguard/
 │   ├── test_fixtures.py               # schema + certainty gates + parity/orthography gates (both fixtures)
 │   ├── test_scorer.py                 # unit tests + pinned per-locale regression matrix (HG120 sample)
 │   ├── test_dimensions.py             # citation/depth unit tests + per-locale flag & tier pins (HGX)
-│   └── test_kb_wiki.py                # KB wiki build/links/gate/lint/query/CLI + zero-dep import
+│   ├── test_kb_wiki.py                # KB wiki build/links/gate/lint/query/CLI + zero-dep import
+│   ├── test_provenance.py             # ink states, precedence, receipt, injected-judge `disagree`, CLI,
+│   │   (+ provenance_matrix_pins.json)#   pinned per-locale state matrix over the 20-item sample
+│   └── test_semantic_entropy.py       # clustering + discrete entropy with a fake judge
 ├── docs/                              # SCHEMA.md · TEST_GUIDE.md · AUDIT-2026-07-19.md · KB-WIKI.md
+│   └── literature/                    #   vendored CC BY 4.0 full texts + licence table of every source
 └── .github/workflows/ci.yml           # SHA-pinned, least-privilege, Python 3.9+3.14 matrix
 ```
 

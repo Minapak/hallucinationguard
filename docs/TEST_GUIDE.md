@@ -17,6 +17,13 @@ python3 tests/test_dimensions.py
 # 3b. KB concept wiki + verification gate (zero-dep; also checks import with sqlalchemy/torch blocked)
 python3 tests/test_kb_wiki.py
 
+# 3c. Provenance Ink — five ink states, precedence, receipt, injected-judge `disagree`, CLI,
+#     pinned per-locale state matrix (tests/provenance_matrix_pins.json; delete to re-pin deliberately)
+python3 tests/test_provenance.py
+
+# 3d. Discrete semantic entropy with a fake judge
+python3 tests/test_semantic_entropy.py
+
 # 4. End-to-end runs, all 7 locales, all three fixtures
 for loc in en ko ja zh-Hans es fr de; do
   python3 reference/score_v0.py fixtures/samples/hg120_sample_20.json --locale "$loc" > /dev/null
